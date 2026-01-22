@@ -796,11 +796,26 @@
     },
     "form": {
       "title": "Send Us a Message",
+      "description": "Use this form only if you could not resolve your question in the Help Center. We do not process 'quote' requests; cost is defined by credit consumption on the platform.",
       "firstName": "First Name",
+      "firstNamePlaceholder": "e.g. John",
       "lastName": "Last Name",
-      "email": "Email Address",
-      "company": "Company Name",
+      "lastNamePlaceholder": "e.g. Smith",
+      "email": "Professional Email",
+      "emailPlaceholder": "name@firm.legal",
+      "company": "Firm or Legal Department",
+      "companyPlaceholder": "e.g. Smith & Associates",
       "phone": "Phone Number",
+      "reason": "Contact Reason",
+      "reasonOptions": {
+        "technical": "Document processing incident (Technical error)",
+        "privacy": "Privacy Protocol or Incinerator Protocol inquiry",
+        "billing": "Billing, invoicing, or credit package acquisition",
+        "api": "API integration or custom infrastructure"
+      },
+      "message": "Detailed Description",
+      "messagePlaceholder": "Describe the technical issue or your specific requirement...",
+      "disclaimer": "By submitting this form, you confirm that you have reviewed our Help Center and that your inquiry requires direct engineering attention.",
       "serviceInterest": "Service Interest",
       "selectService": "Select a service",
       "services": {
@@ -832,8 +847,6 @@
         "over12months": "Over 12 months",
         "planning": "Still planning"
       },
-      "message": "Project Details",
-      "messagePlaceholder": "Please describe your project, challenges you're facing, and what you hope to achieve...",
       "required": "*",
       "sending": "Sending...",
       "sendMessage": "Send Message",

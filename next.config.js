@@ -6,8 +6,8 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Static export for Azure Static Web Apps
-  // output: 'export',
+  // Static export for Cloudflare Pages
+  output: 'export',
 
   // OPCIONAL: Asegura el correcto manejo de rutas
   trailingSlash: true,
