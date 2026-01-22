@@ -1,0 +1,26 @@
+{
+  "app\\[locale]\\page.tsx -> ../../components/InteractiveGridAnimatedRadialInward": {
+    "id": "app\\[locale]\\page.tsx -> ../../components/InteractiveGridAnimatedRadialInward",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_InteractiveGridAnimatedRadialInward_tsx.js"
+    ]
+  },
+  "app\\[locale]\\page.tsx -> ../../components/InteractiveGridPulse": {
+    "id": "app\\[locale]\\page.tsx -> ../../components/InteractiveGridPulse",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_InteractiveGridPulse_tsx.js"
+    ]
+  },
+  "components\\Header.tsx -> ./ui/ThemeToggle": {
+    "id": "components\\Header.tsx -> ./ui/ThemeToggle",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_ui_ThemeToggle_tsx.js"
+    ]
+  },
+  "i18n\\request.ts -> ../messages/en.json": {
+    "id": "i18n\\request.ts -> ../messages/en.json",
+    "files": [
+      "static/chunks/_app-pages-browser_src_messages_en_json.js"
+    ]
+  }
+}

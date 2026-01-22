@@ -1,0 +1,31 @@
+{
+  "minReplicas": 1,
+  "maxReplicas": 5,
+  "rules": [
+    {
+      "name": "http-scaling-rule",
+      "type": "http",
+      "metadata": {
+        "concurrentRequests": "150"
+      }
+    },
+    {
+      "name": "cpu-scaling-rule",
+      "type": "cpu",
+      "metadata": {
+        "type": "Utilization",
+        "value": "70"
+      }
+    },
+    {
+      "name": "memory-scaling-rule",
+      "type": "memory",
+      "metadata": {
+        "type": "Utilization",
+        "value": "75"
+      }
+    }
+  ],
+  "cooldownPeriod": 300,
+  "pollingInterval": 30
+}

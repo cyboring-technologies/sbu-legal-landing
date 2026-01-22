@@ -1,0 +1,130 @@
+/**
+ * Corporate Web - Local Styles
+ * Extended styles specific to this frontend
+ * Extended styles specific to this frontend
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand: Institutional Greyscale + Blue-Grey Accent */
+    --background: 0 0% 100%;
+    /* #FFFFFF */
+    --foreground: 0 0% 6%;
+    /* #0F0F0F (Soft Black) */
+
+    --card: 0 0% 93%;
+    /* #ECECEC */
+    --card-foreground: 0 0% 6%;
+    /* #0F0F0F */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 6%;
+
+    --primary: 204 32% 27%;
+    /* #2F4A5C (Institutional Blue-Grey) */
+    --primary-foreground: 0 0% 100%;
+    /* #FFFFFF */
+
+    --secondary: 0 0% 96%;
+    /* #F4F4F4 */
+    --secondary-foreground: 0 0% 23%;
+    /* #3A3A3A */
+
+    --muted: 0 0% 96%;
+    /* #F4F4F4 */
+    --muted-foreground: 0 0% 42%;
+    /* #6B6B6B */
+
+    --accent: 204 32% 27%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 359 58% 39%;
+    /* #9E2A2B */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 84%;
+    /* #D6D6D6 */
+    --input: 0 0% 84%;
+    --ring: 204 32% 27%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    /* #0F0F0F */
+    --foreground: 0 0% 100%;
+    /* #FFFFFF */
+
+    --card: 0 0% 9%;
+    /* #171717 Slightly lighter than BG */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 204 32% 27%;
+    /* Keep Accent */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 11%;
+    /* #1C1C1C Distinct from BG */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 204 32% 27%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 359 58% 39%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 16%;
+    /* #292929 Subtle separation */
+    --input: 0 0% 16%;
+    --ring: 204 32% 27%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300 ease-in-out;
+  }
+}
+
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Dark mode grid pattern */
+.dark .bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Add any corporate-web specific styles here if needed */
