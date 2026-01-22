@@ -1,7 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /dashboard/
-Disallow: /admin/
-Disallow: /api/
-
-Sitemap: https://cyboring.com/sitemap.xml
