@@ -111,7 +111,7 @@ export default function ContactPage() {
 
                 <div className="space-y-8">
                   <div className="flex items-start">
-                    <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400 mt-1 flex-shrink-0" />
+                    <Mail className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                     <div className="ml-3">
                       <h4 className="text-base font-semibold text-gray-900 dark:text-white">
                         {t('information.email.title')}
@@ -126,7 +126,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400 mt-1 flex-shrink-0" />
+                    <MapPin className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                     <div className="ml-3">
                       <h4 className="text-base font-semibold text-gray-900 dark:text-white">
                         {t('information.address.title')}
@@ -151,7 +151,7 @@ export default function ContactPage() {
 
               {isSubmitted ? (
                 <div className="text-center py-12">
-                  <CheckCircle className="w-16 h-16 text-green-500 dark:text-green-400 mx-auto mb-4" />
+                  <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
                   <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                     {t('form.success.title')}
                   </h4>
@@ -291,7 +291,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                      className="w-full bg-primary text-primary-foreground py-3 px-6 rounded-lg font-semibold hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                     >
                       {isSubmitting ? (
                         <>
@@ -328,42 +328,42 @@ export default function ContactPage() {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* WhatsApp Concierge */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm text-center">
-              <MessageSquare className="w-12 h-12 text-blue-600 dark:text-blue-400 mx-auto mb-4" />
+              <MessageSquare className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('alternativeContact.whatsapp.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('alternativeContact.whatsapp.description')}
               </p>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('alternativeContact.whatsapp.action')}
               </button>
             </div>
 
             {/* Billing */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm text-center">
-              <FileText className="w-12 h-12 text-purple-600 dark:text-purple-400 mx-auto mb-4" />
+              <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('alternativeContact.billing.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('alternativeContact.billing.description')}
               </p>
-              <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
+              <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('alternativeContact.billing.action')}
               </button>
             </div>
 
             {/* Docs */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm text-center">
-              <Book className="w-12 h-12 text-green-600 dark:text-green-400 mx-auto mb-4" />
+              <Book className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('alternativeContact.docs.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('alternativeContact.docs.description')}
               </p>
-              <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+              <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('alternativeContact.docs.action')}
               </button>
             </div>
@@ -398,19 +398,19 @@ export default function ContactPage() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                 <div className="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
-                  <Shield className="w-8 h-8 text-blue-600 dark:text-blue-400 mb-4" />
+                  <Shield className="w-8 h-8 text-primary mb-4" />
                   <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">{tQA('features.privacy.title')}</h4>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">{tQA('features.privacy.description')}</p>
                 </div>
 
                 <div className="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
-                  <Zap className="w-8 h-8 text-green-600 dark:text-green-400 mb-4" />
+                  <Zap className="w-8 h-8 text-primary mb-4" />
                   <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">{tQA('features.efficiency.title')}</h4>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">{tQA('features.efficiency.description')}</p>
                 </div>
 
                 <div className="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
-                  <Users className="w-8 h-8 text-purple-600 dark:text-purple-400 mb-4" />
+                  <Users className="w-8 h-8 text-primary mb-4" />
                   <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">{tQA('features.sovereignty.title')}</h4>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">{tQA('features.sovereignty.description')}</p>
                 </div>

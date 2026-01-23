@@ -268,7 +268,7 @@ export default function HomePage() {
               ref={cardRefs[0]}
               className={`text-center p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${cardVisibility[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-red-100 to-red-200 dark:from-red-900/30 dark:to-red-800/30 text-red-600 dark:text-red-400 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
+              <div className="w-20 h-20 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
                 <Brain className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 font-sans">
@@ -283,7 +283,7 @@ export default function HomePage() {
               ref={cardRefs[1]}
               className={`text-center p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${cardVisibility[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 dark:from-orange-900/30 dark:to-orange-800/30 text-orange-600 dark:text-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
+              <div className="w-20 h-20 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
                 <AlertTriangle className="w-10 h-10" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 font-sans">
@@ -298,7 +298,7 @@ export default function HomePage() {
               ref={cardRefs[2]}
               className={`text-center p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${cardVisibility[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-rose-100 to-rose-200 dark:from-rose-900/30 dark:to-rose-800/30 text-rose-600 dark:text-rose-400 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
+              <div className="w-20 h-20 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
                 <Clock className="w-10 h-10" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 font-sans">
@@ -334,8 +334,8 @@ export default function HomePage() {
               ref={solutionCardRefs[0]}
               className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${solutionCardVisibility[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Crown className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Crown className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">
                 {tSolution('hitl.title')}
@@ -350,8 +350,8 @@ export default function HomePage() {
               ref={solutionCardRefs[1]}
               className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${solutionCardVisibility[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Cpu className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Cpu className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">
                 {tSolution('orchestration.title')}
@@ -366,8 +366,8 @@ export default function HomePage() {
               ref={solutionCardRefs[2]}
               className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${solutionCardVisibility[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <ShieldCheck className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <ShieldCheck className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">
                 {tSolution('privacy.title')}
@@ -382,8 +382,8 @@ export default function HomePage() {
               ref={solutionCardRefs[3]}
               className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${solutionCardVisibility[3] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Layers className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Layers className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">
                 {tSolution('capacity.title')}
@@ -437,7 +437,7 @@ export default function HomePage() {
               ref={servicesCardRefs[0]}
               className={`bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${servicesCardVisibility[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Zap className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3 font-sans">
@@ -445,7 +445,7 @@ export default function HomePage() {
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4 font-sans">{tServices('draftingEngine.description')}</p>
               <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
-                <span className="text-sm font-medium text-blue-600 dark:text-blue-400 font-sans block">
+                <span className="text-sm font-medium text-primary font-sans block">
                   {tServices('draftingEngine.tag')}
                 </span>
               </div>
@@ -456,7 +456,7 @@ export default function HomePage() {
               ref={servicesCardRefs[1]}
               className={`bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${servicesCardVisibility[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Scale className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3 font-sans">
@@ -464,7 +464,7 @@ export default function HomePage() {
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4 font-sans">{tServices('contracts.description')}</p>
               <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
-                <span className="text-sm font-medium text-green-600 dark:text-green-400 font-sans block">
+                <span className="text-sm font-medium text-primary font-sans block">
                   {tServices('contracts.tag')}
                 </span>
               </div>
@@ -475,7 +475,7 @@ export default function HomePage() {
               ref={servicesCardRefs[2]}
               className={`bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${servicesCardVisibility[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <Cpu className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3 font-sans">
@@ -483,7 +483,7 @@ export default function HomePage() {
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4 font-sans">{tServices('orchestration.description')}</p>
               <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
-                <span className="text-sm font-medium text-purple-600 dark:text-purple-400 font-sans block">
+                <span className="text-sm font-medium text-primary font-sans block">
                   {tServices('orchestration.tag')}
                 </span>
               </div>
@@ -701,7 +701,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* WhatsApp Card */}
             <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center mb-6 shadow-lg text-white">
+              <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-6 shadow-lg text-primary-foreground">
                 <MessageSquare className="w-7 h-7" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">{tContact('whatsapp.title')}</h3>
@@ -712,7 +712,7 @@ export default function HomePage() {
                 href="https://wa.me/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors mb-4 shadow-md font-sans"
+                className="block w-full text-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-lg transition-colors mb-4 shadow-md font-sans"
               >
                 {tContact('whatsapp.cta')}
               </a>
@@ -723,7 +723,7 @@ export default function HomePage() {
 
             {/* Enterprise Card */}
             <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center mb-6 shadow-lg text-white">
+              <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-6 shadow-lg text-primary-foreground">
                 <Scale className="w-7 h-7" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">{tContact('enterprise.title')}</h3>
@@ -732,11 +732,11 @@ export default function HomePage() {
               </p>
               <ul className="space-y-3 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-800 pt-6 font-sans">
                 <li className="flex items-start">
-                  <span className="mr-2 text-blue-500">•</span>
+                  <span className="mr-2 text-primary">•</span>
                   {tContact('enterprise.point1')}
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-blue-500">•</span>
+                  <span className="mr-2 text-primary">•</span>
                   {tContact('enterprise.point2')}
                 </li>
               </ul>
@@ -744,7 +744,7 @@ export default function HomePage() {
 
             {/* Security Card */}
             <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="w-14 h-14 bg-purple-500 rounded-full flex items-center justify-center mb-6 shadow-lg text-white">
+              <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-6 shadow-lg text-primary-foreground">
                 <ShieldCheck className="w-7 h-7" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">{tContact('security.title')}</h3>
@@ -753,7 +753,7 @@ export default function HomePage() {
               </p>
               <ul className="space-y-3 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-800 pt-6 font-sans">
                 <li className="flex items-start">
-                  <span className="mr-2 text-purple-500">•</span>
+                  <span className="mr-2 text-primary">•</span>
                   {tContact('security.point1')}
                 </li>
               </ul>

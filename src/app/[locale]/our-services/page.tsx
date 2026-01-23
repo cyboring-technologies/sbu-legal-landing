@@ -59,7 +59,7 @@ export default function OurServicesPage() {
           <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* 1. Drafting Engine */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg hover:shadow-lg transition-shadow flex flex-col">
-              <div className="w-16 h-16 bg-[#2F4A5C] text-white rounded-lg flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-lg flex items-center justify-center mb-6">
                 <Code className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
@@ -70,21 +70,21 @@ export default function OurServicesPage() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                   <span><span className="font-semibold">Capacidades:</span> {t('draftingEngine.capabilities')}</span>
                 </li>
                 <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                   <span><span className="font-semibold">Rigor:</span> {t('draftingEngine.rigor')}</span>
                 </li>
                 <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                   <span><span className="font-semibold">HITL:</span> {t('draftingEngine.hitl')}</span>
                 </li>
               </ul>
               <a
                 href="#contact"
-                className="w-full text-center py-3 rounded-lg font-medium text-white bg-[#2F4A5C] hover:bg-[#243a48] transition-colors"
+                className="w-full text-center py-3 rounded-lg font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-colors"
               >
                 {t('draftingEngine.cta')}
               </a>
@@ -92,7 +92,7 @@ export default function OurServicesPage() {
 
             {/* 2. Contract Engineering */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg hover:shadow-lg transition-shadow flex flex-col">
-              <div className="w-16 h-16 bg-blue-600 dark:bg-blue-500 text-white rounded-lg flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-lg flex items-center justify-center mb-6">
                 <FileText className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
@@ -103,15 +103,15 @@ export default function OurServicesPage() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                   <span><span className="font-semibold">Documentos:</span> {t('contractEngineering.supportedDocs')}</span>
                 </li>
                 <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                   <span><span className="font-semibold">Eficiencia:</span> {t('contractEngineering.efficiency')}</span>
                 </li>
                 <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                   <span><span className="font-semibold">Auto-Detección:</span> {t('contractEngineering.autoDetection')}</span>
                 </li>
               </ul>
@@ -125,7 +125,7 @@ export default function OurServicesPage() {
 
             {/* 3. Infrastructure */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg hover:shadow-lg transition-shadow flex flex-col">
-              <div className="w-16 h-16 bg-green-600 dark:bg-green-500 text-white rounded-lg flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-lg flex items-center justify-center mb-6">
                 <ShieldCheck className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
@@ -136,15 +136,15 @@ export default function OurServicesPage() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                   <span><span className="font-semibold">Eliminación:</span> {t('infrastructure.totalDeletion')}</span>
                 </li>
                 <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                   <span><span className="font-semibold">Orquestación:</span> {t('infrastructure.orchestration')}</span>
                 </li>
                 <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 mr-2 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                   <span><span className="font-semibold">Arquitectura:</span> {t('infrastructure.architecture')}</span>
                 </li>
               </ul>
@@ -173,7 +173,7 @@ export default function OurServicesPage() {
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 dark:bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-xl font-bold">1</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -183,7 +183,7 @@ export default function OurServicesPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 dark:bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-xl font-bold">2</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -193,7 +193,7 @@ export default function OurServicesPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 dark:bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-xl font-bold">3</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -203,7 +203,7 @@ export default function OurServicesPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 dark:bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-xl font-bold">4</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -231,7 +231,7 @@ export default function OurServicesPage() {
             {/* Foundation */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                <Database className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
+                <Database className="w-6 h-6 mr-2 text-primary" />
                 {t('technologies.foundation.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
@@ -242,7 +242,7 @@ export default function OurServicesPage() {
             {/* Security */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                <ShieldCheck className="w-6 h-6 mr-2 text-green-600 dark:text-green-400" />
+                <ShieldCheck className="w-6 h-6 mr-2 text-primary" />
                 {t('technologies.security.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
@@ -253,7 +253,7 @@ export default function OurServicesPage() {
             {/* Efficiency */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                <Zap className="w-6 h-6 mr-2 text-orange-600 dark:text-orange-400" />
+                <Zap className="w-6 h-6 mr-2 text-primary" />
                 {t('technologies.efficiency.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
@@ -273,31 +273,31 @@ export default function OurServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 max-w-5xl mx-auto">
               <div className="flex items-start space-x-3">
                 <div className="flex-shrink-0 mt-1">
-                  <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 font-medium">{t('technologies.techStack.frontend')}</p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="flex-shrink-0 mt-1">
-                  <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 font-medium">{t('technologies.techStack.businessLogic')}</p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="flex-shrink-0 mt-1">
-                  <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 font-medium">{t('technologies.techStack.intelligence')}</p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="flex-shrink-0 mt-1">
-                  <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 font-medium">{t('technologies.techStack.orchestration')}</p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="flex-shrink-0 mt-1">
-                  <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 font-medium">{t('technologies.techStack.infrastructure')}</p>
               </div>
@@ -329,8 +329,8 @@ export default function OurServicesPage() {
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center mb-4">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400" />
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-primary" />
                   </div>
                 </div>
                 <h4 className="ml-4 text-xl font-semibold text-gray-900 dark:text-white">
@@ -340,8 +340,8 @@ export default function OurServicesPage() {
               <p className="text-gray-600 dark:text-gray-300 mb-6 min-h-[48px]">
                 {t('benefits.benefit1.description')}
               </p>
-              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-100 dark:border-blue-800/30">
-                <p className="text-sm font-semibold text-blue-700 dark:text-blue-300">
+              <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20">
+                <p className="text-sm font-semibold text-primary">
                   <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">{t('benefits.impactLabel')}</span>
                   {t('benefits.benefit1.impact')}
                 </p>
@@ -352,8 +352,8 @@ export default function OurServicesPage() {
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center mb-4">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400" />
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-primary" />
                   </div>
                 </div>
                 <h4 className="ml-4 text-xl font-semibold text-gray-900 dark:text-white">
@@ -363,8 +363,8 @@ export default function OurServicesPage() {
               <p className="text-gray-600 dark:text-gray-300 mb-6 min-h-[48px]">
                 {t('benefits.benefit2.description')}
               </p>
-              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-100 dark:border-blue-800/30">
-                <p className="text-sm font-semibold text-blue-700 dark:text-blue-300">
+              <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20">
+                <p className="text-sm font-semibold text-primary">
                   <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">{t('benefits.impactLabel')}</span>
                   {t('benefits.benefit2.impact')}
                 </p>
@@ -375,8 +375,8 @@ export default function OurServicesPage() {
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center mb-4">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400" />
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-primary" />
                   </div>
                 </div>
                 <h4 className="ml-4 text-xl font-semibold text-gray-900 dark:text-white">
@@ -386,8 +386,8 @@ export default function OurServicesPage() {
               <p className="text-gray-600 dark:text-gray-300 mb-6 min-h-[48px]">
                 {t('benefits.benefit3.description')}
               </p>
-              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-100 dark:border-blue-800/30">
-                <p className="text-sm font-semibold text-blue-700 dark:text-blue-300">
+              <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20">
+                <p className="text-sm font-semibold text-primary">
                   <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">{t('benefits.impactLabel')}</span>
                   {t('benefits.benefit3.impact')}
                 </p>
@@ -398,8 +398,8 @@ export default function OurServicesPage() {
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center mb-4">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400" />
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-primary" />
                   </div>
                 </div>
                 <h4 className="ml-4 text-xl font-semibold text-gray-900 dark:text-white">
@@ -409,8 +409,8 @@ export default function OurServicesPage() {
               <p className="text-gray-600 dark:text-gray-300 mb-6 min-h-[48px]">
                 {t('benefits.benefit4.description')}
               </p>
-              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-100 dark:border-blue-800/30">
-                <p className="text-sm font-semibold text-blue-700 dark:text-blue-300">
+              <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20">
+                <p className="text-sm font-semibold text-primary">
                   <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">{t('benefits.impactLabel')}</span>
                   {t('benefits.benefit4.impact')}
                 </p>
@@ -432,13 +432,13 @@ export default function OurServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* 1. Founder's Grant */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-[#2F4A5C]"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('cta.grant.title')}</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8 flex-grow">{t('cta.grant.description')}</p>
               <div className="mb-4">
                 <a
                   href="/contact"
-                  className="w-full block text-center py-3 px-6 rounded-lg bg-[#2F4A5C] text-white font-semibold hover:bg-[#1a2c38] transition-colors"
+                  className="w-full block text-center py-3 px-6 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
                 >
                   {t('cta.grant.button')}
                 </a>
@@ -468,7 +468,7 @@ export default function OurServicesPage() {
             {/* 3. Incinerator Protocol */}
             <div className="bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-xl p-8 shadow-sm flex flex-col">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                <ShieldCheck className="w-6 h-6 mr-2 text-gray-700 dark:text-gray-300" />
+                <ShieldCheck className="w-6 h-6 mr-2 text-primary" />
                 {t('cta.protocol.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm italic">
@@ -476,12 +476,12 @@ export default function OurServicesPage() {
               </p>
               <div className="space-y-4 mt-auto">
                 <div className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                   <p className="text-sm text-gray-700 dark:text-gray-300 font-medium">{t('cta.protocol.guarantee')}</p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5 flex items-center justify-center">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
                   </div>
                   <p className="text-sm text-gray-600 dark:text-gray-400">{t('cta.protocol.infrastructure')}</p>
                 </div>

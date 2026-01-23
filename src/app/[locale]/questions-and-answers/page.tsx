@@ -181,7 +181,7 @@ export default function QuestionsAndAnswersPage() {
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`flex items-center px-4 py-2 rounded-lg transition-colors ${selectedCategory === category.id
-                      ? 'bg-blue-600 text-white'
+                      ? 'bg-primary text-primary-foreground'
                       : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
                       }`}
                   >
@@ -252,8 +252,8 @@ export default function QuestionsAndAnswersPage() {
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 p-6 rounded-lg">
-              <Zap className="w-12 h-12 text-blue-600 dark:text-blue-400 mb-4" />
+            <div className="bg-primary/5 dark:bg-primary/20 p-6 rounded-lg">
+              <Zap className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('popularTopics.technology.title')}
               </h3>
@@ -262,14 +262,14 @@ export default function QuestionsAndAnswersPage() {
               </p>
               <button
                 onClick={() => setSelectedCategory('general')}
-                className="text-blue-600 dark:text-blue-400 font-medium hover:text-blue-800 dark:hover:text-blue-300"
+                className="text-primary font-medium hover:text-primary/80"
               >
                 {t('popularTopics.technology.link')}
               </button>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-800/30 p-6 rounded-lg">
-              <Shield className="w-12 h-12 text-green-600 dark:text-green-400 mb-4" />
+            <div className="bg-primary/5 dark:bg-primary/20 p-6 rounded-lg">
+              <Shield className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('popularTopics.security.title')}
               </h3>
@@ -278,14 +278,14 @@ export default function QuestionsAndAnswersPage() {
               </p>
               <button
                 onClick={() => setSelectedCategory('security')}
-                className="text-green-600 dark:text-green-400 font-medium hover:text-green-800 dark:hover:text-green-300"
+                className="text-primary font-medium hover:text-primary/80"
               >
                 {t('popularTopics.security.link')}
               </button>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/30 p-6 rounded-lg">
-              <Zap className="w-12 h-12 text-purple-600 dark:text-purple-400 mb-4" />
+            <div className="bg-primary/5 dark:bg-primary/20 p-6 rounded-lg">
+              <Zap className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('popularTopics.workflow.title')}
               </h3>
@@ -294,7 +294,7 @@ export default function QuestionsAndAnswersPage() {
               </p>
               <button
                 onClick={() => setSelectedCategory('process')}
-                className="text-purple-600 dark:text-purple-400 font-medium hover:text-purple-800 dark:hover:text-purple-300"
+                className="text-primary font-medium hover:text-primary/80"
               >
                 {t('popularTopics.workflow.link')}
               </button>
@@ -317,40 +317,40 @@ export default function QuestionsAndAnswersPage() {
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm text-center">
-              <MessageCircle className="w-12 h-12 text-blue-600 dark:text-blue-400 mx-auto mb-4" />
+              <MessageCircle className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('helpResources.whatsapp.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('helpResources.whatsapp.description')}
               </p>
-              <button className="bg-blue-600 dark:bg-blue-700 text-white px-6 py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-800 transition-colors">
+              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('helpResources.whatsapp.action')}
               </button>
             </div>
 
             <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm text-center">
-              <FileText className="w-12 h-12 text-purple-600 dark:text-purple-400 mx-auto mb-4" />
+              <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('helpResources.billing.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('helpResources.billing.description')}
               </p>
-              <button className="bg-purple-600 dark:bg-purple-700 text-white px-6 py-2 rounded-lg hover:bg-purple-700 dark:hover:bg-purple-800 transition-colors">
+              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('helpResources.billing.action')}
               </button>
             </div>
 
             <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm text-center">
-              <Book className="w-12 h-12 text-green-600 dark:text-green-400 mx-auto mb-4" />
+              <Book className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('helpResources.docs.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('helpResources.docs.description')}
               </p>
-              <button className="bg-green-600 dark:bg-green-700 text-white px-6 py-2 rounded-lg hover:bg-green-700 dark:hover:bg-green-800 transition-colors">
+              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('helpResources.docs.action')}
               </button>
             </div>
@@ -381,7 +381,7 @@ export default function QuestionsAndAnswersPage() {
               <div className="flex items-center justify-between">
                 <a
                   href="#"
-                  className="text-blue-600 dark:text-blue-400 font-medium hover:text-blue-800 dark:hover:text-blue-300"
+                  className="text-primary font-medium hover:text-primary/80"
                 >
                   {t('knowledgeBase.gettingStarted.cta')} →
                 </a>
@@ -398,7 +398,7 @@ export default function QuestionsAndAnswersPage() {
               <div className="flex items-center justify-between">
                 <a
                   href="#"
-                  className="text-blue-600 dark:text-blue-400 font-medium hover:text-blue-800 dark:hover:text-blue-300"
+                  className="text-primary font-medium hover:text-primary/80"
                 >
                   {t('knowledgeBase.bestPractices.cta')} →
                 </a>
@@ -415,7 +415,7 @@ export default function QuestionsAndAnswersPage() {
               <div className="flex items-center justify-between">
                 <a
                   href="#"
-                  className="text-blue-600 dark:text-blue-400 font-medium hover:text-blue-800 dark:hover:text-blue-300"
+                  className="text-primary font-medium hover:text-primary/80"
                 >
                   {t('knowledgeBase.advanced.cta')} →
                 </a>
@@ -432,7 +432,7 @@ export default function QuestionsAndAnswersPage() {
               <div className="flex items-center justify-between">
                 <a
                   href="#"
-                  className="text-blue-600 dark:text-blue-400 font-medium hover:text-blue-800 dark:hover:text-blue-300"
+                  className="text-primary font-medium hover:text-primary/80"
                 >
                   {t('knowledgeBase.troubleshooting.cta')} →
                 </a>
@@ -456,27 +456,27 @@ export default function QuestionsAndAnswersPage() {
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm flex flex-col items-center text-center">
-              <Activity className="w-12 h-12 text-orange-600 dark:text-orange-400 mb-4" />
+              <Activity className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('evolutionProtocol.reportFriction.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
                 {t('evolutionProtocol.reportFriction.description')}
               </p>
-              <button className="bg-orange-600 dark:bg-orange-700 text-white px-6 py-2 rounded-lg hover:bg-orange-700 dark:hover:bg-orange-800 transition-colors">
+              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('evolutionProtocol.reportFriction.cta')}
               </button>
             </div>
 
             <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm flex flex-col items-center text-center">
-              <Lightbulb className="w-12 h-12 text-yellow-500 dark:text-yellow-400 mb-4" />
+              <Lightbulb className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('evolutionProtocol.newSupply.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
                 {t('evolutionProtocol.newSupply.description')}
               </p>
-              <button className="bg-yellow-500 dark:bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-600 dark:hover:bg-yellow-700 transition-colors">
+              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('evolutionProtocol.newSupply.cta')}
               </button>
             </div>

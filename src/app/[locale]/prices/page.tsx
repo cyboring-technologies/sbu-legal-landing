@@ -67,7 +67,7 @@ export default function PricesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 mb-12">
             {/* Low Complexity */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-6 rounded-lg text-left shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-4 text-blue-600 dark:text-blue-400">
+              <div className="flex items-center mb-4 text-primary">
                 <FileText className="w-8 h-8 mr-3" />
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                   {t('creditSystem.items.low.title')}
@@ -83,7 +83,7 @@ export default function PricesPage() {
 
             {/* Medium Complexity */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-6 rounded-lg text-left shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-4 text-purple-600 dark:text-purple-400">
+              <div className="flex items-center mb-4 text-primary">
                 <ScrollText className="w-8 h-8 mr-3" />
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                   {t('creditSystem.items.medium.title')}
@@ -99,7 +99,7 @@ export default function PricesPage() {
 
             {/* High Complexity */}
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-6 rounded-lg text-left shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-4 text-red-600 dark:text-red-400">
+              <div className="flex items-center mb-4 text-primary">
                 <Building2 className="w-8 h-8 mr-3" />
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                   {t('creditSystem.items.high.title')}
@@ -157,19 +157,19 @@ export default function PricesPage() {
                 <div className="mt-6">
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{t('packages.items.founder.features.0')}</span>
                     </li>
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{t('packages.items.founder.features.1')}</span>
                     </li>
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{t('packages.items.founder.features.2')}</span>
                     </li>
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{t('packages.items.founder.features.3')}</span>
                     </li>
                   </ul>
@@ -201,19 +201,19 @@ export default function PricesPage() {
                 <div className="mt-6">
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{t('packages.items.solo.features.0')}</span>
                     </li>
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{t('packages.items.solo.features.1')}</span>
                     </li>
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{t('packages.items.solo.features.2')}</span>
                     </li>
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{t('packages.items.solo.features.3')}</span>
                     </li>
                   </ul>
@@ -292,26 +292,26 @@ export default function PricesPage() {
                 <div className="mt-6">
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-purple-600 mr-2 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{t('packages.items.factory.features.0')}</span>
                     </li>
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-purple-600 mr-2 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{t('packages.items.factory.features.1')}</span>
                     </li>
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-purple-600 mr-2 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{t('packages.items.factory.features.2')}</span>
                     </li>
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-purple-600 mr-2 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-primary mr-2 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{t('packages.items.factory.features.3')}</span>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="px-6 pb-8">
-                <CTAButton href="/contact" variant="primary" size="md" className="w-full justify-center bg-purple-600 hover:bg-purple-700 border-purple-600 text-white">
+                <CTAButton href="/contact" variant="primary" size="md" className="w-full justify-center">
                   {t('packages.items.factory.cta')}
                 </CTAButton>
               </div>
@@ -391,19 +391,19 @@ export default function PricesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-600 dark:text-gray-300">
             <div className="flex items-center justify-center sm:justify-start">
-              <Check className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" />
+              <Check className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
               <span className="text-lg font-medium">{t('faq.badges.badge1')}</span>
             </div>
             <div className="flex items-center justify-center sm:justify-start">
-              <Check className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" />
+              <Check className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
               <span className="text-lg font-medium">{t('faq.badges.badge2')}</span>
             </div>
             <div className="flex items-center justify-center sm:justify-start">
-              <Check className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" />
+              <Check className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
               <span className="text-lg font-medium">{t('faq.badges.badge3')}</span>
             </div>
             <div className="flex items-center justify-center sm:justify-start">
-              <Check className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" />
+              <Check className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
               <span className="text-lg font-medium">{t('faq.badges.badge4')}</span>
             </div>
           </div>
@@ -428,14 +428,14 @@ export default function PricesPage() {
               href="https://wa.me/18156620760"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-foreground bg-primary hover:bg-primary/90 md:py-4 md:text-lg md:px-10 transition-colors"
             >
               <Phone className="w-5 h-5 mr-2" />
               {t('cta.cta1')}
             </a>
             <a
               href="mailto:concierge@cyboring.com"
-              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-foreground bg-primary hover:bg-primary/90 md:py-4 md:text-lg md:px-10 transition-colors"
             >
               <Mail className="w-5 h-5 mr-2" />
               {t('cta.cta2')}

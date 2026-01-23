@@ -106,7 +106,7 @@ const Footer = () => {
     ],
     support: [
       { name: t('supportLinks.faq'), href: '/questions-and-answers' },
-      { name: t('supportLinks.help'), href: '/help' },
+      { name: t('supportLinks.help'), href: '/questions-and-answers' },
       { name: t('supportLinks.privacy'), href: '/privacy' },
       { name: t('supportLinks.terms'), href: '/terms' },
     ],
