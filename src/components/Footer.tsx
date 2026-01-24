@@ -104,11 +104,11 @@ const Footer = () => {
 
   const footerLinks = {
     company: [
-      { name: t('companyLinks.about'), href: '/about-us' },
       { name: t('companyLinks.services'), href: '/our-services' },
+      { name: t('companyLinks.about'), href: '/about-us' },
       { name: t('companyLinks.prices'), href: '/prices' },
-      { name: t('companyLinks.blog'), href: '/blog' },
       { name: t('companyLinks.contact'), href: '/contact' },
+      { name: t('companyLinks.blog'), href: '/blog' },
     ],
     support: [
       { name: t('supportLinks.faq'), href: '/questions-and-answers' },

@@ -40,6 +40,7 @@
         "tag": "Product Update"
       }
     },
+    "readArticle": "Read Article",
     "newsletter": {
       "title": "Stay in the Loop",
       "description": "Get the latest updates on legal engineering delivered to your inbox.",
@@ -175,24 +176,21 @@
     "askQuestion": "Ask a Question"
   },
   "contact": {
-    "title": "Ready to scale your strategic capability?",
-    "subtitle": "If you require a corporate implementation or advanced technical validation, our engineering team is available to coordinate your deployment.",
+    "title": "Ready to transform your legal practice?",
+    "subtitle": "Start processing documents with judicial-grade precision in 60 seconds.",
+    "primaryCTA": "Start with 50 Free Credits",
+    "advancedTitle": "For advanced or institutional requirements",
     "whatsapp": {
-      "title": "The WhatsApp Bridge (Immediate Attention)",
-      "description": "Instead of anonymous forms, we offer an Onboarding Concierge. If you have questions about using your credits or the security of a document, speak directly with a specialist.",
-      "cta": "Contact via WhatsApp",
-      "usage": "Use: Ideal for real-time technical support and quick questions about the platform."
+      "title": "WhatsApp Concierge",
+      "description": "Direct support for technical questions and platform guidance."
     },
     "enterprise": {
-      "title": "Enterprise Solutions & Law Firms",
-      "description": "For firms requiring centralized billing and custom volume plans.",
-      "point1": "Tailored Plans: Management of multiple users and consumption reports for large legal teams.",
-      "point2": "Billing: Issuance of institutional invoices under international standards."
+      "title": "Enterprise Solutions",
+      "description": "Centralized billing and custom volume plans for law firms."
     },
     "security": {
-      "title": "Security Validation & Compliance",
-      "description": "If your legal department requires validation of our Azure infrastructure or Incinerator Protocol compliance, we coordinate a technical session.",
-      "point1": "Guarantee: Review of data destruction protocols and segregation of Zone A (Platform) and Zone B (Product)."
+      "title": "Security Validation",
+      "description": "Azure infrastructure review and Incinerator Protocol compliance coordination."
     }
   },
   "questionsAndAnswers": {
@@ -947,7 +945,7 @@
     "services": "Services",
     "companyLinks": {
       "about": "About Us",
-      "services": "Our Services",
+      "services": "Services",
       "prices": "Prices",
       "blog": "Blog",
       "contact": "Contact"
@@ -959,10 +957,10 @@
       "terms": "Terms of Service"
     },
     "servicesLinks": {
-      "document": "Document Processing",
-      "analytics": "Data Analytics",
-      "ai": "AI Solutions",
-      "automation": "Automation"
+      "document": "Legal Document Generation & Management",
+      "analytics": "Assisted Legal Analysis",
+      "ai": "Digital Legal Infrastructure",
+      "automation": "Legal Workflow Automation"
     },
     "contactTitle": "Contact Us",
     "copyright": "© {year} <companyLink>Cyboring Technologies LLC</companyLink>. All rights reserved. Delaware, USA.",

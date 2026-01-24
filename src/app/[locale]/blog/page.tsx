@@ -16,17 +16,17 @@ export default function BlogPage() {
         {
             id: 'post1',
             image: '/images/blog/legal-tech-1.jpg', // Placeholder, using solid color div for now if image missing
-            fallbackColor: 'bg-blue-900',
+            fallbackColor: 'bg-gray-800',
         },
         {
             id: 'post2',
             image: '/images/blog/security.jpg',
-            fallbackColor: 'bg-indigo-900',
+            fallbackColor: 'bg-gray-700',
         },
         {
             id: 'post3',
             image: '/images/blog/update.jpg',
-            fallbackColor: 'bg-purple-900',
+            fallbackColor: 'bg-gray-900',
         },
     ];
 
@@ -88,7 +88,7 @@ export default function BlogPage() {
                                             </div>
                                         </div>
 
-                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
                                             {t(`posts.${post.id}.title`)}
                                         </h3>
 
@@ -96,8 +96,8 @@ export default function BlogPage() {
                                             {t(`posts.${post.id}.description`)}
                                         </p>
 
-                                        <div className="flex items-center text-blue-600 dark:text-blue-400 font-medium group-hover:translate-x-1 transition-transform cursor-pointer">
-                                            Read Article <ArrowRight className="w-4 h-4 ml-1" />
+                                        <div className="flex items-center text-gray-700 dark:text-gray-300 font-medium group-hover:translate-x-1 transition-transform cursor-pointer">
+                                            {t('readArticle')} <ArrowRight className="w-4 h-4 ml-1" />
                                         </div>
                                     </div>
                                 </div>
@@ -109,13 +109,15 @@ export default function BlogPage() {
                 {/* Newsletter Section - Functional */}
                 <section id="newsletter" className="py-24 bg-gray-50 dark:bg-gray-900/50 border-b border-border relative">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                        <div className="inline-flex items-center justify-center p-3 sm:p-4 bg-gray-100 dark:bg-gray-800 rounded-full mb-6">
-                            <Mail className="w-6 h-6 text-gray-900 dark:text-white" />
+                        <div className="flex items-center justify-center gap-4 mb-6">
+                            <div className="flex items-center justify-center p-3 sm:p-4 bg-gray-100 dark:bg-gray-800 rounded-full transition-transform duration-300 hover:scale-110">
+                                <Mail className="w-6 h-6 text-gray-900 dark:text-white" />
+                            </div>
+                            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+                                {t('newsletter.title')}
+                            </h2>
                         </div>
 
-                        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                            {t('newsletter.title')}
-                        </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
                             {t('newsletter.description')}
                         </p>
@@ -124,9 +126,9 @@ export default function BlogPage() {
                             <input
                                 type="email"
                                 placeholder={t('newsletter.placeholder')}
-                                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:border-gray-500 dark:focus:border-gray-500 outline-none focus-visible:outline-none ring-0 focus:ring-0 transition-all"
                             />
-                            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-lg shadow-blue-600/20">
+                            <button className="px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-lg transition-colors shadow-lg">
                                 {t('newsletter.cta')}
                             </button>
                         </div>

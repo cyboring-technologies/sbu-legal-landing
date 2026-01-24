@@ -40,6 +40,7 @@
         "tag": "Actualización de Producto"
       }
     },
+    "readArticle": "Leer Artículo",
     "newsletter": {
       "title": "Mantente Informado",
       "description": "Recibe las últimas actualizaciones sobre ingeniería legal directamente en tu bandeja de entrada.",
@@ -175,24 +176,21 @@
     "askQuestion": "Hacer una Pregunta"
   },
   "contact": {
-    "title": "¿Listo para escalar su capacidad estratégica?",
-    "subtitle": "Si requiere una implementación corporativa o validación técnica avanzada, nuestro equipo de ingeniería está disponible para coordinar su despliegue.",
+    "title": "¿Listo para transformar su práctica legal?",
+    "subtitle": "Comience a procesar documentos con precisión de grado judicial en 60 segundos.",
+    "primaryCTA": "Empezar con 50 Créditos de Regalo",
+    "advancedTitle": "Para requerimientos avanzados o institucionales",
     "whatsapp": {
-      "title": "El Puente de WhatsApp (Atención Inmediata)",
-      "description": "En lugar de formularios anónimos, ofrecemos un Onboarding Concierge. Si tiene dudas sobre el uso de sus créditos o la seguridad de un documento, hable directamente con un especialista.",
-      "cta": "Contactar vía WhatsApp",
-      "usage": "Uso: Ideal para soporte técnico en tiempo real y consultas rápidas sobre la plataforma."
+      "title": "WhatsApp Concierge",
+      "description": "Soporte directo para consultas técnicas y orientación de plataforma."
     },
     "enterprise": {
-      "title": "Soluciones Enterprise y Despachos",
-      "description": "Para firmas que requieren facturación centralizada y planes de volumen personalizados.",
-      "point1": "Planes a medida: Gestión de múltiples usuarios y reportes de consumo para grandes equipos legales.",
-      "point2": "Facturación: Emisión de comprobantes institucionales bajo estándares internacionales."
+      "title": "Soluciones Enterprise",
+      "description": "Facturación centralizada y planes de volumen personalizados para despachos."
     },
     "security": {
-      "title": "Validación de Seguridad y Cumplimiento",
-      "description": "Si su departamento legal requiere validar nuestra infraestructura de Azure o el cumplimiento del Protocolo Incinerador, coordinamos una sesión técnica.",
-      "point1": "Garantía: Revisión de protocolos de destrucción de datos y segregación de Zona A (Plataforma) y Zona B (Producto)."
+      "title": "Validación de Seguridad",
+      "description": "Revisión de infraestructura Azure y coordinación de cumplimiento del Protocolo Incinerador."
     }
   },
   "questionsAndAnswers": {
@@ -900,7 +898,7 @@
     "services": "Servicios",
     "companyLinks": {
       "about": "Nosotros",
-      "services": "Nuestros Servicios",
+      "services": "Servicios",
       "prices": "Precios",
       "blog": "Blog",
       "contact": "Contacto"
@@ -912,10 +910,10 @@
       "terms": "Términos de Servicio"
     },
     "servicesLinks": {
-      "document": "Procesamiento de Documentos",
-      "analytics": "Análisis de Datos",
-      "ai": "Soluciones de IA",
-      "automation": "Automatización"
+      "document": "Generación y Gestión de Documentos Legales",
+      "analytics": "Análisis Jurídico Asistido",
+      "ai": "Infraestructura Legal Digital",
+      "automation": "Automatización de Flujos Legales"
     },
     "contactTitle": "Contáctenos",
     "copyright": "© {year} <companyLink>Cyboring Technologies LLC</companyLink>. Todos los derechos reservados. Delaware, USA.",

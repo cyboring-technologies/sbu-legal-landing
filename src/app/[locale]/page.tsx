@@ -256,14 +256,16 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
               ref={cardRefs[0]}
-              className={`text-center p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${cardVisibility[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
+              className={`p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${cardVisibility[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <FileX className="w-8 h-8" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <FileX className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 font-sans">
+                  {tProblems('slowTransformation.title')}
+                </h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 font-sans">
-                {tProblems('slowTransformation.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-400 font-sans">
                 {tProblems('slowTransformation.description')}
               </p>
@@ -271,14 +273,16 @@ export default function HomePage() {
 
             <div
               ref={cardRefs[1]}
-              className={`text-center p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${cardVisibility[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
+              className={`p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${cardVisibility[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <AlertTriangle className="w-8 h-8" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <AlertTriangle className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 font-sans">
+                  {tProblems('poorExperience.title')}
+                </h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 font-sans">
-                {tProblems('poorExperience.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-400 font-sans">
                 {tProblems('poorExperience.description')}
               </p>
@@ -286,14 +290,16 @@ export default function HomePage() {
 
             <div
               ref={cardRefs[2]}
-              className={`text-center p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${cardVisibility[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
+              className={`p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${cardVisibility[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Clock className="w-8 h-8" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Clock className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 font-sans">
+                  {tProblems('opportunityCost.title')}
+                </h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 font-sans">
-                {tProblems('opportunityCost.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-400 font-sans">
                 {tProblems('opportunityCost.description')}
               </p>
@@ -686,87 +692,78 @@ export default function HomePage() {
         </div>
       </section >
 
-      {/* Contact Us Section */}
-      <section className="py-16 bg-background border-b border-border relative overflow-hidden">
-
+      {/* Final CTA Section */}
+      <section className="py-24 bg-background relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+          {/* LAYER 1: PRIMARY FINAL CTA (DOMINANT) */}
           <div
             ref={contactHeaderRef}
-            className={`text-center mb-12 transition-all duration-1000 ${isContactHeaderVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            className={`text-center mb-16 transition-all duration-1000 ${isContactHeaderVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
               {tContact('title')}
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
               {tContact('subtitle')}
             </p>
+            <CTAButton
+              href="/login"
+              variant="primary"
+              size="lg"
+              className="px-12 py-4 text-lg shadow-2xl hover:shadow-xl"
+            >
+              {tContact('primaryCTA')}
+            </CTAButton>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* WhatsApp Card */}
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2 group">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <MessageSquare className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">{tContact('whatsapp.title')}</h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed font-sans">
-                {tContact('whatsapp.description')}
-              </p>
-              <a
-                href="https://wa.me/18156620760"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full text-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-lg transition-colors mb-4 shadow-md font-sans"
-              >
-                {tContact('whatsapp.cta')}
-              </a>
-              <p className="text-sm text-gray-500 dark:text-gray-400 italic border-t border-gray-100 dark:border-gray-800 pt-4 font-sans">
-                {tContact('whatsapp.usage')}
-              </p>
-            </div>
+          {/* LAYER 2: SECONDARY PATHS (DE-EMPHASIZED) */}
+          <div className="max-w-4xl mx-auto pt-12 border-t border-border">
+            <h3 className="text-sm font-medium text-muted-foreground text-center mb-8">
+              {tContact('advancedTitle')}
+            </h3>
 
-            {/* Enterprise Card */}
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2 group">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Scale className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">{tContact('enterprise.title')}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              {/* WhatsApp */}
+              <div className="space-y-2">
+                <a
+                  href="https://wa.me/18156620760"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors underline-offset-4 hover:underline"
+                >
+                  {tContact('whatsapp.title')}
+                </a>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  {tContact('whatsapp.description')}
+                </p>
               </div>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed font-sans">
-                {tContact('enterprise.description')}
-              </p>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-800 pt-6 font-sans">
-                <li className="flex items-start">
-                  <span className="mr-2 text-gray-400">•</span>
-                  {tContact('enterprise.point1')}
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-gray-400">•</span>
-                  {tContact('enterprise.point2')}
-                </li>
-              </ul>
-            </div>
 
-            {/* Security Card */}
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2 group">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">{tContact('security.title')}</h3>
+              {/* Enterprise */}
+              <div className="space-y-2">
+                <a
+                  href="/contact"
+                  className="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors underline-offset-4 hover:underline"
+                >
+                  {tContact('enterprise.title')}
+                </a>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  {tContact('enterprise.description')}
+                </p>
               </div>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed font-sans">
-                {tContact('security.description')}
-              </p>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-400 border-t border-gray-100 dark:border-gray-800 pt-6 font-sans">
-                <li className="flex items-start">
-                  <span className="mr-2 text-gray-400">•</span>
-                  {tContact('security.point1')}
-                </li>
-              </ul>
+
+              {/* Security */}
+              <div className="space-y-2">
+                <a
+                  href="/privacy"
+                  className="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors underline-offset-4 hover:underline"
+                >
+                  {tContact('security.title')}
+                </a>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  {tContact('security.description')}
+                </p>
+              </div>
             </div>
           </div>
         </div>
