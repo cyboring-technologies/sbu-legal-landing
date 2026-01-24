@@ -124,7 +124,7 @@ const Hero: React.FC<HeroProps> = ({
           </div>
 
           {/* Trust Block (Grouped) */}
-          <div className="mt-24 pt-8 border-t border-border/50 flex flex-col items-center gap-6">
+          <div className="mt-24 pt-8 flex flex-col items-center gap-6">
             {foundersGrant && (
               <p className="text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
                 {foundersGrant}

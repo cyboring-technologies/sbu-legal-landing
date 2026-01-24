@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import Layout from '../../../components/Layout';
 import Hero from '../../../components/Hero';
+import { InteractiveGridAnimatedRadialInward } from '../../../components/InteractiveGridAnimatedRadialInward';
 import { InteractiveGridPulse } from '../../../components/InteractiveGridPulse';
 import { CTAButton } from '../../../components/CTAButtons';
 import { FadeIn } from '../../../components/ui/animations/FadeIn';
@@ -29,6 +30,32 @@ import { PageTransition } from '../../../components/ui/PageTransition';
 
 export default function OurServicesPage() {
   const t = useTranslations('ourServices');
+  const [showRadialEffect, setShowRadialEffect] = React.useState(true);
+  const [radialEffectOpacity, setRadialEffectOpacity] = React.useState(1);
+
+  React.useEffect(() => {
+    // Animation runs for approximately 300 offset units at 0.125 per frame
+    // At ~60fps, that's about 300/0.125 = 2400 frames = ~40 seconds for full cycle
+    // But the visible wave effect completes much faster, around 8-10 seconds
+    // Let's use 10 seconds for the complete wave animation
+    const animationDuration = 10000; // 10 seconds
+    const fadeOutDuration = 1000; // 1 second
+
+    // Start fade out after animation completes
+    const fadeOutTimer = setTimeout(() => {
+      setRadialEffectOpacity(0);
+    }, animationDuration);
+
+    // Remove component after fade out completes
+    const removeTimer = setTimeout(() => {
+      setShowRadialEffect(false);
+    }, animationDuration + fadeOutDuration);
+
+    return () => {
+      clearTimeout(fadeOutTimer);
+      clearTimeout(removeTimer);
+    };
+  }, []);
 
   return (
     <Layout>
@@ -48,6 +75,16 @@ export default function OurServicesPage() {
             backgroundImage="/images/services-hero-bg.jpg"
             backgroundVariant="radial"
           />
+          {showRadialEffect && (
+            <div
+              style={{
+                opacity: radialEffectOpacity,
+                transition: 'opacity 1s ease-out'
+              }}
+            >
+              <InteractiveGridAnimatedRadialInward startImmediately runOnce />
+            </div>
+          )}
           <InteractiveGridPulse />
         </div>{' '}
         {/* Overview - Narrative */}

@@ -3,11 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 
-const InteractiveGridAnimatedRadialInward = dynamic(
-    () => import('./InteractiveGridAnimatedRadialInward').then((m) => m.InteractiveGridAnimatedRadialInward),
-    { ssr: false }
-);
-
 const InteractiveGridPulse = dynamic(
     () => import('./InteractiveGridPulse').then((m) => m.InteractiveGridPulse),
     { ssr: false }
@@ -45,7 +40,6 @@ export function HeroBackgroundEffects() {
         <div
             className={`transition-opacity duration-1000 ease-in-out ${mounted ? 'opacity-100' : 'opacity-0'}`}
         >
-            <InteractiveGridAnimatedRadialInward />
             <InteractiveGridPulse />
         </div>
     );

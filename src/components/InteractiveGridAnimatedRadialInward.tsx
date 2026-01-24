@@ -4,12 +4,14 @@ import React, { useEffect, useRef, useState } from 'react';
 
 interface InteractiveGridAnimatedRadialInwardProps {
     targetSelector?: string;
+    startImmediately?: boolean;
+    runOnce?: boolean;
 }
 
 // Optimized Canvas version of the Square Wave Grid (Outside -> Center)
 const InteractiveGridAnimatedRadialInwardComponent: React.FC<
     InteractiveGridAnimatedRadialInwardProps
-> = ({ targetSelector }) => {
+> = ({ targetSelector, startImmediately = false, runOnce = false }) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const [targetPos, setTargetPos] = useState<{ x: number; y: number } | null>(null);
@@ -77,7 +79,14 @@ const InteractiveGridAnimatedRadialInwardComponent: React.FC<
             // Original: setAnimationOffset((prev) => (prev + 1.5) % 300) every 80ms
             // 60fps is approx 16ms/frame.
             // User reverted to 0.125 for "premium/stable" feel.
-            animationOffset = (animationOffset + 0.125) % 300;
+            if (runOnce && animationOffset >= 300) {
+                // Stop animation after one complete cycle
+                cancelAnimationFrame(animationFrameId);
+                return;
+            }
+            animationOffset = runOnce
+                ? Math.min(animationOffset + 0.125, 300)
+                : (animationOffset + 0.125) % 300;
 
             // Max Distance calculation (Manhattan)
             const maxDistanceX = Math.max(centerX, width - centerX) / gridSize;
@@ -125,16 +134,17 @@ const InteractiveGridAnimatedRadialInwardComponent: React.FC<
             animationFrameId = requestAnimationFrame(render);
         };
 
-        // Delay animation start by 3 seconds for better initial page load performance
+        // Use startImmediately to control delay
+        const delay = startImmediately ? 0 : 3000;
         const timerId = setTimeout(() => {
             render();
-        }, 3000);
+        }, delay);
 
         return () => {
             clearTimeout(timerId);
             cancelAnimationFrame(animationFrameId);
         };
-    }, [targetPos]);
+    }, [targetPos, startImmediately, runOnce]);
 
     return (
         <div ref={containerRef} className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
