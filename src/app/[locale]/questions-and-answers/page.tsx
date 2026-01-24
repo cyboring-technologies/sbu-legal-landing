@@ -256,8 +256,8 @@ export default function QuestionsAndAnswersPage() {
           />
 
           <StaggeredGrid columns={3} className="mt-12">
-            <HoverCard className="p-6 bg-primary/5 dark:bg-primary/20 border-transparent">
-              <Zap className="w-12 h-12 text-primary mb-4" />
+            <HoverCard className="p-6 bg-primary/5 dark:bg-primary/20 border-transparent group">
+              <Zap className="w-12 h-12 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('popularTopics.technology.title')}
               </h3>
@@ -272,8 +272,8 @@ export default function QuestionsAndAnswersPage() {
               </button>
             </HoverCard>
 
-            <HoverCard className="p-6 bg-primary/5 dark:bg-primary/20 border-transparent">
-              <Shield className="w-12 h-12 text-primary mb-4" />
+            <HoverCard className="p-6 bg-primary/5 dark:bg-primary/20 border-transparent group">
+              <Shield className="w-12 h-12 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('popularTopics.security.title')}
               </h3>
@@ -288,8 +288,8 @@ export default function QuestionsAndAnswersPage() {
               </button>
             </HoverCard>
 
-            <HoverCard className="p-6 bg-primary/5 dark:bg-primary/20 border-transparent">
-              <Zap className="w-12 h-12 text-primary mb-4" />
+            <HoverCard className="p-6 bg-primary/5 dark:bg-primary/20 border-transparent group">
+              <Zap className="w-12 h-12 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('popularTopics.workflow.title')}
               </h3>
@@ -316,43 +316,56 @@ export default function QuestionsAndAnswersPage() {
           />
 
           <StaggeredGrid columns={3} className="mt-12">
-            <HoverCard className="p-8 text-center">
-              <MessageCircle className="w-12 h-12 text-primary mx-auto mb-4" />
+            <HoverCard className="p-8 text-center group">
+              <MessageCircle className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('helpResources.whatsapp.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('helpResources.whatsapp.description')}
               </p>
-              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+              <a
+                href="https://wa.me/18156620760"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors inline-block"
+              >
                 {t('helpResources.whatsapp.action')}
-              </button>
+              </a>
             </HoverCard>
 
-            <HoverCard className="p-8 text-center">
-              <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
+            <HoverCard className="p-8 text-center group">
+              <FileText className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('helpResources.billing.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('helpResources.billing.description')}
               </p>
-              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+              <a
+                href="mailto:hello@cyboring.com?subject=Consulta de Facturación"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors inline-block"
+              >
                 {t('helpResources.billing.action')}
-              </button>
+              </a>
             </HoverCard>
 
-            <HoverCard className="p-8 text-center">
-              <Book className="w-12 h-12 text-primary mx-auto mb-4" />
+            <HoverCard className="p-8 text-center group">
+              <Book className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('helpResources.docs.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('helpResources.docs.description')}
               </p>
-              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+              <a
+                href="#"
+                className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors inline-block"
+              >
                 {t('helpResources.docs.action')}
-              </button>
+              </a>
             </HoverCard>
           </StaggeredGrid>
         </div>
@@ -447,30 +460,40 @@ export default function QuestionsAndAnswersPage() {
           />
 
           <StaggeredGrid columns={2} className="mt-12">
-            <HoverCard className="p-8 flex flex-col items-center text-center">
-              <Activity className="w-12 h-12 text-primary mb-4" />
+            <HoverCard className="p-8 flex flex-col items-center text-center group">
+              <Activity className="w-12 h-12 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('evolutionProtocol.reportFriction.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
                 {t('evolutionProtocol.reportFriction.description')}
               </p>
-              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+              <a
+                href="mailto:hello@cyboring.com?subject=Reporte de Fricción Técnica"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors inline-block"
+              >
                 {t('evolutionProtocol.reportFriction.cta')}
-              </button>
+              </a>
             </HoverCard>
 
-            <HoverCard className="p-8 flex flex-col items-center text-center">
-              <Lightbulb className="w-12 h-12 text-primary mb-4" />
+            <HoverCard className="p-8 flex flex-col items-center text-center group">
+              <Lightbulb className="w-12 h-12 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('evolutionProtocol.newSupply.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
                 {t('evolutionProtocol.newSupply.description')}
               </p>
-              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+              <a
+                href="mailto:hello@cyboring.com?subject=Propuesta de Nuevo Módulo Documental"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors inline-block"
+              >
                 {t('evolutionProtocol.newSupply.cta')}
-              </button>
+              </a>
             </HoverCard>
           </StaggeredGrid>
         </div>

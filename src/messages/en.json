@@ -375,7 +375,7 @@
       "description": "We substitute artisan drafting with high-precision engineering processes, allowing you to focus your intellect on strategy while we process the technical load."
     },
     "draftingEngine": {
-      "title": "1. The Drafting Engine",
+      "title": "The Drafting Engine",
       "description": "It is our flagship tool for building complex arguments. It acts as a \"Constructor\" that translates your strategic guidelines into documents structured with judicial rigor.",
       "capabilities": "Generation of Answers to Complaints, Civil Complaints, and Appeal Resources.",
       "rigor": "Structuring of arguments with impeccable tone and normative precision.",
@@ -383,7 +383,7 @@
       "cta": "Test Drafting Engine"
     },
     "contractEngineering": {
-      "title": "2. Contract and Legal Act Engineering",
+      "title": "Contract and Legal Act Engineering",
       "description": "Designed for the agile creation of transactional documents and notifications without transcription errors.",
       "supportedDocs": "Lease Contracts, Simple Notifications, and Commercial Agreements.",
       "efficiency": "We transform hours of technical drafting into minutes of executive review.",
@@ -391,7 +391,7 @@
       "cta": "Create Contract"
     },
     "infrastructure": {
-      "title": "3. Infrastructure and Security: The Incinerator Protocol",
+      "title": "Infrastructure and Security: The Incinerator Protocol",
       "description": "The technical foundation guaranteeing your strategic information is never permanently stored.",
       "totalDeletion": "All client files and secrets are automatically eliminated 60 minutes after processing.",
       "orchestration": "We use a native orchestrator that dynamically selects the best models via Microsoft AI Foundry.",
@@ -477,19 +477,19 @@
       "title": "End Artisanal Drafting. Start Engineering.",
       "subtitle": "Reclaim your mental bandwidth. Delegate document grunt work to our judicial-grade infrastructure and focus your intellect on winning strategy.",
       "grant": {
-        "title": "1. The Founder’s Grant",
+        "title": "The Founder’s Grant",
         "description": "We don’t sell promises, we deliver immediate operational capacity. We grant you the resources to validate our technical rigor without initial financial commitment.",
         "button": "Start — 50 Gift Credits",
         "microcopy": "Enough for a full lawsuit. No credit cards."
       },
       "whatsapp": {
-        "title": "2. The Trust Bridge (WhatsApp Bridge)",
+        "title": "The Trust Bridge",
         "description": "For firms requiring human validation before integrating new technical infrastructure.",
         "button": "WhatsApp Concierge",
         "microcopy": "Speak with a document engineering specialist."
       },
       "protocol": {
-        "title": "3. Trust Signal: The Incinerator Protocol",
+        "title": "Trust Signal: The Incinerator Protocol",
         "description": "Your security is not an option, it is an architectural law in our platform.",
         "guarantee": "Guarantee: \"Documents processed in a stateless environment: total destruction of files and secrets in 60 minutes\".",
         "infrastructure": "Infrastructure: \"Operation 100% on Microsoft Azure with institutional compliance standards\"."

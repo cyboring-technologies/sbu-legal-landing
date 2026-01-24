@@ -58,13 +58,15 @@ export default function OurServicesPage() {
 
           <StaggeredGrid columns={3} className="mt-12">
             {/* 1. Drafting Engine */}
-            <HoverCard className="p-8 flex flex-col h-full">
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-lg flex items-center justify-center mb-6">
-                <Code className="w-8 h-8" />
+            <HoverCard className="p-8 flex flex-col h-full group">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Code className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  {t('draftingEngine.title')}
+                </h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                {t('draftingEngine.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
                 {t('draftingEngine.description')}
               </p>
@@ -91,13 +93,15 @@ export default function OurServicesPage() {
             </HoverCard>
 
             {/* 2. Contract Engineering */}
-            <HoverCard className="p-8 flex flex-col h-full">
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-lg flex items-center justify-center mb-6">
-                <FileText className="w-8 h-8" />
+            <HoverCard className="p-8 flex flex-col h-full group">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <FileText className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  {t('contractEngineering.title')}
+                </h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                {t('contractEngineering.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
                 {t('contractEngineering.description')}
               </p>
@@ -124,13 +128,15 @@ export default function OurServicesPage() {
             </HoverCard>
 
             {/* 3. Infrastructure */}
-            <HoverCard className="p-8 flex flex-col h-full">
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-lg flex items-center justify-center mb-6">
-                <ShieldCheck className="w-8 h-8" />
+            <HoverCard className="p-8 flex flex-col h-full group">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  {t('infrastructure.title')}
+                </h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                {t('infrastructure.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
                 {t('infrastructure.description')}
               </p>
@@ -221,9 +227,9 @@ export default function OurServicesPage() {
 
           <StaggeredGrid columns={3} className="mb-16">
             {/* Foundation */}
-            <HoverCard className="p-8">
+            <HoverCard className="p-8 group">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                <Database className="w-6 h-6 mr-2 text-primary" />
+                <Database className="w-6 h-6 mr-2 text-primary group-hover:scale-110 transition-transform duration-300" />
                 {t('technologies.foundation.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
@@ -232,9 +238,9 @@ export default function OurServicesPage() {
             </HoverCard>
 
             {/* Security */}
-            <HoverCard className="p-8">
+            <HoverCard className="p-8 group">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                <ShieldCheck className="w-6 h-6 mr-2 text-primary" />
+                <ShieldCheck className="w-6 h-6 mr-2 text-primary group-hover:scale-110 transition-transform duration-300" />
                 {t('technologies.security.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
@@ -243,9 +249,9 @@ export default function OurServicesPage() {
             </HoverCard>
 
             {/* Efficiency */}
-            <HoverCard className="p-8">
+            <HoverCard className="p-8 group">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                <Zap className="w-6 h-6 mr-2 text-primary" />
+                <Zap className="w-6 h-6 mr-2 text-primary group-hover:scale-110 transition-transform duration-300" />
                 {t('technologies.efficiency.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
@@ -316,10 +322,10 @@ export default function OurServicesPage() {
 
           <StaggeredGrid columns={2}>
             {/* Benefit 1 */}
-            <HoverCard className="p-8">
+            <HoverCard className="p-8 group">
               <div className="flex items-center mb-4">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <CheckCircle className="w-6 h-6 text-primary" />
                   </div>
                 </div>
@@ -339,10 +345,10 @@ export default function OurServicesPage() {
             </HoverCard>
 
             {/* Benefit 2 */}
-            <HoverCard className="p-8">
+            <HoverCard className="p-8 group">
               <div className="flex items-center mb-4">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <CheckCircle className="w-6 h-6 text-primary" />
                   </div>
                 </div>
@@ -362,10 +368,10 @@ export default function OurServicesPage() {
             </HoverCard>
 
             {/* Benefit 3 */}
-            <HoverCard className="p-8">
+            <HoverCard className="p-8 group">
               <div className="flex items-center mb-4">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <CheckCircle className="w-6 h-6 text-primary" />
                   </div>
                 </div>
@@ -385,10 +391,10 @@ export default function OurServicesPage() {
             </HoverCard>
 
             {/* Benefit 4 */}
-            <HoverCard className="p-8">
+            <HoverCard className="p-8 group">
               <div className="flex items-center mb-4">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <CheckCircle className="w-6 h-6 text-primary" />
                   </div>
                 </div>
@@ -458,8 +464,7 @@ export default function OurServicesPage() {
 
             {/* 3. Incinerator Protocol */}
             <HoverCard className="p-8 flex flex-col bg-gray-50 dark:bg-gray-800/50">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                <ShieldCheck className="w-6 h-6 mr-2 text-primary" />
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                 {t('cta.protocol.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm italic">
@@ -467,7 +472,6 @@ export default function OurServicesPage() {
               </p>
               <div className="space-y-4 mt-auto">
                 <div className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                   <p className="text-sm text-gray-700 dark:text-gray-300 font-medium">{t('cta.protocol.guarantee')}</p>
                 </div>
                 <div className="flex items-start">

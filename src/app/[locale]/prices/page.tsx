@@ -64,9 +64,9 @@ export default function PricesPage() {
           {/* Complexity Cards */}
           <StaggeredGrid columns={3} className="mt-12 mb-12">
             {/* Low Complexity */}
-            <HoverCard className="p-6 text-left">
+            <HoverCard className="p-6 text-left group">
               <div className="flex items-center mb-4 text-primary">
-                <FileText className="w-8 h-8 mr-3" />
+                <FileText className="w-8 h-8 mr-3 group-hover:scale-110 transition-transform duration-300" />
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                   {t('creditSystem.items.low.title')}
                 </h4>
@@ -80,9 +80,9 @@ export default function PricesPage() {
             </HoverCard>
 
             {/* Medium Complexity */}
-            <HoverCard className="p-6 text-left">
+            <HoverCard className="p-6 text-left group">
               <div className="flex items-center mb-4 text-primary">
-                <ScrollText className="w-8 h-8 mr-3" />
+                <ScrollText className="w-8 h-8 mr-3 group-hover:scale-110 transition-transform duration-300" />
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                   {t('creditSystem.items.medium.title')}
                 </h4>
@@ -96,9 +96,9 @@ export default function PricesPage() {
             </HoverCard>
 
             {/* High Complexity */}
-            <HoverCard className="p-6 text-left">
+            <HoverCard className="p-6 text-left group">
               <div className="flex items-center mb-4 text-primary">
-                <Building2 className="w-8 h-8 mr-3" />
+                <Building2 className="w-8 h-8 mr-3 group-hover:scale-110 transition-transform duration-300" />
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                   {t('creditSystem.items.high.title')}
                 </h4>

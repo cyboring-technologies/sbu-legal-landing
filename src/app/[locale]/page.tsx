@@ -29,6 +29,7 @@ import {
   Target,
   Cpu,
   ChevronDown,
+  FileX,
 } from 'lucide-react';
 
 // Dynamic imports for heavy components - reduces initial bundle size
@@ -269,7 +270,7 @@ export default function HomePage() {
               className={`text-center p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${cardVisibility[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
               <div className="w-20 h-20 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
-                <Brain className="w-8 h-8" />
+                <FileX className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 font-sans">
                 {tProblems('slowTransformation.title')}
@@ -284,7 +285,7 @@ export default function HomePage() {
               className={`text-center p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${cardVisibility[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
               <div className="w-20 h-20 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
-                <AlertTriangle className="w-10 h-10" />
+                <AlertTriangle className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 font-sans">
                 {tProblems('poorExperience.title')}
@@ -299,7 +300,7 @@ export default function HomePage() {
               className={`text-center p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${cardVisibility[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
               <div className="w-20 h-20 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
-                <Clock className="w-10 h-10" />
+                <Clock className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 font-sans">
                 {tProblems('opportunityCost.title')}
@@ -334,12 +335,14 @@ export default function HomePage() {
               ref={solutionCardRefs[0]}
               className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${solutionCardVisibility[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Crown className="w-8 h-8" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Crown className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">
+                  {tSolution('hitl.title')}
+                </h3>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">
-                {tSolution('hitl.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
                 {tSolution('hitl.description')}
               </p>
@@ -350,12 +353,14 @@ export default function HomePage() {
               ref={solutionCardRefs[1]}
               className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${solutionCardVisibility[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Cpu className="w-8 h-8" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Cpu className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">
+                  {tSolution('orchestration.title')}
+                </h3>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">
-                {tSolution('orchestration.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
                 {tSolution('orchestration.description')}
               </p>
@@ -366,12 +371,14 @@ export default function HomePage() {
               ref={solutionCardRefs[2]}
               className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${solutionCardVisibility[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <ShieldCheck className="w-8 h-8" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">
+                  {tSolution('privacy.title')}
+                </h3>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">
-                {tSolution('privacy.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
                 {tSolution('privacy.description')}
               </p>
@@ -382,12 +389,14 @@ export default function HomePage() {
               ref={solutionCardRefs[3]}
               className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${solutionCardVisibility[3] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Layers className="w-8 h-8" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Layers className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">
+                  {tSolution('capacity.title')}
+                </h3>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">
-                {tSolution('capacity.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
                 {tSolution('capacity.description')}
               </p>
@@ -437,12 +446,14 @@ export default function HomePage() {
               ref={servicesCardRefs[0]}
               className={`bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${servicesCardVisibility[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <Zap className="w-8 h-8" />
+              <div className="flex items-center gap-4 mb-3">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 font-sans">
+                  {tServices('draftingEngine.title')}
+                </h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3 font-sans">
-                {tServices('draftingEngine.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4 font-sans">{tServices('draftingEngine.description')}</p>
               <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
                 <span className="text-sm font-medium text-primary font-sans block">
@@ -456,12 +467,14 @@ export default function HomePage() {
               ref={servicesCardRefs[1]}
               className={`bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${servicesCardVisibility[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <Scale className="w-8 h-8" />
+              <div className="flex items-center gap-4 mb-3">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Scale className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 font-sans">
+                  {tServices('contracts.title')}
+                </h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3 font-sans">
-                {tServices('contracts.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4 font-sans">{tServices('contracts.description')}</p>
               <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
                 <span className="text-sm font-medium text-primary font-sans block">
@@ -475,12 +488,14 @@ export default function HomePage() {
               ref={servicesCardRefs[2]}
               className={`bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${servicesCardVisibility[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
             >
-              <div className="w-16 h-16 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <Cpu className="w-8 h-8" />
+              <div className="flex items-center gap-4 mb-3">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Cpu className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 font-sans">
+                  {tServices('orchestration.title')}
+                </h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3 font-sans">
-                {tServices('orchestration.title')}
-              </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4 font-sans">{tServices('orchestration.description')}</p>
               <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
                 <span className="text-sm font-medium text-primary font-sans block">
@@ -700,11 +715,13 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* WhatsApp Card */}
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-6 shadow-lg text-primary-foreground">
-                <MessageSquare className="w-7 h-7" />
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2 group">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <MessageSquare className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">{tContact('whatsapp.title')}</h3>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">{tContact('whatsapp.title')}</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed font-sans">
                 {tContact('whatsapp.description')}
               </p>
@@ -722,11 +739,13 @@ export default function HomePage() {
             </div>
 
             {/* Enterprise Card */}
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-6 shadow-lg text-primary-foreground">
-                <Scale className="w-7 h-7" />
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2 group">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Scale className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">{tContact('enterprise.title')}</h3>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">{tContact('enterprise.title')}</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed font-sans">
                 {tContact('enterprise.description')}
               </p>
@@ -743,11 +762,13 @@ export default function HomePage() {
             </div>
 
             {/* Security Card */}
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2">
-              <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-6 shadow-lg text-primary-foreground">
-                <ShieldCheck className="w-7 h-7" />
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-300 transform hover:-translate-y-2 group">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">{tContact('security.title')}</h3>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 font-sans">{tContact('security.title')}</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed font-sans">
                 {tContact('security.description')}
               </p>

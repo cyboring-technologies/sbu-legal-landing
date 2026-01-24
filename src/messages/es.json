@@ -370,7 +370,7 @@
       "description": "Sustituimos la redacción artesanal por procesos de ingeniería de alta precisión, permitiéndole centrar su intelecto en la estrategia mientras nosotros procesamos la carga técnica."
     },
     "draftingEngine": {
-      "title": "1. El Motor de Redacción (The Drafting Engine)",
+      "title": "El Motor de Redacción (The Drafting Engine)",
       "description": "Es nuestra herramienta insignia para la construcción de argumentos complejos. Actúa como un \"Constructor\" que traduce sus directrices estratégicas en documentos estructurados con rigor judicial.",
       "capabilities": "Generación de Contestaciones de Demanda, Demandas Civiles y recursos de apelación.",
       "rigor": "Estructuración de argumentos con tono impecable y precisión normativa.",
@@ -378,7 +378,7 @@
       "cta": "Probar Motor de Redacción"
     },
     "contractEngineering": {
-      "title": "2. Ingeniería de Contratos y Actos Jurídicos",
+      "title": "Ingeniería de Contratos y Actos Jurídicos",
       "description": "Diseñado para la creación ágil de documentos transaccionales y notificaciones sin errores de transcripción.",
       "supportedDocs": "Contratos de Arrendamiento, Notificaciones Simples y acuerdos comerciales.",
       "efficiency": "Transformamos horas de redacción técnica en minutos de revisión ejecutiva.",
@@ -386,7 +386,7 @@
       "cta": "Crear Contrato"
     },
     "infrastructure": {
-      "title": "3. Infraestructura y Seguridad: El Protocolo Incinerador",
+      "title": "Infraestructura y Seguridad: El Protocolo Incinerador",
       "description": "La base técnica que garantiza que su información estratégica nunca sea almacenada permanentemente.",
       "totalDeletion": "Todos los archivos y secretos de clientes se eliminan automáticamente 60 minutos después de su procesamiento.",
       "orchestration": "Utilizamos un orquestador nativo que selecciona dinámicamente los mejores modelos mediante Microsoft AI Foundry.",
@@ -472,19 +472,19 @@
       "title": "Finalice la redacción artesanal. Empiece la ingeniería.",
       "subtitle": "Recupere su ancho de banda mental. Delegue la carpintería documental a nuestra infraestructura de grado judicial y enfoque su intelecto en la estrategia ganadora.",
       "grant": {
-        "title": "1. El Impulso de Inicio (Founder’s Grant)",
+        "title": "El Impulso de Inicio",
         "description": "No vendemos promesas, entregamos capacidad operativa inmediata. Le otorgamos los recursos necesarios para validar nuestro rigor técnico sin compromiso financiero inicial.",
         "button": "Empezar — 50 Créditos de Regalo",
         "microcopy": "Suficientes para una demanda completa. Sin tarjetas de crédito."
       },
       "whatsapp": {
-        "title": "2. El Puente de Confianza (WhatsApp Bridge)",
+        "title": "El Puente de Confianza",
         "description": "Para firmas que requieren una validación humana antes de integrar nueva infraestructura técnica.",
         "button": "WhatsApp Concierge",
         "microcopy": "Hable con un especialista en ingeniería documental."
       },
       "protocol": {
-        "title": "3. Señal de Confianza: El Protocolo Incinerador",
+        "title": "Señal de Confianza: El Protocolo Incinerador",
         "description": "Su seguridad no es una opción, es una ley arquitectónica en nuestra plataforma.",
         "guarantee": "Garantía: \"Documentos procesados en entorno sin estado: destrucción total de archivos y secretos en 60 minutos\".",
         "infrastructure": "Infraestructura: \"Operación 100% sobre Microsoft Azure con estándares de cumplimiento institucional\"."
@@ -608,7 +608,7 @@
           "description": "En Documentos.legal, la confidencialidad no es una promesa contractual; es una imposibilidad técnica. Bajo el Protocolo Incinerador, toda información confidencial tiene un ciclo de vida máximo de 60 minutos. No somos un almacén de datos, sino una tubería de procesamiento: los archivos se ingieren, se transforman y la evidencia se elimina físicamente de nuestros servidores de forma automática."
         },
         "item2": {
-          "title": "Arquitectura de Separación Binaria (The Binary Split).",
+          "title": "Arquitectura de Separación Binaria.",
           "description": "Nuestra infraestructura divide estrictamente los datos de negocio (facturación y acceso) de los datos del producto (sus secretos). Mientras que su cuenta permanece segura en nuestra plataforma, el entorno de procesamiento es totalmente efímero y desaparece al terminar su sesión."
         },
         "item3": {

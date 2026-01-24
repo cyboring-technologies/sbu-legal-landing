@@ -334,45 +334,58 @@ export default function ContactPage() {
 
           <StaggeredGrid columns={3} className="mt-12">
             {/* WhatsApp Concierge */}
-            <HoverCard className="p-8 text-center h-full">
-              <MessageSquare className="w-12 h-12 text-primary mx-auto mb-4" />
+            <HoverCard className="p-8 text-center h-full group">
+              <MessageSquare className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('alternativeContact.whatsapp.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('alternativeContact.whatsapp.description')}
               </p>
-              <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+              <a
+                href="https://wa.me/18156620760"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors inline-block"
+              >
                 {t('alternativeContact.whatsapp.action')}
-              </button>
+              </a>
             </HoverCard>
 
             {/* Billing */}
-            <HoverCard className="p-8 text-center h-full">
-              <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
+            <HoverCard className="p-8 text-center h-full group">
+              <FileText className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('alternativeContact.billing.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('alternativeContact.billing.description')}
               </p>
-              <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+              <a
+                href="mailto:hello@cyboring.com?subject=Consulta de Facturación"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors inline-block"
+              >
                 {t('alternativeContact.billing.action')}
-              </button>
+              </a>
             </HoverCard>
 
             {/* Docs */}
-            <HoverCard className="p-8 text-center h-full">
-              <Book className="w-12 h-12 text-primary mx-auto mb-4" />
+            <HoverCard className="p-8 text-center h-full group">
+              <Book className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('alternativeContact.docs.title')}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 {t('alternativeContact.docs.description')}
               </p>
-              <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+              <a
+                href="#"
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors inline-block"
+              >
                 {t('alternativeContact.docs.action')}
-              </button>
+              </a>
             </HoverCard>
           </StaggeredGrid>
         </div>
@@ -404,19 +417,16 @@ export default function ContactPage() {
             </h3>
             <StaggeredGrid columns={3} className="text-left">
               <HoverCard className="p-6">
-                <Shield className="w-8 h-8 text-primary mb-4" />
                 <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">{tQA('features.privacy.title')}</h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">{tQA('features.privacy.description')}</p>
               </HoverCard>
 
               <HoverCard className="p-6">
-                <Zap className="w-8 h-8 text-primary mb-4" />
                 <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">{tQA('features.efficiency.title')}</h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">{tQA('features.efficiency.description')}</p>
               </HoverCard>
 
               <HoverCard className="p-6">
-                <Users className="w-8 h-8 text-primary mb-4" />
                 <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">{tQA('features.sovereignty.title')}</h4>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">{tQA('features.sovereignty.description')}</p>
               </HoverCard>
