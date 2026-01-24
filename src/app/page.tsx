@@ -19,17 +19,14 @@ export default function RootPage() {
     const browserLang = navigator.language.toLowerCase();
     // Simple logic: if strict match or starts with 'es', use 'es', otherwise default to 'en'
     const matchedLocale = locales.find(l => l === browserLang || browserLang.startsWith(l)) || 'en';
-    
+
     localStorage.setItem('preferred-locale', matchedLocale);
     router.replace(`/${matchedLocale}/`);
   }, [router]);
 
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto"></div>
-        <p className="mt-4 text-gray-600">Loading...</p>
-      </div>
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
     </div>
   );
 }

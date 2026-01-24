@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from '../i18n/navigation';
 import { CTAButton } from './CTAButtons';
 import { HtmlContent } from './HtmlContent';
 
@@ -44,7 +45,7 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <section
-      className={`relative bg-background text-foreground pt-32 pb-20 overflow-hidden min-h-[600px] border-b border-border ${className}`}
+      className={`relative bg-background text-foreground pt-32 pb-32 overflow-hidden min-h-[600px] border-b border-border ${className}`}
     >
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
 
@@ -67,29 +68,37 @@ const Hero: React.FC<HeroProps> = ({
           </div>
 
           {/* Description */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-4xl mx-auto leading-relaxed">
             {description}
           </p>
 
-          {/* Strategic Intent Selector (Phase 1 Ready) */}
+          {/* Interaction Block */}
           {chips && (
-            <div className="mb-12">
+            <div className="mb-8">
               <p className="text-lg font-medium text-muted-foreground mb-4 font-sans">{prompt}</p>
               <div className="flex flex-wrap justify-center gap-3">
-                {[chips.response, chips.complaint, chips.lease, chips.notification].map((text, index) => (
-                  <button
-                    key={index}
-                    className="px-6 py-3 bg-transparent border border-gray-300 dark:border-gray-700 rounded-full text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors duration-200 font-sans text-sm md:text-base font-medium"
+                {[
+                  { key: 'response', text: chips.response },
+                  { key: 'complaint', text: chips.complaint },
+                  { key: 'lease', text: chips.lease },
+                  { key: 'notification', text: chips.notification },
+                ].map(({ key, text }) => (
+                  <Link
+                    key={key}
+                    href={`/login?intent=${key}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 bg-background border border-gray-300 dark:border-gray-700 rounded-full text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors duration-200 font-sans text-sm md:text-base font-medium"
                   >
                     {text}
-                  </button>
+                  </Link>
                 ))}
               </div>
             </div>
           )}
 
           {/* Primary Conversion Trigger */}
-          <div className="flex flex-col items-center gap-4 mb-20">
+          <div className="flex flex-col items-center gap-4 mb-0">
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
               <CTAButton
                 href={primaryCTA.href}
@@ -106,25 +115,28 @@ const Hero: React.FC<HeroProps> = ({
                   href={secondaryCTA.href}
                   variant="secondary"
                   size="lg"
-                  className="bg-transparent border-2 border-primary text-primary hover:bg-primary/10 px-8 py-4 text-lg w-full sm:w-auto"
+                  className="bg-background border-2 border-border text-foreground hover:border-primary hover:text-primary px-8 py-4 text-lg w-full sm:w-auto"
                 >
                   {secondaryCTA.text}
                 </CTAButton>
               )}
             </div>
-            <p className="text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
-              {foundersGrant}
-            </p>
           </div>
 
-          {/* Trust Signal: The Incinerator Protocol */}
-          {incineratorProtocol && (
-            <div className="border-t border-border/50 pt-8 mt-8">
-              <p className="text-sm text-muted-foreground font-mono bg-secondary/50 inline-block px-4 py-2 rounded-lg">
+          {/* Trust Block (Grouped) */}
+          <div className="mt-24 pt-8 border-t border-border/50 flex flex-col items-center gap-6">
+            {foundersGrant && (
+              <p className="text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
+                {foundersGrant}
+              </p>
+            )}
+
+            {incineratorProtocol && (
+              <p className="text-sm text-muted-foreground font-mono bg-transparent inline-block px-4 py-2 rounded-lg">
                 {incineratorProtocol}
               </p>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </section>

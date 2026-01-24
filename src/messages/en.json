@@ -499,7 +499,7 @@
   "aboutUs": {
     "hero": {
       "preheader": "",
-      "title": "Where strategic intuition meets precision engineering.",
+      "title": "Where strategic intuition meets precision engineering",
       "subtitle": "Document Engineering",
       "description": "We are a global deep-tech company. We unite a robust hexagonal architecture with cutting-edge AI to ensure experts focus on deciding and winning, not on writing.",
       "primaryCTA": "Learn about us",
@@ -786,12 +786,8 @@
       "contactDetailsTitle": "Link Details",
       "email": {
         "title": "Institutional Email",
-        "address": "soporte@documentos.legal",
+        "address": "hello@cyboring.com",
         "hint": "Guaranteed response in < 24h"
-      },
-      "address": {
-        "title": "Corporate Headquarters",
-        "address": "123 Innovation Drive, Tech City, TC 12345"
       }
     },
     "form": {

@@ -32,7 +32,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
     primary:
       'bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-ring shadow-lg hover:shadow-xl transition-transform duration-200 hover:scale-95',
     secondary:
-      'bg-transparent text-primary dark:text-primary-foreground border-2 border-border hover:bg-secondary focus:ring-ring',
+      'bg-background text-primary dark:text-primary-foreground border-2 border-border hover:bg-secondary focus:ring-ring',
   };
 
   const sizeClasses = {

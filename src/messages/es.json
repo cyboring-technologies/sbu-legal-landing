@@ -494,7 +494,7 @@
   "aboutUs": {
     "hero": {
       "preheader": "",
-      "title": "La infraestructura del alivio cognitivo.",
+      "title": "La infraestructura del alivio cognitivo",
       "subtitle": "Ingeniería Documental",
       "description": "Documentos.legal es una plataforma de ingeniería documental diseñada para erradicar la fricción administrativa en el litigio. Bajo la Doctrina del Protocolo Incinerador, procesamos sus documentos y destruimos los datos privados en 60 minutos. Nosotros molemos el trabajo pesado; usted gobierna la estrategia legal.",
       "primaryCTA": "Ver Protocolos de Seguridad",
@@ -776,12 +776,8 @@
       "contactDetailsTitle": "Datos de Enlace",
       "email": {
         "title": "Correo Electrónico Institucional",
-        "address": "soporte@documentos.legal",
+        "address": "hello@cyboring.com",
         "hint": "Respuesta técnica estimada: < 2 horas (L-V)."
-      },
-      "address": {
-        "title": "Sede Corporativa",
-        "address": "Cyboring Technologies LLC. Delaware, Estados Unidos."
       }
     },
     "form": {
