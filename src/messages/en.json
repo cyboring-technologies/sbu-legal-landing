@@ -52,12 +52,12 @@
     "subtitle": "Transform your strategic decisions into court-ready drafts.",
     "description": "You govern the strategy. We process the administrative burden.",
     "primaryCTA": "Start — 50 Free Credits",
-    "foundersGrant": "Enough to draft a full complaint or five contracts. No cards, just your institutional email.",
+    "foundersGrant": "Enough to draft a full complaint or five contracts. No cards, just your email.",
     "prompt": "What would you like to generate today?",
     "chips": {
       "response": "Answer to Complaint",
       "complaint": "Civil Complaint",
-      "lease": "Lease Agreement",
+      "lease": "Executive Summary",
       "notification": "Simple Notification"
     },
     "incineratorProtocol": "Incinerator Protocol active: We do not store your secrets. Your files and drafts are permanently deleted from our servers 60 minutes after processing."
@@ -123,7 +123,7 @@
     "learnMore": "Learn More"
   },
   "testimonials": {
-    "title": "Designed for the Governing Lawyer.",
+    "title": "Designed for the Governing Lawyer",
     "description": "Documentos.legal is the tool for those who understand that real value lies in strategy, not technical drafting.",
     "client1": {
       "profile": "The Strategic Litigator Persona",
@@ -969,13 +969,14 @@
       "automation": "Automation"
     },
     "contactTitle": "Contact Us",
-    "copyright": "© {year} <link>Cyboring Technologies LLC</link>. All rights reserved. Delaware, USA.",
+    "copyright": "© {year} <companyLink>Cyboring Technologies LLC</companyLink>. All rights reserved. Delaware, USA.",
     "trustBadges": {
-      "azure": "Powered by Microsoft Azure",
-      "ssl": "SSL Secured",
-      "aiFoundry": "Microsoft AI Foundry",
+      "secureByDesign": "Secure by Design",
+      "cloudAgnostic": "Cloud-Agnostic Infrastructure",
       "nativeCode": "Native Proprietary Code",
-      "soc": "SOC Compliant"
+      "orchestration": "Multi-LLM Orchestration",
+      "ssl": "SSL/TLS Encrypted",
+      "soc": "SOC-Ready"
     }
   },
   "privacy": {

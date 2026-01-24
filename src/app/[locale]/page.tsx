@@ -197,7 +197,7 @@ export default function HomePage() {
           description={tHero('description')}
           primaryCTA={{
             text: tHero('primaryCTA'),
-            href: 'https://app.cyboring.com/login?method=google',
+            href: '/login?method=google',
           }}
           prompt={tHero('prompt')}
           foundersGrant={tHero('foundersGrant')}
@@ -396,7 +396,7 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CTAButton
-              href="https://app.cyboring.com/login"
+              href="/login"
               variant="primary"
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg px-8"
@@ -492,7 +492,7 @@ export default function HomePage() {
 
           <div className="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <CTAButton
-              href="https://app.cyboring.com/login"
+              href="/login"
               variant="primary"
               size="lg"
               className="px-8 shadow-lg hover:shadow-xl"
@@ -500,7 +500,7 @@ export default function HomePage() {
               {tServices('viewAll')}
             </CTAButton>
             <CTAButton
-              href="/security"
+              href="/privacy"
               variant="secondary"
               size="lg"
               className="px-8"
@@ -546,7 +546,7 @@ export default function HomePage() {
                   {tTestimonials('client1.relief')}
                 </p>
                 <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
-                  <p className="text-blue-600 dark:text-blue-400 font-medium font-sans text-sm">
+                  <p className="text-primary font-medium font-sans text-sm">
                     {tTestimonials('client1.metric')}
                   </p>
                 </div>
@@ -571,7 +571,7 @@ export default function HomePage() {
                   {tTestimonials('client2.relief')}
                 </p>
                 <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
-                  <p className="text-green-600 dark:text-green-400 font-medium font-sans text-sm">
+                  <p className="text-primary font-medium font-sans text-sm">
                     {tTestimonials('client2.metric')}
                   </p>
                 </div>
@@ -596,7 +596,7 @@ export default function HomePage() {
                   {tTestimonials('client3.relief')}
                 </p>
                 <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
-                  <p className="text-purple-600 dark:text-purple-400 font-medium font-sans text-sm">
+                  <p className="text-primary font-medium font-sans text-sm">
                     {tTestimonials('client3.metric')}
                   </p>
                 </div>
@@ -606,7 +606,7 @@ export default function HomePage() {
 
           <div className="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <CTAButton
-              href="https://app.cyboring.com/login"
+              href="/login"
               variant="primary"
               size="lg"
               className="px-8 shadow-lg hover:shadow-xl"
@@ -614,7 +614,7 @@ export default function HomePage() {
               {tTestimonials('join')}
             </CTAButton>
             <CTAButton
-              href="/guide"
+              href="/blog"
               variant="secondary"
               size="lg"
               className="px-8"
@@ -709,7 +709,7 @@ export default function HomePage() {
                 {tContact('whatsapp.description')}
               </p>
               <a
-                href="https://wa.me/"
+                href="https://wa.me/18156620760"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-3 px-6 rounded-lg transition-colors mb-4 shadow-md font-sans"

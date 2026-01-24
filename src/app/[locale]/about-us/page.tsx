@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -10,6 +9,10 @@ import Hero from '../../../components/Hero';
 import { InteractiveGridPulse } from '../../../components/InteractiveGridPulse';
 import { IncineratorProtocolSection } from '../../../components/sections';
 import { CTAButton } from '../../../components/CTAButtons';
+import { FadeIn } from '../../../components/ui/animations/FadeIn';
+import { StaggeredGrid } from '../../../components/ui/animations/StaggeredGrid';
+import { HoverCard } from '../../../components/ui/animations/HoverCard';
+import { SectionHeader } from '../../../components/ui/SectionHeader';
 import {
   Target,
   Users,
@@ -64,84 +67,86 @@ export default function AboutUsPage() {
             {/* Left Column: Main Title & Logo */}
             <div className="lg:col-span-4 mb-12 lg:mb-0">
               <div className="sticky top-24">
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl mb-8">
-                  {t('story.title')}
-                </h2>
-                <Link
-                  href="https://www.cyboring.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative w-48 opacity-80 hover:opacity-100 transition-opacity block"
-                >
-                  <Image
-                    src="/cyboring-logo-light-mode.svg"
-                    alt="Cyboring Technologies Logo"
-                    width={200}
-                    height={60}
-                    className="w-full h-auto dark:hidden"
-                  />
-                  <Image
-                    src="/cyboring-logo-dark-mode.svg"
-                    alt="Cyboring Technologies Logo"
-                    width={200}
-                    height={60}
-                    className="w-full h-auto hidden dark:block"
-                  />
-                </Link>
+                <FadeIn direction="right">
+                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl mb-8">
+                    {t('story.title')}
+                  </h2>
+                  <Link
+                    href="https://www.cyboring.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative w-48 opacity-80 hover:opacity-100 transition-opacity block"
+                  >
+                    <Image
+                      src="/cyboring-logo-light-mode.svg"
+                      alt="Cyboring Technologies Logo"
+                      width={200}
+                      height={60}
+                      className="w-full h-auto dark:hidden"
+                    />
+                    <Image
+                      src="/cyboring-logo-dark-mode.svg"
+                      alt="Cyboring Technologies Logo"
+                      width={200}
+                      height={60}
+                      className="w-full h-auto hidden dark:block"
+                    />
+                  </Link>
+                </FadeIn>
               </div>
             </div>
 
             {/* Right Column: Content Stack */}
             <div className="lg:col-span-8 space-y-12">
+              <StaggeredGrid columns={1} staggerDelay={150}>
+                {/* Origin */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    {t('story.items.origin.title')}
+                  </h3>
+                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {t('story.items.origin.body')}
+                  </p>
+                </div>
 
-              {/* Origin */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  {t('story.items.origin.title')}
-                </h3>
-                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {t('story.items.origin.body')}
-                </p>
-              </div>
+                {/* VBA Model */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    {t('story.items.vba.title')}
+                  </h3>
+                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {t('story.items.vba.body')}
+                  </p>
+                </div>
 
-              {/* VBA Model */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  {t('story.items.vba.title')}
-                </h3>
-                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {t('story.items.vba.body')}
-                </p>
-              </div>
+                {/* Philosophy */}
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    {t('story.items.philosophy.title')}
+                  </h3>
+                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {t('story.items.philosophy.body')}
+                  </p>
+                </div>
 
-              {/* Philosophy */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  {t('story.items.philosophy.title')}
-                </h3>
-                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {t('story.items.philosophy.body')}
-                </p>
-              </div>
-
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
-                <CTAButton
-                  href="/vba-model"
-                  variant="primary"
-                  size="md"
-                >
-                  {t('story.cta1')}
-                </CTAButton>
-                <CTAButton
-                  href="/infrastructure"
-                  variant="secondary"
-                  size="md"
-                >
-                  {t('story.cta2')}
-                </CTAButton>
-              </div>
-
+                {/* CTAs */}
+                <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
+                  <CTAButton
+                    href="/vba-model"
+                    variant="primary"
+                    size="md"
+                  >
+                    {t('story.cta1')}
+                  </CTAButton>
+                  <CTAButton
+                    href="/infrastructure"
+                    variant="secondary"
+                    size="md"
+                  >
+                    {t('story.cta2')}
+                  </CTAButton>
+                </div>
+              </StaggeredGrid>
             </div>
           </div>
         </div>
@@ -150,9 +155,9 @@ export default function AboutUsPage() {
       <section className="py-20 bg-background border-b border-border relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <StaggeredGrid columns={2}>
             {/* Mission */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm">
+            <HoverCard className="p-8">
               <div className="flex items-center mb-6">
                 <Target className="w-12 h-12 text-primary mr-4" />
                 <div>
@@ -167,10 +172,10 @@ export default function AboutUsPage() {
               <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
                 {t('mission.description')}
               </p>
-            </div>
+            </HoverCard>
 
             {/* Vision */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm">
+            <HoverCard className="p-8">
               <div className="flex items-center mb-6">
                 <Lightbulb className="w-12 h-12 text-primary mr-4" />
                 <div>
@@ -185,40 +190,38 @@ export default function AboutUsPage() {
               <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
                 {t('vision.description')}
               </p>
-            </div>
-          </div>
+            </HoverCard>
+          </StaggeredGrid>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-            <CTAButton
-              href="/start-document"
-              variant="primary"
-              size="lg"
-            >
-              {t('missionVision.cta1')}
-            </CTAButton>
-            <CTAButton
-              href="/security-protocols"
-              variant="secondary"
-              size="lg"
-            >
-              {t('missionVision.cta2')}
-            </CTAButton>
-          </div>
+          <FadeIn direction="up" delay={400}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+              <CTAButton
+                href="/start-document"
+                variant="primary"
+                size="lg"
+              >
+                {t('missionVision.cta1')}
+              </CTAButton>
+              <CTAButton
+                href="/security-protocols"
+                variant="secondary"
+                size="lg"
+              >
+                {t('missionVision.cta2')}
+              </CTAButton>
+            </div>
+          </FadeIn>
         </div>
       </section>
       {/* Core Values */}
       <section className="py-20 bg-background border-b border-border relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
-              {t('values.title')}
-            </h2>
-          </div>
+          <SectionHeader title={t('values.title')} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <StaggeredGrid columns={2} className="mb-12">
             {/* 1. Rigor */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg">
+            <HoverCard className="p-8">
               <div className="flex items-start mb-6">
                 <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <Settings className="w-6 h-6" />
@@ -232,10 +235,10 @@ export default function AboutUsPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </HoverCard>
 
             {/* 2. Sovereignty */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg">
+            <HoverCard className="p-8">
               <div className="flex items-start mb-6">
                 <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <Brain className="w-6 h-6" />
@@ -249,10 +252,10 @@ export default function AboutUsPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </HoverCard>
 
             {/* 3. Trust */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg">
+            <HoverCard className="p-8">
               <div className="flex items-start mb-6">
                 <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <Shield className="w-6 h-6" />
@@ -266,10 +269,10 @@ export default function AboutUsPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </HoverCard>
 
             {/* 4. Speed */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg">
+            <HoverCard className="p-8">
               <div className="flex items-start mb-6">
                 <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <Zap className="w-6 h-6" />
@@ -283,25 +286,27 @@ export default function AboutUsPage() {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
+            </HoverCard>
+          </StaggeredGrid>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton
-              href="/security-docs"
-              variant="secondary"
-              size="lg"
-            >
-              {t('values.cta1')}
-            </CTAButton>
-            <CTAButton
-              href="/new-project"
-              variant="primary"
-              size="lg"
-            >
-              {t('values.cta2')}
-            </CTAButton>
-          </div>
+          <FadeIn direction='up' delay={400}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <CTAButton
+                href="/security-docs"
+                variant="secondary"
+                size="lg"
+              >
+                {t('values.cta1')}
+              </CTAButton>
+              <CTAButton
+                href="/new-project"
+                variant="primary"
+                size="lg"
+              >
+                {t('values.cta2')}
+              </CTAButton>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -309,15 +314,11 @@ export default function AboutUsPage() {
       <section className="py-20 bg-background border-b border-border relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
-              {t('stats.title')}
-            </h2>
-          </div>
+          <SectionHeader title={t('stats.title')} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <StaggeredGrid columns={2} className="mb-12">
             {/* Ephemeral */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm">
+            <HoverCard className="p-8">
               <div className="flex items-start mb-6">
                 <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <Flame className="w-6 h-6" />
@@ -331,10 +332,10 @@ export default function AboutUsPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </HoverCard>
 
             {/* Availability */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm">
+            <HoverCard className="p-8">
               <div className="flex items-start mb-6">
                 <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <Cloud className="w-6 h-6" />
@@ -348,10 +349,10 @@ export default function AboutUsPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </HoverCard>
 
             {/* Zero Storage */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm">
+            <HoverCard className="p-8">
               <div className="flex items-start mb-6">
                 <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <Ban className="w-6 h-6" />
@@ -365,10 +366,10 @@ export default function AboutUsPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </HoverCard>
 
             {/* Speed */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm">
+            <HoverCard className="p-8">
               <div className="flex items-start mb-6">
                 <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <Zap className="w-6 h-6" />
@@ -382,40 +383,38 @@ export default function AboutUsPage() {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
+            </HoverCard>
+          </StaggeredGrid>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton
-              href="/security-audit"
-              variant="secondary"
-              size="lg"
-            >
-              {t('stats.cta1')}
-            </CTAButton>
-            <CTAButton
-              href="/new-document"
-              variant="primary"
-              size="lg"
-            >
-              {t('stats.cta2')}
-            </CTAButton>
-          </div>
+          <FadeIn direction='up' delay={400}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <CTAButton
+                href="/security-audit"
+                variant="secondary"
+                size="lg"
+              >
+                {t('stats.cta1')}
+              </CTAButton>
+              <CTAButton
+                href="/new-document"
+                variant="primary"
+                size="lg"
+              >
+                {t('stats.cta2')}
+              </CTAButton>
+            </div>
+          </FadeIn>
         </div>
       </section>
       {/* Standards and Strategic Alliances */}
       <section className="py-20 bg-background border-b border-border relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
-              {t('standards.title')}
-            </h2>
-          </div>
+          <SectionHeader title={t('standards.title')} />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <StaggeredGrid columns={3} className="mb-12">
             {/* HITL */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm">
+            <HoverCard className="p-8">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-primary" />
               </div>
@@ -425,10 +424,10 @@ export default function AboutUsPage() {
               <p className="text-gray-600 dark:text-gray-300 text-center leading-relaxed">
                 {t('standards.items.hitl.body')}
               </p>
-            </div>
+            </HoverCard>
 
             {/* Agnostic Intelligence */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm">
+            <HoverCard className="p-8">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Lightbulb className="w-8 h-8 text-primary" />
               </div>
@@ -438,10 +437,10 @@ export default function AboutUsPage() {
               <p className="text-gray-600 dark:text-gray-300 text-center leading-relaxed">
                 {t('standards.items.agnostic.body')}
               </p>
-            </div>
+            </HoverCard>
 
             {/* Resilience */}
-            <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-lg shadow-sm">
+            <HoverCard className="p-8">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-8 h-8 text-primary" />
               </div>
@@ -451,25 +450,27 @@ export default function AboutUsPage() {
               <p className="text-gray-600 dark:text-gray-300 text-center leading-relaxed">
                 {t('standards.items.resilience.body')}
               </p>
-            </div>
-          </div>
+            </HoverCard>
+          </StaggeredGrid>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton
-              href="/specs"
-              variant="secondary"
-              size="lg"
-            >
-              {t('standards.cta1')}
-            </CTAButton>
-            <CTAButton
-              href="/welcome-credits"
-              variant="primary"
-              size="lg"
-            >
-              {t('standards.cta2')}
-            </CTAButton>
-          </div>
+          <FadeIn direction='up' delay={400}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <CTAButton
+                href="/specs"
+                variant="secondary"
+                size="lg"
+              >
+                {t('standards.cta1')}
+              </CTAButton>
+              <CTAButton
+                href="/welcome-credits"
+                variant="primary"
+                size="lg"
+              >
+                {t('standards.cta2')}
+              </CTAButton>
+            </div>
+          </FadeIn>
         </div>
       </section >
       {/* Incinerator Protocol */}
@@ -478,26 +479,30 @@ export default function AboutUsPage() {
       < section className="py-20 bg-background border-b border-border relative overflow-hidden" >
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">{t('cta.title')}</h2>
-          <h3 className="mt-4 text-xl font-semibold text-primary">{t('cta.subtitle')}</h3>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">{t('cta.description')}</p>
+          <SectionHeader
+            title={t('cta.title')}
+            subtitle={t('cta.subtitle')}
+            description={t('cta.description')}
+          />
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-            >
-              {t('cta.primaryButton')}
-            </CTAButton>
-            <CTAButton
-              href="/our-services"
-              variant="secondary"
-              size="lg"
-            >
-              {t('cta.secondaryButton')}
-            </CTAButton>
-          </div>
+          <FadeIn direction='up'>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <CTAButton
+                href="/contact"
+                variant="primary"
+                size="lg"
+              >
+                {t('cta.primaryButton')}
+              </CTAButton>
+              <CTAButton
+                href="/our-services"
+                variant="secondary"
+                size="lg"
+              >
+                {t('cta.secondaryButton')}
+              </CTAButton>
+            </div>
+          </FadeIn>
         </div>
       </section >
     </Layout >

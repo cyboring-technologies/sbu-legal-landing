@@ -174,10 +174,8 @@ const Header = () => {
               <ThemeToggle iconSize={20} />
             </div>
             <Link
-              href="http://localhost:3000"
+              href="/login"
               className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-medium shadow-md transition-all duration-200 hover:bg-primary/80 hover:shadow-xl hover:scale-105 active:scale-95"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               {t('access')}
             </Link>
@@ -219,10 +217,8 @@ const Header = () => {
                 );
               })}
               <Link
-                href="http://localhost:3000"
+                href="/login"
                 className="bg-primary text-primary-foreground block px-3 py-2 rounded-md text-base font-medium mt-4 shadow-md transition-all duration-200 hover:bg-primary/80 hover:shadow-xl hover:scale-105 active:scale-95"
-                target="_blank"
-                rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('access')}

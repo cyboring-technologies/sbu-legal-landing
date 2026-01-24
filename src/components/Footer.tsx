@@ -9,11 +9,12 @@ import {
   Mail,
   MessageCircle,
   Facebook,
-  Twitter,
   Linkedin,
-  Instagram,
+  Youtube,
   Lock,
   Code2,
+  ShieldCheck,
+  Cloud,
 
 } from 'lucide-react';
 
@@ -63,33 +64,38 @@ const SOCIcon: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
-const trustBadges = [
-  { icon: AzureIcon, label: 'Powered by Microsoft Azure' },
-  { icon: Lock, label: 'SSL Secured' },
-  { icon: AIFoundryIcon, label: 'Microsoft AI Foundry' },
-  { icon: Code2, label: 'Native Proprietary Code' },
-  { icon: SOCIcon, label: 'SOC Compliant' },
-];
+const TrustBadges = ({ className = '' }: { className?: string }) => {
+  const t = useTranslations('footer.trustBadges');
 
-const TrustBadges = ({ className = '' }: { className?: string }) => (
-  <div className={className}>
-    <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 opacity-70 hover:opacity-100 transition-opacity duration-300">
-      {trustBadges.map((badge, index) => {
-        const IconComponent = badge.icon;
-        return (
-          <div
-            key={index}
-            className="flex items-center gap-2 text-gray-500 dark:text-gray-400 grayscale hover:grayscale-0 transition-all duration-300"
-            title={badge.label}
-          >
-            <IconComponent className="w-5 h-5" />
-            <span className="text-xs font-medium hidden sm:inline">{badge.label}</span>
-          </div>
-        );
-      })}
+  const badges = [
+    { icon: ShieldCheck, label: t('secureByDesign') },
+    { icon: Cloud, label: t('cloudAgnostic') },
+    { icon: Code2, label: t('nativeCode') },
+    { icon: AIFoundryIcon, label: t('orchestration') },
+    { icon: Lock, label: t('ssl') },
+    { icon: SOCIcon, label: t('soc') },
+  ];
+
+  return (
+    <div className={className}>
+      <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 opacity-70 hover:opacity-100 transition-opacity duration-300">
+        {badges.map((badge, index) => {
+          const IconComponent = badge.icon;
+          return (
+            <div
+              key={index}
+              className="flex items-center gap-2 text-gray-500 dark:text-gray-400 grayscale hover:grayscale-0 transition-all duration-300"
+              title={badge.label}
+            >
+              <IconComponent className="w-5 h-5" />
+              <span className="text-xs font-medium hidden sm:inline">{badge.label}</span>
+            </div>
+          );
+        })}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -119,10 +125,9 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: '#' },
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
-    { name: 'Instagram', icon: Instagram, href: '#' },
+    { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com' },
+    { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com' },
   ];
 
   return (
@@ -181,7 +186,9 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <MessageCircle className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                 <a
-                  href="https://wa.me/message/cyboring"
+                  href="https://wa.me/18156620760"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   Chat on WhatsApp
@@ -196,6 +203,8 @@ const Footer = () => {
                     key={social.name}
                     href={social.href}
                     className="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-200"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Icon className="h-5 w-5" />
                   </Link>
@@ -264,10 +273,10 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-gray-300 dark:border-gray-700 pt-8">
           <div className="flex flex-col items-center">
-            <p className="text-gray-600 dark:text-gray-300 text-sm text-center">
+            <p className="text-gray-400 dark:text-gray-500 text-sm text-center">
               {t.rich('copyright', {
                 year: currentYear.toString(),
-                link: (chunks) => (
+                companyLink: (chunks) => (
                   <a
                     href="https://www.cyboring.com"
                     target="_blank"

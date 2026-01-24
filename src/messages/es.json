@@ -52,12 +52,12 @@
     "subtitle": "Transforme sus decisiones estratégicas en borradores listos para el tribunal.",
     "description": "Usted gobierna la estrategia. Nosotros procesamos la carga administrativa.",
     "primaryCTA": "Empezar — 50 Créditos de Regalo",
-    "foundersGrant": "Suficientes para redactar una demanda completa o cinco contratos. Sin tarjetas, solo su correo institucional.",
+    "foundersGrant": "Suficientes para redactar una demanda completa o cinco contratos. Sin tarjetas, solo su correo.",
     "prompt": "¿Qué desea generar hoy?",
     "chips": {
       "response": "Contestación de Demanda",
       "complaint": "Demanda Civil",
-      "lease": "Contrato de Arrendamiento",
+      "lease": "Resumen Ejecutivo",
       "notification": "Notificación Simple"
     },
     "incineratorProtocol": "Protocolo Incinerador activo: No almacenamos sus secretos. Sus archivos y borradores se eliminan permanentemente de nuestros servidores 60 minutos después de procesarlos."
@@ -119,11 +119,11 @@
       "tag": "Seguridad: Ejecución bajo el Protocolo Incinerador; procesamiento sin estado y eliminación total de datos en 60 minutos."
     },
     "viewAll": "Iniciar Redacción — 50 Créditos de Regalo",
-    "getQuote": "Ver Certificación de Seguridad Azure",
+    "getQuote": "Ver Arquitectura de Seguridad",
     "learnMore": "Más información"
   },
   "testimonials": {
-    "title": "Diseñado para el Abogado que Gobierna.",
+    "title": "Diseñado para el Abogado que Gobierna",
     "description": "Documentos.legal es la herramienta de quienes entienden que el valor real reside en la estrategia, no en la redacción técnica.",
     "client1": {
       "profile": "El Perfil del Litigante Estratégico",
@@ -192,7 +192,7 @@
     "security": {
       "title": "Validación de Seguridad y Cumplimiento",
       "description": "Si su departamento legal requiere validar nuestra infraestructura de Azure o el cumplimiento del Protocolo Incinerador, coordinamos una sesión técnica.",
-      "point1": "Garantía: Revisión de protocolos de destrucción de datos y segregación de Zone A (Plataforma) y Zone B (Producto)."
+      "point1": "Garantía: Revisión de protocolos de destrucción de datos y segregación de Zona A (Plataforma) y Zona B (Producto)."
     }
   },
   "questionsAndAnswers": {
@@ -922,13 +922,14 @@
       "automation": "Automatización"
     },
     "contactTitle": "Contáctenos",
-    "copyright": "© {year} <link>Cyboring Technologies LLC</link>. Todos los derechos reservados. Delaware, USA.",
+    "copyright": "© {year} <companyLink>Cyboring Technologies LLC</companyLink>. Todos los derechos reservados. Delaware, USA.",
     "trustBadges": {
-      "azure": "Potenciado por Microsoft Azure",
-      "ssl": "Seguridad SSL",
-      "aiFoundry": "Microsoft AI Foundry",
+      "secureByDesign": "Seguro por Diseño",
+      "cloudAgnostic": "Infraestructura Agnóstica de Nube",
       "nativeCode": "Código Propietario Nativo",
-      "soc": "Cumplimiento SOC"
+      "orchestration": "Orquestación Multi-LLM",
+      "ssl": "Cifrado SSL/TLS",
+      "soc": "Listo para SOC"
     }
   },
   "privacy": {

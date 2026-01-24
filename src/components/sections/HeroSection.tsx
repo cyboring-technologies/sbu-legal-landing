@@ -53,7 +53,7 @@ export function HeroSection({ translations }: HeroSectionProps) {
         description={translations.description}
         primaryCTA={{
           text: translations.primaryCTA,
-          href: 'https://app.cyboring.com/login?method=google',
+          href: '/login?method=google',
         }}
         secondaryCTA={{
           text: translations.secondaryCTA,

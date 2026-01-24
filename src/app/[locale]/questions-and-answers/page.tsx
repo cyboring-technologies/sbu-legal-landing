@@ -6,6 +6,10 @@ import Layout from '../../../components/Layout';
 import Hero from '../../../components/Hero';
 import { InteractiveGridPulse } from '../../../components/InteractiveGridPulse';
 import { CTAButton } from '../../../components/CTAButtons';
+import { FadeIn } from '../../../components/ui/animations/FadeIn';
+import { StaggeredGrid } from '../../../components/ui/animations/StaggeredGrid';
+import { HoverCard } from '../../../components/ui/animations/HoverCard';
+import { SectionHeader } from '../../../components/ui/SectionHeader';
 import {
   ChevronDown,
   ChevronUp,
@@ -157,75 +161,79 @@ export default function QuestionsAndAnswersPage() {
       <section className="py-16 bg-background border-b border-border relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Search Bar */}
-          <div className="mb-8">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 w-5 h-5" />
-              <input
-                type="text"
-                placeholder={t('search.placeholder')}
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-              />
+          <FadeIn direction='up'>
+            {/* Search Bar */}
+            <div className="mb-8">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder={t('search.placeholder')}
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                />
+              </div>
             </div>
-          </div>
 
-          {/* Category Filters */}
-          <div className="mb-8">
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => {
-                const Icon = category.icon;
-                return (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center px-4 py-2 rounded-lg transition-colors ${selectedCategory === category.id
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
-                      }`}
-                  >
-                    <Icon className="w-4 h-4 mr-2" />
-                    {category.name}
-                  </button>
-                );
-              })}
+            {/* Category Filters */}
+            <div className="mb-8">
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => {
+                  const Icon = category.icon;
+                  return (
+                    <button
+                      key={category.id}
+                      onClick={() => setSelectedCategory(category.id)}
+                      className={`flex items-center px-4 py-2 rounded-lg transition-colors ${selectedCategory === category.id
+                        ? 'bg-primary text-primary-foreground'
+                        : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                        }`}
+                    >
+                      <Icon className="w-4 h-4 mr-2" />
+                      {category.name}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* FAQ Items */}
           <div className="space-y-4">
             {filteredFAQs.length > 0 ? (
-              filteredFAQs.map((faq) => (
-                <div
-                  key={faq.id}
-                  className="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700"
-                >
-                  <button
-                    onClick={() => toggleFAQ(faq.id)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+              <StaggeredGrid columns={1}>
+                {filteredFAQs.map((faq) => (
+                  <div
+                    key={faq.id}
+                    className="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow"
                   >
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white pr-4">
-                      {faq.question}
-                    </h3>
-                    {openFAQ === faq.id ? (
-                      <ChevronUp className="w-5 h-5 text-gray-500 dark:text-gray-400 flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-gray-500 dark:text-gray-400 flex-shrink-0" />
-                    )}
-                  </button>
+                    <button
+                      onClick={() => toggleFAQ(faq.id)}
+                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors rounded-lg"
+                    >
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+                        {faq.question}
+                      </h3>
+                      {openFAQ === faq.id ? (
+                        <ChevronUp className="w-5 h-5 text-gray-500 dark:text-gray-400 flex-shrink-0" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-500 dark:text-gray-400 flex-shrink-0" />
+                      )}
+                    </button>
 
-                  {openFAQ === faq.id && (
-                    <div className="px-6 pb-4">
-                      <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                          {faq.answer}
-                        </p>
+                    {openFAQ === faq.id && (
+                      <div className="px-6 pb-4">
+                        <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+                          <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              ))
+                    )}
+                  </div>
+                ))}
+              </StaggeredGrid>
             ) : (
               <div className="text-center py-12">
                 <HelpCircle className="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
@@ -242,17 +250,13 @@ export default function QuestionsAndAnswersPage() {
       <section className="py-16 bg-background border-b border-border relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
-              {t('popularTopics.title')}
-            </h2>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              {t('popularTopics.description')}
-            </p>
-          </div>
+          <SectionHeader
+            title={t('popularTopics.title')}
+            description={t('popularTopics.description')}
+          />
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-primary/5 dark:bg-primary/20 p-6 rounded-lg">
+          <StaggeredGrid columns={3} className="mt-12">
+            <HoverCard className="p-6 bg-primary/5 dark:bg-primary/20 border-transparent">
               <Zap className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('popularTopics.technology.title')}
@@ -266,9 +270,9 @@ export default function QuestionsAndAnswersPage() {
               >
                 {t('popularTopics.technology.link')}
               </button>
-            </div>
+            </HoverCard>
 
-            <div className="bg-primary/5 dark:bg-primary/20 p-6 rounded-lg">
+            <HoverCard className="p-6 bg-primary/5 dark:bg-primary/20 border-transparent">
               <Shield className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('popularTopics.security.title')}
@@ -282,9 +286,9 @@ export default function QuestionsAndAnswersPage() {
               >
                 {t('popularTopics.security.link')}
               </button>
-            </div>
+            </HoverCard>
 
-            <div className="bg-primary/5 dark:bg-primary/20 p-6 rounded-lg">
+            <HoverCard className="p-6 bg-primary/5 dark:bg-primary/20 border-transparent">
               <Zap className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('popularTopics.workflow.title')}
@@ -298,25 +302,21 @@ export default function QuestionsAndAnswersPage() {
               >
                 {t('popularTopics.workflow.link')}
               </button>
-            </div>
-          </div>
+            </HoverCard>
+          </StaggeredGrid>
         </div>
       </section>
       {/* Help Resources */}
       <section className="py-16 bg-background border-b border-border relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
-              {t('helpResources.title')}
-            </h2>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              {t('helpResources.description')}
-            </p>
-          </div>
+          <SectionHeader
+            title={t('helpResources.title')}
+            description={t('helpResources.description')}
+          />
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm text-center">
+          <StaggeredGrid columns={3} className="mt-12">
+            <HoverCard className="p-8 text-center">
               <MessageCircle className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('helpResources.whatsapp.title')}
@@ -327,9 +327,9 @@ export default function QuestionsAndAnswersPage() {
               <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('helpResources.whatsapp.action')}
               </button>
-            </div>
+            </HoverCard>
 
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm text-center">
+            <HoverCard className="p-8 text-center">
               <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('helpResources.billing.title')}
@@ -340,9 +340,9 @@ export default function QuestionsAndAnswersPage() {
               <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('helpResources.billing.action')}
               </button>
-            </div>
+            </HoverCard>
 
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm text-center">
+            <HoverCard className="p-8 text-center">
               <Book className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('helpResources.docs.title')}
@@ -353,25 +353,21 @@ export default function QuestionsAndAnswersPage() {
               <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('helpResources.docs.action')}
               </button>
-            </div>
-          </div>
+            </HoverCard>
+          </StaggeredGrid>
         </div>
       </section>
       {/* Knowledge Base Preview */}
       <section className="py-16 bg-background border-b border-border relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
-              {t('knowledgeBase.title')}
-            </h2>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-              {t('knowledgeBase.description')}
-            </p>
-          </div>
+          <SectionHeader
+            title={t('knowledgeBase.title')}
+            description={t('knowledgeBase.description')}
+          />
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:shadow-md transition-shadow bg-white dark:bg-gray-900">
+          <StaggeredGrid columns={2} className="mt-12">
+            <HoverCard className="p-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {t('knowledgeBase.gettingStarted.title')}
               </h3>
@@ -386,9 +382,9 @@ export default function QuestionsAndAnswersPage() {
                   {t('knowledgeBase.gettingStarted.cta')} →
                 </a>
               </div>
-            </div>
+            </HoverCard>
 
-            <div className="border border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:shadow-md transition-shadow bg-white dark:bg-gray-900">
+            <HoverCard className="p-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {t('knowledgeBase.bestPractices.title')}
               </h3>
@@ -403,9 +399,9 @@ export default function QuestionsAndAnswersPage() {
                   {t('knowledgeBase.bestPractices.cta')} →
                 </a>
               </div>
-            </div>
+            </HoverCard>
 
-            <div className="border border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:shadow-md transition-shadow bg-white dark:bg-gray-900">
+            <HoverCard className="p-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {t('knowledgeBase.advanced.title')}
               </h3>
@@ -420,9 +416,9 @@ export default function QuestionsAndAnswersPage() {
                   {t('knowledgeBase.advanced.cta')} →
                 </a>
               </div>
-            </div>
+            </HoverCard>
 
-            <div className="border border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:shadow-md transition-shadow bg-white dark:bg-gray-900">
+            <HoverCard className="p-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                 {t('knowledgeBase.troubleshooting.title')}
               </h3>
@@ -437,25 +433,21 @@ export default function QuestionsAndAnswersPage() {
                   {t('knowledgeBase.troubleshooting.cta')} →
                 </a>
               </div>
-            </div>
-          </div>
+            </HoverCard>
+          </StaggeredGrid>
         </div>
       </section>
       {/* Evolution Protocol - New Section */}
       <section className="py-16 bg-background border-b border-border relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
-              {t('evolutionProtocol.title')}
-            </h2>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              {t('evolutionProtocol.description')}
-            </p>
-          </div>
+          <SectionHeader
+            title={t('evolutionProtocol.title')}
+            description={t('evolutionProtocol.description')}
+          />
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm flex flex-col items-center text-center">
+          <StaggeredGrid columns={2} className="mt-12">
+            <HoverCard className="p-8 flex flex-col items-center text-center">
               <Activity className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('evolutionProtocol.reportFriction.title')}
@@ -466,9 +458,9 @@ export default function QuestionsAndAnswersPage() {
               <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('evolutionProtocol.reportFriction.cta')}
               </button>
-            </div>
+            </HoverCard>
 
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm flex flex-col items-center text-center">
+            <HoverCard className="p-8 flex flex-col items-center text-center">
               <Lightbulb className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                 {t('evolutionProtocol.newSupply.title')}
@@ -479,40 +471,43 @@ export default function QuestionsAndAnswersPage() {
               <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('evolutionProtocol.newSupply.cta')}
               </button>
-            </div>
-          </div>
+            </HoverCard>
+          </StaggeredGrid>
         </div>
       </section>
       {/* Contact CTA */}
       <section className="py-16 bg-background border-b border-border relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">{t('cta.title')}</h2>
-          <div className="mt-4 text-lg text-gray-600 dark:text-gray-300 space-y-4">
-            <p>{t('cta.description1')}</p>
-            <p>
-              {t.rich('cta.description2', {
-                strong: (chunks) => <strong className="font-bold text-gray-900 dark:text-white">{chunks}</strong>,
-              })}
-            </p>
-          </div>
-
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-            >
-              {t('cta.primaryButton')}
-            </CTAButton>
-            <CTAButton
-              href="/contact"
-              variant="secondary"
-              size="lg"
-            >
-              {t('cta.secondaryButton')}
-            </CTAButton>
-          </div>
+          <SectionHeader
+            title={t('cta.title')}
+          />
+          <FadeIn direction='up' delay={100}>
+            <div className="mt-4 text-lg text-gray-600 dark:text-gray-300 space-y-4 mb-4">
+              <p>{t('cta.description1')}</p>
+              <p>
+                {t.rich('cta.description2', {
+                  strong: (chunks) => <strong className="font-bold text-gray-900 dark:text-white">{chunks}</strong>,
+                })}
+              </p>
+            </div>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <CTAButton
+                href="/contact"
+                variant="primary"
+                size="lg"
+              >
+                {t('cta.primaryButton')}
+              </CTAButton>
+              <CTAButton
+                href="/contact"
+                variant="secondary"
+                size="lg"
+              >
+                {t('cta.secondaryButton')}
+              </CTAButton>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </Layout>
