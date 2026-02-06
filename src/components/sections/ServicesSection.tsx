@@ -81,10 +81,10 @@ export const ServicesSection: React.FC = () => {
         </div>
 
         <div className="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-          <CTAButton href="/our-services" variant="primary" size="lg">
+          <CTAButton href="/our-services" variant="primary" size="lg" ctaType="cta-2">
             {tServices('viewAll')}
           </CTAButton>
-          <CTAButton href="/contact" variant="secondary" size="lg">
+          <CTAButton href="/contact" variant="secondary" size="lg" ctaType="cta-2">
             {tServices('getQuote')}
           </CTAButton>
         </div>

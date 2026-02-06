@@ -1,21 +1,19 @@
 {
   "navigation": {
-    "home": "Inicio",
     "services": "Servicios",
     "prices": "Precios",
     "about": "Nosotros",
     "faq": "Preguntas",
     "contact": "Contacto",
-    "blog": "Blog",
-    "access": "Acceso"
+    "cta_1_access": "Acceso"
   },
   "blog": {
     "hero": {
       "title": "Manuales de Ingeniería Documental",
       "subtitle": "Protocolos de operación para la soberanía del Arquitecto Legal.",
       "description": "Acceda a la documentación oficial de documentos.legal sobre nuestra arquitectura de producción. Desde la ejecución táctica del Founder’s Grant hasta la seguridad del Protocolo Incinerador. Información diseñada para maximizar su eficiencia y garantizar su tiempo fuera del sitio.",
-      "primaryCTA": "Explorar Documentación",
-      "secondaryCTA": "Activar 50 créditos (Founder’s Grant)"
+      "cta_2_primary": "Explorar Documentación",
+      "cta_1_secondary": "Activar 50 créditos (Founder’s Grant)"
     },
     "posts": {
       "post1": {
@@ -45,14 +43,14 @@
       "title": "Mantente Informado",
       "description": "Recibe las últimas actualizaciones sobre ingeniería legal directamente en tu bandeja de entrada.",
       "placeholder": "Ingresa tu correo",
-      "cta": "Suscribirse"
+      "cta_4_newsletter": "Suscribirse"
     }
   },
   "hero": {
     "title": "Ingeniería de Documentos de Grado Judicial",
     "subtitle": "Transforme sus decisiones estratégicas en borradores listos para el tribunal.",
     "description": "Usted gobierna la estrategia. Nosotros procesamos la carga administrativa.",
-    "primaryCTA": "Empezar — 50 Créditos de Regalo",
+    "cta_1_primary": "Iniciar Ejecución — 50 Créditos de Regalo",
     "foundersGrant": "Suficientes para redactar una demanda completa o cinco contratos. Sin tarjetas, solo su correo.",
     "prompt": "¿Qué desea generar hoy?",
     "chips": {
@@ -98,8 +96,8 @@
       "title": "Capacidad de Despacho Industrial",
       "description": "Aumente su volumen de casos sin aumentar su fatiga. Documentos.legal absorbe la carga administrativa, permitiéndole dedicar su tiempo a tareas de alto valor: el estudio profundo del derecho y el crecimiento de su firma."
     },
-    "getStarted": "Iniciar con 50 créditos gratuitos",
-    "learnMore": "Ver Protocolo de Privacidad"
+    "cta_1_getStarted": "Iniciar con 50 créditos gratuitos",
+    "cta_2_learnMore": "Ver Protocolo de Privacidad"
   },
   "services": {
     "title": "Ingeniería Aplicada: Soluciones Documentales de Alto Impacto",
@@ -119,9 +117,9 @@
       "description": "Nuestra arquitectura utiliza Microsoft AI Foundry para acceder a los modelos más avanzados, coordinados por un orquestador nativo que garantiza la integridad de cada transacción. El humano siempre retiene el control final: el sistema propone, usted valida y finaliza.",
       "tag": "Seguridad: Ejecución bajo el Protocolo Incinerador; procesamiento sin estado y eliminación total de datos en 60 minutos."
     },
-    "viewAll": "Iniciar Redacción — 50 Créditos de Regalo",
-    "getQuote": "Ver Arquitectura de Seguridad",
-    "learnMore": "Más información"
+    "cta_1_viewAll": "Iniciar Redacción — 50 Créditos de Regalo",
+    "cta_2_getQuote": "Ver Arquitectura de Seguridad",
+    "cta_2_learnMore": "Más información"
   },
   "testimonials": {
     "title": "Diseñado para el Abogado que Gobierna",
@@ -144,8 +142,8 @@
       "relief": "Procesar documentos bajo el Protocolo Incinerador, garantizando que la información sensible desaparece 60 minutos después de su creación.",
       "metric": "Métrica de éxito: Seguridad absoluta de grado bancario y cumplimiento total de privacidad sin esfuerzo adicional."
     },
-    "join": "Unirse al nuevo estándar — 50 Créditos de Regalo",
-    "guide": "Ver Guía de Ingeniería Documental",
+    "cta_1_join": "Unirse al nuevo estándar — 50 Créditos de Regalo",
+    "cta_2_guide": "Ver Guía de Ingeniería Documental",
     "challengeLabel": "El Reto",
     "reliefLabel": "El Alivio"
   },
@@ -172,13 +170,13 @@
       "question": "¿Cómo funciona el modelo de costos por créditos?",
       "answer": "Rechazamos el modelo de suscripciones innecesarias; usted solo compra lo que necesita mediante \"Packs de Suministros\" industriales. Cada generación consume créditos de forma transparente (ej. una demanda compleja consume aprox. 50 créditos), permitiéndole pagar solo por los resultados finales entregados."
     },
-    "viewAll": "Ver Todas las Preguntas",
-    "askQuestion": "Hacer una Pregunta"
+    "cta_2_viewAll": "Ver Todas las Preguntas",
+    "cta_3_askQuestion": "Hacer una Pregunta"
   },
   "contact": {
     "title": "¿Listo para transformar su práctica legal?",
     "subtitle": "Comience a procesar documentos con precisión de grado judicial en 60 segundos.",
-    "primaryCTA": "Empezar con 50 Créditos de Regalo",
+    "cta_1_primary": "Iniciar Ejecución — 50 Créditos de Regalo",
     "advancedTitle": "Para requerimientos avanzados o institucionales",
     "whatsapp": {
       "title": "WhatsApp Concierge",
@@ -198,8 +196,8 @@
       "title": "Protocolos y Certeza Operativa",
       "subtitle": "Soporte técnico para la infraestructura de documentos.legal",
       "description": "Despeje dudas sobre el Protocolo Incinerador, nuestra arquitectura de seguridad de grado bancario y la gobernanza humana del sistema. Información técnica diseñada para reducir su responsabilidad legal y maximizar su velocidad de descarga.",
-      "primaryCTA": "Explorar protocolos",
-      "secondaryCTA": "Consulta técnica"
+      "cta_2_primary": "Explorar protocolos",
+      "cta_3_secondary": "Consulta técnica"
     },
     "search": {
       "placeholder": "Buscar preguntas...",
@@ -296,17 +294,17 @@
       "whatsapp": {
         "title": "WhatsApp Concierge (Soporte Directo)",
         "description": "Canal exclusivo para asistencia inmediata en procesos de carga masiva o incidencias críticas en el flujo de producción. Recomendado para usuarios de los paquetes Firm y Factory.",
-        "action": "Iniciar Chat Técnico"
+        "cta_3_chat": "Iniciar Chat Técnico"
       },
       "billing": {
         "title": "Enlace de Cumplimiento y Facturación",
         "description": "Gestiones administrativas relacionadas con la adquisición de paquetes de créditos, facturación institucional o consultas sobre el Protocolo de Incineración.",
-        "action": "Contactar Administración"
+        "cta_3_contact": "Contactar Administración"
       },
       "docs": {
         "title": "Centro de Documentación",
         "description": "Acceda a guías técnicas sobre la arquitectura de seguridad, uso de la API y manuales de usuario para maximizar su autonomía en la plataforma.",
-        "action": "Explorar Documentación"
+        "cta_2_explore": "Explorar Documentación"
       }
     },
     "knowledgeBase": {
@@ -315,22 +313,22 @@
       "gettingStarted": {
         "title": "Protocolo de Despliegue Inicial",
         "description": "Procedimientos base para ejecutar su primer ciclo de generación técnica utilizando los 50 créditos del Founder’s Grant. Orientado a lograr su primera descarga en menos de 5 minutos.",
-        "cta": "Consultar Protocolo (3 min)"
+        "cta_2_read": "Consultar Protocolo (3 min)"
       },
       "bestPractices": {
         "title": "Ingeniería de Precisión",
         "description": "Estrategias para el Abogado Arquitecto: aprenda a estructurar los archivos de entrada para que el Constructor AI entregue borradores 95% listos para el tribunal.",
-        "cta": "Ver Guía de Arquitectura (6 min)"
+        "cta_2_read": "Ver Guía de Arquitectura (6 min)"
       },
       "advanced": {
         "title": "Flujos de Orquestación Avanzada",
         "description": "Maximice el rendimiento del sistema mediante nuestro enrutador multi-modelo dinámico y la gestión de expedientes complejos bajo la arquitectura SAGA.",
-        "cta": "Documentación Técnica (8 min)"
+        "cta_2_read": "Documentación Técnica (8 min)"
       },
       "troubleshooting": {
         "title": "Diagnóstico y Resolución de Inconsistencias",
         "description": "Protocolos de actuación ante discrepancias en la extracción de entidades (NER) o fallos en la normalización de formatos bajo el Protocolo Incinerador.",
-        "cta": "Guía de Diagnóstico (4 min)"
+        "cta_2_read": "Guía de Diagnóstico (4 min)"
       }
     },
     "evolutionProtocol": {
@@ -339,20 +337,20 @@
       "reportFriction": {
         "title": "Reporte de Fricción Técnica",
         "description": "Utilice este canal para señalar pasos innecesarios en el flujo de trabajo o errores en la interfaz que retrasen su descarga.",
-        "cta": "Reportar Punto de Fricción"
+        "cta_3_report": "Reportar Punto de Fricción"
       },
       "newSupply": {
         "title": "Propuesta de Nuevo Suministro",
         "description": "¿Requiere un tipo de documento específico que aún no está en nuestra biblioteca de ingeniería? Proponga nuevos módulos para la cadena de producción industrial.",
-        "cta": "Proponer Módulo Documental"
+        "cta_3_propose": "Proponer Módulo Documental"
       }
     },
     "cta": {
       "title": "Certeza Operativa Final",
       "description1": "Si la documentación técnica no ha resuelto una duda específica sobre su jurisdicción o caso de uso, la validación más eficiente es la ejecución táctica en nuestra infraestructura.",
       "description2": "Active su <strong>Founder’s Grant</strong > y compruebe la velocidad de descarga y la precisión del Protocolo Incinerador en un entorno real de producción. No vendemos software; vendemos alivio cognitivo verificable.",
-      "primaryButton": "Activar 50 créditos gratuitos",
-      "secondaryButton": "Consultar tabla de suministros industriales"
+      "cta_1_primary": "Iniciar Ejecución — 50 Créditos de Regalo",
+      "cta_2_secondary": "Consultar tabla de suministros industriales"
     }
   },
   "ourServices": {
@@ -360,7 +358,7 @@
       "title": "Infraestructura de Ingeniería Documental Judicial",
       "subtitle": "Capacidad de despacho industrial para firmas de alto volumen que priorizan la seguridad y el control.",
       "description": "Ejecución técnica de borradores legales bajo el Protocolo Incinerador. Usted define la estrategia de alto nivel; nosotros procesamos la carpintería documental con rigor algorítmico.",
-      "primaryCTA": "Empezar — 50 Créditos de Regalo",
+      "cta_1_primary": "Iniciar Ejecución — 50 Créditos de Regalo",
       "foundersGrant": "No se requiere tarjeta de crédito. Incluye una demanda completa o cinco contratos."
     },
     "overview": {
@@ -373,7 +371,7 @@
       "capabilities": "Generación de Contestaciones de Demanda, Demandas Civiles y recursos de apelación.",
       "rigor": "Estructuración de argumentos con tono impecable y precisión normativa.",
       "hitl": "Usted valida la metadata extraída y realiza la revisión final antes de la descarga; el sistema propone, usted gobierna.",
-      "cta": "Probar Motor de Redacción"
+      "cta_3_request": "Solicitar Propuesta Técnica"
     },
     "contractEngineering": {
       "title": "Ingeniería de Contratos y Actos Jurídicos",
@@ -381,7 +379,7 @@
       "supportedDocs": "Contratos de Arrendamiento, Notificaciones Simples y acuerdos comerciales.",
       "efficiency": "Transformamos horas de redacción técnica en minutos de revisión ejecutiva.",
       "autoDetection": "El sistema identifica automáticamente el área legal y su rol para reducir la carga cognitiva inicial.",
-      "cta": "Crear Contrato"
+      "cta_3_request": "Solicitar Propuesta Técnica"
     },
     "infrastructure": {
       "title": "Infraestructura y Seguridad: El Protocolo Incinerador",
@@ -389,7 +387,7 @@
       "totalDeletion": "Todos los archivos y secretos de clientes se eliminan automáticamente 60 minutos después de su procesamiento.",
       "orchestration": "Utilizamos un orquestador nativo que selecciona dinámicamente los mejores modelos mediante Microsoft AI Foundry.",
       "architecture": "Nuestra lógica de negocio está aislada de proveedores externos para garantizar estabilidad y seguridad de grado bancario.",
-      "cta": "Ver Certificación de Seguridad"
+      "cta_3_request": "Solicitar Propuesta Técnica"
     },
     "process": {
       "title": "El Ciclo de Ejecución Técnica",
@@ -472,13 +470,13 @@
       "grant": {
         "title": "El Impulso de Inicio",
         "description": "No vendemos promesas, entregamos capacidad operativa inmediata. Le otorgamos los recursos necesarios para validar nuestro rigor técnico sin compromiso financiero inicial.",
-        "button": "Empezar — 50 Créditos de Regalo",
+        "cta_1_activate": "Iniciar Ejecución — 50 Créditos de Regalo",
         "microcopy": "Suficientes para una demanda completa. Sin tarjetas de crédito."
       },
       "whatsapp": {
         "title": "El Puente de Confianza",
         "description": "Para firmas que requieren una validación humana antes de integrar nueva infraestructura técnica.",
-        "button": "WhatsApp Concierge",
+        "cta_3_chat": "WhatsApp Concierge",
         "microcopy": "Hable con un especialista en ingeniería documental."
       },
       "protocol": {
@@ -495,8 +493,8 @@
       "title": "La infraestructura del alivio cognitivo",
       "subtitle": "Ingeniería Documental",
       "description": "Documentos.legal es una plataforma de ingeniería documental diseñada para erradicar la fricción administrativa en el litigio. Bajo la Doctrina del Protocolo Incinerador, procesamos sus documentos y destruimos los datos privados en 60 minutos. Nosotros molemos el trabajo pesado; usted gobierna la estrategia legal.",
-      "primaryCTA": "Ver Protocolos de Seguridad",
-      "secondaryCTA": "Comenzar Proceso"
+      "cta_2_primary": "Ver Protocolos de Seguridad",
+      "cta_2_secondary": "Contáctanos"
     },
     "mission": {
       "title": "Nuestra Misión: El Alivio de la Carga Cognitiva.",
@@ -511,8 +509,8 @@
       "description": "Aspiramos a ser la infraestructura invisible y esencial que permite al sistema legal funcionar sin fricción operativa. No buscamos capturar la atención del usuario, sino desaparecer dentro de su flujo de trabajo una vez cumplida la tarea. Visualizamos un futuro donde el derecho se ejerza mediante decisiones estratégicas humanas, apoyadas por una arquitectura tecnológica que procesa la drudgery y destruye la evidencia, reduciendo la responsabilidad por datos a cero."
     },
     "missionVision": {
-      "cta1": "Iniciar Documento",
-      "cta2": "Leer Protocolos de Seguridad"
+      "cta_1_start": "Iniciar Documento",
+      "cta_2_read": "Leer Protocolos de Seguridad"
     },
     "values": {
       "title": "Valores Arquitectónicos: Los Pilares de la Infraestructura.",
@@ -534,8 +532,8 @@
           "body": "No medimos el éxito por el \"Tiempo en el Sitio\", sino por la \"Velocidad de Descarga\". Optimizamos el sistema para que usted obtenga un documento perfecto y abandone la plataforma lo antes posible. El valor real se mide en resultados: demandas ganadas, contratos cerrados y alivio cognitivo inmediato."
         }
       },
-      "cta1": "Ver Documentación de Seguridad",
-      "cta2": "Iniciar Nuevo Proyecto"
+      "cta_2_viewDocs": "Ver Documentación de Seguridad",
+      "cta_1_start": "Iniciar Nuevo Proyecto"
     },
     "story": {
       "title": "La Entidad: Cyboring Technologies LLC.",
@@ -553,8 +551,8 @@
           "body": "Rechazamos la métrica del \"Tiempo en el Sitio\". Optimizamos para la velocidad de descarga: el éxito se mide por lo rápido que usted puede abandonar nuestra plataforma con un resultado legal perfecto. Estamos aquí para que usted deje de escribir y empiece a gobernar."
         }
       },
-      "cta1": "Conocer el Modelo VBA",
-      "cta2": "Ver Infraestructura Azure"
+      "cta_2_learnVba": "Conocer el Modelo VBA",
+      "cta_2_viewInfrastructure": "Ver Infraestructura Azure"
     },
     "stats": {
       "title": "Métricas de Ingeniería e Impacto.",
@@ -576,8 +574,8 @@
           "body": "Nuestra métrica de éxito es el \"Time Off Site\". Optimizamos el sistema para que el profesional pase el menor tiempo posible en la plataforma, logrando documentos que están 95% listos para tribunales en una fracción del tiempo habitual."
         }
       },
-      "cta1": "Ver Auditoría de Seguridad",
-      "cta2": "Iniciar Nuevo Documento"
+      "cta_2_viewAudit": "Ver Auditoría de Seguridad",
+      "cta_1_start": "Iniciar Nuevo Documento"
     },
     "standards": {
       "title": "Certificaciones de Robustez y Soberanía Humana.",
@@ -595,8 +593,8 @@
           "body": "Estamos construidos sobre Azure Container Apps, lo que garantiza una seguridad de grado empresarial y una arquitectura de \"Escala-a-Cero\" que elimina costos innecesarios. Implementamos una Arquitectura Hexagonal nativa para desacoplar la lógica legal de las interfaces externas, asegurando que nuestra infraestructura sea tan estable y predecible como el sistema de justicia mismo."
         }
       },
-      "cta1": "Ver Especificaciones Técnicas",
-      "cta2": "Obtener 50 Créditos de Bienvenida"
+      "cta_2_viewSpecs": "Ver Especificaciones Técnicas",
+      "cta_1_start": "Obtener 50 Créditos de Bienvenida"
     },
     "incineratorProtocol": {
       "title": "La Doctrina del Protocolo Incinerador: El fin de la responsabilidad por datos.",
@@ -614,15 +612,15 @@
           "description": "La destrucción de datos está grabada en el ADN de nuestra nube en Azure. Las políticas de ciclo de vida eliminan los archivos una hora después de su carga, sin intervención humana y sin excepciones. Si el servidor está vacío, su responsabilidad legal se reduce a cero. Arreglamos sus documentos y destruimos la evidencia."
         }
       },
-      "cta1": "Leer Doctrina Arquitectónica",
-      "cta2": "Probar con Documento de Muestra"
+      "cta_2_readDoctrine": "Leer Doctrina Arquitectónica",
+      "cta_1_test": "Probar con Documento de Muestra"
     },
     "cta": {
       "title": "Elimine la fricción operativa hoy mismo.",
       "subtitle": "Su primer borrador estratégico está a 60 segundos de distancia.",
       "description": "Únase a los profesionales que han dejado de escribir para empezar a decidir. Bajo el Protocolo Incinerador, su privacidad está garantizada por arquitectura, no por promesas. Inicie ahora su sesión efímera y reciba 50 créditos de cortesía para procesar su primera demanda o contrato. Sin suscripciones, sin \"proyectos\"; solo ingeniería de precisión para resultados legales inmediatos.",
-      "primaryButton": "Reclamar mis 50 Créditos",
-      "secondaryButton": "Ver Menú de Suministros"
+      "cta_1_primary": "Iniciar Ejecución — 50 Créditos de Regalo",
+      "cta_2_secondary": "Ver Menú de Suministros"
     }
   },
   "prices": {
@@ -630,8 +628,8 @@
       "title": "Pague por resultados, no por suscripciones",
       "subtitle": "Suministro Industrial de Ingeniería Documental",
       "description": "Acceso transaccional mediante créditos. $0.10 por unidad. Los documentos se procesan y se incineran en 60 minutos",
-      "primaryCTA": "Obtener 50 créditos de cortesía",
-      "secondaryCTA": "Ver paquetes de suministro",
+      "cta_1_primary": "Obtener 50 créditos de cortesía",
+      "cta_2_secondary": "Ver paquetes de suministro",
       "microcopy": "Sin tarjeta de crédito. Solo verificación de identidad"
     },
     "creditSystem": {
@@ -673,7 +671,7 @@
             "Verificación de identidad requerida.",
             "Protocolo de Incineración de datos activo."
           ],
-          "cta": "Iniciar con 50 Créditos Gratis"
+          "cta_1_activate": "Iniciar Ejecución — 50 Créditos de Regalo"
         },
         "solo": {
           "title": "El Pack Solo",
@@ -685,7 +683,7 @@
             "1 Usuario.",
             "Soporte prioritario por email."
           ],
-          "cta": "Adquirir Pack Solo"
+          "cta_2_getStarted": "Adquirir Pack Solo"
         },
         "firm": {
           "title": "El Pack Firma",
@@ -698,7 +696,7 @@
             "Hasta 5 Usuarios (Cuentas de Equipo).",
             "Historial de documentos extendido."
           ],
-          "cta": "Adquirir Pack Firma"
+          "cta_2_getStarted": "Adquirir Pack Firma"
         },
         "factory": {
           "title": "El Pack Fábrica",
@@ -710,7 +708,7 @@
             "Usuarios ilimitados.",
             "Incorporación dedicada por ingeniería."
           ],
-          "cta": "Adquirir Pack Fábrica"
+          "cta_2_getStarted": "Adquirir Pack Fábrica"
         }
       },
       "microcopy1": "Todos los precios en USD para estándares internacionales.",
@@ -755,8 +753,8 @@
       "pretitle": "Soporte de Ingeniería Corporativa",
       "title": "Integración para Despachos de Alto Volumen",
       "description": "Si su operación requiere una implementación a medida, integraciones vía API o un volumen superior a los 5,000 créditos mensuales, nuestro equipo de ingeniería está disponible para coordinar su infraestructura profesional.",
-      "cta1": "Contactar Concierge vía WhatsApp",
-      "cta2": "Solicitar Propuesta Técnica",
+      "cta_3_whatsapp": "Contactar Concierge vía WhatsApp",
+      "cta_3_request": "Solicitar Propuesta Técnica",
       "microcopy": "Atención directa de ingeniería. Sin intermediarios de ventas."
     }
   },
@@ -765,8 +763,8 @@
       "title": "Soporte y Enlace Institucional",
       "subtitle": "Gestión de infraestructura técnica y consultas de cumplimiento.",
       "description": "Documentos.legal opera como infraestructura crítica para profesionales del derecho. Priorizamos la resolución técnica asincrónica para garantizar la eficiencia de su despacho y minimizar el tiempo fuera de la plataforma.",
-      "primaryCTA": "Iniciar Requerimiento Técnico",
-      "secondaryCTA": "Ver Centro de Ayuda"
+      "cta_3_startRequest": "Iniciar Requerimiento Técnico",
+      "cta_2_helpCenter": "Ver Centro de Ayuda"
     },
     "information": {
       "title": "Centro de Resolución y Enlace Institucional",
@@ -813,68 +811,25 @@
       "whatsapp": {
         "title": "WhatsApp Concierge (Soporte Directo)",
         "description": "Canal exclusivo para asistencia inmediata en procesos de carga masiva o incidencias críticas en el flujo de producción. Recomendado para usuarios de los paquetes Firm y Factory.",
-        "action": "Iniciar Chat Técnico"
+        "cta_3_chat": "Iniciar Chat Técnico"
       },
       "billing": {
         "title": "Enlace de Cumplimiento y Facturación",
         "description": "Gestiones administrativas relacionadas con la adquisición de paquetes de créditos, facturación institucional o consultas sobre el Protocolo de Incineración.",
-        "action": "Contactar Administración"
+        "cta_3_contact": "Contactar Administración"
       },
       "docs": {
         "title": "Centro de Documentación",
         "description": "Acceda a guías técnicas sobre la arquitectura de seguridad, uso de la API y manuales de usuario para maximizar su autonomía en la plataforma.",
-        "action": "Explorar Documentación"
-      }
-    }
-  },
-  "offices": {
-    "title": "Nuestra Presencia Global",
-    "subtitle": "Con miembros del equipo en múltiples continentes, brindamos soporte las 24 horas y experiencia local.",
-    "northAmerica": {
-      "title": "América del Norte",
-      "headquarters": {
-        "name": "Sede Central - Tech City",
-        "address": "123 Innovation Drive, TC 12345",
-        "phone": "1-(815) 662-0760"
-      },
-      "westCoast": {
-        "name": "Oficina Costa Oeste",
-        "address": "456 Silicon Valley Blvd, CA 94025",
-        "phone": "+1 (555) 987-6543"
-      }
-    },
-    "europe": {
-      "title": "Europa",
-      "london": {
-        "name": "Oficina Londres",
-        "address": "789 Tech Street, London EC1A 1BB",
-        "phone": "+44 20 1234 5678"
-      },
-      "berlin": {
-        "name": "Oficina Berlín",
-        "address": "321 Innovation Allee, 10115 Berlin",
-        "phone": "+49 30 12345678"
-      }
-    },
-    "asiaPacific": {
-      "title": "Asia Pacífico",
-      "singapore": {
-        "name": "Oficina Singapur",
-        "address": "654 Innovation Hub, Singapore 018956",
-        "phone": "+65 6123 4567"
-      },
-      "sydney": {
-        "name": "Oficina Sídney",
-        "address": "987 Tech Quarter, Sydney NSW 2000",
-        "phone": "+61 2 1234 5678"
+        "cta_2_explore": "Explorar Documentación"
       }
     }
   },
   "quickAccess": {
     "title": "¿Busca autonomía inmediata?",
     "description": "Acceda a respuestas técnicas sobre la gestión de créditos, protocolos de seguridad y flujos de producción en nuestro repositorio de conocimiento institucional.",
-    "cta1": "Consultar FAQs",
-    "cta2": "Explorar Infraestructura Digital",
+    "cta_2_browseFaqs": "Consultar FAQs",
+    "cta_2_exploreInfrastructure": "Explorar Infraestructura Digital",
     "guaranteeTitle": "Garantía de Infraestructura",
     "features": {
       "privacy": {
@@ -915,7 +870,8 @@
       "ai": "Infraestructura Legal Digital",
       "automation": "Automatización de Flujos Legales"
     },
-    "contactTitle": "Contáctenos",
+    "cta_3_whatsapp": "Chatear por WhatsApp",
+    "cta_3_request": "Enviar Correo",
     "copyright": "© {year} <companyLink>Cyboring Technologies LLC</companyLink>. Todos los derechos reservados. Delaware, USA.",
     "trustBadges": {
       "secureByDesign": "Seguro por Diseño",

@@ -1,21 +1,19 @@
 {
   "navigation": {
-    "home": "Home",
     "services": "Services",
     "prices": "Prices",
     "about": "About",
     "faq": "FAQ",
     "contact": "Contact",
-    "blog": "Blog",
-    "access": "Access"
+    "cta_1_access": "Access"
   },
   "blog": {
     "hero": {
       "title": "Document Engineering Manuals",
       "subtitle": "Operating protocols for the sovereignty of the Legal Architect.",
       "description": "Access the official documentation of documentos.legal regarding our production architecture. From the tactical execution of the Founder’s Grant to the security of the Incinerator Protocol. Information designed to maximize your efficiency and guarantee your time off-site.",
-      "primaryCTA": "Explore Documentation",
-      "secondaryCTA": "Activate 50 credits (Founder’s Grant)"
+      "cta_2_primary": "Explore Documentation",
+      "cta_1_secondary": "Activate 50 credits (Founder’s Grant)"
     },
     "posts": {
       "post1": {
@@ -45,14 +43,14 @@
       "title": "Stay in the Loop",
       "description": "Get the latest updates on legal engineering delivered to your inbox.",
       "placeholder": "Enter your email",
-      "cta": "Subscribe"
+      "cta_4_newsletter": "Subscribe"
     }
   },
   "hero": {
     "title": "Judicial-Grade Document Engineering",
     "subtitle": "Transform your strategic decisions into court-ready drafts.",
     "description": "You govern the strategy. We process the administrative burden.",
-    "primaryCTA": "Start — 50 Free Credits",
+    "cta_1_primary": "Start Execution — 50 Free Credits",
     "foundersGrant": "Enough to draft a full complaint or five contracts. No cards, just your email.",
     "prompt": "What would you like to generate today?",
     "chips": {
@@ -98,8 +96,8 @@
       "title": "Industrial Dispatch Capacity",
       "description": "Increase your case volume without increasing your fatigue. Documentos.legal absorbs the administrative burden, allowing you to dedicate your time to high-value tasks: the deep study of law and the growth of your firm."
     },
-    "getStarted": "Start with 50 free credits",
-    "learnMore": "View Privacy Protocol"
+    "cta_1_getStarted": "Start with 50 free credits",
+    "cta_2_learnMore": "View Privacy Protocol"
   },
   "services": {
     "title": "Applied Engineering: High Impact Document Solutions",
@@ -119,9 +117,9 @@
       "description": "Our architecture uses Microsoft AI Foundry to access the most advanced models, coordinated by a native orchestrator that ensures the integrity of every transaction. The human always retains final control: the system proposes, you validate and finalize.",
       "tag": "Security: Execution under the Incinerator Protocol; stateless processing and total data deletion in 60 minutes."
     },
-    "viewAll": "Start Drafting — 50 Free Credits",
-    "getQuote": "View Azure Security Certification",
-    "learnMore": "Learn More"
+    "cta_1_viewAll": "Start Drafting — 50 Free Credits",
+    "cta_2_getQuote": "View Azure Security Certification",
+    "cta_2_learnMore": "Learn More"
   },
   "testimonials": {
     "title": "Designed for the Governing Lawyer",
@@ -144,8 +142,8 @@
       "relief": "Process documents under the Incinerator Protocol, ensuring sensitive information disappears 60 minutes after creation.",
       "metric": "Success Metric: Absolute bank-grade security and full privacy compliance without additional effort."
     },
-    "join": "Join the New Standard — 50 Free Credits",
-    "guide": "View Document Engineering Guide",
+    "cta_1_join": "Join the New Standard — 50 Free Credits",
+    "cta_2_guide": "View Document Engineering Guide",
     "challengeLabel": "The Challenge",
     "reliefLabel": "The Relief"
   },
@@ -172,13 +170,13 @@
       "question": "How does the credit cost model work?",
       "answer": "We reject the model of unnecessary subscriptions; you only buy what you need via industrial \"Supply Packs\". Each generation transparently consumes credits (e.g., a complex lawsuit consumes approx. 50 credits), allowing you to pay only for the final results delivered."
     },
-    "viewAll": "View All FAQs",
-    "askQuestion": "Ask a Question"
+    "cta_2_viewAll": "View All FAQs",
+    "cta_3_askQuestion": "Ask a Question"
   },
   "contact": {
     "title": "Ready to transform your legal practice?",
     "subtitle": "Start processing documents with judicial-grade precision in 60 seconds.",
-    "primaryCTA": "Start with 50 Free Credits",
+    "cta_1_primary": "Start Execution — 50 Free Credits",
     "advancedTitle": "For advanced or institutional requirements",
     "whatsapp": {
       "title": "WhatsApp Concierge",
@@ -198,8 +196,8 @@
       "title": "Protocols and Operational Certainty",
       "subtitle": "Technical support for the infrastructure of documentos.legal",
       "description": "Clear your doubts about the Incinerator Protocol, our bank-grade security architecture, and the human governance of the system. Technical information designed to reduce your legal liability and maximize your download speed.",
-      "primaryCTA": "Explore protocols",
-      "secondaryCTA": "Technical consultation"
+      "cta_2_primary": "Explore protocols",
+      "cta_3_secondary": "Technical consultation"
     },
     "search": {
       "placeholder": "Search questions...",
@@ -296,17 +294,17 @@
       "whatsapp": {
         "title": "WhatsApp Concierge (Direct Support)",
         "description": "Exclusive channel for immediate assistance in bulk upload processes or critical production flow incidents. Recommended for Firm and Factory package users.",
-        "action": "Start Technical Chat"
+        "cta_3_chat": "Start Technical Chat"
       },
       "billing": {
         "title": "Compliance and Billing Link",
         "description": "Administrative management related to credit package acquisition, institutional billing, or Incinerator Protocol inquiries.",
-        "action": "Contact Administration"
+        "cta_3_contact": "Contact Administration"
       },
       "docs": {
         "title": "Documentation Center",
         "description": "Access technical guides on security architecture, API usage, and user manuals to maximize your autonomy on the platform.",
-        "action": "Explore Documentation"
+        "cta_2_explore": "Explore Documentation"
       }
     },
     "knowledgeBase": {
@@ -316,25 +314,25 @@
         "title": "Getting Started Guide",
         "description": "Learn the basics of using our platform and creating your first document.",
         "readTime": "5 min read",
-        "cta": "Read guide"
+        "cta_2_read": "Read guide"
       },
       "bestPractices": {
         "title": "Best Practices",
         "description": "Tips and strategies for maximizing document quality and efficiency.",
         "readTime": "8 min read",
-        "cta": "Read guide"
+        "cta_2_read": "Read guide"
       },
       "advanced": {
         "title": "Advanced Features",
         "description": "Unlock the full potential of our platform with advanced techniques.",
         "readTime": "10 min read",
-        "cta": "Read guide"
+        "cta_2_read": "Read guide"
       },
       "troubleshooting": {
         "title": "Troubleshooting",
         "description": "Common issues and solutions to help you resolve problems quickly.",
         "readTime": "6 min read",
-        "cta": "Read guide"
+        "cta_2_read": "Read guide"
       }
     },
     "evolutionProtocol": {
@@ -343,12 +341,12 @@
       "reportFriction": {
         "title": "Technical Friction Report",
         "description": "Use this channel to point out unnecessary steps in the workflow or interface errors that delay your download.",
-        "cta": "Report Friction Point"
+        "cta_3_report": "Report Friction Point"
       },
       "newSupply": {
         "title": "New Supply Proposal",
         "description": "Do you require a specific document type that is not yet in our engineering library? Propose new modules for the industrial production chain.",
-        "cta": "Propose Document Module"
+        "cta_3_propose": "Propose Document Module"
       }
     },
     "cta": {
@@ -356,8 +354,8 @@
       "description1": "If the technical documentation hasn't resolved a specific doubt about your jurisdiction or use case, the most efficient validation is tactical execution on our infrastructure.",
       "description2": "Activate your <strong>Founder’s Grant</strong> and verify the download speed and Incinerator Protocol precision in a real production environment. We don't sell software; we sell verifiable cognitive relief.",
       "description": "Our team is here to help. Contact us for personalized support and detailed answers to your specific questions.",
-      "primaryButton": "Start with 50 free credits",
-      "secondaryButton": "View document cost table"
+      "cta_1_primary": "Start Execution — 50 Free Credits",
+      "cta_2_secondary": "View document cost table"
     }
   },
   "ourServices": {
@@ -365,7 +363,7 @@
       "title": "Judicial Document Engineering Infrastructure",
       "subtitle": "Industrial-grade dispatch capacity for high-volume firms prioritizing security and control.",
       "description": "Technical execution of legal drafts under the Incinerator Protocol. You define high-level strategy; we process documentary carpentry with algorithmic rigor.",
-      "primaryCTA": "Start — 50 Gift Credits",
+      "cta_1_primary": "Start Execution — 50 Gift Credits",
       "foundersGrant": "No credit card required. Includes one full complaint or five contracts."
     },
     "overview": {
@@ -378,7 +376,7 @@
       "capabilities": "Generation of Answers to Complaints, Civil Complaints, and Appeal Resources.",
       "rigor": "Structuring of arguments with impeccable tone and normative precision.",
       "hitl": "You validate the extracted metadata and perform the final review before download; the system proposes, you govern.",
-      "cta": "Test Drafting Engine"
+      "cta_3_request": "Request Technical Proposal"
     },
     "contractEngineering": {
       "title": "Contract and Legal Act Engineering",
@@ -386,7 +384,7 @@
       "supportedDocs": "Lease Contracts, Simple Notifications, and Commercial Agreements.",
       "efficiency": "We transform hours of technical drafting into minutes of executive review.",
       "autoDetection": "The system automatically identifies the legal area and your role to reduce initial cognitive load.",
-      "cta": "Create Contract"
+      "cta_3_request": "Request Technical Proposal"
     },
     "infrastructure": {
       "title": "Infrastructure and Security: The Incinerator Protocol",
@@ -394,7 +392,7 @@
       "totalDeletion": "All client files and secrets are automatically eliminated 60 minutes after processing.",
       "orchestration": "We use a native orchestrator that dynamically selects the best models via Microsoft AI Foundry.",
       "architecture": "Our business logic is isolated from external providers to guarantee stability and banking-grade security.",
-      "cta": "View Security Certification"
+      "cta_3_request": "Request Technical Proposal"
     },
     "process": {
       "title": "The Technical Execution Cycle",
@@ -477,13 +475,13 @@
       "grant": {
         "title": "The Founder’s Grant",
         "description": "We don’t sell promises, we deliver immediate operational capacity. We grant you the resources to validate our technical rigor without initial financial commitment.",
-        "button": "Start — 50 Gift Credits",
+        "cta_1_activate": "Start Execution — 50 Gift Credits",
         "microcopy": "Enough for a full lawsuit. No credit cards."
       },
       "whatsapp": {
         "title": "The Trust Bridge",
         "description": "For firms requiring human validation before integrating new technical infrastructure.",
-        "button": "WhatsApp Concierge",
+        "cta_3_chat": "WhatsApp Concierge",
         "microcopy": "Speak with a document engineering specialist."
       },
       "protocol": {
@@ -500,8 +498,8 @@
       "title": "Where strategic intuition meets precision engineering",
       "subtitle": "Document Engineering",
       "description": "We are a global deep-tech company. We unite a robust hexagonal architecture with cutting-edge AI to ensure experts focus on deciding and winning, not on writing.",
-      "primaryCTA": "Learn about us",
-      "secondaryCTA": "Our services"
+      "cta_2_primary": "See Security Protocols",
+      "cta_2_secondary": "Contact Us"
     },
     "mission": {
       "title": "Our Mission: Cognitive Load Relief.",
@@ -516,8 +514,8 @@
       "description": "We aspire to be the invisible and essential infrastructure that allows the legal system to function without operational friction. We do not seek to capture user attention, but to disappear within their workflow once the task is done. We visualize a future where law is practiced through human strategic decisions, supported by a technological architecture that processes drudgery and destroys evidence, reducing data liability to zero."
     },
     "missionVision": {
-      "cta1": "Start Document",
-      "cta2": "Read Security Protocols"
+      "cta_1_start": "Start Document",
+      "cta_2_read": "Read Security Protocols"
     },
     "values": {
       "title": "Architectural Values: The Pillars of Infrastructure.",
@@ -539,8 +537,8 @@
           "body": "We don't measure success by \"Time on Site\", but by \"Download Speed\". We optimize the system so you get a perfect document and leave the platform as soon as possible. Real value is measured in results: lawsuits won, contracts closed, and immediate cognitive relief."
         }
       },
-      "cta1": "View Security Documentation",
-      "cta2": "Start New Project"
+      "cta_2_viewDocs": "View Security Documentation",
+      "cta_1_start": "Start New Project"
     },
     "story": {
       "title": "The Entity: Cyboring Technologies LLC.",
@@ -558,8 +556,8 @@
           "body": "We reject the \"Time on Site\" metric. We optimize for download speed: success is measured by how quickly you can leave our platform with a perfect legal result. We are here so you can stop writing and start governing."
         }
       },
-      "cta1": "Learn about VBA Model",
-      "cta2": "View Azure Infrastructure"
+      "cta_2_learnVba": "Learn about VBA Model",
+      "cta_2_viewInfrastructure": "View Azure Infrastructure"
     },
     "stats": {
       "title": "Engineering items and Impact.",
@@ -581,8 +579,8 @@
           "body": "Our success metric is \"Time Off Site\". We optimize the system so that the professional spends the least amount of time possible on the platform, achieving documents that are 95% court-ready in a fraction of the usual time."
         }
       },
-      "cta1": "View Security Audit",
-      "cta2": "Start New Document"
+      "cta_2_viewAudit": "View Security Audit",
+      "cta_1_start": "Start New Document"
     },
     "standards": {
       "title": "Certifications of Robustness and Human Sovereignty.",
@@ -600,8 +598,8 @@
           "body": "We are built on Azure Container Apps, guaranteeing enterprise-grade security and a \"Scale-to-Zero\" architecture that eliminates unnecessary costs. We implement a native Hexagonal Architecture to decouple legal logic from external interfaces, ensuring our infrastructure is as stable and predictable as the justice system itself."
         }
       },
-      "cta1": "View Technical Specs",
-      "cta2": "Get 50 Welcome Credits"
+      "cta_2_viewSpecs": "View Technical Specs",
+      "cta_1_start": "Get 50 Welcome Credits"
     },
     "incineratorProtocol": {
       "title": "The Incinerator Protocol Doctrine: The End of Data Liability.",
@@ -619,15 +617,15 @@
           "description": "Data destruction is engraved in the DNA of our Azure cloud. Lifecycle policies delete files one hour after upload, without human intervention and without exceptions. If the server is empty, your legal liability drops to zero. We fix your documents and destroy the evidence."
         }
       },
-      "cta1": "Read Architectural Doctrine",
-      "cta2": "Test with Sample Document"
+      "cta_2_readDoctrine": "Read Architectural Doctrine",
+      "cta_1_test": "Test with Sample Document"
     },
     "cta": {
       "title": "Eliminate operational friction today.",
       "subtitle": "Your first strategic draft is 60 seconds away.",
       "description": "Join the professionals who have stopped writing to start deciding. Under the Incinerator Protocol, your privacy is guaranteed by architecture, not by promises. Start your ephemeral session now and receive 50 complimentary credits to process your first lawsuit or contract. No subscriptions, no \"projects\"; just precision engineering for immediate legal results.",
-      "primaryButton": "Claim my 50 Credits",
-      "secondaryButton": "View Supply Menu"
+      "cta_1_primary": "Start Execution — 50 Gift Credits",
+      "cta_2_secondary": "View Supply Menu"
     }
   },
   "prices": {
@@ -635,8 +633,8 @@
       "title": "Pay for results, not subscriptions",
       "subtitle": "Industrial Documentation Engineering Supply",
       "description": "Transactional access via credits. $0.10 per unit. Documents are processed and incinerated in 60 minutes",
-      "primaryCTA": "Get 50 complimentary credits",
-      "secondaryCTA": "View supply packages",
+      "cta_1_primary": "Start Execution — 50 complimentary credits",
+      "cta_2_secondary": "View supply packages",
       "microcopy": "No credit card required. Identity verification only"
     },
     "creditSystem": {
@@ -678,7 +676,7 @@
             "Identity verification required.",
             "Data Incineration Protocol active."
           ],
-          "cta": "Start with 50 Free Credits"
+          "cta_1_activate": "Start Execution — 50 Free Credits"
         },
         "solo": {
           "title": "Solo Pack",
@@ -690,7 +688,7 @@
             "1 User.",
             "Priority support via email."
           ],
-          "cta": "Buy Solo Pack"
+          "cta_2_getStarted": "Buy Solo Pack"
         },
         "firm": {
           "title": "Firm Pack",
@@ -703,7 +701,7 @@
             "Up to 5 Users (Team Accounts).",
             "Extended document history."
           ],
-          "cta": "Buy Firm Pack"
+          "cta_2_getStarted": "Buy Firm Pack"
         },
         "factory": {
           "title": "Factory Pack",
@@ -715,7 +713,7 @@
             "Unlimited Users.",
             "Dedicated engineering onboarding."
           ],
-          "cta": "Buy Factory Pack"
+          "cta_2_getStarted": "Buy Factory Pack"
         }
       },
       "microcopy1": "All prices in USD for international standards.",
@@ -765,8 +763,8 @@
       "pretitle": "Corporate Engineering Support",
       "title": "Integration for High-Volume Firms",
       "description": "If your operation requires a custom implementation, API integrations, or a volume exceeding 5,000 monthly credits, our engineering team is available to coordinate your professional infrastructure.",
-      "cta1": "Contact Concierge via WhatsApp",
-      "cta2": "Request Technical Proposal",
+      "cta_3_whatsapp": "Contact Concierge via WhatsApp",
+      "cta_3_request": "Request Technical Proposal",
       "microcopy": "Direct engineering attention. No sales intermediaries."
     }
   },
@@ -775,8 +773,8 @@
       "title": "Support and Institutional Link",
       "subtitle": "Technical infrastructure management and compliance inquiries.",
       "description": "Documentos.legal operates as critical infrastructure for legal professionals. We prioritize asynchronous technical resolution to ensure your firm's efficiency and minimize downtime.",
-      "primaryCTA": "Start Technical Request",
-      "secondaryCTA": "View Help Center"
+      "cta_3_startRequest": "Start Technical Request",
+      "cta_2_helpCenter": "View Help Center"
     },
     "information": {
       "title": "Resolution Center and Institutional Link",
@@ -855,73 +853,30 @@
       "whatsapp": {
         "title": "WhatsApp Concierge (Direct Support)",
         "description": "Exclusive channel for immediate assistance in bulk upload processes or critical production flow incidents. Recommended for Firm and Factory package users.",
-        "action": "Start Technical Chat"
+        "cta_3_chat": "Start Technical Chat"
       },
       "billing": {
         "title": "Compliance and Billing Link",
         "description": "Administrative management related to credit package acquisition, institutional billing, or Incinerator Protocol inquiries.",
-        "action": "Contact Administration"
+        "cta_3_contact": "Contact Administration"
       },
       "docs": {
         "title": "Documentation Center",
         "description": "Access technical guides on security architecture, API usage, and user manuals to maximize your autonomy on the platform.",
-        "action": "Explore Documentation"
+        "cta_2_explore": "Explore Documentation"
       }
     },
     "support": {
       "title": "Technical Support",
       "description": "Existing clients can access dedicated technical support for urgent issues and system maintenance.",
-      "cta": "Get Support"
-    }
-  },
-  "offices": {
-    "title": "Our Global Presence",
-    "subtitle": "With team members across multiple continents, we provide round-the-clock support and local expertise.",
-    "northAmerica": {
-      "title": "North America",
-      "headquarters": {
-        "name": "Headquarters - Tech City",
-        "address": "123 Innovation Drive, TC 12345",
-        "phone": "1-(815) 662-0760"
-      },
-      "westCoast": {
-        "name": "West Coast Office",
-        "address": "456 Silicon Valley Blvd, CA 94025",
-        "phone": "+1 (555) 987-6543"
-      }
-    },
-    "europe": {
-      "title": "Europe",
-      "london": {
-        "name": "London Office",
-        "address": "789 Tech Street, London EC1A 1BB",
-        "phone": "+44 20 1234 5678"
-      },
-      "berlin": {
-        "name": "Berlin Office",
-        "address": "321 Innovation Allee, 10115 Berlin",
-        "phone": "+49 30 12345678"
-      }
-    },
-    "asiaPacific": {
-      "title": "Asia Pacific",
-      "singapore": {
-        "name": "Singapore Office",
-        "address": "654 Innovation Hub, Singapore 018956",
-        "phone": "+65 6123 4567"
-      },
-      "sydney": {
-        "name": "Sydney Office",
-        "address": "987 Tech Quarter, Sydney NSW 2000",
-        "phone": "+61 2 1234 5678"
-      }
+      "cta_3_getSupport": "Get Support"
     }
   },
   "quickAccess": {
     "title": "Seeking immediate autonomy?",
     "description": "Access technical answers about credit management, security protocols, and production flows in our institutional knowledge repository.",
-    "cta1": "Browse FAQs",
-    "cta2": "Explore Digital Infrastructure",
+    "cta_2_browseFaqs": "Browse FAQs",
+    "cta_2_exploreInfrastructure": "Explore Digital Infrastructure",
     "guaranteeTitle": "Infrastructure Guarantee",
     "features": {
       "privacy": {
@@ -962,7 +917,8 @@
       "ai": "Digital Legal Infrastructure",
       "automation": "Legal Workflow Automation"
     },
-    "contactTitle": "Contact Us",
+    "cta_3_whatsapp": "Chat on WhatsApp",
+    "cta_3_request": "Send Email",
     "copyright": "© {year} <companyLink>Cyboring Technologies LLC</companyLink>. All rights reserved. Delaware, USA.",
     "trustBadges": {
       "secureByDesign": "Secure by Design",

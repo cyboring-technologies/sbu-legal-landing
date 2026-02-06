@@ -66,15 +66,17 @@ export const IncineratorProtocolSection: React.FC = () => {
                         href="/incinerator-protocol"
                         variant="primary"
                         size="lg"
+                        ctaType="cta-2"
                     >
-                        {t('cta1')}
+                        {t('cta_2_readDoctrine')}
                     </CTAButton>
                     <CTAButton
                         href="/demo"
                         variant="secondary"
                         size="lg"
+                        ctaType="cta-2"
                     >
-                        {t('cta2')}
+                        {t('cta_1_test')}
                     </CTAButton>
                 </div>
             </div>

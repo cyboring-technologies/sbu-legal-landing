@@ -84,10 +84,10 @@ export const SolutionSection: React.FC = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <CTAButton href="/contact" variant="primary" size="lg">
+          <CTAButton href="/contact" variant="primary" size="lg" ctaType="cta-2">
             {tSolution('getStarted')}
           </CTAButton>
-          <CTAButton href="/our-services" variant="secondary" size="lg">
+          <CTAButton href="/our-services" variant="secondary" size="lg" ctaType="cta-2">
             {tSolution('learnMore')}
           </CTAButton>
         </div>

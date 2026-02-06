@@ -4,6 +4,7 @@ import React from 'react';
 import { Link } from '../i18n/navigation';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
+import { CTAButton } from './CTAButtons';
 import {
   Rocket,
   Mail,
@@ -174,25 +175,27 @@ const Footer = () => {
 
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                <a
+                <CTAButton
                   href="mailto:hello@cyboring.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  variant="secondary"
+                  size="sm"
+                  ctaType="cta-3"
+                  className="p-0 h-auto bg-transparent hover:bg-transparent text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 border-none"
                 >
                   hello@cyboring.com
-                </a>
+                </CTAButton>
               </div>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                <a
+                <CTAButton
                   href="https://wa.me/18156620760"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  variant="secondary"
+                  size="sm"
+                  ctaType="cta-3"
+                  className="p-0 h-auto bg-transparent hover:bg-transparent text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 border-none"
                 >
-                  Chat on WhatsApp
-                </a>
+                  {t('cta_3_whatsapp')}
+                </CTAButton>
               </div>
             </div>
             <div className="flex space-x-4 mt-6">
@@ -291,7 +294,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 };
 

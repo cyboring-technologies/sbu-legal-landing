@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from '../i18n/navigation';
-import { CTAButton } from './CTAButtons';
+import { CTAButton, CTAType } from './CTAButtons';
 import { HtmlContent } from './HtmlContent';
 
 interface HeroProps {
@@ -10,10 +10,14 @@ interface HeroProps {
   primaryCTA: {
     text: string;
     href: string;
+    onClick?: () => void;
+    ctaType?: CTAType;
   };
   secondaryCTA?: {
     text: string;
     href: string;
+    onClick?: () => void;
+    ctaType?: CTAType;
   };
   prompt?: string;
   foundersGrant?: string;
@@ -72,50 +76,34 @@ const Hero: React.FC<HeroProps> = ({
             {description}
           </p>
 
-          {/* Interaction Block */}
-          {chips && (
-            <div className="mb-8">
-              <p className="text-lg font-medium text-muted-foreground mb-4 font-sans">{prompt}</p>
-              <div className="flex flex-wrap justify-center gap-3">
-                {[
-                  { key: 'response', text: chips.response },
-                  { key: 'complaint', text: chips.complaint },
-                  { key: 'lease', text: chips.lease },
-                  { key: 'notification', text: chips.notification },
-                ].map(({ key, text }) => (
-                  <Link
-                    key={key}
-                    href={`/login?intent=${key}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-3 bg-background border border-gray-300 dark:border-gray-700 rounded-full text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors duration-200 font-sans text-sm md:text-base font-medium"
-                  >
-                    {text}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* Primary Conversion Trigger */}
           <div className="flex flex-col items-center gap-4 mb-0">
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
-              <CTAButton
-                href={primaryCTA.href}
-                variant="primary"
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg px-8 py-4 text-lg w-full sm:w-auto"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {primaryCTA.text}
-              </CTAButton>
+              {(() => {
+                const isEngine = primaryCTA.href === '/engine' || primaryCTA.href?.includes('/engine?');
+                const deducedType = primaryCTA.ctaType || (isEngine ? 'cta-1' : 'cta-2');
+
+                return (
+                  <CTAButton
+                    href={deducedType === 'cta-1' ? '/engine' : primaryCTA.href}
+                    variant="primary"
+                    size="lg"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg px-8 py-4 text-lg w-full sm:w-auto"
+                    ctaType={deducedType as any}
+                    onClick={primaryCTA.onClick}
+                  >
+                    {primaryCTA.text}
+                  </CTAButton>
+                );
+              })()}
               {secondaryCTA && (
                 <CTAButton
                   href={secondaryCTA.href}
                   variant="secondary"
                   size="lg"
                   className="bg-background border-2 border-border text-foreground hover:border-primary hover:text-primary px-8 py-4 text-lg w-full sm:w-auto"
+                  ctaType={(secondaryCTA.ctaType || 'cta-2') as any}
+                  onClick={secondaryCTA.onClick}
                 >
                   {secondaryCTA.text}
                 </CTAButton>

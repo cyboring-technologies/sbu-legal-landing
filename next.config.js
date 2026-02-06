@@ -7,7 +7,23 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Static export for Cloudflare Pages
-  output: 'export',
+  // output: 'export', // Disabled to allow rewrites in dev
+  async rewrites() {
+    return [
+      {
+        source: '/api/gateway/:path*',
+        destination: 'http://localhost:8787/:path*',
+      },
+      {
+        source: '/engine',
+        destination: 'http://localhost:8788/',
+      },
+      {
+        source: '/engine/:path*',
+        destination: 'http://localhost:8788/:path*',
+      },
+    ]
+  },
 
   // OPCIONAL: Asegura el correcto manejo de rutas
   trailingSlash: true,

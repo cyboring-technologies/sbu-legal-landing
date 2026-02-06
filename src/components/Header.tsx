@@ -27,56 +27,26 @@ const throttle = <T extends (...args: any[]) => any>(
   };
 };
 
+import { CTAButton2 } from './CTAButtons';
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const t = useTranslations('navigation');
   const locale = useLocale();
   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      // Update scrolled state
-      setIsScrolled(currentScrollY > 10);
-
-      // Show/hide based on scroll direction
-      if (currentScrollY < lastScrollY || currentScrollY < 10) {
-        // Scrolling up or at top - show header
-        setIsVisible(true);
-      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down and past threshold - hide header
-        setIsVisible(false);
-      }
-
-      setLastScrollY(currentScrollY);
+      setIsScrolled(window.scrollY > 10);
     };
 
-    const handleMouseMove = (e: MouseEvent) => {
-      // Show header when mouse is near the top (within 100px)
-      if (e.clientY < 100) {
-        setIsHovered(true);
-      } else {
-        setIsHovered(false);
-      }
-    };
-
-    // Throttle scroll to 100ms for better performance
     const throttledScroll = throttle(handleScroll, 100);
-    // Throttle mousemove to 50ms
-    const throttledMouseMove = throttle(handleMouseMove, 50);
-
     window.addEventListener('scroll', throttledScroll, { passive: true });
-    window.addEventListener('mousemove', throttledMouseMove, { passive: true });
     return () => {
       window.removeEventListener('scroll', throttledScroll);
-      window.removeEventListener('mousemove', throttledMouseMove);
     };
-  }, [lastScrollY]);
+  }, []);
 
   const navigation = [
     { name: t('services'), href: '/our-services' },
@@ -88,10 +58,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl shadow-lg border-b border-gray-200/20 dark:border-gray-700/20'
-        : 'bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl shadow-md border-b border-gray-200/10 dark:border-gray-700/10'
-        } ${isVisible || isHovered ? 'translate-y-0' : '-translate-y-full'}`}
+      className={`absolute w-full top-0 z-50 bg-white/40 dark:bg-gray-900/40 backdrop-blur-md border-b border-gray-200/5 dark:border-gray-700/5`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -167,18 +134,19 @@ const Header = () => {
             })}
           </nav>
 
-          {/* CTA Button & Theme Toggle */}
+          {/* Theme Toggle & Access */}
           <div className="hidden md:flex items-center space-x-4">
             <LanguageToggle />
+            <CTAButton2
+              href="/engine"
+              variant="ghost"
+              size="sm"
+            >
+              {t('cta_1_access')}
+            </CTAButton2>
             <div className="w-[40px] h-[40px] flex items-center justify-center">
               <ThemeToggle iconSize={20} />
             </div>
-            <Link
-              href="/login"
-              className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-medium shadow-md transition-all duration-200 hover:bg-primary/80 hover:shadow-xl hover:scale-105 active:scale-95"
-            >
-              {t('access')}
-            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -216,13 +184,18 @@ const Header = () => {
                   </Link>
                 );
               })}
-              <Link
-                href="/login"
-                className="bg-primary text-primary-foreground block px-3 py-2 rounded-md text-base font-medium mt-4 shadow-md transition-all duration-200 hover:bg-primary/80 hover:shadow-xl hover:scale-105 active:scale-95"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t('access')}
-              </Link>
+              <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+                <CTAButton2
+                  href="/engine"
+                  variant="ghost"
+                  size="md"
+                  ctaType="cta-1"
+                  className="w-full justify-start text-gray-500 dark:text-gray-400 !transition-none opacity-60 hover:opacity-100"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t('cta_1_access')}
+                </CTAButton2>
+              </div>
             </div>
           </div>
         )}
