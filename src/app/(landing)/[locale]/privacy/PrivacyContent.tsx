@@ -146,9 +146,10 @@ export default function PrivacyContent() {
                     {t('sections.contact.email')}:{' '}
                     <CTAButton
                       href="mailto:legal@cyboring.com"
+                      target="_blank"
                       variant="secondary"
                       size="sm"
-                      ctaType="cta-3"
+                      ctaType="cta-4"
                       className="p-0 h-auto bg-transparent hover:bg-transparent text-blue-600 dark:text-blue-400 border-none inline"
                     >
                       legal@cyboring.com

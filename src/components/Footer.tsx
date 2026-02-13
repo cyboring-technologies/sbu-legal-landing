@@ -177,6 +177,7 @@ const Footer = () => {
                 <Mail className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                 <CTAButton
                   href="mailto:hello@documentos.legal"
+                  target="_blank"
                   variant="secondary"
                   size="sm"
                   ctaType="cta-4"
@@ -190,7 +191,8 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <MessageCircle className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                 <CTAButton
-                  href="https://wa.me/18156620760"
+                  href="https://wa.me/50687504770"
+                  target="_blank"
                   variant="secondary"
                   size="sm"
                   ctaType="cta-3"

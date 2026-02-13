@@ -490,7 +490,7 @@ export default function OurServicesPage() {
                 <p className="text-gray-600 dark:text-gray-300 mb-8 flex-grow">{t('cta.whatsapp.description')}</p>
                 <div className="mb-4">
                   <CTAButton
-                    href="https://wa.me/18156620760"
+                    href="https://wa.me/50687504770"
                     variant="secondary"
                     size="md"
                     className="w-full justify-center"

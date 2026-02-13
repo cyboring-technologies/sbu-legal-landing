@@ -341,7 +341,7 @@ export default function QuestionsAndAnswersPage() {
                   {t('helpResources.whatsapp.description')}
                 </p>
                 <CTAButton
-                  href="https://wa.me/18156620760"
+                  href="https://wa.me/50687504770"
                   target="_blank"
                   variant="secondary"
                   size="md"
@@ -368,7 +368,7 @@ export default function QuestionsAndAnswersPage() {
                   target="_blank"
                   variant="secondary"
                   size="md"
-                  ctaType="cta-2"
+                  ctaType="cta-4"
                   note={t('helpResources.cta_4_note')}
                   className="mx-auto"
                 >
@@ -514,9 +514,10 @@ export default function QuestionsAndAnswersPage() {
                 </p>
                 <CTAButton
                   href="mailto:hello@documentos.legal?subject=Reporte de Fricción Técnica"
+                  target="_blank"
                   variant="secondary"
                   size="md"
-                  ctaType="cta-2"
+                  ctaType="cta-4"
                   className="mx-auto"
                 >
                   {t('evolutionProtocol.cta_4_send')}
@@ -535,9 +536,10 @@ export default function QuestionsAndAnswersPage() {
                 </p>
                 <CTAButton
                   href="mailto:hello@documentos.legal?subject=Propuesta de Nuevo Módulo Documental"
+                  target="_blank"
                   variant="secondary"
                   size="md"
-                  ctaType="cta-2"
+                  ctaType="cta-4"
                   className="mx-auto"
                 >
                   {t('evolutionProtocol.cta_4_send')}

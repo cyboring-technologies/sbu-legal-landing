@@ -86,15 +86,15 @@ export default function ContactPage() {
             description={t('hero.description')}
             primaryCTA={{
               text: t('hero.cta_3_primary'),
-              href: 'https://wa.me/18156620760',
-              ctaType: 'cta-2',
+              href: 'https://wa.me/50687504770',
+              ctaType: 'cta-3',
               target: '_blank',
               note: t('hero.cta_3_note'),
             }}
             secondaryCTA={{
               text: t('hero.cta_4_secondary'),
               href: 'mailto:hello@documentos.legal',
-              ctaType: 'cta-2',
+              ctaType: 'cta-4',
               target: '_blank',
               note: t('hero.cta_4_note'),
             }}
@@ -342,7 +342,8 @@ export default function ContactPage() {
                   {t('alternativeContact.whatsapp.description')}
                 </p>
                 <CTAButton
-                  href="https://wa.me/18156620760"
+                  href="https://wa.me/50687504770"
+                  target="_blank"
                   variant="secondary"
                   size="sm"
                   ctaType="cta-2"
@@ -365,9 +366,10 @@ export default function ContactPage() {
                 </p>
                 <CTAButton
                   href="mailto:hello@documentos.legal?subject=Consulta de Facturación"
+                  target="_blank"
                   variant="secondary"
                   size="sm"
-                  ctaType="cta-2"
+                  ctaType="cta-4"
                   note={t('alternativeContact.cta_4_note')}
                 >
                   {t('alternativeContact.cta_4_send')}
