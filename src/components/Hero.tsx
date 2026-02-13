@@ -12,22 +12,18 @@ interface HeroProps {
     href: string;
     onClick?: () => void;
     ctaType?: CTAType;
+    target?: '_blank' | '_self';
+    note?: string;
   };
   secondaryCTA?: {
     text: string;
     href: string;
     onClick?: () => void;
     ctaType?: CTAType;
+    target?: '_blank' | '_self';
+    note?: string;
   };
-  prompt?: string;
-  foundersGrant?: string;
   incineratorProtocol?: string;
-  chips?: {
-    response: string;
-    complaint: string;
-    lease: string;
-    notification: string;
-  };
   backgroundImage?: string;
   className?: string;
   backgroundVariant?: 'default' | 'animated-gradient' | 'mesh' | 'geometric' | 'radial' | 'diagonal';
@@ -39,10 +35,7 @@ const Hero: React.FC<HeroProps> = ({
   description,
   primaryCTA,
   secondaryCTA,
-  prompt,
-  foundersGrant,
   incineratorProtocol,
-  chips,
   backgroundImage,
   className = '',
   backgroundVariant = 'default',
@@ -72,9 +65,11 @@ const Hero: React.FC<HeroProps> = ({
           </div>
 
           {/* Description */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-4xl mx-auto leading-relaxed">
-            {description}
-          </p>
+          <HtmlContent
+            content={description}
+            as="p"
+            className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-4xl mx-auto leading-relaxed"
+          />
 
           {/* Primary Conversion Trigger */}
           <div className="flex flex-col items-center gap-4 mb-0">
@@ -82,15 +77,18 @@ const Hero: React.FC<HeroProps> = ({
               {(() => {
                 const isEngine = primaryCTA.href === '/engine' || primaryCTA.href?.includes('/engine?');
                 const deducedType = primaryCTA.ctaType || (isEngine ? 'cta-1' : 'cta-2');
+                const variant = deducedType === 'cta-2' ? 'secondary' : 'primary';
 
                 return (
                   <CTAButton
                     href={deducedType === 'cta-1' ? '/engine' : primaryCTA.href}
-                    variant="primary"
+                    variant={variant}
                     size="lg"
-                    className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg px-8 py-4 text-lg w-full sm:w-auto"
+                    className={variant === 'primary' ? 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg px-8 py-4 text-lg w-full sm:w-auto' : 'bg-background border-2 border-border text-foreground hover:border-primary hover:text-primary px-8 py-4 text-lg w-full sm:w-auto'}
                     ctaType={deducedType as any}
                     onClick={primaryCTA.onClick}
+                    target={primaryCTA.target}
+                    note={primaryCTA.note}
                   >
                     {primaryCTA.text}
                   </CTAButton>
@@ -103,7 +101,8 @@ const Hero: React.FC<HeroProps> = ({
                   size="lg"
                   className="bg-background border-2 border-border text-foreground hover:border-primary hover:text-primary px-8 py-4 text-lg w-full sm:w-auto"
                   ctaType={(secondaryCTA.ctaType || 'cta-2') as any}
-                  onClick={secondaryCTA.onClick}
+                  target={secondaryCTA.target}
+                  note={secondaryCTA.note}
                 >
                   {secondaryCTA.text}
                 </CTAButton>
@@ -113,11 +112,7 @@ const Hero: React.FC<HeroProps> = ({
 
           {/* Trust Block (Grouped) */}
           <div className="mt-24 pt-8 flex flex-col items-center gap-6">
-            {foundersGrant && (
-              <p className="text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
-                {foundersGrant}
-              </p>
-            )}
+
 
             {incineratorProtocol && (
               <p className="text-sm text-muted-foreground font-mono bg-transparent inline-block px-4 py-2 rounded-lg">

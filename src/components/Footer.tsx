@@ -15,7 +15,7 @@ import {
   Lock,
   Code2,
   ShieldCheck,
-  Cloud,
+  Cpu,
 
 } from 'lucide-react';
 
@@ -70,7 +70,7 @@ const TrustBadges = ({ className = '' }: { className?: string }) => {
 
   const badges = [
     { icon: ShieldCheck, label: t('secureByDesign') },
-    { icon: Cloud, label: t('cloudAgnostic') },
+    { icon: Cpu, label: t('cloudAgnostic') },
     { icon: Code2, label: t('nativeCode') },
     { icon: AIFoundryIcon, label: t('orchestration') },
     { icon: Lock, label: t('ssl') },
@@ -176,13 +176,15 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                 <CTAButton
-                  href="mailto:hello@cyboring.com"
+                  href="mailto:hello@documentos.legal"
                   variant="secondary"
                   size="sm"
-                  ctaType="cta-3"
+                  ctaType="cta-4"
+                  note={t('cta_4_note')}
+                  tooltip={true}
                   className="p-0 h-auto bg-transparent hover:bg-transparent text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 border-none"
                 >
-                  hello@cyboring.com
+                  {t('cta_4_send')}
                 </CTAButton>
               </div>
               <div className="flex items-center space-x-2">
@@ -192,6 +194,8 @@ const Footer = () => {
                   variant="secondary"
                   size="sm"
                   ctaType="cta-3"
+                  note={t('cta_3_note')}
+                  tooltip={true}
                   className="p-0 h-auto bg-transparent hover:bg-transparent text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 border-none"
                 >
                   {t('cta_3_whatsapp')}

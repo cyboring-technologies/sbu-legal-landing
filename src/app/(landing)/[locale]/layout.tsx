@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
+import { ModalProvider } from '../../../components/providers/ModalProvider';
 
 const locales = ['en', 'es'];
 
@@ -32,7 +33,9 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      {children}
+      <ModalProvider>
+        {children}
+      </ModalProvider>
     </NextIntlClientProvider>
   );
 }

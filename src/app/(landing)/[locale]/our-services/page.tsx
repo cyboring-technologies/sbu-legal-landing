@@ -71,7 +71,10 @@ export default function OurServicesPage() {
               text: t('hero.cta_1_primary'),
               href: '/engine',
             }}
-            foundersGrant={t('hero.foundersGrant')}
+            secondaryCTA={{
+              text: t('hero.cta_2_secondary'),
+              href: '/privacy',
+            }}
             backgroundImage="/images/services-hero-bg.jpg"
             backgroundVariant="radial"
           />
@@ -100,7 +103,7 @@ export default function OurServicesPage() {
               {/* 1. Drafting Engine */}
               <HoverCard className="p-8 flex flex-col h-full group">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <Code className="w-6 h-6" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -112,7 +115,7 @@ export default function OurServicesPage() {
                 </p>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-muted-foreground mr-2 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                     <span><span className="font-semibold">Capacidades:</span> {t('draftingEngine.capabilities')}</span>
                   </li>
                   <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
@@ -125,12 +128,12 @@ export default function OurServicesPage() {
                   </li>
                 </ul>
                 <CTAButton
-                  href="#contact"
+                  href="/engine"
                   variant="primary"
                   className="w-full justify-center"
-                  ctaType="cta-2"
+                  ctaType="cta-1"
                 >
-                  {t('draftingEngine.cta_3_request')}
+                  {t('draftingEngine.cta_1_start')}
                 </CTAButton>
               </HoverCard>
 
@@ -165,7 +168,7 @@ export default function OurServicesPage() {
                   href="#contact"
                   variant="secondary"
                   className="w-full justify-center"
-                  ctaType="cta-2"
+                  ctaType="cta-3"
                 >
                   {t('contractEngineering.cta_3_request')}
                 </CTAButton>
@@ -204,7 +207,7 @@ export default function OurServicesPage() {
                   className="w-full justify-center"
                   ctaType="cta-2"
                 >
-                  {t('infrastructure.cta_3_request')}
+                  {t('infrastructure.cta_2_security')}
                 </CTAButton>
               </HoverCard>
             </StaggeredGrid>
@@ -220,44 +223,44 @@ export default function OurServicesPage() {
             />
 
             <StaggeredGrid columns={4} className="mt-12">
-              <HoverCard className="p-6 text-center h-full">
-                <div className="w-16 h-16 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <HoverCard className="p-6 text-center h-full group">
+                <div className="w-16 h-16 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:rotate-3">
                   <span className="text-xl font-bold">1</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {t('process.step1.title')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">{t('process.step1.description')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-left">{t('process.step1.description')}</p>
               </HoverCard>
 
-              <HoverCard className="p-6 text-center h-full">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
+              <HoverCard className="p-6 text-center h-full group">
+                <div className="w-16 h-16 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:-rotate-3">
                   <span className="text-xl font-bold">2</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {t('process.step2.title')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">{t('process.step2.description')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-left">{t('process.step2.description')}</p>
               </HoverCard>
 
-              <HoverCard className="p-6 text-center h-full">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
+              <HoverCard className="p-6 text-center h-full group">
+                <div className="w-16 h-16 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:rotate-3">
                   <span className="text-xl font-bold">3</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {t('process.step3.title')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">{t('process.step3.description')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-left">{t('process.step3.description')}</p>
               </HoverCard>
 
-              <HoverCard className="p-6 text-center h-full">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
+              <HoverCard className="p-6 text-center h-full group">
+                <div className="w-16 h-16 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:-rotate-3">
                   <span className="text-xl font-bold">4</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {t('process.step4.title')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">{t('process.step4.description')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-left">{t('process.step4.description')}</p>
               </HoverCard>
             </StaggeredGrid>
           </div>
@@ -308,50 +311,39 @@ export default function OurServicesPage() {
 
             {/* Tech Stack List */}
             <FadeIn direction='up' delay={200}>
-              <div className="bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+              <div className="mt-16 bg-muted/30 dark:bg-muted/10 rounded-3xl p-8 lg:p-12 border border-border/50 relative overflow-hidden">
+                {/* Decorative background elements */}
+                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+
+                <h3 className="text-3xl font-bold text-foreground mb-6 text-center relative z-10">
                   {t('technologies.techStack.title')}
                 </h3>
-                <p className="text-center text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-                  {t('technologies.techStack.intro')}
+                <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto text-lg leading-relaxed relative z-10">
+                  {t.rich('technologies.techStack.intro', {
+                    br: () => <br />
+                  })}
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 max-w-5xl mx-auto">
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 rounded-full bg-gray-400"></div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto relative z-10">
+                  {/* Tech Stack Items */}
+                  {[
+                    'frontend',
+                    'businessLogic',
+                    'intelligence',
+                    'orchestration',
+                    'infrastructure',
+                    'security'
+                  ].map((key) => (
+                    <div key={key} className="group p-6 rounded-xl bg-background border border-border hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="flex items-start space-x-4">
+                        <div className="mt-2 flex-shrink-0 w-2.5 h-2.5 rounded-full bg-primary dark:bg-white shadow-sm group-hover:scale-125 transition-transform duration-300" />
+                        <p className="text-foreground font-medium text-lg leading-relaxed group-hover:text-primary transition-colors duration-300">
+                          {t(`technologies.techStack.${key}`)}
+                        </p>
+                      </div>
                     </div>
-                    <p className="text-gray-700 dark:text-gray-300 font-medium">{t('technologies.techStack.frontend')}</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 rounded-full bg-primary"></div>
-                    </div>
-                    <p className="text-gray-700 dark:text-gray-300 font-medium">{t('technologies.techStack.businessLogic')}</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 rounded-full bg-primary"></div>
-                    </div>
-                    <p className="text-gray-700 dark:text-gray-300 font-medium">{t('technologies.techStack.intelligence')}</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 rounded-full bg-primary"></div>
-                    </div>
-                    <p className="text-gray-700 dark:text-gray-300 font-medium">{t('technologies.techStack.orchestration')}</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 rounded-full bg-primary"></div>
-                    </div>
-                    <p className="text-gray-700 dark:text-gray-300 font-medium">{t('technologies.techStack.infrastructure')}</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 rounded-full bg-gray-400"></div>
-                    </div>
-                    <p className="text-gray-700 dark:text-gray-300 font-medium">{t('technologies.techStack.security')}</p>
-                  </div>
+                  ))}
                 </div>
               </div>
             </FadeIn>
@@ -382,8 +374,8 @@ export default function OurServicesPage() {
                 <p className="text-gray-600 dark:text-gray-300 mb-6 min-h-[48px]">
                   {t('benefits.benefit1.description')}
                 </p>
-                <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                  <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20">
+                  <p className="text-sm font-semibold text-primary dark:text-white">
                     <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">{t('benefits.impactLabel')}</span>
                     {t('benefits.benefit1.impact')}
                   </p>
@@ -406,7 +398,7 @@ export default function OurServicesPage() {
                   {t('benefits.benefit2.description')}
                 </p>
                 <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20">
-                  <p className="text-sm font-semibold text-primary">
+                  <p className="text-sm font-semibold text-primary dark:text-white">
                     <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">{t('benefits.impactLabel')}</span>
                     {t('benefits.benefit2.impact')}
                   </p>
@@ -429,7 +421,7 @@ export default function OurServicesPage() {
                   {t('benefits.benefit3.description')}
                 </p>
                 <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20">
-                  <p className="text-sm font-semibold text-primary">
+                  <p className="text-sm font-semibold text-primary dark:text-white">
                     <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">{t('benefits.impactLabel')}</span>
                     {t('benefits.benefit3.impact')}
                   </p>
@@ -452,7 +444,7 @@ export default function OurServicesPage() {
                   {t('benefits.benefit4.description')}
                 </p>
                 <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20">
-                  <p className="text-sm font-semibold text-primary">
+                  <p className="text-sm font-semibold text-primary dark:text-white">
                     <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">{t('benefits.impactLabel')}</span>
                     {t('benefits.benefit4.impact')}
                   </p>
@@ -472,24 +464,24 @@ export default function OurServicesPage() {
             />
 
             <StaggeredGrid columns={3}>
-              {/* 1. Founder's Grant */}
-              <HoverCard className="p-8 flex flex-col h-full relative overflow-hidden border-t-2 border-t-primary">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('cta.grant.title')}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-8 flex-grow">{t('cta.grant.description')}</p>
-                <div className="mb-4">
-                  <CTAButton
-                    href="/contact"
-                    variant="primary"
-                    size="md"
-                    className="w-full justify-center"
-                    ctaType="cta-2"
-                  >
-                    {t('cta.grant.cta_1_activate')}
-                  </CTAButton>
-                </div>
-                <p className="text-xs text-center text-gray-500 dark:text-gray-400 italic">
-                  {t('cta.grant.microcopy')}
+              {/* 1. Incinerator Protocol */}
+              <HoverCard className="p-8 flex flex-col bg-gray-50 dark:bg-gray-800/50">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  {t('cta.protocol.title')}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-8 text-sm leading-relaxed">
+                  {t('cta.protocol.description')}
                 </p>
+                <div className="space-y-4 mt-auto">
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" />
+                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-snug">{t('cta.protocol.guarantee')}</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" />
+                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-snug">{t('cta.protocol.infrastructure')}</p>
+                  </div>
+                </div>
               </HoverCard>
 
               {/* 2. WhatsApp Bridge */}
@@ -503,6 +495,8 @@ export default function OurServicesPage() {
                     size="md"
                     className="w-full justify-center"
                     ctaType="cta-3"
+                    note={t('cta.whatsapp.cta_3_note')}
+                    target="_blank"
                   >
                     {t('cta.whatsapp.cta_3_chat')}
                   </CTAButton>
@@ -512,25 +506,24 @@ export default function OurServicesPage() {
                 </p>
               </HoverCard>
 
-              {/* 3. Incinerator Protocol */}
-              <HoverCard className="p-8 flex flex-col bg-gray-50 dark:bg-gray-800/50">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                  {t('cta.protocol.title')}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm italic">
-                  {t('cta.protocol.description')}
-                </p>
-                <div className="space-y-4 mt-auto">
-                  <div className="flex items-start">
-                    <p className="text-sm text-gray-700 dark:text-gray-300 font-medium">{t('cta.protocol.guarantee')}</p>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5 flex items-center justify-center">
-                      <div className="w-1.5 h-1.5 rounded-full bg-gray-400"></div>
-                    </div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{t('cta.protocol.infrastructure')}</p>
-                  </div>
+              {/* 3. Founder's Grant */}
+              <HoverCard className="p-8 flex flex-col h-full relative overflow-hidden border-t-2 border-t-primary">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('cta.grant.title')}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-8 flex-grow">{t('cta.grant.description')}</p>
+                <div className="mb-4">
+                  <CTAButton
+                    href="/engine"
+                    variant="primary"
+                    size="md"
+                    className="w-full justify-center"
+                    ctaType="cta-1"
+                  >
+                    {t('cta.grant.cta_1_activate')}
+                  </CTAButton>
                 </div>
+                <p className="text-xs text-center text-gray-500 dark:text-gray-400 italic">
+                  {t('cta.grant.microcopy')}
+                </p>
               </HoverCard>
             </StaggeredGrid>
           </div>

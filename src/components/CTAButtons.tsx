@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from '../i18n/navigation';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { useModal } from './providers/ModalProvider';
 
 // CTA Architecture v1.1 Normative Types
 export type CTAType = 'cta-1' | 'cta-2' | 'cta-3' | 'cta-4';
@@ -15,6 +16,8 @@ interface BaseCTAProps {
   onClick?: () => void;
   // Metadata for audit tracking
   'data-cta-label'?: string;
+  note?: string;
+  tooltip?: boolean;
 }
 
 type CTAButtonProps = BaseCTAProps & (
@@ -22,7 +25,6 @@ type CTAButtonProps = BaseCTAProps & (
   | { ctaType: 'cta-2'; href: string; target?: '_blank' | '_self'; rel?: string }
   | { ctaType: 'cta-3'; href: string; target?: '_blank' | '_self'; rel?: string }
   | { ctaType: 'cta-4'; href?: string; target?: '_blank' | '_self'; rel?: string }
-  | { ctaType?: never; href?: string; target?: '_blank' | '_self'; rel?: string } // Legacy support
 );
 
 const CTAButton: React.FC<CTAButtonProps> = ({
@@ -36,8 +38,11 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   target,
   rel,
   ctaType,
+  note,
+  tooltip,
 }) => {
   const { theme } = useTheme();
+  const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
   let finalHref = ctaType === 'cta-1' ? '/engine' : href;
@@ -77,42 +82,59 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   );
 
 
-  // If href is not provided, or an onClick handler is present, render a button
-  if (!href || onClick) {
-    return (
-      <button onClick={onClick} className={`${classes} group`}>
-        {content}
-      </button>
-    );
-  }
+  const buttonContent = (
+    <div className="relative inline-flex flex-col group/cta">
+      {/* If href is not provided, or an onClick handler is present, render a button */}
+      {(!href || onClick || ctaType === 'cta-2') ? (
+        <button onClick={(e) => {
+          if (ctaType === 'cta-2') {
+            e.preventDefault();
+            openSecurityModal();
+          }
+          if (onClick) onClick();
+        }} className={`${classes} group`}>
+          {content}
+        </button>
+      ) : finalHref?.startsWith('http') ? (
+        <a
+          href={finalHref}
+          className={`${classes} group`}
+          target={finalTarget}
+          rel={finalRel}
+          data-cta-type={ctaType}
+        >
+          {content}
+        </a>
+      ) : (
+        <Link
+          href={finalHref || '#'}
+          className={`${classes} group`}
+          target={finalTarget}
+          rel={finalRel}
+          data-cta-type={ctaType}
+        >
+          {content}
+        </Link>
+      )}
 
-  // If href starts with http, render a standard anchor tag
-  if (finalHref?.startsWith('http')) {
-    return (
-      <a
-        href={finalHref}
-        className={`${classes} group`}
-        target={finalTarget}
-        rel={finalRel}
-        data-cta-type={ctaType}
-      >
-        {content}
-      </a>
-    );
-  }
+      {note && !tooltip && (
+        <p className="mt-2 text-xs text-muted-foreground/80 leading-snug max-w-[240px]">
+          {note}
+        </p>
+      )}
 
-  // Otherwise, render a Next.js Link component
-  return (
-    <Link
-      href={finalHref || '#'}
-      className={`${classes} group`}
-      target={finalTarget}
-      rel={finalRel}
-      data-cta-type={ctaType}
-    >
-      {content}
-    </Link>
+      {note && tooltip && (
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 invisible group-hover/cta:visible opacity-0 group-hover/cta:opacity-100 transition-all duration-200 z-50">
+          <div className="bg-gray-900 dark:bg-gray-800 text-white px-3 py-2 rounded text-[10px] leading-tight w-max max-w-[200px] shadow-2xl border border-white/10">
+            {note}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-gray-900 dark:border-t-gray-800" />
+          </div>
+        </div>
+      )}
+    </div>
   );
+
+  return buttonContent;
 };
 
 // Secondary CTA Button (different style)
@@ -122,6 +144,8 @@ interface BaseCTA2Props {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
+  note?: string;
+  tooltip?: boolean;
 }
 
 type CTAButton2Props = BaseCTA2Props & (
@@ -129,7 +153,6 @@ type CTAButton2Props = BaseCTA2Props & (
   | { ctaType: 'cta-2'; href: string; target?: '_blank' | '_self'; rel?: string }
   | { ctaType: 'cta-3'; href: string; target?: '_blank' | '_self'; rel?: string }
   | { ctaType: 'cta-4'; href?: string; target?: '_blank' | '_self'; rel?: string }
-  | { ctaType?: never; href?: string; target?: '_blank' | '_self'; rel?: string }
 );
 
 const CTAButton2: React.FC<CTAButton2Props> = ({
@@ -142,8 +165,11 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
   target,
   rel,
   ctaType,
+  note,
+  tooltip,
 }) => {
   const { theme } = useTheme();
+  const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
   let finalHref = ctaType === 'cta-1' ? '/engine' : href;
@@ -162,7 +188,7 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
     outline:
       'border-2 border-border text-foreground hover:border-primary hover:text-primary focus:ring-ring',
     ghost:
-      'text-primary hover:text-primary/80 hover:bg-accent/10 focus:ring-ring',
+      'text-primary dark:text-gray-100 hover:text-primary/80 dark:hover:text-white hover:bg-accent/10 focus:ring-ring',
   };
 
   const sizeClasses = {
@@ -181,39 +207,59 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
   );
 
 
-  if (onClick) {
-    return (
-      <button onClick={onClick} className={classes}>
-        {content}
-      </button>
-    );
-  }
+  const buttonContent = (
+    <div className="relative inline-flex flex-col group/cta">
+      {/* Logic for button or link */}
+      {(onClick || ctaType === 'cta-2') ? (
+        <button onClick={(e) => {
+          if (ctaType === 'cta-2') {
+            e.preventDefault();
+            openSecurityModal();
+          }
+          if (onClick) onClick();
+        }} className={classes}>
+          {content}
+        </button>
+      ) : finalHref?.startsWith('http') ? (
+        <a
+          href={finalHref}
+          className={classes}
+          target={finalTarget}
+          rel={finalRel}
+          data-cta-type={ctaType}
+        >
+          {content}
+        </a>
+      ) : (
+        <Link
+          href={finalHref || '#'}
+          className={classes}
+          target={finalTarget}
+          rel={finalRel}
+          data-cta-type={ctaType}
+        >
+          {content}
+        </Link>
+      )}
 
-  if (finalHref?.startsWith('http')) {
-    return (
-      <a
-        href={finalHref}
-        className={classes}
-        target={finalTarget}
-        rel={finalRel}
-        data-cta-type={ctaType}
-      >
-        {content}
-      </a>
-    );
-  }
+      {note && !tooltip && (
+        <p className="mt-2 text-xs text-muted-foreground/80 leading-snug max-w-[240px]">
+          {note}
+        </p>
+      )}
 
-  return (
-    <Link
-      href={finalHref || '#'}
-      className={classes}
-      target={finalTarget}
-      rel={finalRel}
-      data-cta-type={ctaType}
-    >
-      {content}
-    </Link>
+      {note && tooltip && (
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 invisible group-hover/cta:visible opacity-0 group-hover/cta:opacity-100 transition-all duration-200 z-50">
+          <div className="bg-gray-900 dark:bg-gray-800 text-white px-3 py-2 rounded text-[10px] leading-tight w-max max-w-[200px] shadow-2xl border border-white/10">
+            {note}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-gray-900 dark:border-t-gray-800" />
+          </div>
+        </div>
+      )}
+    </div>
   );
+
+  return buttonContent;
 };
 
 export { CTAButton, CTAButton2 };

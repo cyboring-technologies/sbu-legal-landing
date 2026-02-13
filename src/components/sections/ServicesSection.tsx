@@ -7,6 +7,7 @@ import {
   useStaggeredIntersectionObserver,
 } from '../../hooks/useIntersectionObserver';
 import { CTAButton } from '../CTAButtons';
+import { HtmlContent } from '../HtmlContent';
 import { Scale, Target, Cpu, ArrowRight } from 'lucide-react';
 
 export const ServicesSection: React.FC = () => {
@@ -43,9 +44,11 @@ export const ServicesSection: React.FC = () => {
           ref={servicesHeaderRef}
           className={`text-center mb-16 transition-all duration-1000 ${isServicesHeaderVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
-            {tServices('title')}
-          </h2>
+          <HtmlContent
+            content={tServices('title')}
+            as="h2"
+            className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-6"
+          />
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             {tServices('description')}
           </p>

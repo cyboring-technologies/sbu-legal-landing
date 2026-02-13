@@ -4,6 +4,22 @@ import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import { Globe } from 'lucide-react';
 
+// Slug mapping between languages for blog posts
+const slugMap: Record<string, Record<string, string>> = {
+  'en': {
+    'el-modelo-one-shot': 'the-one-shot-model',
+    'protocolo-incinerador': 'incinerator-protocol',
+    'pago-como-autoridad': 'payment-as-authority',
+    'fin-horas-facturables': 'end-of-billable-hours',
+  },
+  'es': {
+    'the-one-shot-model': 'el-modelo-one-shot',
+    'incinerator-protocol': 'protocolo-incinerador',
+    'payment-as-authority': 'pago-como-autoridad',
+    'end-of-billable-hours': 'fin-horas-facturables',
+  },
+};
+
 export function LanguageToggle() {
   const locale = useLocale();
   const router = useRouter();
@@ -16,7 +32,18 @@ export function LanguageToggle() {
     localStorage.setItem('preferred-locale', newLocale);
 
     // Remove the current locale from the pathname
-    const pathnameWithoutLocale = pathname.replace(`/${locale}`, '');
+    let pathnameWithoutLocale = pathname.replace(`/${locale}`, '');
+
+    // Check if we're on a blog post page and translate the slug
+    const blogPostMatch = pathnameWithoutLocale.match(/^\/blog\/([^/]+)\/?$/);
+    if (blogPostMatch) {
+      const currentSlug = blogPostMatch[1];
+      const translatedSlug = slugMap[newLocale]?.[currentSlug];
+
+      if (translatedSlug) {
+        pathnameWithoutLocale = `/blog/${translatedSlug}`;
+      }
+    }
 
     // Navigate to the same path with the new locale
     router.push(`/${newLocale}${pathnameWithoutLocale}`);

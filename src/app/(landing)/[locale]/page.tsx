@@ -217,16 +217,9 @@ export default function HomePage() {
                 text: tHero('cta_1_primary'), // V2 CONTRACT: Permitted copy (semantically neutral, no accounts/sessions)
                 onClick: handleStartExecution, // SOVEREIGN MODE: Direct Engine V2 entry with theme
                 href: '#', // Fallback
+                ctaType: 'cta-1',
               }}
-              prompt={tHero('prompt')}
-              foundersGrant={tHero('foundersGrant')}
               incineratorProtocol={tHero('incineratorProtocol')}
-              chips={{
-                response: tHero('chips.response'),
-                complaint: tHero('chips.complaint'),
-                lease: tHero('chips.lease'),
-                notification: tHero('chips.notification'),
-              }}
             />
             <HeroBackgroundEffects />
           </div>
@@ -347,9 +340,11 @@ export default function HomePage() {
                 <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
                   {tSolution('title')}
                 </h2>
-                <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                  {tSolution('description')}
-                </p>
+                <HtmlContent
+                  content={tSolution('description')}
+                  as="p"
+                  className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto"
+                />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -426,27 +421,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <CTAButton
-                  href="/engine"
-                  variant="primary"
-                  size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg px-8"
-                  ctaType="cta-1"
-                  onClick={handleStartExecution}
-                >
-                  {tSolution('cta_1_getStarted')}
-                </CTAButton>
-                <CTAButton
-                  href="/privacy"
-                  variant="secondary"
-                  size="lg"
-                  className="text-foreground hover:bg-secondary border border-border px-8"
-                  ctaType="cta-2"
-                >
-                  {tSolution('cta_2_learnMore')}
-                </CTAButton>
-              </div>
+
             </div>
           </section>
 
@@ -458,12 +433,16 @@ export default function HomePage() {
                 ref={servicesHeaderRef}
                 className={`text-center mb-16 transition-all duration-1000 ${isServicesHeaderVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               >
-                <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
-                  {tServices('title')}
-                </h2>
-                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                  {tServices('description')}
-                </p>
+                <HtmlContent
+                  content={tServices('title')}
+                  as="h2"
+                  className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6"
+                />
+                <HtmlContent
+                  content={tServices('description')}
+                  as="p"
+                  className="text-xl text-gray-600 dark:text-gray-300 max-w-6xl mx-auto leading-relaxed"
+                />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -531,27 +510,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-                <CTAButton
-                  href="/engine"
-                  variant="primary"
-                  size="lg"
-                  className="px-8 shadow-lg hover:shadow-xl"
-                  ctaType="cta-1"
-                  onClick={handleStartExecution}
-                >
-                  {tServices('cta_1_viewAll')}
-                </CTAButton>
-                <CTAButton
-                  href="/privacy"
-                  variant="secondary"
-                  size="lg"
-                  className="px-8"
-                  ctaType="cta-2"
-                >
-                  {tServices('cta_2_getQuote')}
-                </CTAButton>
-              </div>
+
             </div>
           </section>
 
@@ -566,9 +525,11 @@ export default function HomePage() {
                 <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
                   {tTestimonials('title')}
                 </h2>
-                <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {tTestimonials('description')}
-                </p>
+                <HtmlContent
+                  content={tTestimonials('description')}
+                  as="p"
+                  className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+                />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -648,27 +609,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-                <CTAButton
-                  href="/engine"
-                  variant="primary"
-                  size="lg"
-                  className="px-8 shadow-lg hover:shadow-xl"
-                  ctaType="cta-1"
-                  onClick={handleStartExecution}
-                >
-                  {tTestimonials('cta_1_join')}
-                </CTAButton>
-                <CTAButton
-                  href="/blog"
-                  variant="secondary"
-                  size="lg"
-                  className="px-8"
-                  ctaType="cta-2"
-                >
-                  {tTestimonials('cta_2_guide')}
-                </CTAButton>
-              </div>
+
             </div>
           </section >
 
@@ -721,19 +662,11 @@ export default function HomePage() {
               <div className="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
                 <CTAButton
                   href="/questions-and-answers"
-                  variant="primary"
-                  size="lg"
-                  ctaType="cta-2"
-                >
-                  {tFaq('cta_2_viewAll')}
-                </CTAButton>
-                <CTAButton
-                  href="/contact"
                   variant="secondary"
                   size="lg"
                   ctaType="cta-2"
                 >
-                  {tFaq('cta_3_askQuestion')}
+                  {tFaq('cta_2_viewAll')}
                 </CTAButton>
               </div>
             </div>
@@ -769,25 +702,8 @@ export default function HomePage() {
 
             {/* LAYER 2: SECONDARY PATHS (DE-EMPHASIZED) */}
             <div className="max-w-4xl mx-auto pt-12 border-t border-border">
-              <h3 className="text-sm font-medium text-muted-foreground text-center mb-8">
-                {tContact('advancedTitle')}
-              </h3>
-
               <div className="grid grid-cols-1 md:grid-cols-1 gap-6 text-center">
-                <div className="flex flex-col items-center">
-                  <CTAButton
-                    href="https://wa.me/18156620760"
-                    variant="secondary"
-                    size="sm"
-                    ctaType="cta-3"
-                    className="text-sm font-semibold p-0 h-auto bg-transparent hover:bg-transparent text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary border-none"
-                  >
-                    {tContact('whatsapp.title')}
-                  </CTAButton>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                    {tContact('whatsapp.description')}
-                  </p>
-                </div>
+
               </div>
             </div>
 

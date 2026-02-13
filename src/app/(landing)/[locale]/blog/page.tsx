@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 import Layout from '../../../../components/Layout';
 import Hero from '../../../../components/Hero';
 import { InteractiveGridPulse } from '../../../../components/InteractiveGridPulse';
@@ -11,6 +12,7 @@ import { PageTransition } from '../../../../components/ui/PageTransition';
 
 export default function BlogPage() {
     const t = useTranslations('blog');
+    const locale = useLocale();
 
     const posts = [
         {
@@ -27,6 +29,11 @@ export default function BlogPage() {
             id: 'post3',
             image: '/images/blog/update.jpg',
             fallbackColor: 'bg-gray-900',
+        },
+        {
+            id: 'post4',
+            image: '/images/blog/payment.jpg',
+            fallbackColor: 'bg-gray-600',
         },
     ];
 
@@ -60,9 +67,10 @@ export default function BlogPage() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {posts.map((post) => (
-                                <div
+                                <Link
                                     key={post.id}
-                                    className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                                    href={`/${locale}/blog/${t(`posts.${post.id}.slug`)}`}
+                                    className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 block"
                                 >
                                     {/* Image Placeholder */}
                                     <div className={`h-48 w-full ${post.fallbackColor} relative`}>
@@ -96,11 +104,11 @@ export default function BlogPage() {
                                             {t(`posts.${post.id}.description`)}
                                         </p>
 
-                                        <div className="flex items-center text-gray-700 dark:text-gray-300 font-medium group-hover:translate-x-1 transition-transform cursor-pointer">
+                                        <div className="flex items-center text-gray-700 dark:text-gray-300 font-medium group-hover:translate-x-1 transition-transform">
                                             {t('readArticle')} <ArrowRight className="w-4 h-4 ml-1" />
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>

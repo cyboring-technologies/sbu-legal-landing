@@ -96,24 +96,24 @@ export default function QuestionsAndAnswersPage() {
       answer: t('faq.process.q2.answer'),
       category: 'process',
     },
-    // Plans & Support (Commercial & Availability)
+    // Billing & Model (Model & Billing)
     {
       id: 9,
-      question: t('faq.plans.q1.question'),
-      answer: t('faq.plans.q1.answer'),
-      category: 'plans',
+      question: t('faq.billing.q1.question'),
+      answer: t('faq.billing.q1.answer'),
+      category: 'billing',
     },
     {
       id: 10,
-      question: t('faq.plans.q2.question'),
-      answer: t('faq.plans.q2.answer'),
-      category: 'plans',
+      question: t('faq.billing.q2.question'),
+      answer: t('faq.billing.q2.answer'),
+      category: 'billing',
     },
     {
       id: 11,
-      question: t('faq.plans.q3.question'),
-      answer: t('faq.plans.q3.answer'),
-      category: 'plans',
+      question: t('faq.billing.q3.question'),
+      answer: t('faq.billing.q3.answer'),
+      category: 'billing',
     },
   ];
 
@@ -122,7 +122,7 @@ export default function QuestionsAndAnswersPage() {
     { id: 'general', name: t('categories.general'), icon: MessageCircle },
     { id: 'security', name: t('categories.security'), icon: Shield },
     { id: 'process', name: t('categories.process'), icon: Zap },
-    { id: 'plans', name: t('categories.plans'), icon: Users },
+    { id: 'billing', name: t('categories.billing'), icon: DollarSign },
   ];
 
   const filteredFAQs = faqData.filter((faq) => {
@@ -147,12 +147,9 @@ export default function QuestionsAndAnswersPage() {
             subtitle={t('hero.subtitle')}
             description={t('hero.description')}
             primaryCTA={{
-              text: t('hero.cta_2_primary'),
-              href: '/engine',
-            }}
-            secondaryCTA={{
-              text: t('hero.cta_3_secondary'),
-              href: '/our-services',
+              text: t('hero.cta_2_protocols'),
+              href: '/privacy',
+              ctaType: 'cta-2',
             }}
             backgroundImage="/images/faq-hero-bg.jpg"
             backgroundVariant="radial"
@@ -160,7 +157,7 @@ export default function QuestionsAndAnswersPage() {
           <InteractiveGridPulse />
         </div>{' '}
         {/* Search and Categories - Operational */}
-        <section className="py-24 bg-background border-b border-border relative overflow-hidden">
+        <section id="faq-content" className="py-24 bg-background border-b border-border relative overflow-hidden">
 
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <FadeIn direction='up'>
@@ -187,9 +184,9 @@ export default function QuestionsAndAnswersPage() {
                       <button
                         key={category.id}
                         onClick={() => setSelectedCategory(category.id)}
-                        className={`flex items-center px-4 py-2 rounded-lg transition-colors ${selectedCategory === category.id
-                          ? 'bg-primary text-primary-foreground'
-                          : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                        className={`flex items-center px-4 py-2 rounded-lg transition-all border-2 ${selectedCategory === category.id
+                          ? 'border-primary bg-primary/10 text-primary'
+                          : 'border-border bg-background text-foreground hover:border-primary hover:text-primary'
                           }`}
                       >
                         <Icon className="w-4 h-4 mr-2" />
@@ -259,7 +256,9 @@ export default function QuestionsAndAnswersPage() {
 
             <StaggeredGrid columns={3} className="mt-12">
               <HoverCard className="p-6 group">
-                <Zap className="w-12 h-12 text-gray-900 dark:text-white mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('popularTopics.technology.title')}
                 </h3>
@@ -267,7 +266,10 @@ export default function QuestionsAndAnswersPage() {
                   {t('popularTopics.technology.description')}
                 </p>
                 <button
-                  onClick={() => setSelectedCategory('general')}
+                  onClick={() => {
+                    setSelectedCategory('general');
+                    document.getElementById('faq-content')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="text-primary font-medium hover:text-primary/80"
                 >
                   {t('popularTopics.technology.link')}
@@ -275,7 +277,9 @@ export default function QuestionsAndAnswersPage() {
               </HoverCard>
 
               <HoverCard className="p-6 group">
-                <Shield className="w-12 h-12 text-gray-900 dark:text-white mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-6 h-6" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('popularTopics.security.title')}
                 </h3>
@@ -283,7 +287,10 @@ export default function QuestionsAndAnswersPage() {
                   {t('popularTopics.security.description')}
                 </p>
                 <button
-                  onClick={() => setSelectedCategory('security')}
+                  onClick={() => {
+                    setSelectedCategory('security');
+                    document.getElementById('faq-content')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="text-primary font-medium hover:text-primary/80"
                 >
                   {t('popularTopics.security.link')}
@@ -291,7 +298,9 @@ export default function QuestionsAndAnswersPage() {
               </HoverCard>
 
               <HoverCard className="p-6 group">
-                <Zap className="w-12 h-12 text-gray-900 dark:text-white mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-6 h-6" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('popularTopics.workflow.title')}
                 </h3>
@@ -299,7 +308,10 @@ export default function QuestionsAndAnswersPage() {
                   {t('popularTopics.workflow.description')}
                 </p>
                 <button
-                  onClick={() => setSelectedCategory('process')}
+                  onClick={() => {
+                    setSelectedCategory('process');
+                    document.getElementById('faq-content')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className="text-primary font-medium hover:text-primary/80"
                 >
                   {t('popularTopics.workflow.link')}
@@ -319,7 +331,9 @@ export default function QuestionsAndAnswersPage() {
 
             <StaggeredGrid columns={3} className="mt-12">
               <HoverCard className="p-8 text-center group">
-                <MessageCircle className="w-12 h-12 text-gray-900 dark:text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <MessageCircle className="w-6 h-6" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('helpResources.whatsapp.title')}
                 </h3>
@@ -328,9 +342,11 @@ export default function QuestionsAndAnswersPage() {
                 </p>
                 <CTAButton
                   href="https://wa.me/18156620760"
-                  variant="primary"
+                  target="_blank"
+                  variant="secondary"
                   size="md"
-                  ctaType="cta-3"
+                  ctaType="cta-2"
+                  note={t('helpResources.cta_3_note')}
                   className="mx-auto"
                 >
                   {t('helpResources.whatsapp.cta_3_chat')}
@@ -338,7 +354,9 @@ export default function QuestionsAndAnswersPage() {
               </HoverCard>
 
               <HoverCard className="p-8 text-center group">
-                <FileText className="w-12 h-12 text-gray-900 dark:text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <FileText className="w-6 h-6" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('helpResources.billing.title')}
                 </h3>
@@ -346,18 +364,22 @@ export default function QuestionsAndAnswersPage() {
                   {t('helpResources.billing.description')}
                 </p>
                 <CTAButton
-                  href="mailto:hello@cyboring.com?subject=Consulta de Facturación"
-                  variant="primary"
+                  href="mailto:hello@documentos.legal?subject=Consulta de Facturación"
+                  target="_blank"
+                  variant="secondary"
                   size="md"
-                  ctaType="cta-3"
+                  ctaType="cta-2"
+                  note={t('helpResources.cta_4_note')}
                   className="mx-auto"
                 >
-                  {t('helpResources.billing.cta_3_contact')}
+                  {t('helpResources.cta_4_send')}
                 </CTAButton>
               </HoverCard>
 
               <HoverCard className="p-8 text-center group">
-                <Book className="w-12 h-12 text-gray-900 dark:text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Book className="w-6 h-6" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('helpResources.docs.title')}
                 </h3>
@@ -365,8 +387,9 @@ export default function QuestionsAndAnswersPage() {
                   {t('helpResources.docs.description')}
                 </p>
                 <CTAButton
-                  href="#"
-                  variant="primary"
+                  href="/blog"
+                  target="_blank"
+                  variant="secondary"
                   size="md"
                   ctaType="cta-2"
                   className="mx-auto"
@@ -395,12 +418,15 @@ export default function QuestionsAndAnswersPage() {
                   {t('knowledgeBase.gettingStarted.description')}
                 </p>
                 <div className="flex items-center justify-between">
-                  <a
+                  <CTAButton
                     href="#"
-                    className="text-primary font-medium hover:text-primary/80"
+                    variant="secondary"
+                    size="sm"
+                    ctaType="cta-2"
+                    className="p-0 h-auto bg-transparent border-none hover:bg-transparent"
                   >
-                    {t('knowledgeBase.gettingStarted.cta_2_read')} →
-                  </a>
+                    {t('knowledgeBase.gettingStarted.cta_2_read')}
+                  </CTAButton>
                 </div>
               </HoverCard>
 
@@ -412,12 +438,15 @@ export default function QuestionsAndAnswersPage() {
                   {t('knowledgeBase.bestPractices.description')}
                 </p>
                 <div className="flex items-center justify-between">
-                  <a
+                  <CTAButton
                     href="#"
-                    className="text-primary font-medium hover:text-primary/80"
+                    variant="secondary"
+                    size="sm"
+                    ctaType="cta-2"
+                    className="p-0 h-auto bg-transparent border-none hover:bg-transparent"
                   >
-                    {t('knowledgeBase.bestPractices.cta_2_read')} →
-                  </a>
+                    {t('knowledgeBase.bestPractices.cta_2_read')}
+                  </CTAButton>
                 </div>
               </HoverCard>
 
@@ -429,12 +458,15 @@ export default function QuestionsAndAnswersPage() {
                   {t('knowledgeBase.advanced.description')}
                 </p>
                 <div className="flex items-center justify-between">
-                  <a
+                  <CTAButton
                     href="#"
-                    className="text-primary font-medium hover:text-primary/80"
+                    variant="secondary"
+                    size="sm"
+                    ctaType="cta-2"
+                    className="p-0 h-auto bg-transparent border-none hover:bg-transparent"
                   >
-                    {t('knowledgeBase.advanced.cta_2_read')} →
-                  </a>
+                    {t('knowledgeBase.advanced.cta_2_read')}
+                  </CTAButton>
                 </div>
               </HoverCard>
 
@@ -446,12 +478,15 @@ export default function QuestionsAndAnswersPage() {
                   {t('knowledgeBase.troubleshooting.description')}
                 </p>
                 <div className="flex items-center justify-between">
-                  <a
+                  <CTAButton
                     href="#"
-                    className="text-primary font-medium hover:text-primary/80"
+                    variant="secondary"
+                    size="sm"
+                    ctaType="cta-2"
+                    className="p-0 h-auto bg-transparent border-none hover:bg-transparent"
                   >
-                    {t('knowledgeBase.troubleshooting.cta_2_read')} →
-                  </a>
+                    {t('knowledgeBase.troubleshooting.cta_2_read')}
+                  </CTAButton>
                 </div>
               </HoverCard>
             </StaggeredGrid>
@@ -468,7 +503,9 @@ export default function QuestionsAndAnswersPage() {
 
             <StaggeredGrid columns={2} className="mt-12">
               <HoverCard className="p-8 flex flex-col items-center text-center group">
-                <Activity className="w-12 h-12 text-gray-900 dark:text-white mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Activity className="w-6 h-6" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('evolutionProtocol.reportFriction.title')}
                 </h3>
@@ -476,18 +513,20 @@ export default function QuestionsAndAnswersPage() {
                   {t('evolutionProtocol.reportFriction.description')}
                 </p>
                 <CTAButton
-                  href="mailto:hello@cyboring.com?subject=Reporte de Fricción Técnica"
-                  variant="primary"
+                  href="mailto:hello@documentos.legal?subject=Reporte de Fricción Técnica"
+                  variant="secondary"
                   size="md"
-                  ctaType="cta-3"
+                  ctaType="cta-2"
                   className="mx-auto"
                 >
-                  {t('evolutionProtocol.reportFriction.cta_3_report')}
+                  {t('evolutionProtocol.cta_4_send')}
                 </CTAButton>
               </HoverCard>
 
               <HoverCard className="p-8 flex flex-col items-center text-center group">
-                <Lightbulb className="w-12 h-12 text-gray-900 dark:text-white mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Lightbulb className="w-6 h-6" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('evolutionProtocol.newSupply.title')}
                 </h3>
@@ -495,13 +534,13 @@ export default function QuestionsAndAnswersPage() {
                   {t('evolutionProtocol.newSupply.description')}
                 </p>
                 <CTAButton
-                  href="mailto:hello@cyboring.com?subject=Propuesta de Nuevo Módulo Documental"
-                  variant="primary"
+                  href="mailto:hello@documentos.legal?subject=Propuesta de Nuevo Módulo Documental"
+                  variant="secondary"
                   size="md"
-                  ctaType="cta-3"
+                  ctaType="cta-2"
                   className="mx-auto"
                 >
-                  {t('evolutionProtocol.newSupply.cta_3_propose')}
+                  {t('evolutionProtocol.cta_4_send')}
                 </CTAButton>
               </HoverCard>
             </StaggeredGrid>
@@ -517,28 +556,16 @@ export default function QuestionsAndAnswersPage() {
             <FadeIn direction='up' delay={100}>
               <div className="mt-4 text-lg text-gray-600 dark:text-gray-300 space-y-4 mb-4">
                 <p>{t('cta.description1')}</p>
-                <p>
-                  {t.rich('cta.description2', {
-                    strong: (chunks) => <strong className="font-bold text-gray-900 dark:text-white">{chunks}</strong>,
-                  })}
-                </p>
               </div>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <CTAButton
-                  href="/contact"
+                  href="/engine"
+                  target="_blank"
                   variant="primary"
                   size="lg"
-                  ctaType="cta-2"
+                  ctaType="cta-1"
                 >
                   {t('cta.cta_1_primary')}
-                </CTAButton>
-                <CTAButton
-                  href="/contact"
-                  variant="secondary"
-                  size="lg"
-                  ctaType="cta-2"
-                >
-                  {t('cta.cta_2_secondary')}
                 </CTAButton>
               </div>
             </FadeIn>

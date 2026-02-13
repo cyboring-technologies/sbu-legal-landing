@@ -48,12 +48,14 @@ export default function AboutUsPage() {
             subtitle={t('hero.subtitle')}
             description={t('hero.description')}
             primaryCTA={{
-              text: t('hero.cta_2_primary'),
-              href: '/privacy',
+              text: t('hero.cta_1_primary'),
+              href: '/engine',
+              ctaType: 'cta-1',
             }}
             secondaryCTA={{
               text: t('hero.cta_2_secondary'),
-              href: '/contact',
+              href: '/privacy',
+              ctaType: 'cta-2',
             }}
             backgroundImage="/images/about-hero-bg.jpg"
             backgroundVariant="radial"
@@ -131,25 +133,7 @@ export default function AboutUsPage() {
                     </p>
                   </div>
 
-                  {/* CTAs */}
-                  <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
-                    <CTAButton
-                      href="/contact"
-                      variant="primary"
-                      size="md"
-                      ctaType="cta-2"
-                    >
-                      {t('story.cta_2_learnVba')}
-                    </CTAButton>
-                    <CTAButton
-                      href="/contact"
-                      variant="secondary"
-                      size="md"
-                      ctaType="cta-2"
-                    >
-                      {t('story.cta_2_viewInfrastructure')}
-                    </CTAButton>
-                  </div>
+
                 </StaggeredGrid>
               </div>
             </div>
@@ -163,7 +147,9 @@ export default function AboutUsPage() {
               {/* Mission */}
               <HoverCard className="p-8 group">
                 <div className="flex items-center mb-6">
-                  <Target className="w-12 h-12 text-gray-900 dark:text-white mr-4 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Target className="w-6 h-6" />
+                  </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                       {t('mission.title')}
@@ -181,7 +167,9 @@ export default function AboutUsPage() {
               {/* Vision */}
               <HoverCard className="p-8 group">
                 <div className="flex items-center mb-6">
-                  <Lightbulb className="w-12 h-12 text-gray-900 dark:text-white mr-4 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Lightbulb className="w-6 h-6" />
+                  </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                       {t('vision.title')}
@@ -197,26 +185,7 @@ export default function AboutUsPage() {
               </HoverCard>
             </StaggeredGrid>
 
-            <FadeIn direction="up" delay={400}>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-                <CTAButton
-                  href="/engine"
-                  variant="primary"
-                  size="lg"
-                  ctaType="cta-1"
-                >
-                  {t('missionVision.cta_1_start')}
-                </CTAButton>
-                <CTAButton
-                  href="/privacy"
-                  variant="secondary"
-                  size="lg"
-                  ctaType="cta-2"
-                >
-                  {t('missionVision.cta_2_read')}
-                </CTAButton>
-              </div>
-            </FadeIn>
+
           </div>
         </section>
         {/* Core Values - Conceptual */}
@@ -229,7 +198,7 @@ export default function AboutUsPage() {
               {/* 1. Rigor */}
               <HoverCard className="p-8 group">
                 <div className="flex items-start mb-6">
-                  <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Settings className="w-6 h-6" />
                   </div>
                   <div>
@@ -295,26 +264,7 @@ export default function AboutUsPage() {
               </HoverCard>
             </StaggeredGrid>
 
-            <FadeIn direction='up' delay={400}>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <CTAButton
-                  href="/privacy"
-                  variant="secondary"
-                  size="lg"
-                  ctaType="cta-2"
-                >
-                  {t('values.cta_2_viewDocs')}
-                </CTAButton>
-                <CTAButton
-                  href="/engine"
-                  variant="primary"
-                  size="lg"
-                  ctaType="cta-1"
-                >
-                  {t('values.cta_1_start')}
-                </CTAButton>
-              </div>
-            </FadeIn>
+
           </div>
         </section>
 
@@ -394,26 +344,7 @@ export default function AboutUsPage() {
               </HoverCard>
             </StaggeredGrid>
 
-            <FadeIn direction='up' delay={400}>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <CTAButton
-                  href="/privacy"
-                  variant="secondary"
-                  size="lg"
-                  ctaType="cta-2"
-                >
-                  {t('stats.cta_2_viewAudit')}
-                </CTAButton>
-                <CTAButton
-                  href="/engine"
-                  variant="primary"
-                  size="lg"
-                  ctaType="cta-1"
-                >
-                  {t('stats.cta_2_viewAudit')}
-                </CTAButton>
-              </div>
-            </FadeIn>
+
           </div>
         </section>
         {/* Standards and Strategic Alliances */}
@@ -425,64 +356,45 @@ export default function AboutUsPage() {
             <StaggeredGrid columns={3} className="mb-12">
               {/* HITL */}
               <HoverCard className="p-8 group">
-                <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-8 h-8 text-gray-900 dark:text-gray-100" />
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-center">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('standards.items.hitl.title')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-center leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   {t('standards.items.hitl.body')}
                 </p>
               </HoverCard>
 
               {/* Agnostic Intelligence */}
               <HoverCard className="p-8 group">
-                <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Lightbulb className="w-8 h-8 text-gray-900 dark:text-gray-100" />
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Lightbulb className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-center">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('standards.items.agnostic.title')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-center leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   {t('standards.items.agnostic.body')}
                 </p>
               </HoverCard>
 
               {/* Resilience */}
               <HoverCard className="p-8 group">
-                <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Shield className="w-8 h-8 text-gray-900 dark:text-gray-100" />
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 text-center">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('standards.items.resilience.title')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-center leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   {t('standards.items.resilience.body')}
                 </p>
               </HoverCard>
             </StaggeredGrid>
 
-            <FadeIn direction='up' delay={400}>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <CTAButton
-                  href="/contact"
-                  variant="secondary"
-                  size="lg"
-                  ctaType="cta-2"
-                >
-                  {t('standards.cta_2_viewSpecs')}
-                </CTAButton>
-                <CTAButton
-                  href="/engine"
-                  variant="primary"
-                  size="lg"
-                  ctaType="cta-1"
-                >
-                  {t('standards.cta_1_start')}
-                </CTAButton>
-              </div>
-            </FadeIn>
+
           </div>
         </section>
 
@@ -502,15 +414,15 @@ export default function AboutUsPage() {
             <FadeIn direction='up'>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <CTAButton
-                  href="/contact"
+                  href="/engine"
                   variant="primary"
                   size="lg"
-                  ctaType="cta-2"
+                  ctaType="cta-1"
                 >
                   {t('cta.cta_1_primary')}
                 </CTAButton>
                 <CTAButton
-                  href="/our-services"
+                  href="/privacy"
                   variant="secondary"
                   size="lg"
                   ctaType="cta-2"

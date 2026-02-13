@@ -5,37 +5,48 @@
     "about": "About",
     "faq": "FAQ",
     "contact": "Contact",
-    "cta_1_access": "Access"
+    "cta_1_access": "Start execution"
   },
   "blog": {
     "hero": {
       "title": "Document Engineering Manuals",
       "subtitle": "Operating protocols for the sovereignty of the Legal Architect.",
       "description": "Access the official documentation of documentos.legal regarding our production architecture. From the tactical execution of the Founder’s Grant to the security of the Incinerator Protocol. Information designed to maximize your efficiency and guarantee your time off-site.",
-      "cta_2_primary": "Explore Documentation",
-      "cta_1_secondary": "Activate 50 credits (Founder’s Grant)"
+      "cta_2_primary": "View security protocols",
+      "cta_1_secondary": "Start execution"
     },
     "posts": {
       "post1": {
-        "title": "The End of Billable Hours for Drafting",
-        "description": "Why document automation is shifting the economic model of law firms from time-based to value-based billing.",
+        "title": "The One-Shot Model",
+        "slug": "the-one-shot-model",
+        "description": "Why the future of legal infrastructure is not found in recurring subscriptions, but in purposeful execution acts.",
         "date": "Oct 15, 2025",
         "readTime": "5 min read",
-        "tag": "Industry Analysis"
+        "tag": "Architecture"
       },
       "post2": {
-        "title": "Understanding the Incinerator Protocol",
-        "description": "A deep dive into our stateless architecture and how we ensure 100% data destruction.",
+        "title": "The Incinerator Protocol",
+        "slug": "incinerator-protocol",
+        "description": "A deep dive into our stateless architecture and how we ensure total information destruction after execution.",
         "date": "Nov 02, 2025",
         "readTime": "8 min read",
         "tag": "Security"
       },
       "post3": {
-        "title": "New Feature: Multi-Jurisdiction Support",
-        "description": "We are expanding our drafting engine to support specific procedural codes in Panama and Guatemala.",
+        "title": "Payment as Authority",
+        "slug": "payment-as-authority",
+        "description": "The economics of irreversibility: how we redefine payment as authorization of a unique act.",
         "date": "Dec 10, 2025",
-        "readTime": "3 min read",
-        "tag": "Product Update"
+        "readTime": "6 min read",
+        "tag": "Economic Model"
+      },
+      "post4": {
+        "title": "The End of Billable Hours for Drafting",
+        "slug": "end-of-billable-hours",
+        "description": "How document engineering is shifting the focus from artisanal time to technical precision.",
+        "date": "Jan 20, 2026",
+        "readTime": "7 min read",
+        "tag": "Industry Analysis"
       }
     },
     "readArticle": "Read Article",
@@ -47,23 +58,16 @@
     }
   },
   "hero": {
-    "title": "Judicial-Grade Document Engineering",
-    "subtitle": "Transform your strategic decisions into court-ready drafts.",
-    "description": "You govern the strategy. We process the administrative burden.",
-    "cta_1_primary": "Start Execution — 50 Free Credits",
-    "foundersGrant": "Enough to draft a full complaint or five contracts. No cards, just your email.",
-    "prompt": "What would you like to generate today?",
-    "chips": {
-      "response": "Answer to Complaint",
-      "complaint": "Civil Complaint",
-      "lease": "Executive Summary",
-      "notification": "Simple Notification"
-    },
-    "incineratorProtocol": "Incinerator Protocol active: We do not store your secrets. Your files and drafts are permanently deleted from our servers 60 minutes after processing."
+    "title": "Response to lawsuit in minutes",
+    "subtitle": "Generate your response ready for review and filing",
+    "description": "Upload your lawsuit and get a structured draft ready to file",
+    "cta_1_primary": "Start execution",
+    "cta_2_secondary": "View security protocols",
+    "incineratorProtocol": "Incinerator Protocol active: execution followed by total destruction of files and drafts."
   },
   "problems": {
     "title": "The True Cost of Litigation:<br /> Administrative Friction",
-    "description": "Your intellect is designed to govern strategy, not to fight against document carpentry.",
+    "description": "Your intellect is designed to govern strategy,<br /> not to fight against document carpentry.",
     "slowTransformation": {
       "title": "The Blank Page Block",
       "description": "The gap between your strategic intuition and technical execution generates a cognitive paralysis that drains your energy before starting the case."
@@ -73,16 +77,16 @@
       "description": "In law, a formal error is fatal. Manual drafting in states of fatigue multiplies the risk of critical failures in documents where precision is non-negotiable."
     },
     "opportunityCost": {
-      "title": "Economic Spillage (Opportunity Cost)",
+      "title": "Economic Opportunity Cost",
       "description": "Spending hours building a single brief is a financial error. Every minute dedicated to artisanal drafting is time stolen from senior management, the study of new cases, and the growth of your firm."
     }
   },
   "solution": {
-    "title": "You Govern. We Process.",
-    "description": "We transform legal drafting from an exhausting artisanal task into a high-precision engineering operation.",
+    "title": "You govern. The system executes.",
+    "description": "We transform legal drafting from an exhausting artisanal task<br /> into a high-precision engineering operation.",
     "hitl": {
       "title": "Human Sovereignty (HITL)",
-      "description": "You act as the Architect of the strategy; our system acts as the Builder. No document is final without your explicit validation (Human-in-the-Loop), ensuring that professional control always remains in your hands."
+      "description": "You act as the Architect of the strategy; the system executes the technical construction. No document is final without your explicit validation within the execution act (Human-in-the-Loop), ensuring that professional control always remains in your hands."
     },
     "orchestration": {
       "title": "Immediate Judicial Orchestration",
@@ -90,44 +94,44 @@
     },
     "privacy": {
       "title": "Privacy under the Incinerator Protocol",
-      "description": "Bank-grade security: your files are processed in a stateless environment and permanently deleted 60 minutes after use. We do not store your secrets; we only deliver results."
+      "description": "Infrastructure with institutional standards: your files are processed in a stateless environment and permanently deleted after execution. We do not store your secrets; we issue a single draft and destroy the evidence."
     },
     "capacity": {
       "title": "Industrial Dispatch Capacity",
-      "description": "Increase your case volume without increasing your fatigue. Documentos.legal absorbs the administrative burden, allowing you to dedicate your time to high-value tasks: the deep study of law and the growth of your firm."
+      "description": "Reduces marginal effort per execution, enabling higher case volume at an operational level, not systemic."
     },
-    "cta_1_getStarted": "Start with 50 free credits",
-    "cta_2_learnMore": "View Privacy Protocol"
+    "cta_1_getStarted": "Start execution",
+    "cta_2_learnMore": "View security protocols"
   },
   "services": {
-    "title": "Applied Engineering: High Impact Document Solutions",
-    "description": "We are not a static template library; we are a dynamic engineering platform that adapts to the complexity of your case.",
+    "title": "Applied Engineering<br />High Impact Document Solutions",
+    "description": "We are not a static template library.<br />\nWe are an engineering infrastructure that resolves the specific complexity of your case in an isolated execution.<br />\nThe infrastructure retains neither capacity nor state: each execution is independent.",
     "draftingEngine": {
       "title": "Judicial Drafting Engine",
-      "description": "Transform your legal strategy into solid briefs, responses, and complaints in minutes. The system structures your arguments with technical precision and impeccable tone, allowing you to handle a higher volume of cases with strategic depth.",
-      "tag": "Capacity: Processing of complex files to generate drafts 95% ready for court."
+      "description": "Transform your legal strategy into solid briefs, responses, and complaints in minutes. The system structures your arguments with technical precision and impeccable tone, allowing for higher case volumes through punctual executions.",
+      "tag": "Capacity: Processing of complex files to generate drafts designed for immediate executive review."
     },
     "contracts": {
       "title": "Contract and Notification Engineering",
-      "description": "Automate the creation of lease agreements, notifications, and recurring legal documents with automatic legal area and role detection. Eliminate human error in data transcription and ensure that every clause meets your firm's standards.",
+      "description": "Automated technical execution for the creation of lease agreements, notifications, and recurring legal documents with automatic legal area and role detection. Eliminate human error in data transcription and ensure that every clause meets your firm's standards.",
       "tag": "Agility: Reduce hours of administrative work to minutes of executive validation."
     },
     "orchestration": {
-      "title": "Multi-LLM Orchestration and Human Sovereignty (HITL)",
+      "title": "Multi-LLM Orchestration and Human Sovereignty",
       "description": "Our architecture uses Microsoft AI Foundry to access the most advanced models, coordinated by a native orchestrator that ensures the integrity of every transaction. The human always retains final control: the system proposes, you validate and finalize.",
-      "tag": "Security: Execution under the Incinerator Protocol; stateless processing and total data deletion in 60 minutes."
+      "tag": "Security: Execution under the Incinerator Protocol; stateless processing and total data deletion after execution."
     },
-    "cta_1_viewAll": "Start Drafting — 50 Free Credits",
-    "cta_2_getQuote": "View Azure Security Certification",
-    "cta_2_learnMore": "Learn More"
+    "cta_1_viewAll": "Start execution",
+    "cta_2_getQuote": "View security protocols",
+    "cta_2_learnMore": "View security protocols"
   },
   "testimonials": {
     "title": "Designed for the Governing Lawyer",
-    "description": "Documentos.legal is the tool for those who understand that real value lies in strategy, not technical drafting.",
+    "description": "Documentos.legal is the infrastructure for those who understand<br /> that real value lies in strategy, not technical drafting.",
     "client1": {
       "profile": "The Strategic Litigator Persona",
       "challenge": "Submit multiple complex lawsuits with technical depth in a single afternoon.",
-      "relief": "Regain focus on studying the law, delegating \"document carpentry\" to a high-precision engineering infrastructure.",
+      "relief": "Strategic time optimization for the study of law, delegating \"document carpentry\" to a high-precision engineering infrastructure.",
       "metric": "Success Metric: Optimization of \"Time-to-Download\"; less time on screen, more time in court."
     },
     "client2": {
@@ -139,65 +143,68 @@
     "client3": {
       "profile": "The High-Value Consultant",
       "challenge": "Eliminate administrative friction that drains the mental bandwidth needed for critical decision-making.",
-      "relief": "Process documents under the Incinerator Protocol, ensuring sensitive information disappears 60 minutes after creation.",
+      "relief": "Process documents under the Incinerator Protocol, ensuring sensitive information disappears after execution.",
       "metric": "Success Metric: Absolute bank-grade security and full privacy compliance without additional effort."
     },
-    "cta_1_join": "Join the New Standard — 50 Free Credits",
-    "cta_2_guide": "View Document Engineering Guide",
+    "cta_1_join": "Start execution",
+    "cta_2_guide": "View security protocols",
     "challengeLabel": "The Challenge",
-    "reliefLabel": "The Relief"
+    "reliefLabel": "Outcome"
   },
   "faq": {
     "title": "Operational Clarity and Privacy Guarantee",
     "description": "Absolute transparency about our engineering infrastructure and the treatment of your strategic information.",
     "q1": {
       "question": "How is Documentos.legal different from tools like ChatGPT?",
-      "answer": "Unlike a generic chatbot, we are a specialized document engineering platform using Hexagonal Architecture. We don't rely on a single model; our native orchestrator dynamically selects the best engine (GPT-4o, Claude 3.5, or Gemini) for each section of the document. Each workflow is designed with judicial rigor, ensuring a structure and tone that a conventional chat cannot replicate."
+      "answer": "Unlike a generic chatbot, we are a specialized document engineering infrastructure using Hexagonal Architecture. We don't rely on a single model; our native orchestrator dynamically selects the best engine (GPT-4o, Claude 3.5, or Gemini) for each section of the document. Each workflow is designed with judicial rigor, ensuring a structure and tone that a conventional chat cannot replicate."
     },
     "q2": {
       "question": "How secure are my data and strategy?",
-      "answer": "We implement the Incinerator Protocol: we treat client data as \"toxic waste\" that must be destroyed after processing. All infrastructure resides on Microsoft Azure, where files are permanently deleted automatically 60 minutes after creation. Your strategic data is never used to train AI models nor exposed to the public internet."
+      "answer": "We implement the Incinerator Protocol: we treat client data as \"toxic waste\" that must be destroyed after processing. All infrastructure resides on Microsoft Cloudflare, where files are permanently deleted automatically after execution. Your strategic data is never used to train AI models nor exposed to the public internet."
     },
     "q3": {
       "question": "Can I trust the technical accuracy of the documents?",
-      "answer": "The system delivers drafts with 95% court-readiness, but you retain absolute sovereignty. We operate under a Human-in-the-Loop (HITL) model: you validate extracted data before generation and perform the final review before download."
+      "answer": "The system delivers drafts designed for immediate executive review, but you retain absolute sovereignty. We operate under a Human-in-the-Loop (HITL) model: you validate extracted data before generation and perform the final review before download."
     },
     "q4": {
       "question": "Do I need \"Prompt Engineering\" knowledge?",
-      "answer": "No; our job is the \"Digital Plumbing\". You only provide your strategic knowledge and key arguments; our platform handles the complex engineering in the background to translate your intent into a professional document."
+      "answer": "No; our job is the \"Digital Plumbing\". You only provide your strategic knowledge and key arguments; the complex engineering is executed in the background during the cycle to translate your intent into a professional document."
     },
     "q5": {
-      "question": "How does the credit cost model work?",
-      "answer": "We reject the model of unnecessary subscriptions; you only buy what you need via industrial \"Supply Packs\". Each generation transparently consumes credits (e.g., a complex lawsuit consumes approx. 50 credits), allowing you to pay only for the final results delivered."
+      "question": "Why don't you offer monthly subscriptions?",
+      "answer": "The subscription model is inefficient for legal engineering: you pay even if you generate nothing. We operate under a Single Execution Model: you authorize and pay only when you need a document. No hidden fees, no lock-ins, and no waste."
     },
-    "cta_2_viewAll": "View All FAQs",
-    "cta_3_askQuestion": "Ask a Question"
+    "cta_2_viewAll": "View security protocols",
+    "cta_3_askQuestion": "Institutional contact"
   },
   "contact": {
-    "title": "Ready to transform your legal practice?",
-    "subtitle": "Start processing documents with judicial-grade precision in 60 seconds.",
-    "cta_1_primary": "Start Execution — 50 Free Credits",
-    "advancedTitle": "For advanced or institutional requirements",
+    "title": "Ready to authorize an immediate document execution?",
+    "subtitle": "Authorize the technical processing of documents with judicial-grade precision.",
+    "cta_1_primary": "Start execution",
     "whatsapp": {
-      "title": "WhatsApp Concierge",
-      "description": "Direct support for technical questions and platform guidance."
+      "title": "WhatsApp",
+      "description": "Direct support for technical questions and system guidance."
     },
     "enterprise": {
-      "title": "Enterprise Solutions",
-      "description": "Centralized billing and custom volume plans for law firms."
+      "title": "Corporate Solutions",
+      "description": "Bulk execution agreements and centralized billing for high-volume firms."
     },
     "security": {
       "title": "Security Validation",
-      "description": "Azure infrastructure review and Incinerator Protocol compliance coordination."
-    }
+      "description": "Cloudflare infrastructure review and Incinerator Protocol compliance coordination."
+    },
+    "cta_3_note": "External channel for sales and enterprise requirements. Does not provide operational support or assistance during execution."
   },
   "questionsAndAnswers": {
     "hero": {
       "title": "Protocols and Operational Certainty",
       "subtitle": "Technical support for the infrastructure of documentos.legal",
-      "description": "Clear your doubts about the Incinerator Protocol, our bank-grade security architecture, and the human governance of the system. Technical information designed to reduce your legal liability and maximize your download speed.",
-      "cta_2_primary": "Explore protocols",
-      "cta_3_secondary": "Technical consultation"
+      "description": "Clear your doubts about the Incinerator Protocol, our infrastructure with institutional standards, and the human governance of the system. Technical information designed to reduce your legal liability and maximize your download speed.",
+      "cta_3_primary": "WhatsApp",
+      "cta_3_note": "External channel for specific technical inquiries",
+      "cta_4_secondary": "Email",
+      "cta_4_note": "Institutional contact for non-operational inquiries",
+      "cta_2_protocols": "View security protocols"
     },
     "search": {
       "placeholder": "Search questions...",
@@ -209,21 +216,21 @@
       "general": "General & Technology",
       "security": "Security & Privacy",
       "process": "Process & Accuracy",
-      "plans": "Commercial and Availability"
+      "billing": "Model & Billing"
     },
     "faq": {
       "general": {
         "title": "General & Technology",
         "q1": {
           "question": "What exactly is documentos.legal and how does it differ from a generic AI chat?",
-          "answer": "We are not a chat assistant, but an Industrial Document Engineering platform. Unlike generic AIs that can hallucinate, our system uses an orchestration architecture (SAGA Pattern) and a multi-model router that selects the best intelligence for specific legal tasks. We focus on Cognitive Relief: eliminating the lawyer's administrative burden, not just generating text."
+          "answer": "We are not a chat assistant, but an Industrial Document Engineering infrastructure. Unlike generic AIs that can hallucinate, our system uses an orchestration architecture (SAGA Pattern) and a multi-model router that selects the best intelligence for specific legal tasks. We focus on Cognitive Relief: eliminating the lawyer's administrative burden, not just generating text."
         },
         "q2": {
           "question": "What exactly does \"Document Engineering\" mean?",
-          "answer": "It is the application of software engineering principles to the creation of legal documents. This includes precise entity extraction, logical structuring of arguments, and format normalization, ensuring that 95% of the document is ready for court before you review it."
+          "answer": "It is the application of software engineering principles to the creation of legal documents. This includes precise entity extraction, logical structuring of arguments, and format normalization, ensuring that the document is designed for immediate executive review before you review it."
         },
         "q3": {
-          "question": "Which sectors is the platform optimized for?",
+          "question": "Which sectors is the infrastructure optimized for?",
           "answer": "Currently, the system is calibrated exclusively for the legal sector: independent litigators, medium-sized firms, and in-house legal departments operating under Central and Latin American regulations."
         },
         "q4": {
@@ -235,7 +242,7 @@
         "title": "Security & Privacy",
         "q1": {
           "question": "Are my confidential data and strategies secure?",
-          "answer": "We implement the Incinerator Protocol. We treat client information as toxic waste: it is processed and destroyed immediately. Your original files and drafts have a maximum life cycle of 60 minutes before being physically deleted from our Azure servers."
+          "answer": "We implement the Incinerator Protocol. We treat client information as toxic waste: it is processed and destroyed immediately. Your original files and drafts are physically deleted from our Cloudflare servers after execution."
         },
         "q2": {
           "question": "Are my documents used to train AI models?",
@@ -253,19 +260,19 @@
           "answer": "It means the human is always at the center of the workflow. The system presents the evidence and the draft simultaneously for you to approve, reject, or refine each section. Our promise is \"We grind, you govern\"."
         }
       },
-      "plans": {
-        "title": "Commercial and Availability",
+      "billing": {
+        "title": "Model & Billing",
         "q1": {
-          "question": "How can I start using the platform?",
-          "answer": "You can start with our Founder’s Grant: 50 free credits upon verifying your profile. This allows you to generate a complete lawsuit or five lease contracts to validate the quality of the system with no initial cost."
+          "question": "How do I contract the service if there are no subscriptions?",
+          "answer": "It is purely transactional. You upload your file, the system calculates complexity and issues a fixed price. Upon authorizing payment, engineering executes immediately. It's like buying a plane ticket: defined destination, closed price, single use."
         },
         "q2": {
-          "question": "Do you offer plans for law firms or multiple users?",
-          "answer": "We do not use monthly subscriptions that become \"forgotten software\". We sell Industrial Supply Packs of pre-paid credits (Solo, Firm, and Factory) that do not expire and allow total control of operating spending."
+          "question": "We are a large firm, do we need multiple accounts?",
+          "answer": "There are no 'user accounts'. The system authenticates the person authorizing the execution at that moment. For firms, we offer centralized billing, but the operation remains execution-by-execution, without user management or idle licenses."
         },
         "q3": {
-          "question": "In which regions is the service available?",
-          "answer": "We are operational for the Central American market, with specific optimization for Costa Rica, Guatemala, Panama, and El Salvador. The service is available 24/7 thanks to our serverless architecture."
+          "question": "What happens if the complex document requires adjustments?",
+          "answer": "The price includes the guarantee of technical integrity. If the structure fails, our engineering support intervenes. However, strategic content is your responsibility under the Human Sovereignty model."
         }
       }
     },
@@ -274,12 +281,12 @@
       "description": "Direct access to the protocols that govern our document engineering infrastructure.",
       "technology": {
         "title": "Engineering & Architecture",
-        "description": "Details about our Hexagonal Architecture and why documentos.legal is a stateless processing platform, not a data warehouse. Learn how we optimize your time off-site.",
+        "description": "Details about our Hexagonal Architecture and why documentos.legal is a stateless processing infrastructure, not a data warehouse. Learn how we optimize your time off-site.",
         "link": "Consult Architecture"
       },
       "security": {
         "title": "Incinerator Protocol (Privacy)",
-        "description": "Understand how we treat data as toxic waste. Information on the physical deletion of files in 60 minutes and our banking-grade security infrastructure on Azure.",
+        "description": "Understand how we treat data as toxic waste. Information on the physical deletion of files after execution and our infrastructure with institutional standards on Cloudflare.",
         "link": "Consult Privacy Protocols"
       },
       "workflow": {
@@ -290,21 +297,24 @@
     },
     "helpResources": {
       "title": "Technical Assistance Channels",
+      "cta_3_note": "External channel for sales and enterprise requirements. Does not provide operational support or assistance during execution.",
+      "cta_4_send": "Send",
+      "cta_4_note": "Channel for administrative or institutional management. Not used for operational support or usage inquiries.",
       "description": "We prioritize asynchronous resolution to keep your workflow uninterrupted. Choose the appropriate channel based on the nature of your request.",
       "whatsapp": {
-        "title": "WhatsApp Concierge (Direct Support)",
-        "description": "Exclusive channel for immediate assistance in bulk upload processes or critical production flow incidents. Recommended for Firm and Factory package users.",
-        "cta_3_chat": "Start Technical Chat"
+        "title": "WhatsApp",
+        "description": "Exclusive channel for immediate assistance in bulk upload processes or critical technical incidents.",
+        "cta_3_chat": "WhatsApp"
       },
       "billing": {
         "title": "Compliance and Billing Link",
-        "description": "Administrative management related to credit package acquisition, institutional billing, or Incinerator Protocol inquiries.",
-        "cta_3_contact": "Contact Administration"
+        "description": "Administrative management related to corporate agreements, institutional billing, or Incinerator Protocol inquiries.",
+        "cta_3_contact": "Institutional contact"
       },
       "docs": {
         "title": "Documentation Center",
-        "description": "Access technical guides on security architecture, API usage, and user manuals to maximize your autonomy on the platform.",
-        "cta_2_explore": "Explore Documentation"
+        "description": "Access technical guides on security architecture, API usage, and user manuals to maximize your autonomy on the infrastructure.",
+        "cta_2_explore": "Visit Blog"
       }
     },
     "knowledgeBase": {
@@ -312,59 +322,60 @@
       "description": "Access detailed guides, tutorials, and best practices to get the most out of our services.",
       "gettingStarted": {
         "title": "Getting Started Guide",
-        "description": "Learn the basics of using our platform and creating your first document.",
+        "description": "Learn the basics of using our infrastructure and creating your first document.",
         "readTime": "5 min read",
-        "cta_2_read": "Read guide"
+        "cta_2_read": "View security protocols"
       },
       "bestPractices": {
         "title": "Best Practices",
         "description": "Tips and strategies for maximizing document quality and efficiency.",
         "readTime": "8 min read",
-        "cta_2_read": "Read guide"
+        "cta_2_read": "View security protocols"
       },
       "advanced": {
         "title": "Advanced Features",
-        "description": "Unlock the full potential of our platform with advanced techniques.",
+        "description": "Unlock the full potential of our infrastructure with advanced techniques.",
         "readTime": "10 min read",
-        "cta_2_read": "Read guide"
+        "cta_2_read": "View security protocols"
       },
       "troubleshooting": {
         "title": "Troubleshooting",
         "description": "Common issues and solutions to help you resolve problems quickly.",
         "readTime": "6 min read",
-        "cta_2_read": "Read guide"
+        "cta_2_read": "View security protocols"
       }
     },
     "evolutionProtocol": {
-      "title": "Evolution and Optimization Protocol",
+      "title": "Evolution Protocol: The Engineering Behind the Relief",
+      "subtitle": "How documentos.legal builds the future of litigation",
+      "cta_3_note": "External channel for sales and enterprise requirements. Does not provide operational support or assistance during execution.",
+      "cta_4_send": "Send",
+      "cta_4_note": "Channel for administrative or institutional management. Not used for operational support or usage inquiries.",
       "description": "We don't seek \"engagement\", we seek absolute efficiency. If you detect friction in the infrastructure or identify an automation opportunity, report it directly to our engineering team for evaluation in the next sprint.",
       "reportFriction": {
         "title": "Technical Friction Report",
         "description": "Use this channel to point out unnecessary steps in the workflow or interface errors that delay your download.",
-        "cta_3_report": "Report Friction Point"
+        "cta_3_report": "Institutional contact"
       },
       "newSupply": {
         "title": "New Supply Proposal",
         "description": "Do you require a specific document type that is not yet in our engineering library? Propose new modules for the industrial production chain.",
-        "cta_3_propose": "Propose Document Module"
+        "cta_3_propose": "Institutional contact"
       }
     },
     "cta": {
       "title": "Still Have Questions?",
       "description1": "If the technical documentation hasn't resolved a specific doubt about your jurisdiction or use case, the most efficient validation is tactical execution on our infrastructure.",
-      "description2": "Activate your <strong>Founder’s Grant</strong> and verify the download speed and Incinerator Protocol precision in a real production environment. We don't sell software; we sell verifiable cognitive relief.",
-      "description": "Our team is here to help. Contact us for personalized support and detailed answers to your specific questions.",
-      "cta_1_primary": "Start Execution — 50 Free Credits",
-      "cta_2_secondary": "View document cost table"
+      "cta_1_primary": "Start execution"
     }
   },
   "ourServices": {
     "hero": {
       "title": "Judicial Document Engineering Infrastructure",
-      "subtitle": "Industrial-grade dispatch capacity for high-volume firms prioritizing security and control.",
-      "description": "Technical execution of legal drafts under the Incinerator Protocol. You define high-level strategy; we process documentary carpentry with algorithmic rigor.",
-      "cta_1_primary": "Start Execution — 50 Gift Credits",
-      "foundersGrant": "No credit card required. Includes one full complaint or five contracts."
+      "subtitle": "Industrial-grade dispatch capacity for high-volume firms prioritizing security and control",
+      "description": "Technical execution of legal drafts under the Incinerator Protocol.<br />You define high-level strategy; we process documentary carpentry with algorithmic rigor.",
+      "cta_1_primary": "Start execution",
+      "cta_2_secondary": "View security protocols"
     },
     "overview": {
       "title": "Judicial-Grade Document Engineering",
@@ -372,11 +383,11 @@
     },
     "draftingEngine": {
       "title": "The Drafting Engine",
-      "description": "It is our flagship tool for building complex arguments. It acts as a \"Constructor\" that translates your strategic guidelines into documents structured with judicial rigor.",
+      "description": "It is our flagship execution module for building complex arguments. It acts as a \"Constructor\" that translates your strategic guidelines into documents structured with judicial rigor.",
       "capabilities": "Generation of Answers to Complaints, Civil Complaints, and Appeal Resources.",
       "rigor": "Structuring of arguments with impeccable tone and normative precision.",
       "hitl": "You validate the extracted metadata and perform the final review before download; the system proposes, you govern.",
-      "cta_3_request": "Request Technical Proposal"
+      "cta_1_start": "Start execution"
     },
     "contractEngineering": {
       "title": "Contract and Legal Act Engineering",
@@ -389,10 +400,10 @@
     "infrastructure": {
       "title": "Infrastructure and Security: The Incinerator Protocol",
       "description": "The technical foundation guaranteeing your strategic information is never permanently stored.",
-      "totalDeletion": "All client files and secrets are automatically eliminated 60 minutes after processing.",
+      "totalDeletion": "All client files and secrets are automatically eliminated after execution.",
       "orchestration": "We use a native orchestrator that dynamically selects the best models via Microsoft AI Foundry.",
-      "architecture": "Our business logic is isolated from external providers to guarantee stability and banking-grade security.",
-      "cta_3_request": "Request Technical Proposal"
+      "architecture": "Our business logic is isolated from external providers to guarantee stability and infrastructure with institutional standards.",
+      "cta_2_security": "View security protocols"
     },
     "process": {
       "title": "The Technical Execution Cycle",
@@ -404,7 +415,7 @@
       },
       "step2": {
         "number": "2",
-        "title": "Extraction and Validation (HITL 1: No Blind Validation)",
+        "title": "Extraction and Validation",
         "description": "Our architecture processes the source document and extracts key metadata and entities. Before proceeding, you validate this information via a split view (Source-Action Flow), ensuring the system does not work on incorrect data."
       },
       "step3": {
@@ -414,8 +425,31 @@
       },
       "step4": {
         "number": "4",
-        "title": "Final Refinement and Incineration (HITL 2)",
-        "description": "The generated document (95% court-ready) is presented for your final review. You can make manual adjustments or request specific refinements before download. Upon download, the Incinerator Protocol is activated: all evidence and the draft are permanently deleted from our servers within 60 minutes."
+        "title": "Tactical Download and Incineration",
+        "description": "The final outcome is delivered in your preferred format. Simultaneously, the Incinerator Protocol ensures the immediate destruction of all evidence and sources upon completion of execution, leaving your digital liability at zero."
+      }
+    },
+    "cta": {
+      "whatsapp": {
+        "title": "The Trust Bridge",
+        "description": "For firms requiring human validation before integrating new technical infrastructure.",
+        "cta_3_chat": "Contact Engineering",
+        "cta_3_note": "External channel for sales and enterprise requirements. Does not provide operational support or assistance during execution.",
+        "microcopy": ""
+      },
+      "protocol": {
+        "title": "Trust Signal: The Incinerator Protocol",
+        "description": "Your security is not an option, it is an architectural law in our infrastructure.",
+        "guarantee": "Guarantee: Stateless environment processing with immediate and definitive incineration of files and secrets upon execution closure.",
+        "infrastructure": "Infrastructure: Operation 100% on Cloudflare Global Network with institutional compliance standards."
+      },
+      "title": "End the artisanal drafting<br /> Start the engineering",
+      "subtitle": "Reclaim your mental bandwidth. Delegate document grunt work to our judicial-grade infrastructure and focus your intellect on winning strategy.",
+      "grant": {
+        "title": "The Founder’s Grant",
+        "description": "We don’t sell promises, we deliver immediate operational capacity. A validation execution is enabled to validate our technical rigor without initial financial commitment.",
+        "cta_1_activate": "Start execution",
+        "microcopy": ""
       }
     },
     "technologies": {
@@ -423,29 +457,29 @@
       "description": "We are built on a proprietary infrastructure designed for stability, data sovereignty, and operational efficiency.",
       "foundation": {
         "title": "The Foundation: Hexagonal Architecture",
-        "description": "Our platform utilizes a Hexagonal Architecture (Ports & Adapters) that decouples legal business logic from technical infrastructure. This modular structure allows us to flexibly orchestrate the best microservices and AI models on the market via Microsoft AI Foundry, ensuring your firm always operates with state-of-the-art (SOTA) technology without obsolescence risk."
+        "description": "Our infrastructure utilizes a Native Serverless Architecture that eliminates permanent server and database management. This modular structure allows us to flexibly orchestrate the most advanced AI models on the market (Gemini 1.5 Pro) via Cloudflare Workers, ensuring minimal latency and execution sovereignty."
       },
       "security": {
-        "title": "Sovereignty and Security on Azure",
-        "description": "Our entire operation resides exclusively within the secure Microsoft Azure environment (SOC Certified). By processing documents in isolated, stateless containers, we guarantee that your strategic information is never used to train public models and remains protected under the most rigorous compliance standards."
+        "title": "Sovereignty and Security on the Edge",
+        "description": "Our entire operation resides exclusively on the Cloudflare Global Edge Network. By processing documents in isolated, ephemeral Durable Objects, we guarantee that your strategic information never touches a persistent disk and remains protected under the Incinerator Protocol."
       },
       "efficiency": {
         "title": "Scale-to-Zero Efficiency",
-        "description": "We operate under a Scale-to-Zero financial and technical model. Our infrastructure only activates when you are processing a document, eliminating unnecessary costs and allowing us to offer a competitive cost advantage passed directly to our supply packs."
+        "description": "We operate under a Scale-to-Zero financial and technical model. Our infrastructure only activates when you are processing a document, eliminating unnecessary costs and allowing us to offer a competitive cost advantage passed directly to our per-execution prices."
       },
       "techStack": {
         "title": "The Technology Arsenal (Industrial Stack)",
-        "intro": "To project technical seriousness, we present the tools that support the \"Digital Plumbing\" of documentos.legal:",
+        "intro": "To establish technical rigor, we make explicit the infrastructure supporting the \"Digital Plumbing\" of documentos.legal:",
         "frontend": "Frontend: React / Next.js (High-speed, low-friction interface).",
-        "businessLogic": "Business Logic: C# / .NET 8 Core (Industrial rigor and stability).",
-        "intelligence": "Intelligence: Python / Azure AI Services (Advanced natural language processing).",
-        "orchestration": "Orchestration: Dapr (Microservices coordination and SAGA flows).",
-        "infrastructure": "Infrastructure: Azure Container Apps / Docker (Scalable and secure deployment).",
-        "security": "Security: Incinerator Protocol (Automatic data destruction in 60 min)."
+        "businessLogic": "Business Logic: TypeScript / Cloudflare Workers (High-performance serverless execution).",
+        "intelligence": "Intelligence: Direct orchestration of latest generation LLM models via native APIs, dynamically selected for technical suitability at runtime.",
+        "orchestration": "Orchestration: Durable Objects (Transactional coordination and ephemeral state).",
+        "infrastructure": "Infrastructure: Cloudflare Global Network (Serverless edge deployment).",
+        "security": "Security: Incinerator Protocol (Volatile memory processing and immediate destruction)."
       }
     },
     "benefits": {
-      "title": "Cross-Border Operation with Institutional Rigor",
+      "title": "Institutional-Grade Multi-Jurisdiction Infrastructure",
       "description": "Documentos.legal is an infrastructure designed to operate with precision across multiple jurisdictions, eliminating the linguistic and administrative barriers of modern litigation.",
       "benefit1": {
         "title": "Native Bilingual Operation (Spanish / English)",
@@ -453,328 +487,265 @@
         "impact": "Elimination of the language barrier in technical and strategic drafting."
       },
       "benefit2": {
-        "title": "Priority Focus on Central America",
-        "description": "We launched operations with an optimized deployment for Costa Rica, Guatemala, Panama, and El Salvador, ensuring our engineering solutions respect the procedural contexts of the region.",
+        "title": "Jurisdiction-Agnostic Legal Infrastructure",
+        "description": "We operate on a jurisdiction-agnostic legal infrastructure, capable of adapting to procedural frameworks across Latin America through parameterization and human validation.",
         "impact": "Tools designed for the reality of the litigator in specific local markets."
       },
       "benefit3": {
         "title": "\"Scale-to-Zero\" Operational Scalability",
-        "description": "Thanks to our cloud architecture, your firm can scale from one to hundreds of documents immediately without increasing fixed costs. You only pay for results generated through our credit system.",
+        "description": "Thanks to our cloud architecture, your firm can scale from one to hundreds of documents immediately without increasing fixed costs. You only pay for results generated through individual executions.",
         "impact": "Big firm capacity for independent professionals and medium-sized teams."
       },
       "benefit4": {
         "title": "Unified Compliance and Security",
-        "description": "Regardless of location, every document is processed under the Incinerator Protocol, guaranteeing total data destruction in 60 minutes and compliance with Azure security standards (SOC).",
-        "impact": "Bank-grade security that transcends national borders."
+        "description": "Regardless of location, every document is processed under the Incinerator Protocol, guaranteeing total data destruction after execution and compliance with Cloudflare security standards (ISO/SOC).",
+        "impact": "Infrastructure with institutional standards that transcends national borders."
       },
       "impactLabel": "Impact:"
-    },
-    "cta": {
-      "title": "End Artisanal Drafting. Start Engineering.",
-      "subtitle": "Reclaim your mental bandwidth. Delegate document grunt work to our judicial-grade infrastructure and focus your intellect on winning strategy.",
-      "grant": {
-        "title": "The Founder’s Grant",
-        "description": "We don’t sell promises, we deliver immediate operational capacity. We grant you the resources to validate our technical rigor without initial financial commitment.",
-        "cta_1_activate": "Start Execution — 50 Gift Credits",
-        "microcopy": "Enough for a full lawsuit. No credit cards."
-      },
-      "whatsapp": {
-        "title": "The Trust Bridge",
-        "description": "For firms requiring human validation before integrating new technical infrastructure.",
-        "cta_3_chat": "WhatsApp Concierge",
-        "microcopy": "Speak with a document engineering specialist."
-      },
-      "protocol": {
-        "title": "Trust Signal: The Incinerator Protocol",
-        "description": "Your security is not an option, it is an architectural law in our platform.",
-        "guarantee": "Guarantee: \"Documents processed in a stateless environment: total destruction of files and secrets in 60 minutes\".",
-        "infrastructure": "Infrastructure: \"Operation 100% on Microsoft Azure with institutional compliance standards\"."
-      }
     }
   },
   "aboutUs": {
     "hero": {
       "preheader": "",
       "title": "Where strategic intuition meets precision engineering",
-      "subtitle": "Document Engineering",
+      "subtitle": "Judicial Grade Document Engineering",
       "description": "We are a global deep-tech company. We unite a robust hexagonal architecture with cutting-edge AI to ensure experts focus on deciding and winning, not on writing.",
-      "cta_2_primary": "See Security Protocols",
-      "cta_2_secondary": "Contact Us"
+      "cta_1_primary": "Start execution",
+      "cta_2_secondary": "View security protocols"
     },
     "mission": {
-      "title": "Our Mission: Cognitive Load Relief.",
+      "title": "Our Mission: Cognitive Load Relief",
       "subtitle": "",
       "headline": "We grind administrative work. You govern the law.",
-      "description": "The mission of Documentos.legal is to eradicate the administrative \"plumbing\" that suffocates the practice of law. We do not sell artificial intelligence as an end; we sell time and institutional safety. Our reason for being is for the lawyer to regain their strategic capacity, delegating the drafting, paginating, and redaction of documents to a precision infrastructure that guarantees immediate cognitive relief."
+      "description": "The mission of Documentos.legal is to eradicate the administrative \"operational infrastructure\" that suffocates the practice of law. We do not sell artificial intelligence as an end; we sell time and institutional safety. Our reason for being is for the lawyer to regain their strategic capacity, delegating the drafting, paginating, and redaction of documents to a precision infrastructure that guarantees immediate cognitive relief."
     },
     "vision": {
-      "title": "Our Vision: The Invisible Infrastructure.",
+      "title": "Our Vision: The Invisible Infrastructure",
       "subtitle": "",
       "headline": "To be the standard of reliability for modern justice.",
       "description": "We aspire to be the invisible and essential infrastructure that allows the legal system to function without operational friction. We do not seek to capture user attention, but to disappear within their workflow once the task is done. We visualize a future where law is practiced through human strategic decisions, supported by a technological architecture that processes drudgery and destroys evidence, reducing data liability to zero."
     },
     "missionVision": {
-      "cta_1_start": "Start Document",
-      "cta_2_read": "Read Security Protocols"
+      "cta_1_start": "Start execution",
+      "cta_2_read": "View security protocols"
     },
     "values": {
-      "title": "Architectural Values: The Pillars of Infrastructure.",
+      "title": "Architectural Values: The Pillars of Infrastructure",
       "items": {
         "rigor": {
-          "title": "1. Engineering Rigor: No \"Black Boxes\".",
+          "title": "1. Engineering Rigor: No \"Black Boxes\"",
           "body": "We reject the narrative of AI as magic. We operate under a Hexagonal Architecture that decouples legal logic from external interfaces, guaranteeing stability and auditable processes. We are not a third-party wrapper; we own our proprietary code \"Chassis\", built to offer predictability in high-responsibility environments."
         },
         "sovereignty": {
-          "title": "2. Human Sovereignty (HITL): Force Multiplier.",
+          "title": "2. Human Sovereignty (HITL): Force Multiplier",
           "body": "Technology is a precision tool, never a substitute for expert judgment. Our \"Human-in-the-Loop\" architecture ensures you retain absolute control over final validation. The system performs the administrative heavy lifting so that the professional acts exclusively as the architect of the strategy."
         },
         "trust": {
-          "title": "3. Structural Trust: The Incinerator Protocol.",
-          "body": "Security is not a promise, it is a technical impossibility of leakage. Through Binary Separation and the Incinerator Protocol, confidential data is processed in an ephemeral environment with a 60-minute lifespan. By using armored Azure infrastructure, we guarantee that evidence is physically destroyed after each session."
+          "title": "3. Structural Trust: The Incinerator Protocol",
+          "body": "Security is not a promise, it is a technical impossibility of leakage. Through Binary Separation and the Incinerator Protocol, confidential data is processed in an ephemeral environment. By using armored Cloudflare infrastructure, we guarantee that evidence is physically destroyed after each session."
         },
         "speed": {
-          "title": "4. Speed Economy: Win, Don't Stay.",
-          "body": "We don't measure success by \"Time on Site\", but by \"Download Speed\". We optimize the system so you get a perfect document and leave the platform as soon as possible. Real value is measured in results: lawsuits won, contracts closed, and immediate cognitive relief."
+          "title": "4. Speed Economy: Win, Don't Stay",
+          "body": "We don't measure success by \"Time on Site\", but by \"Download Speed\". We optimize the system so you get a perfect document and leave the infrastructure as soon as possible. Real value is measured in results: lawsuits won, contracts closed, and immediate cognitive relief."
         }
       },
-      "cta_2_viewDocs": "View Security Documentation",
-      "cta_1_start": "Start New Project"
+      "cta_2_viewDocs": "View security protocols",
+      "cta_1_start": "Start execution"
     },
     "story": {
-      "title": "The Entity: Cyboring Technologies LLC.",
+      "title": "The Entity: Cyboring Technologies LLC",
       "items": {
         "origin": {
-          "title": "The Origin: Engineering for \"Digital Plumbing\".",
-          "body": "We were not born from theory, but from a raw observation: elite professionals consumed by administrative \"drudgery\". We identified that the gap between legal strategy and final drafting was a system error that had to be patched. Documentos.legal is the industrial answer to that friction; we don't sell \"magic\", we sell cognitive relief through infrastructure."
+          "title": "The Origin: Engineering for \"Digital Plumbing\"",
+          "body": "We were not born from theory, but from a raw observation: elite professionals consumed by administrative \"drudgery\". We identified that the gap between legal strategy and final drafting was a system error that had to be patched. Documentos.legal is the industrial answer to that friction; we don't sell \"magic\", we sell operational efficiency through infrastructure."
         },
         "vba": {
-          "title": "The VBA Model: Stability and Scale-to-Zero.",
+          "title": "The VBA Model: Stability and Scale-to-Zero",
           "body": "We are a Strategic Business Unit (SBU) of Cyboring Technologies LLC, operating under the Venture Builder Autonomous (VBA) model. We are not an experimental startup, but the product of an \"Agentic Assembly Line\" designed to produce industrial-grade software. Our \"Scale-to-Zero\" architecture guarantees that we only consume resources when you generate revenue, ensuring asymmetric financial viability against traditional competitors."
         },
         "philosophy": {
-          "title": "Philosophy: The Economy of Apathy.",
-          "body": "We reject the \"Time on Site\" metric. We optimize for download speed: success is measured by how quickly you can leave our platform with a perfect legal result. We are here so you can stop writing and start governing."
+          "title": "Philosophy: The Economy of Apathy",
+          "body": "We reject the \"Time on Site\" metric. We optimize for download speed: success is measured by how quickly you can leave our infrastructure with a perfect legal result. We are here so you can stop writing and start governing."
         }
       },
-      "cta_2_learnVba": "Learn about VBA Model",
-      "cta_2_viewInfrastructure": "View Azure Infrastructure"
+      "cta_2_learnVba": "View security protocols",
+      "cta_2_viewInfrastructure": "View security protocols"
     },
     "stats": {
-      "title": "Engineering items and Impact.",
+      "title": "Engineering items and Impact",
       "items": {
         "ephemeral": {
-          "title": "60 Minutes: Ephemeral Data Persistence.",
-          "body": "Under the Incinerator Protocol, confidential information has a maximum lifecycle of one hour. Physical deletion at the infrastructure level in Azure ensures that your data liability is reduced to zero after every work session."
+          "title": "Immediate Deletion: Ephemeral Data Persistence",
+          "body": "Under the Incinerator Protocol, confidential information is destroyed after execution. Physical deletion at the infrastructure level in Cloudflare ensures that your data liability is reduced to zero after every work session."
         },
         "availability": {
-          "title": "99.9%+: Availability on Armored Infrastructure.",
-          "body": "We operate on Microsoft Azure to offer bank-grade resilience and enterprise standard compliance. Our native hexagonal architecture ensures unwavering stability and massive scalability for critical litigation processes."
+          "title": "99.9%+: Availability on Armored Infrastructure",
+          "body": "We operate on Microsoft Cloudflare to offer bank-grade resilience and enterprise standard compliance. Our native hexagonal architecture ensures unwavering stability and massive scalability for critical litigation processes."
         },
         "zero_storage": {
-          "title": "0% Secrets Storage.",
+          "title": "0% Secrets Storage",
           "body": "We reject the traditional data \"warehouse\" model; we are an industrial processing pipeline. Your information is not saved to be exploited, it is transformed: once the result is delivered, the system physically destroys any trace of the original source."
         },
         "speed": {
-          "title": "Maximum Download Speed.",
-          "body": "Our success metric is \"Time Off Site\". We optimize the system so that the professional spends the least amount of time possible on the platform, achieving documents that are 95% court-ready in a fraction of the usual time."
+          "title": "Maximum Download Speed",
+          "body": "Our success metric is \"Time Off Site\". We optimize the system so that the professional spends the least amount of time possible on the infrastructure, achieving drafts designed for immediate executive review in a fraction of the usual time."
         }
       },
-      "cta_2_viewAudit": "View Security Audit",
-      "cta_1_start": "Start New Document"
+      "cta_2_viewAudit": "View security protocols",
+      "cta_1_start": "Start execution"
     },
     "standards": {
-      "title": "Certifications of Robustness and Human Sovereignty.",
+      "title": "Certifications of Robustness and Human Sovereignty",
       "items": {
         "hitl": {
-          "title": "HITL Guarantee: You Govern, We Grind.",
-          "body": "At Documentos.legal, the human expert retains absolute sovereignty over every document produced. The system operates under strict Human-in-the-Loop (HITL) control, where no draft is finalized without your explicit validation. This architecture allows the professional to act as the Architect of the strategy while the system acts as the Constructor, ensuring that the result is 95% court-ready before download."
+          "title": "HITL Guarantee: You Govern, We Grind",
+          "body": "At Documentos.legal, the human expert retains absolute sovereignty over every document produced. The system operates under strict Human-in-the-Loop (HITL) control, where no draft is finalized without your explicit validation. This architecture allows the professional to act as the Architect of the strategy while the system acts as the Constructor, ensuring that the result is a draft designed for immediate executive review before download."
         },
         "agnostic": {
-          "title": "Agnostic Intelligence: Microsoft AI Foundry.",
-          "body": "Our platform does not rely on a single AI provider; we use an agnostic orchestrator that dynamically selects the most efficient model (GPT-4o, Claude 3.5, or Gemini) through Microsoft AI Foundry. This allows optimizing accuracy according to the complexity of the legal argument and ensures service continuity in the face of any external failure."
+          "title": "Multi-Provider Agnostic Intelligence",
+          "body": "Our infrastructure depends on neither a single provider nor a specific model. We operate via direct orchestration of latest generation LLM models, consumed via native APIs and dynamically selected based on the technical suitability of each task. This guarantees precision, operational continuity, and absence of technological dependency."
         },
         "resilience": {
-          "title": "Infrastructure Resilience: Azure and Hexagonal Design.",
-          "body": "We are built on Azure Container Apps, guaranteeing enterprise-grade security and a \"Scale-to-Zero\" architecture that eliminates unnecessary costs. We implement a native Hexagonal Architecture to decouple legal logic from external interfaces, ensuring our infrastructure is as stable and predictable as the justice system itself."
+          "title": "Infrastructure Resilience: Cloudflare and Hexagonal Design",
+          "body": "We are built on Cloudflare's serverless infrastructure, guaranteeing enterprise-grade security and a \"Scale-to-Zero\" architecture that eliminates unnecessary costs. We implement a native Hexagonal Architecture to decouple legal logic from external interfaces, ensuring our infrastructure is as stable and predictable as the justice system itself."
         }
       },
-      "cta_2_viewSpecs": "View Technical Specs",
-      "cta_1_start": "Get 50 Welcome Credits"
+      "cta_2_viewSpecs": "View security protocols",
+      "cta_1_start": "Start execution"
     },
     "incineratorProtocol": {
-      "title": "The Incinerator Protocol Doctrine: The End of Data Liability.",
+      "title": "The Incinerator Protocol Doctrine: The End of Data Liability",
       "items": {
         "item1": {
-          "title": "We treat your documents like toxic waste: process and destroy.",
-          "description": "At Documentos.legal, confidentiality is not a contractual promise; it is a technical impossibility. Under the Incinerator Protocol, all confidential information has a maximum lifecycle of 60 minutes. We are not a data warehouse, but a processing pipeline: files are ingested, transformed, and evidence is physically deleted from our servers automatically."
+          "title": "Ephemeral Processing of Confidential Information",
+          "description": "At Documentos.legal, confidentiality is not a contractual promise; it is a technical impossibility. Under the Incinerator Protocol, all confidential information is destroyed after execution. We are not a data warehouse, but a processing pipeline: files are ingested, transformed, and evidence is physically deleted from our servers automatically."
         },
         "item2": {
-          "title": "The Binary Split Architecture.",
-          "description": "Our infrastructure strictly divides business data (billing and access) from product data (your secrets). While your account remains secure on our platform, the processing environment is totally ephemeral and vanishes upon session termination."
+          "title": "The Binary Split Architecture",
+          "description": "Our infrastructure strictly divides business data (billing and access) from product data (your secrets). While your account remains secure on our infrastructure, the processing environment is totally ephemeral and vanishes upon session termination."
         },
         "item3": {
-          "title": "Deletion guaranteed by infrastructure, not code.",
-          "description": "Data destruction is engraved in the DNA of our Azure cloud. Lifecycle policies delete files one hour after upload, without human intervention and without exceptions. If the server is empty, your legal liability drops to zero. We fix your documents and destroy the evidence."
+          "title": "Deletion guaranteed by infrastructure, not code",
+          "description": "Data destruction is engraved in the DNA of our Cloudflare cloud. Lifecycle policies delete files after execution, without human intervention and without exceptions. If the server is empty, your legal liability drops to zero. We fix your documents and destroy the evidence."
         }
       },
-      "cta_2_readDoctrine": "Read Architectural Doctrine",
-      "cta_1_test": "Test with Sample Document"
+      "cta_2_readDoctrine": "View security protocols",
+      "cta_1_test": "Start execution"
     },
     "cta": {
-      "title": "Eliminate operational friction today.",
-      "subtitle": "Your first strategic draft is 60 seconds away.",
-      "description": "Join the professionals who have stopped writing to start deciding. Under the Incinerator Protocol, your privacy is guaranteed by architecture, not by promises. Start your ephemeral session now and receive 50 complimentary credits to process your first lawsuit or contract. No subscriptions, no \"projects\"; just precision engineering for immediate legal results.",
-      "cta_1_primary": "Start Execution — 50 Gift Credits",
-      "cta_2_secondary": "View Supply Menu"
+      "title": "Eliminate operational friction today",
+      "subtitle": "Your first strategic draft is 60 seconds away",
+      "description": "Start an ephemeral execution now and validate download speed and Incinerator Protocol rigor without initial financial commitment. No subscriptions, no \"projects\"; just precision engineering for immediate legal results.",
+      "cta_1_primary": "Start execution",
+      "cta_2_secondary": "View security protocols"
     }
+  },
+  "securityModal": {
+    "title": "Security and Incineration Protocols",
+    "bullets": [
+      "Processing exclusively in volatile memory.",
+      "No storage on disk, databases or histories.",
+      "One-shot execution per session. Non-repeatable.",
+      "The final document is generated only once.",
+      "After download, all material is automatically incinerated.",
+      "No accounts, persistent sessions or subsequent recovery.",
+      "The system does not keep evidence. The act ends and disappears."
+    ],
+    "close": "Close"
   },
   "prices": {
     "hero": {
-      "title": "Pay for results, not subscriptions",
-      "subtitle": "Industrial Documentation Engineering Supply",
-      "description": "Transactional access via credits. $0.10 per unit. Documents are processed and incinerated in 60 minutes",
-      "cta_1_primary": "Start Execution — 50 complimentary credits",
-      "cta_2_secondary": "View supply packages",
-      "microcopy": "No credit card required. Identity verification only"
+      "title": "Price per Execution<br/>One Document → Once",
+      "subtitle": "Authorization for a single and irreversible execution",
+      "description": "No credits. No subscriptions. No inventory. You pay for the act of transforming a file, not for access to the system.",
+      "cta_1_primary": "Start execution",
+      "cta_2_secondary": "View security protocols"
     },
-    "creditSystem": {
-      "pretitle": "Document Engineering Logic",
-      "title": "Credits: The Measurement Unit of Effort",
-      "description": "Not all documents require the same computational rigor. Processing a simple notification does not have the same cost as constructing a complex civil complaint from multiple evidence sources. That's why we use Credits: a transparent metric that reflects the exact technical work of the AI.",
+    "mechanics": {
+      "title": "Algorithmic Valuation",
+      "description": "Cost is calculated in real-time based on the technical complexity of the material.",
       "items": {
-        "low": {
-          "title": "Low Complexity Tasks",
-          "example": "Notifications",
-          "cost": "~5 Credits ($0.50)"
+        "analysis": {
+          "title": "Prior Analysis",
+          "description": "The system analyzes the document structure before issuing a price."
         },
-        "medium": {
-          "title": "Medium Complexity Tasks",
-          "example": "Lease Agreements",
-          "cost": "~15 Credits ($1.50)"
+        "complexity": {
+          "title": "Computational Complexity",
+          "description": "Value depends on inference density, not on length or time."
         },
-        "high": {
-          "title": "High Complexity Tasks",
-          "example": "Civil Complaints",
-          "cost": "~50 Credits ($5.00)"
+        "certainty": {
+          "title": "Absolute Certainty",
+          "description": "The price is fixed, final, and presented before any payment commitment."
         }
-      },
-      "microcopy1": "Costs are estimates based on average length and processing. The platform will always show the exact cost in credits before confirming generation.",
-      "microcopy2": "No forced subscriptions. You acquire the credit inventory your practice requires."
-    },
-    "packages": {
-      "pretitle": "Document Inventory Supply",
-      "title": "Industrial Supply Packs",
-      "description": "No subscriptions or recurring charges. Acquire credits according to your workflow volume. Inventory does not expire and adjusts to your professional pace.",
-      "items": {
-        "founder": {
-          "title": "Founder's Grant",
-          "subtitle": "To validate the power of document engineering.",
-          "price": "$0",
-          "features": [
-            "50 Complimentary Credits (One-time use).",
-            "Enough for 1 Civil Complaint or 5 Contracts.",
-            "Identity verification required.",
-            "Data Incineration Protocol active."
-          ],
-          "cta_1_activate": "Start Execution — 50 Free Credits"
-        },
-        "solo": {
-          "title": "Solo Pack",
-          "subtitle": "For the professional with moderate case flow.",
-          "price": "$20",
-          "features": [
-            "200 Prepaid Credits ($0.10/credit).",
-            "One-time payment, no auto-renewals.",
-            "1 User.",
-            "Priority support via email."
-          ],
-          "cta_2_getStarted": "Buy Solo Pack"
-        },
-        "firm": {
-          "title": "Firm Pack",
-          "badge": "Recommended",
-          "subtitle": "The standard for active litigation and medium firms.",
-          "price": "$80",
-          "features": [
-            "1,000 Prepaid Credits ($0.08/credit).",
-            "20% savings vs base price.",
-            "Up to 5 Users (Team Accounts).",
-            "Extended document history."
-          ],
-          "cta_2_getStarted": "Buy Firm Pack"
-        },
-        "factory": {
-          "title": "Factory Pack",
-          "subtitle": "For high demand and notarial departments.",
-          "price": "$350",
-          "features": [
-            "5,000 Prepaid Credits ($0.07/credit).",
-            "30% savings. Maximum efficiency per unit.",
-            "Unlimited Users.",
-            "Dedicated engineering onboarding."
-          ],
-          "cta_2_getStarted": "Buy Factory Pack"
-        }
-      },
-      "microcopy1": "All prices in USD for international standards.",
-      "microcopy2": "Billing by Cyboring Technologies LLC, Delaware, USA."
-    },
-    "faq": {
-      "pretitle": "Billing and Supply Protocols",
-      "title": "Operational Clarity on Your Investment",
-      "description": "Institutional answers regarding the credit system, document inventory management, and transaction security.",
-      "q1": {
-        "question": "How does the credit system work compared to a subscription?",
-        "answer": "Documentos.legal operates on a purely transactional model. You do not pay a monthly rent; you acquire an inventory of credits that you consume based on your actual demand. This eliminates resource waste ('shelfware') and aligns your cost directly with the value produced."
-      },
-      "q2": {
-        "question": "Do credits expire if I don't use them in the month?",
-        "answer": "No. As an industrial supply of engineering, your credits have no monthly expiration. They remain in your account as available inventory until you decide to use them to process a document."
-      },
-      "q3": {
-        "question": "Are there permanence contracts or long-term commitments?",
-        "answer": "No. The platform is 'Scale-to-Zero': there is only an economic commitment when you decide to make a credit load. You can stop using the service at any time without cancellation procedures."
-      },
-      "q4": {
-        "question": "Can I get volume discounts for my firm?",
-        "answer": "Yes. The system is designed to reward scale. Packages like 'The Factory Pack' offer up to 30% savings per unit, reducing the cost per credit from $0.10 to $0.07."
-      },
-      "q5": {
-        "question": "How can I test the quality of the engineering before buying?",
-        "answer": "Every new user receives the 'Founder's Grant': 50 free credits after verifying their identity. This allows you to process a complete civil complaint or multiple contracts without economic risk, validating our precision before any investment."
-      },
-      "q6": {
-        "question": "What is the refund policy?",
-        "answer": "Due to immediate computational processing costs and the use of high-end AI models, refunds are not offered for consumed credits. The 50-credit Founder's Grant exists precisely so you can perform all necessary tests without initial cost."
-      },
-      "badges": {
-        "badge1": "No Setup Costs",
-        "badge2": "No Recurring Charges",
-        "badge3": "100% Human Intellectual Property",
-        "badge4": "Active Incineration Protocol"
       }
     },
-    "badges": {
-      "noSetupCosts": "No implementation costs",
-      "cancelAnytime": "Cancel anytime",
-      "riskFreeTrial": "Risk-free free trial"
+    "historicalContext": {
+      "title": "Reference Execution Ranges",
+      "description": "Ranges observed in previous executions. These do not constitute a binding offer.",
+      "items": {
+        "floor": {
+          "title": "Cold Start Base",
+          "price": "$5.00 USD",
+          "description": "Base cost to wake the isolated environment."
+        },
+        "standard": {
+          "title": "Standard Spectrum",
+          "price": "$5.00 - $20.00 USD",
+          "description": "Observed in 90% of administrative filings and contracts."
+        },
+        "highDensity": {
+          "title": "High Density",
+          "price": "~$50.00+ USD",
+          "description": "Reference for massive evidentiary files."
+        }
+      }
+    },
+    "validityDisclaimer": {
+      "title": "Economic Invariants",
+      "items": [
+        "Each execution is an isolated economic event.",
+        "Past costs do not predict future costs.",
+        "The ONLY valid price is the one calculated by the Engine before payment."
+      ]
+    },
+    "authorization": {
+      "title": "Execution Rights",
+      "description": "The acquisition of only one execution right.",
+      "items": [
+        "One (1) document engineering execution",
+        "One (1) final downloadable document",
+        "Total and immediate destruction of evidence",
+        "Irreversible session closure"
+      ]
+    },
+    "exclusions": {
+      "title": "What is NOT sold",
+      "description": "This model excludes by design:",
+      "items": [
+        "Subscriptions or memberships",
+        "Credits, balances, or wallets",
+        "Reusable user accounts",
+        "History or file storage",
+        "Future capacity or reservations"
+      ]
     },
     "cta": {
-      "pretitle": "Corporate Engineering Support",
-      "title": "Integration for High-Volume Firms",
-      "description": "If your operation requires a custom implementation, API integrations, or a volume exceeding 5,000 monthly credits, our engineering team is available to coordinate your professional infrastructure.",
-      "cta_3_whatsapp": "Contact Concierge via WhatsApp",
-      "cta_3_request": "Request Technical Proposal",
-      "microcopy": "Direct engineering attention. No sales intermediaries."
+      "title": "Begin execution",
+      "description": "Upload your file to receive an immediate complexity calculation.",
+      "button": "Start execution"
     }
   },
   "contactPage": {
     "hero": {
       "title": "Support and Institutional Link",
-      "subtitle": "Technical infrastructure management and compliance inquiries.",
+      "subtitle": "Technical infrastructure management and compliance inquiries",
       "description": "Documentos.legal operates as critical infrastructure for legal professionals. We prioritize asynchronous technical resolution to ensure your firm's efficiency and minimize downtime.",
-      "cta_3_startRequest": "Start Technical Request",
-      "cta_2_helpCenter": "View Help Center"
+      "cta_2_startRequest": "Start technical request",
+      "cta_2_helpCenter": "Help Center",
+      "cta_3_primary": "WhatsApp",
+      "cta_3_note": "External channel for sales and enterprise requirements. Does not provide operational support or assistance during execution.",
+      "cta_4_secondary": "Email",
+      "cta_4_note": "Channel for administrative or institutional management. Not used for operational support or usage inquiries."
     },
     "information": {
       "title": "Resolution Center and Institutional Link",
@@ -782,13 +753,13 @@
       "contactDetailsTitle": "Link Details",
       "email": {
         "title": "Institutional Email",
-        "address": "hello@cyboring.com",
+        "address": "hello@documentos.legal",
         "hint": "Guaranteed response in < 24h"
       }
     },
     "form": {
       "title": "Send Us a Message",
-      "description": "Use this form only if you could not resolve your question in the Help Center. We do not process 'quote' requests; cost is defined by credit consumption on the platform.",
+      "description": "Use this form only if you could not resolve your question in the Help Center. We do not process 'quote' requests; cost is defined by the technical complexity of the execution.",
       "firstName": "First Name",
       "firstNamePlaceholder": "e.g. John",
       "lastName": "Last Name",
@@ -851,41 +822,50 @@
       "title": "Technical Assistance Channels",
       "subtitle": "We prioritize asynchronous resolution to keep your workflow uninterrupted. Choose the appropriate channel based on the nature of your request.",
       "whatsapp": {
-        "title": "WhatsApp Concierge (Direct Support)",
+        "title": "WhatsApp",
         "description": "Exclusive channel for immediate assistance in bulk upload processes or critical production flow incidents. Recommended for Firm and Factory package users.",
-        "cta_3_chat": "Start Technical Chat"
+        "cta_3_chat": "WhatsApp"
       },
       "billing": {
         "title": "Compliance and Billing Link",
         "description": "Administrative management related to credit package acquisition, institutional billing, or Incinerator Protocol inquiries.",
-        "cta_3_contact": "Contact Administration"
+        "cta_3_contact": "Institutional contact"
       },
+      "cta_3_note": "External channel for sales and enterprise requirements. Does not provide operational support or assistance during execution.",
+      "cta_4_send": "Email",
+      "cta_4_note": "Channel for administrative or institutional management. Not used for operational support or usage inquiries.",
       "docs": {
         "title": "Documentation Center",
-        "description": "Access technical guides on security architecture, API usage, and user manuals to maximize your autonomy on the platform.",
-        "cta_2_explore": "Explore Documentation"
+        "description": "Access technical guides on security architecture, API usage, and user manuals to maximize your autonomy on the infrastructure.",
+        "cta_2_explore": "View security protocols",
+        "note": "Technical documentation and guides resource."
       }
+    },
+    "cta": {
+      "title": "Ready to authorize an immediate documentary execution?",
+      "description": "Upload your file to receive an immediate complexity calculation.",
+      "button": "Start execution"
     },
     "support": {
       "title": "Technical Support",
       "description": "Existing clients can access dedicated technical support for urgent issues and system maintenance.",
-      "cta_3_getSupport": "Get Support"
+      "cta_3_getSupport": "Institutional contact"
     }
   },
   "quickAccess": {
     "title": "Seeking immediate autonomy?",
     "description": "Access technical answers about credit management, security protocols, and production flows in our institutional knowledge repository.",
-    "cta_2_browseFaqs": "Browse FAQs",
-    "cta_2_exploreInfrastructure": "Explore Digital Infrastructure",
+    "cta_2_browseFaqs": "View FAQs",
+    "cta_2_exploreInfrastructure": "View security protocols",
     "guaranteeTitle": "Infrastructure Guarantee",
     "features": {
       "privacy": {
         "title": "Native Privacy",
-        "description": "Strict application of the Incinerator Protocol: total destruction of sensitive data 60 minutes after processing."
+        "description": "Strict application of the Incinerator Protocol: total destruction of sensitive data after processing."
       },
       "efficiency": {
         "title": "Asynchronous Efficiency",
-        "description": "System designed for self-service with specialized technical support in less than 2 business hours."
+        "description": "Self-service infrastructure with institutional support during business hours."
       },
       "sovereignty": {
         "title": "User Sovereignty",
@@ -894,7 +874,7 @@
     }
   },
   "footer": {
-    "slogan": "Legal infrastructure that\nreduces mental load",
+    "slogan": "Judicial-Grade\nDocument Engineering",
     "company": "Company",
     "support": "Support",
     "services": "Services",
@@ -917,12 +897,15 @@
       "ai": "Digital Legal Infrastructure",
       "automation": "Legal Workflow Automation"
     },
-    "cta_3_whatsapp": "Chat on WhatsApp",
-    "cta_3_request": "Send Email",
+    "cta_3_whatsapp": "WhatsApp",
+    "cta_3_request": "Institutional contact",
+    "cta_4_send": "Send",
+    "cta_4_note": "Channel for administrative or institutional management. Not used for operational support or usage inquiries.",
+    "cta_3_note": "External channel for sales and enterprise requirements. Does not provide operational support or assistance during execution.",
     "copyright": "© {year} <companyLink>Cyboring Technologies LLC</companyLink>. All rights reserved. Delaware, USA.",
     "trustBadges": {
       "secureByDesign": "Secure by Design",
-      "cloudAgnostic": "Cloud-Agnostic Infrastructure",
+      "cloudAgnostic": "Execution Architecture",
       "nativeCode": "Native Proprietary Code",
       "orchestration": "Multi-LLM Orchestration",
       "ssl": "SSL/TLS Encrypted",
@@ -932,16 +915,16 @@
   "privacy": {
     "title": "Privacy Policy",
     "lastUpdated": "Last Updated: December 1, 2025",
-    "introduction": "Cyboring Hexagonal Technologies LLC (\"Cyboring\", \"we\", \"us\", or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our document engineering platform and related services.",
+    "introduction": "Cyboring Hexagonal Technologies LLC (\"Cyboring\", \"we\", \"us\", or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our document engineering infrastructure and related services.",
     "sections": {
       "informationCollect": {
         "title": "Information We Collect",
         "intro": "We collect information that you provide directly to us and information we obtain automatically when you use our Services:",
         "items": {
           "personal": "Personal Information: Name, email address, phone number, billing information, and professional details you provide when creating an account or using our services.",
-          "usage": "Usage Data: Information about how you interact with our platform, including documents processed, features used, and time spent on the platform.",
+          "usage": "Usage Data: Information about how you interact with our infrastructure, including documents processed, features used, and time spent on the infrastructure.",
           "device": "Device Information: IP address, browser type, operating system, and device identifiers.",
-          "cookies": "Cookies and Tracking: We use cookies and similar technologies to enhance your experience and analyze platform usage."
+          "cookies": "Cookies and Tracking: We use cookies and similar technologies to enhance your experience and analyze infrastructure usage."
         }
       },
       "howWeUse": {
@@ -957,13 +940,13 @@
       },
       "dataSecurity": {
         "title": "Data Security",
-        "content": "We implement industry-standard security measures to protect your data. All data is processed within Microsoft Azure's enterprise-grade infrastructure with SOC 2 Type II certification. Your documents and strategic information are encrypted in transit and at rest, and are never exposed to the public internet or used to train AI models."
+        "content": "We implement industry-standard security measures to protect your data. All data is processed within Microsoft Cloudflare's enterprise-grade infrastructure with SOC 2 Type II certification. Your documents and strategic information are encrypted in transit and at rest, and are never exposed to the public internet or used to train AI models."
       },
       "dataSharing": {
         "title": "Data Sharing and Disclosure",
         "intro": "We do not sell your personal information. We may share your information only in the following circumstances:",
         "items": {
-          "providers": "Service Providers: With trusted third-party service providers who assist us in operating our platform, subject to confidentiality obligations.",
+          "providers": "Service Providers: With trusted third-party service providers who assist us in operating our infrastructure, subject to confidentiality obligations.",
           "legal": "Legal Requirements: When required by law, subpoena, or other legal process, or to protect the rights and safety of Cyboring, our users, or others.",
           "business": "Business Transfers: In connection with a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction."
         }
@@ -981,7 +964,7 @@
       },
       "cookies": {
         "title": "Cookies and Tracking Technologies",
-        "content": "We use cookies and similar tracking technologies to collect information about your browsing activities. You can control cookies through your browser settings, though disabling certain cookies may limit your ability to use some features of our platform."
+        "content": "We use cookies and similar tracking technologies to collect information about your browsing activities. You can control cookies through your browser settings, though disabling certain cookies may limit your ability to use some features of our infrastructure."
       },
       "children": {
         "title": "Children's Privacy",
@@ -1001,7 +984,7 @@
   "terms": {
     "title": "Terms of Service",
     "lastUpdated": "Last Updated: December 1, 2025",
-    "introduction": "Welcome to Cyboring. These Terms of Service (\"Terms\") govern your access to and use of the Cyboring document engineering platform and related services (\"Services\") provided by Cyboring Hexagonal Technologies LLC (\"Cyboring\", \"we\", \"us\", or \"our\"). Please read these Terms carefully before using our Services.",
+    "introduction": "Welcome to Cyboring. These Terms of Service (\"Terms\") govern your access to and use of the Cyboring document engineering infrastructure and related services (\"Services\") provided by Cyboring Hexagonal Technologies LLC (\"Cyboring\", \"we\", \"us\", or \"our\"). Please read these Terms carefully before using our Services.",
     "sections": {
       "acceptance": {
         "title": "1. Acceptance of Terms",
@@ -1009,7 +992,7 @@
       },
       "description": {
         "title": "2. Description of Services",
-        "content": "Cyboring provides a document engineering platform that uses artificial intelligence to help professionals create, analyze, and process documents. Our Services include document generation, metadata extraction, compliance checking, and other related features. We reserve the right to modify, suspend, or discontinue any part of our Services at any time."
+        "content": "Cyboring provides a document engineering infrastructure that uses artificial intelligence to help professionals create, analyze, and process documents. Our Services include document generation, metadata extraction, compliance checking, and other related features. We reserve the right to modify, suspend, or discontinue any part of our Services at any time."
       },
       "accounts": {
         "title": "3. User Accounts",
@@ -1038,7 +1021,7 @@
       },
       "userContent": {
         "title": "6. User Content",
-        "content": "You retain ownership of any documents and content you upload to our platform (\"User Content\"). By uploading User Content, you grant Cyboring a limited license to process your content solely for the purpose of providing our Services to you. We do not use your User Content to train our AI models or share it with third parties except as necessary to provide the Services."
+        "content": "You retain ownership of any documents and content you upload to our infrastructure (\"User Content\"). By uploading User Content, you grant Cyboring a limited license to process your content solely for the purpose of providing our Services to you. We do not use your User Content to train our AI models or share it with third parties except as necessary to provide the Services."
       },
       "payment": {
         "title": "7. Payment Terms",

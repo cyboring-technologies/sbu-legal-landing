@@ -3,6 +3,8 @@
 import React from 'react';
 import { FadeIn } from './animations/FadeIn';
 
+import { HtmlContent } from '../HtmlContent';
+
 interface SectionHeaderProps {
     title: string;
     subtitle?: string;
@@ -31,7 +33,9 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
                 )}
 
                 {/* Main Title */}
-                <h2
+                <HtmlContent
+                    content={title}
+                    as="h2"
                     className={`
             text-3xl md:text-4xl lg:text-5xl font-bold mb-6
             ${titleGradient
@@ -39,15 +43,15 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
                             : 'text-gray-900 dark:text-white'
                         }
           `}
-                >
-                    {title}
-                </h2>
+                />
 
                 {/* Description */}
                 {description && (
-                    <p className={`text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl ${centered ? 'mx-auto' : ''}`}>
-                        {description}
-                    </p>
+                    <HtmlContent
+                        content={description}
+                        as="p"
+                        className={`text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl ${centered ? 'mx-auto' : ''}`}
+                    />
                 )}
             </FadeIn>
         </div>

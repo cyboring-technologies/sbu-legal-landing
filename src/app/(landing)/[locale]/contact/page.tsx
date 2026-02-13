@@ -85,12 +85,18 @@ export default function ContactPage() {
             subtitle={t('hero.subtitle')}
             description={t('hero.description')}
             primaryCTA={{
-              text: t('hero.cta_3_startRequest'),
-              href: '#contact-form',
+              text: t('hero.cta_3_primary'),
+              href: 'https://wa.me/18156620760',
+              ctaType: 'cta-2',
+              target: '_blank',
+              note: t('hero.cta_3_note'),
             }}
             secondaryCTA={{
-              text: t('hero.cta_2_helpCenter'),
-              href: '/questions-and-answers',
+              text: t('hero.cta_4_secondary'),
+              href: 'mailto:hello@documentos.legal',
+              ctaType: 'cta-2',
+              target: '_blank',
+              note: t('hero.cta_4_note'),
             }}
             backgroundImage="/images/contact-hero-bg.jpg"
             backgroundVariant="radial"
@@ -281,7 +287,7 @@ export default function ContactPage() {
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             placeholder={t('form.messagePlaceholder')}
                           />
-                          <p className="mt-4 text-xs text-yellow-800 dark:text-yellow-200 bg-yellow-50 dark:bg-yellow-900/40 p-3 rounded-md border border-yellow-200 dark:border-yellow-800">
+                          <p className="mt-4 text-xs text-muted-foreground bg-muted p-3 rounded-md border border-border">
                             {t('form.disclaimer')}
                           </p>
                         </div>
@@ -291,11 +297,11 @@ export default function ContactPage() {
                           <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="w-full bg-primary text-primary-foreground py-3 px-6 rounded-lg font-semibold hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                            className="inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-background text-primary dark:text-primary-foreground border-2 border-border hover:bg-secondary focus:ring-ring px-6 py-3 text-base disabled:opacity-50 disabled:cursor-not-allowed"
                           >
                             {isSubmitting ? (
                               <>
-                                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-gray-900 dark:border-white mr-2"></div>
                                 {t('form.sending')}
                               </>
                             ) : (
@@ -325,8 +331,10 @@ export default function ContactPage() {
 
             <StaggeredGrid columns={3} className="mt-12">
               {/* WhatsApp Concierge */}
-              <HoverCard className="p-8 text-center h-full group">
-                <MessageSquare className="w-12 h-12 text-gray-900 dark:text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <HoverCard className="p-8 h-full group">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <MessageSquare className="w-6 h-6" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('alternativeContact.whatsapp.title')}
                 </h3>
@@ -335,18 +343,20 @@ export default function ContactPage() {
                 </p>
                 <CTAButton
                   href="https://wa.me/18156620760"
-                  variant="primary"
-                  size="md"
-                  ctaType="cta-3"
-                  className="mx-auto"
+                  variant="secondary"
+                  size="sm"
+                  ctaType="cta-2"
+                  note={t('alternativeContact.cta_3_note')}
                 >
                   {t('alternativeContact.whatsapp.cta_3_chat')}
                 </CTAButton>
               </HoverCard>
 
               {/* Billing */}
-              <HoverCard className="p-8 text-center h-full group">
-                <FileText className="w-12 h-12 text-gray-900 dark:text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <HoverCard className="p-8 h-full group">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Mail className="w-6 h-6" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('alternativeContact.billing.title')}
                 </h3>
@@ -354,19 +364,21 @@ export default function ContactPage() {
                   {t('alternativeContact.billing.description')}
                 </p>
                 <CTAButton
-                  href="mailto:hello@cyboring.com?subject=Consulta de Facturación"
-                  variant="primary"
-                  size="md"
-                  ctaType="cta-3"
-                  className="mx-auto"
+                  href="mailto:hello@documentos.legal?subject=Consulta de Facturación"
+                  variant="secondary"
+                  size="sm"
+                  ctaType="cta-2"
+                  note={t('alternativeContact.cta_4_note')}
                 >
-                  {t('alternativeContact.billing.cta_3_contact')}
+                  {t('alternativeContact.cta_4_send')}
                 </CTAButton>
               </HoverCard>
 
               {/* Docs */}
-              <HoverCard className="p-8 text-center h-full group">
-                <Book className="w-12 h-12 text-gray-900 dark:text-white mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <HoverCard className="p-8 h-full group">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Book className="w-6 h-6" />
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {t('alternativeContact.docs.title')}
                 </h3>
@@ -374,11 +386,12 @@ export default function ContactPage() {
                   {t('alternativeContact.docs.description')}
                 </p>
                 <CTAButton
-                  href="#"
-                  variant="primary"
-                  size="md"
-                  ctaType="cta-2"
-                  className="mx-auto"
+                  href="/blog"
+                  target="_blank"
+                  variant="secondary"
+                  size="sm"
+                  ctaType="cta-3"
+                  note={t('alternativeContact.docs.note')}
                 >
                   {t('alternativeContact.docs.cta_2_explore')}
                 </CTAButton>
@@ -398,11 +411,8 @@ export default function ContactPage() {
 
             <FadeIn direction='up'>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <CTAButton href="/questions-and-answers" variant="primary" size="lg" ctaType="cta-2">
+                <CTAButton href="/questions-and-answers" variant="secondary" size="lg" ctaType="cta-2">
                   {tQA('cta_2_browseFaqs')}
-                </CTAButton>
-                <CTAButton href="/our-services" variant="secondary" size="lg" ctaType="cta-2">
-                  {tQA('cta_2_exploreInfrastructure')}
                 </CTAButton>
               </div>
             </FadeIn>
@@ -428,6 +438,29 @@ export default function ContactPage() {
                 </HoverCard>
               </StaggeredGrid>
             </div>
+          </div>
+        </section>
+        {/* Final CTA - Closing */}
+        <section className="py-32 bg-background relative overflow-hidden">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6">
+              {t('cta.title')}
+            </h2>
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              {t('cta.description')}
+            </p>
+
+            <FadeIn direction='up' delay={200}>
+              <CTAButton
+                href="/engine"
+                variant="primary"
+                size="lg"
+                ctaType="cta-1"
+                className="w-full sm:w-auto"
+              >
+                {t('cta.button')}
+              </CTAButton>
+            </FadeIn>
           </div>
         </section>
       </PageTransition>
