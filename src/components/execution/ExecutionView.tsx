@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 // @ts-ignore
 import mammoth from 'mammoth';
 import showdown from 'showdown';
+import { ENGINE_BASE } from '../../lib/apiConfig';
 
 interface ExecutionViewProps {
     file: File;
@@ -88,7 +89,7 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({ file, token, onRes
             mounted.current = false;
             if (previewUrl) URL.revokeObjectURL(previewUrl);
             if (jobId && sessionKey) {
-                navigator.sendBeacon('/api/gateway/incinerate', JSON.stringify({ id: jobId }));
+                navigator.sendBeacon(`${ENGINE_BASE}/incinerate`, JSON.stringify({ id: jobId }));
             }
         };
     }, []); // Run once on mount
@@ -114,7 +115,7 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({ file, token, onRes
             // CONTRACT: Explicit Human Choice (Passed from Pre-Auth)
             formData.append('draft_type', selectedDraftType);
 
-            const res = await fetch('/api/gateway/upload', {
+            const res = await fetch(`${ENGINE_BASE}/upload`, {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -225,14 +226,14 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({ file, token, onRes
             // Fire both endpoints. Order is semantic but they could be parallel.
 
             // Step 3a: Push Structure
-            await fetch('/api/gateway/structure', {
+            await fetch(`${ENGINE_BASE}/structure`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'X-Engine-Session': sessKey },
                 body: JSON.stringify({ id, structure: struct })
             });
 
             // Step 3b: Trigger Extraction (The Metadata Step)
-            const extractRes = await fetch('/api/gateway/extract', {
+            const extractRes = await fetch(`${ENGINE_BASE}/extract`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'X-Engine-Session': sessKey },
                 body: JSON.stringify({ id, text: fullText })
@@ -271,7 +272,7 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({ file, token, onRes
         if (!jobId || !sessionKey || !metadata) return;
 
         try {
-            const res = await fetch('/api/gateway/review_metadata', {
+            const res = await fetch(`${ENGINE_BASE}/review_metadata`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'X-Engine-Session': sessionKey },
                 body: JSON.stringify({
@@ -294,7 +295,7 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({ file, token, onRes
         setStatus('GENERATING');
 
         try {
-            const res = await fetch('/api/gateway/generate', {
+            const res = await fetch(`${ENGINE_BASE}/generate`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'X-Engine-Session': sessionKey },
                 body: JSON.stringify({
@@ -326,7 +327,7 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({ file, token, onRes
             body.append('html', html);
             body.append('id', jobId);
 
-            const res = await fetch('/api/gateway/download', {
+            const res = await fetch(`${ENGINE_BASE}/download`, {
                 method: 'POST',
                 body: body,
                 headers: { 'X-Engine-Session': sessionKey }
@@ -361,7 +362,7 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({ file, token, onRes
         const interval = setInterval(async () => {
             polls++;
             try {
-                const res = await fetch(`/api/gateway/check-status?id=${jobId}`, {
+                const res = await fetch(`${ENGINE_BASE}/check-status?id=${jobId}`, {
                     headers: { 'X-Engine-Session': sessionKey }
                 });
                 if (res.status === 410) {
