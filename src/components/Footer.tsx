@@ -9,7 +9,7 @@ import {
   Rocket,
   Mail,
   MessageCircle,
-  Facebook,
+
   Linkedin,
   Youtube,
   Lock,
@@ -126,9 +126,9 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com' },
+
     { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com' },
   ];
 
   return (
