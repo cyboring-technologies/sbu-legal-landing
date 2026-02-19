@@ -104,26 +104,44 @@
     "cta_2_learnMore": "Ver protocolos de seguridad"
   },
   "services": {
-    "title": "Ingeniería Aplicada<br />Soluciones Documentales de Alto Impacto",
-    "description": "No somos una biblioteca de plantillas estáticas.<br />\nSomos una infraestructura de ingeniería que resuelve la complejidad específica de su caso en una ejecución aislada.<br />\nLa infraestructura no retiene capacidad ni estado: cada ejecución es independiente.",
-    "draftingEngine": {
-      "title": "Motor de Redacción Judicial",
-      "description": "Transforme su estrategia legal en escritos, contestaciones y demandas sólidas en cuestión de minutos. El sistema estructura sus argumentos con precisión técnica y tono impecable, permitiendo resolver mayor volumen de casos mediante ejecuciones puntuales.",
-      "tag": "Capacidad: Procesamiento de expedientes complejos para generar borradores diseñados para revisión ejecutiva inmediata."
+    "title": "Infraestructura para actos procesales específicos",
+    "description": "Seleccione el acto jurídico que necesita ejecutar. Una ejecución. Un documento.",
+    "items": {
+      "initProcess": {
+        "title": "Iniciar proceso",
+        "description": "Presentación estructurada de demanda o escrito inicial ante autoridad competente."
+      },
+      "answerOppose": {
+        "title": "Contestar / Oponerse",
+        "description": "Respuesta formal a demanda o actuación procesal recibida."
+      },
+      "impugnAppeal": {
+        "title": "Impugnar / Apelar",
+        "description": "Interposición técnica de recursos contra resoluciones judiciales."
+      },
+      "requestMeasure": {
+        "title": "Solicitar medida",
+        "description": "Solicitud fundamentada de medidas cautelares o actuaciones urgentes."
+      },
+      "modifyDemand": {
+        "title": "Ampliar / Modificar demanda",
+        "description": "Ajuste formal de hechos o pretensiones dentro de un proceso en curso."
+      },
+      "fulfillExecute": {
+        "title": "Cumplir / Ejecutar",
+        "description": "Activación de fase de cumplimiento o ejecución de sentencia."
+      },
+      "informProve": {
+        "title": "Informar / Probar",
+        "description": "Presentación estructurada de informes, ofrecimiento o desarrollo probatorio."
+      },
+      "desistSettle": {
+        "title": "Desistir / Transigir",
+        "description": "Formalización técnica de desistimientos o acuerdos procesales."
+      }
     },
-    "contracts": {
-      "title": "Ingeniería de Contratos y Notificaciones",
-      "description": "Ejecución técnica automatizada para la creación de contratos de arrendamiento, notificaciones y documentos legales recurrentes con detección automática de área legal y rol. Elimine el error humano en la transcripción de datos y asegure que cada cláusula cumpla con los estándares de su firma.",
-      "tag": "Agilidad: Reduzca horas de trabajo administrativo a minutos de validación ejecutiva."
-    },
-    "orchestration": {
-      "title": "Orquestación Multi-LLM y Soberanía Humana",
-      "description": "Nuestra arquitectura utiliza Microsoft AI Foundry para acceder a los modelos más avanzados, coordinados por un orquestador nativo que garantiza la integridad de cada transacción. El humano siempre retiene el control final: el sistema propone, usted valida y finaliza.",
-      "tag": "Seguridad: Ejecución bajo el Protocolo Incinerador; procesamiento sin estado y eliminación total de datos tras la ejecución."
-    },
-    "cta_1_viewAll": "Iniciar ejecución",
-    "cta_2_getQuote": "Ver protocolos de seguridad",
-    "cta_2_learnMore": "Ver protocolos de seguridad"
+    "footer": "Cada acto se ejecuta una sola vez.<br />No existe almacenamiento ni continuidad entre ejecuciones.",
+    "cta_start": "Iniciar ejecución"
   },
   "testimonials": {
     "title": "Diseñado para el Abogado que Gobierna",
@@ -367,11 +385,64 @@
   },
   "ourServices": {
     "hero": {
-      "title": "Infraestructura de Ingeniería Documental Judicial",
-      "subtitle": "Capacidad de despacho industrial para firmas de alto volumen que priorizan la seguridad y el control",
-      "description": "Ejecución técnica de borradores legales bajo el Protocolo Incinerador.<br />Usted define la estrategia de alto nivel; nosotros procesamos la carpintería documental con rigor algorítmico.",
+      "title": "Ejecución técnica de documentos procesales",
+      "subtitle": "Actos procesales ejecutados bajo un modelo de ejecución única",
+      "description": "Usted define la estrategia de alto nivel; nosotros procesamos la carpintería documental con rigor algorítmico.",
       "cta_1_primary": "Iniciar ejecución",
       "cta_2_secondary": "Ver protocolos de seguridad"
+    },
+    "serviceCatalog": {
+      "title": "Nuestros Servicios",
+      "items": {
+        "item1": {
+          "title": "Iniciar proceso",
+          "action": "Acción: Presentar una demanda o escrito inicial ante autoridad competente.",
+          "copy": "Inicie un nuevo proceso judicial a partir de su documento base. El Engine estructura la demanda o escrito inicial conforme a la lógica procesal aplicable, organiza hechos, pretensiones y fundamentos, y genera un borrador listo para revisión antes de su presentación.",
+          "footer": "Una ejecución. Un escrito inicial. Sin almacenamiento posterior."
+        },
+        "item2": {
+          "title": "Contestar / Oponerse",
+          "action": "Acción: Responder formalmente a una demanda o actuación.",
+          "copy": "Genere la contestación u oposición a partir del documento recibido. El sistema extrae hechos relevantes, identifica pretensiones y estructura la defensa con orden técnico y coherencia argumentativa.",
+          "footer": "Usted valida. El Engine ejecuta. El resultado se descarga y la sesión se destruye."
+        },
+        "item3": {
+          "title": "Impugnar / Apelar",
+          "action": "Acción: Interponer recursos contra resoluciones.",
+          "copy": "Elabore un recurso de apelación, revocatoria u otro medio de impugnación a partir de la resolución cuestionada. El Engine organiza agravios, fundamentos normativos y peticiones concretas bajo estructura formal adecuada.",
+          "footer": "Una autorización. Un recurso. Sin re-ejecuciones."
+        },
+        "item4": {
+          "title": "Solicitar medida",
+          "action": "Acción: Requerir medidas cautelares o actuaciones urgentes.",
+          "copy": "Solicite medidas cautelares u otras actuaciones urgentes con estructura clara y fundamentación precisa. El sistema integra hechos, peligro en la demora y apariencia de buen derecho en un documento coherente y formalmente sólido.",
+          "footer": "La ejecución ocurre una sola vez. El archivo final concentra todo el valor."
+        },
+        "item5": {
+          "title": "Ampliar / Modificar demanda",
+          "action": "Acción: Ajustar el alcance de una acción ya iniciada.",
+          "copy": "Amplíe hechos, modifique pretensiones o adecue la demanda a nuevos elementos procesales. El Engine reorganiza el escrito base manteniendo consistencia argumentativa y estructura normativa.",
+          "footer": "No se trata de editar un archivo guardado. Se trata de ejecutar una nueva transformación puntual."
+        },
+        "item6": {
+          "title": "Cumplir / Ejecutar",
+          "action": "Acción: Solicitar cumplimiento o fase de ejecución de sentencia.",
+          "copy": "Active la fase de cumplimiento o ejecución de una resolución firme. El sistema ordena antecedentes, título ejecutivo y peticiones de ejecución bajo formato procesal correspondiente.",
+          "footer": "Una ejecución técnica para activar la ejecución jurídica."
+        },
+        "item7": {
+          "title": "Informar / Probar",
+          "action": "Acción: Presentar informes, pruebas o escritos de trámite.",
+          "copy": "Genere escritos de ofrecimiento, incorporación o desarrollo probatorio con estructura clara y orden lógico. El Engine organiza anexos, referencias y exposición técnica para facilitar revisión y presentación.",
+          "footer": "Un acto procesal aislado. Sin historial. Sin continuidad."
+        },
+        "item8": {
+          "title": "Desistir / Transigir",
+          "action": "Acción: Formalizar desistimientos, acuerdos o transacciones.",
+          "copy": "Formalice un desistimiento o acuerdo transaccional con redacción precisa y coherente con el estado procesal. El Engine estructura cláusulas, manifestaciones y solicitudes de homologación cuando corresponda.",
+          "footer": "Se ejecuta el documento. Se descarga. La infraestructura se incinera."
+        }
+      }
     },
     "overview": {
       "title": "Ingeniería Documental de Grado Judicial",
@@ -852,10 +923,10 @@
       "terms": "Términos de Servicio"
     },
     "servicesLinks": {
-      "document": "Generación y Gestión de Documentos Legales",
-      "analytics": "Análisis Jurídico Asistido",
-      "ai": "Infraestructura Legal Digital",
-      "automation": "Automatización de Flujos Legales"
+      "document": "Inicio de Acción",
+      "analytics": "Defensa y Respuesta",
+      "ai": "Revisión y Modificación",
+      "automation": "Cierre y Ejecución"
     },
     "cta_3_whatsapp": "WhatsApp",
     "cta_3_request": "Contacto institucional",

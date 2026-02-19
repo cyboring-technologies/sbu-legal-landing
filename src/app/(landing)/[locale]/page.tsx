@@ -14,6 +14,7 @@ import { CTAButton } from '../../../components/CTAButtons';
 import { HtmlContent } from '../../../components/HtmlContent';
 import {
   ShieldCheck,
+  Shield,
   Zap,
   Users,
   Trophy,
@@ -31,6 +32,11 @@ import {
   Cpu,
   ChevronDown,
   FileX,
+  FileText,
+  Gavel,
+  FileSignature,
+  Search,
+  Handshake,
 } from 'lucide-react';
 
 
@@ -110,9 +116,9 @@ export default function HomePage() {
   );
 
   // Services cards animation
-  const [servicesCardVisibility, setServicesCardVisibility] = useState([false, false, false]);
+  const [servicesCardVisibility, setServicesCardVisibility] = useState(new Array(8).fill(false));
   const servicesCardRefs = useStaggeredIntersectionObserver(
-    3,
+    8,
     useCallback((index: number) => {
       setServicesCardVisibility((prev) => {
         const newVisibility = [...prev];
@@ -351,16 +357,12 @@ export default function HomePage() {
                 {/* Card 1: HITL */}
                 <div
                   ref={solutionCardRefs[0]}
-                  className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${solutionCardVisibility[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
+                  className={`relative bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group overflow-hidden ${solutionCardVisibility[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Crown className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">
-                      {tSolution('hitl.title')}
-                    </h3>
-                  </div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2F4A5C] to-[#4A6678] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans mb-4">
+                    {tSolution('hitl.title')}
+                  </h3>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
                     {tSolution('hitl.description')}
                   </p>
@@ -369,16 +371,12 @@ export default function HomePage() {
                 {/* Card 2: Orchestration */}
                 <div
                   ref={solutionCardRefs[1]}
-                  className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${solutionCardVisibility[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
+                  className={`relative bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group overflow-hidden ${solutionCardVisibility[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Cpu className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">
-                      {tSolution('orchestration.title')}
-                    </h3>
-                  </div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2F4A5C] to-[#1B2B36] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans mb-4">
+                    {tSolution('orchestration.title')}
+                  </h3>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
                     {tSolution('orchestration.description')}
                   </p>
@@ -387,16 +385,12 @@ export default function HomePage() {
                 {/* Card 3: Privacy */}
                 <div
                   ref={solutionCardRefs[2]}
-                  className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${solutionCardVisibility[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
+                  className={`relative bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group overflow-hidden ${solutionCardVisibility[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <ShieldCheck className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">
-                      {tSolution('privacy.title')}
-                    </h3>
-                  </div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2F4A5C] to-[#4A6678] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans mb-4">
+                    {tSolution('privacy.title')}
+                  </h3>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
                     {tSolution('privacy.description')}
                   </p>
@@ -405,16 +399,12 @@ export default function HomePage() {
                 {/* Card 4: Capacity */}
                 <div
                   ref={solutionCardRefs[3]}
-                  className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${solutionCardVisibility[3] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
+                  className={`relative bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group overflow-hidden ${solutionCardVisibility[3] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Layers className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans">
-                      {tSolution('capacity.title')}
-                    </h3>
-                  </div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2F4A5C] to-[#1B2B36] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 font-sans mb-4">
+                    {tSolution('capacity.title')}
+                  </h3>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
                     {tSolution('capacity.description')}
                   </p>
@@ -445,69 +435,54 @@ export default function HomePage() {
                 />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* Card 1: Drafting Engine */}
-                <div
-                  ref={servicesCardRefs[0]}
-                  className={`bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${servicesCardVisibility[0] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
-                >
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Zap className="w-6 h-6" />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  { key: 'initProcess', icon: FileText },
+                  { key: 'answerOppose', icon: Shield },
+                  { key: 'impugnAppeal', icon: Gavel },
+                  { key: 'requestMeasure', icon: Zap },
+                  { key: 'modifyDemand', icon: FileSignature },
+                  { key: 'fulfillExecute', icon: CheckCircle },
+                  { key: 'informProve', icon: Search },
+                  { key: 'desistSettle', icon: Handshake },
+                ].map((item, index) => (
+                  <div
+                    key={item.key}
+                    ref={servicesCardRefs[index]}
+                    className={`bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-md hover:shadow-xl border border-gray-200 dark:border-gray-700 transition-all duration-300 ease-out hover:-translate-y-1 transform-gpu group ${servicesCardVisibility[index] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
+                  >
+                    <div className="flex items-center gap-4 mb-3">
+                      <div className="w-10 h-10 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-xl flex items-center justify-center shadow-sm transition-all duration-300 group-hover:bg-[#2F4A5C] group-hover:text-white">
+                        <item.icon className="w-5 h-5" />
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 font-sans leading-tight group-hover:text-[#2F4A5C] transition-colors duration-300">
+                        {tServices(`items.${item.key}.title`)}
+                      </h3>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 font-sans">
-                      {tServices('draftingEngine.title')}
-                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm font-sans leading-relaxed">
+                      {tServices(`items.${item.key}.description`)}
+                    </p>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 font-sans">{tServices('draftingEngine.description')}</p>
-                  <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
-                    <span className="text-sm font-medium text-muted-foreground font-sans block">
-                      {tServices('draftingEngine.tag')}
-                    </span>
-                  </div>
-                </div>
+                ))}
+              </div>
 
-                {/* Card 2: Contracts */}
-                <div
-                  ref={servicesCardRefs[1]}
-                  className={`bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${servicesCardVisibility[1] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
-                >
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Scale className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 font-sans">
-                      {tServices('contracts.title')}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 font-sans">{tServices('contracts.description')}</p>
-                  <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
-                    <span className="text-sm font-medium text-muted-foreground font-sans block">
-                      {tServices('contracts.tag')}
-                    </span>
-                  </div>
-                </div>
+              <div className="mt-16 text-center">
+                <HtmlContent
+                  content={tServices('footer')}
+                  as="p"
+                  className="text-lg text-gray-500 dark:text-gray-400 mb-8 font-medium"
+                />
 
-                {/* Card 3: Orchestration */}
-                <div
-                  ref={servicesCardRefs[2]}
-                  className={`bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 transition-all duration-700 hover:-translate-y-2 group ${servicesCardVisibility[2] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}
+                <CTAButton
+                  href="/engine"
+                  variant="primary"
+                  size="lg"
+                  className="px-10 py-3 shadow-xl hover:shadow-2xl"
+                  ctaType="cta-1"
+                  onClick={handleStartExecution}
                 >
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="w-12 h-12 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Cpu className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 font-sans">
-                      {tServices('orchestration.title')}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 font-sans">{tServices('orchestration.description')}</p>
-                  <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
-                    <span className="text-sm font-medium text-muted-foreground font-sans block">
-                      {tServices('orchestration.tag')}
-                    </span>
-                  </div>
-                </div>
+                  {tServices('cta_start')}
+                </CTAButton>
               </div>
 
 

@@ -104,26 +104,44 @@
     "cta_2_learnMore": "View security protocols"
   },
   "services": {
-    "title": "Applied Engineering<br />High Impact Document Solutions",
-    "description": "We are not a static template library.<br />\nWe are an engineering infrastructure that resolves the specific complexity of your case in an isolated execution.<br />\nThe infrastructure retains neither capacity nor state: each execution is independent.",
-    "draftingEngine": {
-      "title": "Judicial Drafting Engine",
-      "description": "Transform your legal strategy into solid briefs, responses, and complaints in minutes. The system structures your arguments with technical precision and impeccable tone, allowing for higher case volumes through punctual executions.",
-      "tag": "Capacity: Processing of complex files to generate drafts designed for immediate executive review."
+    "title": "Infrastructure for specific procedural acts",
+    "description": "Select the legal act you need to execute. One execution. One document.",
+    "items": {
+      "initProcess": {
+        "title": "Start Process",
+        "description": "Structured presentation of claim or initial writ before competent authority."
+      },
+      "answerOppose": {
+        "title": "Answer / Oppose",
+        "description": "Formal response to claim or procedural action received."
+      },
+      "impugnAppeal": {
+        "title": "Impugn / Appeal",
+        "description": "Technical filing of appeals against judicial resolutions."
+      },
+      "requestMeasure": {
+        "title": "Request Measure",
+        "description": "Substantiated request for precautionary measures or urgent actions."
+      },
+      "modifyDemand": {
+        "title": "Expand / Modify Claim",
+        "description": "Formal adjustment of facts or claims within an ongoing process."
+      },
+      "fulfillExecute": {
+        "title": "Fulfill / Execute",
+        "description": "Activation of compliance phase or judgment execution."
+      },
+      "informProve": {
+        "title": "Inform / Prove",
+        "description": "Structured presentation of reports, offering or development of evidence."
+      },
+      "desistSettle": {
+        "title": "Desist / Settle",
+        "description": "Technical formalization of withdrawals or procedural agreements."
+      }
     },
-    "contracts": {
-      "title": "Contract and Notification Engineering",
-      "description": "Automated technical execution for the creation of lease agreements, notifications, and recurring legal documents with automatic legal area and role detection. Eliminate human error in data transcription and ensure that every clause meets your firm's standards.",
-      "tag": "Agility: Reduce hours of administrative work to minutes of executive validation."
-    },
-    "orchestration": {
-      "title": "Multi-LLM Orchestration and Human Sovereignty",
-      "description": "Our architecture uses Microsoft AI Foundry to access the most advanced models, coordinated by a native orchestrator that ensures the integrity of every transaction. The human always retains final control: the system proposes, you validate and finalize.",
-      "tag": "Security: Execution under the Incinerator Protocol; stateless processing and total data deletion after execution."
-    },
-    "cta_1_viewAll": "Start execution",
-    "cta_2_getQuote": "View security protocols",
-    "cta_2_learnMore": "View security protocols"
+    "footer": "Each act is executed only once.<br />There is no storage or continuity between executions.",
+    "cta_start": "Start execution"
   },
   "testimonials": {
     "title": "Designed for the Governing Lawyer",
@@ -371,11 +389,64 @@
   },
   "ourServices": {
     "hero": {
-      "title": "Judicial Document Engineering Infrastructure",
-      "subtitle": "Industrial-grade dispatch capacity for high-volume firms prioritizing security and control",
-      "description": "Technical execution of legal drafts under the Incinerator Protocol.<br />You define high-level strategy; we process documentary carpentry with algorithmic rigor.",
+      "title": "Technical execution of procedural documents",
+      "subtitle": "Procedural acts executed under a single execution model",
+      "description": "You define high-level strategy; we process documentary carpentry with algorithmic rigor.",
       "cta_1_primary": "Start execution",
       "cta_2_secondary": "View security protocols"
+    },
+    "serviceCatalog": {
+      "title": "Our Services",
+      "items": {
+        "item1": {
+          "title": "Start Process",
+          "action": "Action: File a lawsuit or initial writ before a competent authority.",
+          "copy": "Start a new judicial process from your base document. The Engine structures the lawsuit or initial writ according to the applicable procedural logic, organizes facts, claims, and foundations, and generates a draft ready for review before filing.",
+          "footer": "One execution. One initial writ. No subsequent storage."
+        },
+        "item2": {
+          "title": "Answer / Oppose",
+          "action": "Action: Formally respond to a lawsuit or action.",
+          "copy": "Generate the answer or opposition from the received document. The system extracts relevant facts, identifies claims, and structures the defense with technical order and argumentative coherence.",
+          "footer": "You validate. The Engine executes. The result is downloaded and the session is destroyed."
+        },
+        "item3": {
+          "title": "Impugn / Appeal",
+          "action": "Action: File appeals against resolutions.",
+          "copy": "Draft an appeal, revocation, or other means of challenge from the questioned resolution. The Engine organizes grievances, normative foundations, and specific petitions under an adequate formal structure.",
+          "footer": "One authorization. One resource. No re-executions."
+        },
+        "item4": {
+          "title": "Request Measure",
+          "action": "Action: Request precautionary measures or urgent actions.",
+          "copy": "Request precautionary measures or other urgent actions with clear structure and precise foundation. The system integrates facts, danger in delay, and appearance of good law into a coherent and formally solid document.",
+          "footer": "Execution occurs only once. The final file concentrates all value."
+        },
+        "item5": {
+          "title": "Expand / Modify Claim",
+          "action": "Action: Adjust the scope of an action already initiated.",
+          "copy": "Expand facts, modify claims, or adapt the lawsuit to new procedural elements. The Engine reorganizes the base writ maintaining argumentative consistency and normative structure.",
+          "footer": "It is not about editing a saved file. It is about executing a new specific transformation."
+        },
+        "item6": {
+          "title": "Fulfill / Execute",
+          "action": "Action: Request compliance or execution phase of judgment.",
+          "copy": "Activate the compliance or execution phase of a final resolution. The system orders antecedents, executive title, and execution petitions under the corresponding procedural format.",
+          "footer": "A technical execution to activate legal execution."
+        },
+        "item7": {
+          "title": "Inform / Prove",
+          "action": "Action: Present reports, evidence, or procedural writs.",
+          "copy": "Generate writs for offering, incorporation, or evidentiary development with clear structure and logical order. The Engine organizes annexes, references, and technical exposition to facilitate review and presentation.",
+          "footer": "An isolated procedural act. No history. No continuity."
+        },
+        "item8": {
+          "title": "Desist / Settle",
+          "action": "Action: Formalize withdrawals, agreements, or transactions.",
+          "copy": "Formalize a withdrawal or transactional agreement with precise drafting coherent with the procedural state. The Engine structures clauses, manifestations, and homologation requests when applicable.",
+          "footer": "The document is executed. It is downloaded. The infrastructure is incinerated."
+        }
+      }
     },
     "overview": {
       "title": "Judicial-Grade Document Engineering",
@@ -507,9 +578,9 @@
   "aboutUs": {
     "hero": {
       "preheader": "",
-      "title": "Where strategic intuition meets precision engineering",
+      "title": "The infrastructure of cognitive relief",
       "subtitle": "Judicial Grade Document Engineering",
-      "description": "We are a global deep-tech company. We unite a robust hexagonal architecture with cutting-edge AI to ensure experts focus on deciding and winning, not on writing.",
+      "description": "Documentos.legal is a document engineering infrastructure designed to eradicate administrative friction in litigation. Under the Incinerator Protocol Doctrine, we process your documents and destroy private data after execution. We execute the heavy lifting; you govern the legal strategy.",
       "cta_1_primary": "Start execution",
       "cta_2_secondary": "View security protocols"
     },
@@ -572,7 +643,7 @@
       "cta_2_viewInfrastructure": "View security protocols"
     },
     "stats": {
-      "title": "Engineering items and Impact",
+      "title": "Engineering Metrics and Impact",
       "items": {
         "ephemeral": {
           "title": "Immediate Deletion: Ephemeral Data Persistence",
@@ -892,10 +963,10 @@
       "terms": "Terms of Service"
     },
     "servicesLinks": {
-      "document": "Legal Document Generation & Management",
-      "analytics": "Assisted Legal Analysis",
-      "ai": "Digital Legal Infrastructure",
-      "automation": "Legal Workflow Automation"
+      "document": "Initiate Action",
+      "analytics": "Defense & Response",
+      "ai": "Review & Modification",
+      "automation": "Closing & Execution"
     },
     "cta_3_whatsapp": "WhatsApp",
     "cta_3_request": "Institutional contact",

@@ -90,129 +90,36 @@ export default function OurServicesPage() {
           )}
           <InteractiveGridPulse />
         </div>{' '}
-        {/* Overview - Narrative */}
-        <section className="py-32 bg-background border-b border-border relative overflow-hidden">
 
+        {/* Service Catalog - New Section */}
+        <section className="py-24 bg-background border-b border-border relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <SectionHeader
-              title={t('overview.title')}
-              description={t('overview.description')}
-            />
-
-            <StaggeredGrid columns={3} className="mt-12">
-              {/* 1. Drafting Engine */}
-              <HoverCard className="p-8 flex flex-col h-full group">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Code className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    {t('draftingEngine.title')}
+            <SectionHeader title={t('serviceCatalog.title')} />
+            <StaggeredGrid columns={2} className="gap-6 mt-12">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+                <HoverCard key={item} className="p-8 flex flex-col h-full group bg-card transition-all duration-300 hover:shadow-xl border border-border/50">
+                  <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                    {t(`serviceCatalog.items.item${item}.title`)}
                   </h3>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
-                  {t('draftingEngine.description')}
-                </p>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Capacidades:</span> {t('draftingEngine.capabilities')}</span>
-                  </li>
-                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Rigor:</span> {t('draftingEngine.rigor')}</span>
-                  </li>
-                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">HITL:</span> {t('draftingEngine.hitl')}</span>
-                  </li>
-                </ul>
-                <CTAButton
-                  href="/engine"
-                  variant="primary"
-                  className="w-full justify-center"
-                  ctaType="cta-1"
-                >
-                  {t('draftingEngine.cta_1_start')}
-                </CTAButton>
-              </HoverCard>
-
-              {/* 2. Contract Engineering */}
-              <HoverCard className="p-8 flex flex-col h-full group">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <FileText className="w-6 h-6" />
+                  <div className="mb-4">
+                    <p className="text-primary font-semibold text-sm uppercase tracking-wide">
+                      {t(`serviceCatalog.items.item${item}.action`)}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    {t('contractEngineering.title')}
-                  </h3>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
-                  {t('contractEngineering.description')}
-                </p>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Documentos:</span> {t('contractEngineering.supportedDocs')}</span>
-                  </li>
-                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Eficiencia:</span> {t('contractEngineering.efficiency')}</span>
-                  </li>
-                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Auto-Detección:</span> {t('contractEngineering.autoDetection')}</span>
-                  </li>
-                </ul>
-                <CTAButton
-                  href="#contact"
-                  variant="secondary"
-                  className="w-full justify-center"
-                  ctaType="cta-3"
-                >
-                  {t('contractEngineering.cta_3_request')}
-                </CTAButton>
-              </HoverCard>
-
-              {/* 3. Infrastructure */}
-              <HoverCard className="p-8 flex flex-col h-full group">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <ShieldCheck className="w-6 h-6" />
+                  <p className="text-muted-foreground text-base leading-relaxed mb-6 flex-grow">
+                    {t(`serviceCatalog.items.item${item}.copy`)}
+                  </p>
+                  <div className="border-t border-border pt-4 mt-auto">
+                    <p className="text-xs text-muted-foreground/80 italic font-mono">
+                      {t(`serviceCatalog.items.item${item}.footer`)}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    {t('infrastructure.title')}
-                  </h3>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
-                  {t('infrastructure.description')}
-                </p>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Eliminación:</span> {t('infrastructure.totalDeletion')}</span>
-                  </li>
-                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Orquestación:</span> {t('infrastructure.orchestration')}</span>
-                  </li>
-                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Arquitectura:</span> {t('infrastructure.architecture')}</span>
-                  </li>
-                </ul>
-                <CTAButton
-                  href="#contact"
-                  variant="secondary"
-                  className="w-full justify-center"
-                  ctaType="cta-2"
-                >
-                  {t('infrastructure.cta_2_security')}
-                </CTAButton>
-              </HoverCard>
+                </HoverCard>
+              ))}
             </StaggeredGrid>
           </div>
         </section>
+
         {/* Service Process - Process/List */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
 
@@ -265,6 +172,94 @@ export default function OurServicesPage() {
             </StaggeredGrid>
           </div>
         </section>
+
+        {/* Overview - Narrative */}
+        <section className="py-32 bg-background border-b border-border relative overflow-hidden">
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <SectionHeader
+              title={t('overview.title')}
+              description={t('overview.description')}
+            />
+
+            <StaggeredGrid columns={2} className="mt-12">
+              {/* 1. Drafting Engine */}
+              <HoverCard className="p-8 flex flex-col h-full group">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <Code className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    {t('draftingEngine.title')}
+                  </h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
+                  {t('draftingEngine.description')}
+                </p>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
+                    <span><span className="font-semibold">Capacidades:</span> {t('draftingEngine.capabilities')}</span>
+                  </li>
+                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
+                    <span><span className="font-semibold">Rigor:</span> {t('draftingEngine.rigor')}</span>
+                  </li>
+                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
+                    <span><span className="font-semibold">HITL:</span> {t('draftingEngine.hitl')}</span>
+                  </li>
+                </ul>
+                <CTAButton
+                  href="/engine"
+                  variant="primary"
+                  className="w-full justify-center"
+                  ctaType="cta-1"
+                >
+                  {t('draftingEngine.cta_1_start')}
+                </CTAButton>
+              </HoverCard>
+
+              {/* 3. Infrastructure */}
+              <HoverCard className="p-8 flex flex-col h-full group">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <ShieldCheck className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    {t('infrastructure.title')}
+                  </h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
+                  {t('infrastructure.description')}
+                </p>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
+                    <span><span className="font-semibold">Eliminación:</span> {t('infrastructure.totalDeletion')}</span>
+                  </li>
+                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
+                    <span><span className="font-semibold">Orquestación:</span> {t('infrastructure.orchestration')}</span>
+                  </li>
+                  <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
+                    <span><span className="font-semibold">Arquitectura:</span> {t('infrastructure.architecture')}</span>
+                  </li>
+                </ul>
+                <CTAButton
+                  href="#contact"
+                  variant="secondary"
+                  className="w-full justify-center"
+                  ctaType="cta-2"
+                >
+                  {t('infrastructure.cta_2_security')}
+                </CTAButton>
+              </HoverCard>
+            </StaggeredGrid>
+          </div>
+        </section>
+
         {/* Technologies - List */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
 
