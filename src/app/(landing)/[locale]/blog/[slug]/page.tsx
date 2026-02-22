@@ -1,13 +1,15 @@
-'use client';
-
 import React from 'react';
-import { useParams } from 'next/navigation';
 import Layout from '../../../../../components/Layout';
 import { PageTransition } from '../../../../../components/ui/PageTransition';
 import { Calendar, Clock, Tag, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import showdown from 'showdown';
+import fs from 'fs/promises';
+import path from 'path';
+
+export const dynamic = "error";
+export const revalidate = false;
 
 // Blog content files mapping
 const blogFiles: Record<string, string> = {
@@ -21,11 +23,13 @@ const blogFiles: Record<string, string> = {
     'end-of-billable-hours': '/content/blog/en-fin-horas-facturables.md',
 };
 
-export default function BlogPostPage() {
-    const params = useParams();
-    const slug = params.slug as string;
-    const locale = params.locale as string;
-    const t = useTranslations('blog');
+export function generateStaticParams() {
+    return Object.keys(blogFiles).map((slug) => ({ slug }));
+}
+
+export default async function BlogPostPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+    const { slug, locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'blog' });
 
     // Get post ID from slug
     const getPostIdFromSlug = (slug: string): string => {
@@ -43,70 +47,41 @@ export default function BlogPostPage() {
     };
 
     const postId = getPostIdFromSlug(slug);
-    const [htmlContent, setHtmlContent] = React.useState<string>('');
-    const [loading, setLoading] = React.useState(true);
 
-    React.useEffect(() => {
-        const loadMarkdownContent = async () => {
-            try {
-                const filePath = blogFiles[slug];
-                if (!filePath) {
-                    throw new Error('Blog post not found');
-                }
+    // Read Markdown statically during build
+    let htmlContent = '';
+    const filePathUrl = blogFiles[slug];
 
-                // Fetch the markdown file with cache busting
-                const response = await fetch(`${filePath}?v=${new Date().getTime()}`);
-                if (!response.ok) {
-                    throw new Error('Failed to load blog content');
-                }
+    if (filePathUrl) {
+        try {
+            // filePathUrl usually looks like /content/blog/es-el-modelo-one-shot.md
+            // We map it to the actual absolute / public directory
+            const absolutePath = path.join(process.cwd(), 'public', filePathUrl);
+            let markdownText = await fs.readFile(absolutePath, 'utf8');
 
-                let markdownText = await response.text();
+            markdownText = markdownText.replace(/^```markdown\s*/gm, '');
+            markdownText = markdownText.replace(/^```\s*$/gm, '');
 
-                // Clean up markdown artifacts for better readability
-                // Remove code fences if present
-                markdownText = markdownText.replace(/^```markdown\s*/gm, '');
-                markdownText = markdownText.replace(/^```\s*$/gm, '');
+            const converter = new showdown.Converter({
+                tables: true,
+                strikethrough: true,
+                tasklists: true,
+                simpleLineBreaks: false,
+                openLinksInNewWindow: true,
+                emoji: true,
+                smoothLivePreview: true,
+                literalMidWordUnderscores: true,
+                ghCodeBlocks: true,
+                headerLevelStart: 2,
+            });
 
-                // Convert markdown to HTML using showdown
-                const converter = new showdown.Converter({
-                    tables: true,
-                    strikethrough: true,
-                    tasklists: true,
-                    simpleLineBreaks: false, // Use proper paragraph breaks
-                    openLinksInNewWindow: true,
-                    emoji: true,
-                    smoothLivePreview: true,
-                    literalMidWordUnderscores: true,
-                    ghCodeBlocks: true,
-                    headerLevelStart: 2, // Start headers at h2 level for better hierarchy
-                });
-
-                const html = converter.makeHtml(markdownText);
-                setHtmlContent(html);
-            } catch (error) {
-                console.error('Error loading blog content:', error);
-                setHtmlContent('<p>Error loading blog content. Please try again later.</p>');
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        loadMarkdownContent();
-    }, [slug]);
-
-    if (loading) {
-        return (
-            <Layout>
-                <PageTransition>
-                    <div className="min-h-screen flex items-center justify-center">
-                        <div className="text-center">
-                            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 dark:border-white mx-auto"></div>
-                            <p className="mt-4 text-gray-600 dark:text-gray-400">Cargando...</p>
-                        </div>
-                    </div>
-                </PageTransition>
-            </Layout>
-        );
+            htmlContent = converter.makeHtml(markdownText);
+        } catch (error) {
+            console.error('Error reading blog content at build time:', error);
+            htmlContent = '<p>Error loading blog content.</p>';
+        }
+    } else {
+        htmlContent = '<p>Blog post not found.</p>';
     }
 
     return (

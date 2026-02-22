@@ -1,0 +1,170 @@
+[
+    {
+        "slug": "iniciar-proceso-jur-1",
+        "service": "Iniciar proceso",
+        "jurisdiction": "JUR_1",
+        "variant": "V1",
+        "audience": "Direct"
+    },
+    {
+        "slug": "contestar-oponerse-jur-1",
+        "service": "Contestar / Oponerse",
+        "jurisdiction": "JUR_1",
+        "variant": "V1",
+        "audience": "Direct"
+    },
+    {
+        "slug": "impugnar-apelar-jur-1",
+        "service": "Impugnar / Apelar",
+        "jurisdiction": "JUR_1",
+        "variant": "V1",
+        "audience": "Direct"
+    },
+    {
+        "slug": "solicitar-medida-jur-1",
+        "service": "Solicitar medida",
+        "jurisdiction": "JUR_1",
+        "variant": "V1",
+        "audience": "Direct"
+    },
+    {
+        "slug": "ampliar-modificar-demanda-jur-1",
+        "service": "Ampliar / Modificar demanda",
+        "jurisdiction": "JUR_1",
+        "variant": "V1",
+        "audience": "Direct"
+    },
+    {
+        "slug": "cumplir-ejecutar-jur-1",
+        "service": "Cumplir / Ejecutar",
+        "jurisdiction": "JUR_1",
+        "variant": "V1",
+        "audience": "Direct"
+    },
+    {
+        "slug": "informar-probar-jur-1",
+        "service": "Informar / Probar",
+        "jurisdiction": "JUR_1",
+        "variant": "V1",
+        "audience": "Direct"
+    },
+    {
+        "slug": "desistir-transigir-jur-1",
+        "service": "Desistir / Transigir",
+        "jurisdiction": "JUR_1",
+        "variant": "V1",
+        "audience": "Direct"
+    },
+    {
+        "slug": "iniciar-proceso-jur-1-v2",
+        "service": "Iniciar proceso",
+        "jurisdiction": "JUR_1",
+        "variant": "V2",
+        "audience": "B2C"
+    },
+    {
+        "slug": "iniciar-proceso-jur-1-v3",
+        "service": "Iniciar proceso",
+        "jurisdiction": "JUR_1",
+        "variant": "V3",
+        "audience": "B2B"
+    },
+    {
+        "slug": "contestar-oponerse-jur-1-v2",
+        "service": "Contestar / Oponerse",
+        "jurisdiction": "JUR_1",
+        "variant": "V2",
+        "audience": "B2C"
+    },
+    {
+        "slug": "contestar-oponerse-jur-1-v3",
+        "service": "Contestar / Oponerse",
+        "jurisdiction": "JUR_1",
+        "variant": "V3",
+        "audience": "B2B"
+    },
+    {
+        "slug": "impugnar-apelar-jur-1-v2",
+        "service": "Impugnar / Apelar",
+        "jurisdiction": "JUR_1",
+        "variant": "V2",
+        "audience": "B2C"
+    },
+    {
+        "slug": "impugnar-apelar-jur-1-v3",
+        "service": "Impugnar / Apelar",
+        "jurisdiction": "JUR_1",
+        "variant": "V3",
+        "audience": "B2B"
+    },
+    {
+        "slug": "solicitar-medida-jur-1-v2",
+        "service": "Solicitar medida",
+        "jurisdiction": "JUR_1",
+        "variant": "V2",
+        "audience": "B2C"
+    },
+    {
+        "slug": "solicitar-medida-jur-1-v3",
+        "service": "Solicitar medida",
+        "jurisdiction": "JUR_1",
+        "variant": "V3",
+        "audience": "B2B"
+    },
+    {
+        "slug": "ampliar-modificar-demanda-jur-1-v2",
+        "service": "Ampliar / Modificar demanda",
+        "jurisdiction": "JUR_1",
+        "variant": "V2",
+        "audience": "B2C"
+    },
+    {
+        "slug": "ampliar-modificar-demanda-jur-1-v3",
+        "service": "Ampliar / Modificar demanda",
+        "jurisdiction": "JUR_1",
+        "variant": "V3",
+        "audience": "B2B"
+    },
+    {
+        "slug": "cumplir-ejecutar-jur-1-v2",
+        "service": "Cumplir / Ejecutar",
+        "jurisdiction": "JUR_1",
+        "variant": "V2",
+        "audience": "B2C"
+    },
+    {
+        "slug": "cumplir-ejecutar-jur-1-v3",
+        "service": "Cumplir / Ejecutar",
+        "jurisdiction": "JUR_1",
+        "variant": "V3",
+        "audience": "B2B"
+    },
+    {
+        "slug": "informar-probar-jur-1-v2",
+        "service": "Informar / Probar",
+        "jurisdiction": "JUR_1",
+        "variant": "V2",
+        "audience": "B2C"
+    },
+    {
+        "slug": "informar-probar-jur-1-v3",
+        "service": "Informar / Probar",
+        "jurisdiction": "JUR_1",
+        "variant": "V3",
+        "audience": "B2B"
+    },
+    {
+        "slug": "desistir-transigir-jur-1-v2",
+        "service": "Desistir / Transigir",
+        "jurisdiction": "JUR_1",
+        "variant": "V2",
+        "audience": "B2C"
+    },
+    {
+        "slug": "desistir-transigir-jur-1-v3",
+        "service": "Desistir / Transigir",
+        "jurisdiction": "JUR_1",
+        "variant": "V3",
+        "audience": "B2B"
+    }
+]
