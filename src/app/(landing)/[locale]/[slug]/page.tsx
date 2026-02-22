@@ -13,9 +13,8 @@ type Props = {
 // 1. Static Execution Parameters
 export function generateStaticParams() {
     return allSlugs.map((slug) => ({
+        locale: 'es',
         slug,
-        // Because next-intl locales are defined at layout, dynamic export handles it automatically
-        // but for exact safety, we export just the slug.
     }));
 }
 
