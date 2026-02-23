@@ -689,7 +689,7 @@
         },
         "item2": {
           "title": "Arquitectura de Separación Binaria",
-          "description": "Nuestra infraestructura divide estrictamente los datos de negocio (facturación y acceso) de los datos del producto (sus secretos). Mientras que su cuenta permanece segura en nuestra infraestructura, el entorno de procesamiento es totalmente efímero y desaparece al terminar su sesión."
+          "description": "Nuestra infraestructura divide estrictamente los datos de negocio (facturación y acceso) de los datos del producto (sus secretos). Mientras nuestra infraestructura perimetral protege sus datos de facturación, el entorno de procesamiento es totalmente efímero y desaparece al terminar su sesión."
         },
         "item3": {
           "title": "Eliminación garantizada por infraestructura, no por código",
