@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`AntiPages Structural Audit matches the structural DOM snapshot 1`] = `
+<div>
+  <main
+    class="prose dark:prose-invert max-w-3xl mx-auto px-6 py-12"
+  >
+    <section
+      id="hero"
+    >
+      <h1>
+        Test Service in JUR_1
+      </h1>
+    </section>
+    <section
+      id="context"
+    >
+      <h2>
+        Context
+      </h2>
+      <p>
+        Body context
+      </p>
+    </section>
+    <section
+      id="execution-scope"
+    >
+      <h2>
+        Scope
+      </h2>
+      <p>
+        Body scope
+      </p>
+    </section>
+    <section
+      id="irreversibility-statement"
+    >
+      <h2>
+        Irreversibility
+      </h2>
+      <p>
+        Body irreversibility
+      </p>
+    </section>
+    <section
+      id="process-summary"
+    >
+      <h2>
+        Process
+      </h2>
+      <p
+        class="whitespace-pre-line"
+      >
+        Process body
+      </p>
+    </section>
+    <section
+      id="trust-guarantees"
+    >
+      <h2>
+        Trust
+      </h2>
+      <p>
+        Trust body
+      </p>
+    </section>
+    <section
+      id="cta-block"
+    >
+      <a
+        href="https://engine.sbu-legal.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Start execution
+      </a>
+    </section>
+  </main>
+</div>
+`;
