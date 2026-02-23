@@ -18,7 +18,8 @@ export default function RootPage() {
     // Check browser language
     const browserLang = navigator.language.toLowerCase();
     // Simple logic: if strict match or starts with 'es', use 'es', otherwise default to 'en'
-    const matchedLocale = locales.find(l => l === browserLang || browserLang.startsWith(l)) || 'en';
+    const matchedLocale =
+      locales.find((l) => l === browserLang || browserLang.startsWith(l)) || 'en';
 
     localStorage.setItem('preferred-locale', matchedLocale);
     router.replace(`/${matchedLocale}/`);

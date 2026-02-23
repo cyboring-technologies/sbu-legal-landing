@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function RuntimeShell() {
-    return <div>RuntimeShell Placeholder</div>;
+  return <div>RuntimeShell Placeholder</div>;
 }

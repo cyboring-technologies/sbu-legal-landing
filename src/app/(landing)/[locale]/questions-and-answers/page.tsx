@@ -157,10 +157,12 @@ export default function QuestionsAndAnswersPage() {
           <InteractiveGridPulse />
         </div>{' '}
         {/* Search and Categories - Operational */}
-        <section id="faq-content" className="py-24 bg-background border-b border-border relative overflow-hidden">
-
+        <section
+          id="faq-content"
+          className="py-24 bg-background border-b border-border relative overflow-hidden"
+        >
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <FadeIn direction='up'>
+            <FadeIn direction="up">
               {/* Search Bar */}
               <div className="mb-8">
                 <div className="relative">
@@ -184,10 +186,11 @@ export default function QuestionsAndAnswersPage() {
                       <button
                         key={category.id}
                         onClick={() => setSelectedCategory(category.id)}
-                        className={`flex items-center px-4 py-2 rounded-lg transition-all border-2 ${selectedCategory === category.id
-                          ? 'border-primary bg-primary/10 text-primary'
-                          : 'border-border bg-background text-foreground hover:border-primary hover:text-primary'
-                          }`}
+                        className={`flex items-center px-4 py-2 rounded-lg transition-all border-2 ${
+                          selectedCategory === category.id
+                            ? 'border-primary bg-primary/10 text-primary'
+                            : 'border-border bg-background text-foreground hover:border-primary hover:text-primary'
+                        }`}
                       >
                         <Icon className="w-4 h-4 mr-2" />
                         {category.name}
@@ -247,7 +250,6 @@ export default function QuestionsAndAnswersPage() {
         </section>
         {/* Popular Topics - Operational */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <SectionHeader
               title={t('popularTopics.title')}
@@ -322,7 +324,6 @@ export default function QuestionsAndAnswersPage() {
         </section>
         {/* Help Resources - Operational */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <SectionHeader
               title={t('helpResources.title')}
@@ -402,7 +403,6 @@ export default function QuestionsAndAnswersPage() {
         </section>
         {/* Knowledge Base Preview - Operational */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <SectionHeader
               title={t('knowledgeBase.title')}
@@ -494,7 +494,6 @@ export default function QuestionsAndAnswersPage() {
         </section>
         {/* Evolution Protocol - Operational */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <SectionHeader
               title={t('evolutionProtocol.title')}
@@ -550,12 +549,9 @@ export default function QuestionsAndAnswersPage() {
         </section>
         {/* Contact CTA - Closing */}
         <section className="py-16 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <SectionHeader
-              title={t('cta.title')}
-            />
-            <FadeIn direction='up' delay={100}>
+            <SectionHeader title={t('cta.title')} />
+            <FadeIn direction="up" delay={100}>
               <div className="mt-4 text-lg text-gray-600 dark:text-gray-300 space-y-4 mb-4">
                 <p>{t('cta.description1')}</p>
               </div>

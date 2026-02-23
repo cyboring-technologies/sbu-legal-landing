@@ -1,5 +1,6 @@
 ```markdown
-# Protocolo Incinerador  
+# Protocolo Incinerador
+
 ## Arquitectura Sin Estado y Destrucción Total
 
 ---

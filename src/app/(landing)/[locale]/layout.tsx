@@ -33,9 +33,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <ModalProvider>
-        {children}
-      </ModalProvider>
+      <ModalProvider>{children}</ModalProvider>
     </NextIntlClientProvider>
   );
 }

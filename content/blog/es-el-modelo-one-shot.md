@@ -23,18 +23,18 @@ Es arquitectónica, económica y doctrinal.
 
 El modelo SaaS fue diseñado para:
 
-* Retener usuarios.
-* Construir cuentas.
-* Acumular datos.
-* Maximizar tiempo dentro del sistema.
-* Monetizar continuidad.
+- Retener usuarios.
+- Construir cuentas.
+- Acumular datos.
+- Maximizar tiempo dentro del sistema.
+- Monetizar continuidad.
 
 Ese modelo funciona para:
 
-* CRM.
-* Gestión de proyectos.
-* Herramientas colaborativas.
-* Plataformas de contenido.
+- CRM.
+- Gestión de proyectos.
+- Herramientas colaborativas.
+- Plataformas de contenido.
 
 Pero el acto jurídico no es continuo.
 Es puntual.
@@ -58,18 +58,18 @@ En el modelo one-shot, el sistema no ofrece acceso permanente.
 
 Ofrece:
 
-* Una ejecución.
-* Un borrador.
-* Una descarga.
-* Una destrucción total posterior.
+- Una ejecución.
+- Un borrador.
+- Una descarga.
+- Una destrucción total posterior.
 
 No hay:
 
-* Historial.
-* Biblioteca.
-* Proyectos.
-* Versionado persistente.
-* Reanudación futura.
+- Historial.
+- Biblioteca.
+- Proyectos.
+- Versionado persistente.
+- Reanudación futura.
 
 El sistema no acumula memoria.
 No construye relación.
@@ -89,20 +89,20 @@ Un SaaS es una plataforma.
 
 Una plataforma:
 
-* Tiene usuarios.
-* Tiene cuentas.
-* Tiene continuidad.
-* Tiene retención como métrica central.
+- Tiene usuarios.
+- Tiene cuentas.
+- Tiene continuidad.
+- Tiene retención como métrica central.
 
 El modelo one-shot no es plataforma.
 Es máquina.
 
 Una máquina:
 
-* Se activa.
-* Ejecuta.
-* Produce.
-* Se apaga.
+- Se activa.
+- Ejecuta.
+- Produce.
+- Se apaga.
 
 No existe “uso continuo”.
 Existe activación puntual.
@@ -119,22 +119,22 @@ Es tiempo hasta descarga.
 
 En el modelo SaaS:
 
-* Se paga por acceso.
-* Se paga por membresía.
-* Se paga por continuidad.
+- Se paga por acceso.
+- Se paga por membresía.
+- Se paga por continuidad.
 
 En el modelo one-shot:
 
-* Se paga por autoridad de ejecución.
+- Se paga por autoridad de ejecución.
 
 El pago no habilita una cuenta.
 Habilita un único cruce irreversible.
 
 Una vez consumida esa autoridad:
 
-* No puede reutilizarse.
-* No puede extenderse.
-* No puede reiniciarse.
+- No puede reutilizarse.
+- No puede extenderse.
+- No puede reiniciarse.
 
 No existen créditos.
 No existe saldo.
@@ -148,17 +148,17 @@ Cada ejecución es un evento económico aislado.
 
 El SaaS tradicional construye confianza prometiendo:
 
-* Seguridad de almacenamiento.
-* Historial recuperable.
-* Backup.
-* Control de acceso.
+- Seguridad de almacenamiento.
+- Historial recuperable.
+- Backup.
+- Control de acceso.
 
 El modelo one-shot construye confianza por ausencia:
 
-* No hay almacenamiento.
-* No hay historial.
-* No hay datos persistentes.
-* No hay recuperación posterior.
+- No hay almacenamiento.
+- No hay historial.
+- No hay datos persistentes.
+- No hay recuperación posterior.
 
 La información no se guarda “segura”.
 Se destruye.
@@ -174,10 +174,10 @@ Si no hay datos retenidos, no hay superficie de explotación futura.
 
 El modelo one-shot implica:
 
-* No existe retención como KPI.
-* No existe LTV acumulativo por usuario.
-* No existe lock-in.
-* No existe ecosistema cerrado.
+- No existe retención como KPI.
+- No existe LTV acumulativo por usuario.
+- No existe lock-in.
+- No existe ecosistema cerrado.
 
 La sostenibilidad no proviene de la dependencia del cliente.
 Proviene de la claridad del acto.
@@ -192,12 +192,12 @@ Cada interacción es autosuficiente.
 
 No es:
 
-* Una suite legal.
-* Un workspace.
-* Un gestor documental.
-* Un asistente continuo.
-* Un entorno colaborativo.
-* Un repositorio de conocimiento.
+- Una suite legal.
+- Un workspace.
+- Un gestor documental.
+- Un asistente continuo.
+- Un entorno colaborativo.
+- Un repositorio de conocimiento.
 
 Cualquier movimiento hacia esas categorías crea otro negocio distinto.
 
@@ -214,11 +214,11 @@ Es una doctrina operacional.
 
 Define:
 
-* Cómo se cobra.
-* Cómo se ejecuta.
-* Qué se permite.
-* Qué se prohíbe.
-* Qué se destruye.
+- Cómo se cobra.
+- Cómo se ejecuta.
+- Qué se permite.
+- Qué se prohíbe.
+- Qué se destruye.
 
 La arquitectura impone límites que el marketing no puede suavizar.
 

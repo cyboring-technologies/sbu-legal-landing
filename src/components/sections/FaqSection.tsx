@@ -47,13 +47,15 @@ export const FaqSection: React.FC = () => {
                   {tFaq(`q${index}.question`)}
                 </h3>
                 <ChevronDown
-                  className={`w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform flex-shrink-0 ${openFaq === index ? 'transform rotate-180' : ''
-                    }`}
+                  className={`w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform flex-shrink-0 ${
+                    openFaq === index ? 'transform rotate-180' : ''
+                  }`}
                 />
               </button>
               <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}
               >
                 <div className="px-6 pb-4 pt-2">
                   <p className="text-gray-600 dark:text-gray-300">{tFaq(`q${index}.answer`)}</p>

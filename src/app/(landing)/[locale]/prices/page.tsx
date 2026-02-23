@@ -59,7 +59,6 @@ export default function PricesPage() {
         <section className="py-24 bg-muted/30 border-b border-border relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-
               {/* What Payment Authorizes */}
               <FadeIn direction="right">
                 <div className="h-full">
@@ -79,25 +78,33 @@ export default function PricesPage() {
                         <div className="bg-emerald-500/10 p-2 rounded-full mr-4 mt-1">
                           <Check className="w-5 h-5 text-emerald-600" />
                         </div>
-                        <span className="text-lg font-medium text-foreground">{t('authorization.items.0')}</span>
+                        <span className="text-lg font-medium text-foreground">
+                          {t('authorization.items.0')}
+                        </span>
                       </li>
                       <li className="flex items-start">
                         <div className="bg-emerald-500/10 p-2 rounded-full mr-4 mt-1">
                           <Check className="w-5 h-5 text-emerald-600" />
                         </div>
-                        <span className="text-lg font-medium text-foreground">{t('authorization.items.1')}</span>
+                        <span className="text-lg font-medium text-foreground">
+                          {t('authorization.items.1')}
+                        </span>
                       </li>
                       <li className="flex items-start">
                         <div className="bg-emerald-500/10 p-2 rounded-full mr-4 mt-1">
                           <Check className="w-5 h-5 text-emerald-600" />
                         </div>
-                        <span className="text-lg font-medium text-foreground">{t('authorization.items.2')}</span>
+                        <span className="text-lg font-medium text-foreground">
+                          {t('authorization.items.2')}
+                        </span>
                       </li>
                       <li className="flex items-start">
                         <div className="bg-emerald-500/10 p-2 rounded-full mr-4 mt-1">
                           <Check className="w-5 h-5 text-emerald-600" />
                         </div>
-                        <span className="text-lg font-medium text-foreground">{t('authorization.items.3')}</span>
+                        <span className="text-lg font-medium text-foreground">
+                          {t('authorization.items.3')}
+                        </span>
                       </li>
                     </ul>
                   </div>
@@ -109,9 +116,7 @@ export default function PricesPage() {
                 <div className="h-full">
                   <div className="flex items-center mb-6">
                     <XCircle className="w-8 h-8 text-red-600 mr-4" />
-                    <h3 className="text-2xl font-bold text-foreground">
-                      {t('exclusions.title')}
-                    </h3>
+                    <h3 className="text-2xl font-bold text-foreground">{t('exclusions.title')}</h3>
                   </div>
                   <p className="text-lg text-muted-foreground mb-8">
                     {t('exclusions.description')}
@@ -140,10 +145,7 @@ export default function PricesPage() {
         {/* Mechanics Block - How Price is Determined - NOW THIRD */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <SectionHeader
-              title={t('mechanics.title')}
-              description={t('mechanics.description')}
-            />
+            <SectionHeader title={t('mechanics.title')} description={t('mechanics.description')} />
 
             <StaggeredGrid columns={3} className="mt-16">
               {/* Analysis */}
@@ -154,9 +156,7 @@ export default function PricesPage() {
                 <h4 className="text-xl font-bold text-foreground mb-4">
                   {t('mechanics.items.analysis.title')}
                 </h4>
-                <p className="text-muted-foreground">
-                  {t('mechanics.items.analysis.description')}
-                </p>
+                <p className="text-muted-foreground">{t('mechanics.items.analysis.description')}</p>
               </HoverCard>
 
               {/* Complexity */}
@@ -205,7 +205,9 @@ export default function PricesPage() {
                 <h4 className="text-xl font-bold text-foreground mb-2">
                   {t('historicalContext.items.floor.title')}
                 </h4>
-                <div className="text-4xl font-bold text-primary my-6"> {/* Increased padding/size */}
+                <div className="text-4xl font-bold text-primary my-6">
+                  {' '}
+                  {/* Increased padding/size */}
                   {t('historicalContext.items.floor.price')}
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -221,7 +223,9 @@ export default function PricesPage() {
                 <h4 className="text-xl font-bold text-foreground mb-2">
                   {t('historicalContext.items.standard.title')}
                 </h4>
-                <div className="text-4xl font-bold text-primary my-6"> {/* Increased padding/size */}
+                <div className="text-4xl font-bold text-primary my-6">
+                  {' '}
+                  {/* Increased padding/size */}
                   {t('historicalContext.items.standard.price')}
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -237,7 +241,9 @@ export default function PricesPage() {
                 <h4 className="text-xl font-bold text-foreground mb-2">
                   {t('historicalContext.items.highDensity.title')}
                 </h4>
-                <div className="text-4xl font-bold text-primary my-6"> {/* Increased padding/size */}
+                <div className="text-4xl font-bold text-primary my-6">
+                  {' '}
+                  {/* Increased padding/size */}
                   {t('historicalContext.items.highDensity.price')}
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -283,7 +289,7 @@ export default function PricesPage() {
               {t('cta.description')}
             </p>
 
-            <FadeIn direction='up' delay={200}>
+            <FadeIn direction="up" delay={200}>
               <CTAButton
                 href="/engine"
                 variant="primary"
@@ -296,7 +302,6 @@ export default function PricesPage() {
             </FadeIn>
           </div>
         </section>
-
       </PageTransition>
     </Layout>
   );

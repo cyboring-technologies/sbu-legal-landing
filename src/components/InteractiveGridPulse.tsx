@@ -63,10 +63,7 @@ const InteractiveGridPulseComponent: React.FC = () => {
         if (!rect) return prev;
 
         const isInside =
-          mouseX >= 0 &&
-          mouseX <= rect.width &&
-          mouseY >= 0 &&
-          mouseY <= rect.height;
+          mouseX >= 0 && mouseX <= rect.width && mouseY >= 0 && mouseY <= rect.height;
 
         if (!isInside) {
           // Check if we need to reset to avoid spamming re-renders
@@ -80,7 +77,7 @@ const InteractiveGridPulseComponent: React.FC = () => {
         return prev.map((cell) => {
           const distance = Math.sqrt(
             Math.pow(cell.x + gridSize / 2 - mouseX, 2) +
-            Math.pow(cell.y + gridSize / 2 - mouseY, 2)
+              Math.pow(cell.y + gridSize / 2 - mouseY, 2)
           );
           // Create ripple effect with gradient intensity
           const maxDistance = 150;
@@ -106,11 +103,7 @@ const InteractiveGridPulseComponent: React.FC = () => {
       const mouseX = e.clientX - rect.left;
       const mouseY = e.clientY - rect.top;
 
-      const isInside =
-        mouseX >= 0 &&
-        mouseX <= rect.width &&
-        mouseY >= 0 &&
-        mouseY <= rect.height;
+      const isInside = mouseX >= 0 && mouseX <= rect.width && mouseY >= 0 && mouseY <= rect.height;
 
       if (isInside) {
         throttledUpdate(mouseX, mouseY, rect);
@@ -123,7 +116,7 @@ const InteractiveGridPulseComponent: React.FC = () => {
 
     const handleMouseLeaveWindow = () => {
       // Force reset when leaving window
-      setCells(prev => {
+      setCells((prev) => {
         const hasActivity = prev.some((c) => c.active || c.intensity > 0);
         if (!hasActivity) return prev;
         return prev.map((c) => ({ ...c, active: false, intensity: 0 }));

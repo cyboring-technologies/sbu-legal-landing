@@ -39,12 +39,9 @@ import {
   Handshake,
 } from 'lucide-react';
 
-
-
 import { HeroBackgroundEffects } from '../../../components/HeroBackgroundEffects';
 
 // import { CheckoutFlow } from '../../../components/payment/CheckoutFlow';
-
 
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -59,9 +56,7 @@ export default function HomePage() {
 
   // SOVEREIGN MODE: No inline checkout state
 
-
   // VISUAL CONTRACT STATE: Execution Mode
-
 
   const problemsSectionRef = useRef<HTMLElement>(null);
   const [isProblemsVisible, setIsProblemsVisible] = useState(false);
@@ -200,12 +195,10 @@ export default function HomePage() {
     <>
       {/* VISUAL CONTRACT RULE 2.1 & 2.4: Execution Mode Sovereignty */}
 
-
       {/* LANDING PAGE LAYOUT - HIDDEN DURING EXECUTION */}
       {true && (
         <Layout>
           {/* Checkout Modal Overlay REMOVED for Sovereign Strictness */}
-
 
           {/* Hero Section */}
           <div
@@ -235,8 +228,6 @@ export default function HomePage() {
             ref={problemsSectionRef}
             className="py-32 bg-background border-b border-border relative overflow-hidden"
           >
-
-
             {/* Scroll Indicator Arrow */}
             {!isProblemsVisible && (
               <div
@@ -410,14 +401,11 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
-
-
             </div>
           </section>
 
           {/* Our Services Section */}
           <section className="py-24 bg-background border-b border-border relative overflow-hidden">
-
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div
                 ref={servicesHeaderRef}
@@ -484,14 +472,11 @@ export default function HomePage() {
                   {tServices('cta_start')}
                 </CTAButton>
               </div>
-
-
             </div>
           </section>
 
           {/* Testimonials Section */}
           <section className="py-32 bg-background border-b border-border relative overflow-hidden">
-
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div
                 ref={testimonialsHeaderRef}
@@ -518,11 +503,15 @@ export default function HomePage() {
                   </h4>
                   <div className="space-y-4">
                     <p className="text-gray-600 dark:text-gray-400 font-sans text-sm">
-                      <span className="font-semibold text-gray-900 dark:text-gray-200 block mb-1">{tTestimonials('challengeLabel')}</span>
+                      <span className="font-semibold text-gray-900 dark:text-gray-200 block mb-1">
+                        {tTestimonials('challengeLabel')}
+                      </span>
                       {tTestimonials('client1.challenge')}
                     </p>
                     <p className="text-gray-600 dark:text-gray-400 font-sans text-sm">
-                      <span className="font-semibold text-gray-900 dark:text-gray-200 block mb-1">{tTestimonials('reliefLabel')}</span>
+                      <span className="font-semibold text-gray-900 dark:text-gray-200 block mb-1">
+                        {tTestimonials('reliefLabel')}
+                      </span>
                       {tTestimonials('client1.relief')}
                     </p>
                     <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
@@ -543,11 +532,15 @@ export default function HomePage() {
                   </h4>
                   <div className="space-y-4">
                     <p className="text-gray-600 dark:text-gray-400 font-sans text-sm">
-                      <span className="font-semibold text-gray-900 dark:text-gray-200 block mb-1">{tTestimonials('challengeLabel')}</span>
+                      <span className="font-semibold text-gray-900 dark:text-gray-200 block mb-1">
+                        {tTestimonials('challengeLabel')}
+                      </span>
                       {tTestimonials('client2.challenge')}
                     </p>
                     <p className="text-gray-600 dark:text-gray-400 font-sans text-sm">
-                      <span className="font-semibold text-gray-900 dark:text-gray-200 block mb-1">{tTestimonials('reliefLabel')}</span>
+                      <span className="font-semibold text-gray-900 dark:text-gray-200 block mb-1">
+                        {tTestimonials('reliefLabel')}
+                      </span>
                       {tTestimonials('client2.relief')}
                     </p>
                     <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
@@ -568,11 +561,15 @@ export default function HomePage() {
                   </h4>
                   <div className="space-y-4">
                     <p className="text-gray-600 dark:text-gray-400 font-sans text-sm">
-                      <span className="font-semibold text-gray-900 dark:text-gray-200 block mb-1">{tTestimonials('challengeLabel')}</span>
+                      <span className="font-semibold text-gray-900 dark:text-gray-200 block mb-1">
+                        {tTestimonials('challengeLabel')}
+                      </span>
                       {tTestimonials('client3.challenge')}
                     </p>
                     <p className="text-gray-600 dark:text-gray-400 font-sans text-sm">
-                      <span className="font-semibold text-gray-900 dark:text-gray-200 block mb-1">{tTestimonials('reliefLabel')}</span>
+                      <span className="font-semibold text-gray-900 dark:text-gray-200 block mb-1">
+                        {tTestimonials('reliefLabel')}
+                      </span>
                       {tTestimonials('client3.relief')}
                     </p>
                     <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
@@ -583,14 +580,11 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-
-
             </div>
-          </section >
+          </section>
 
           {/* FAQs Section */}
           <section className="py-24 bg-background border-b border-border relative overflow-hidden">
-
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div
                 ref={faqHeaderRef}
@@ -618,16 +612,20 @@ export default function HomePage() {
                         {tFaq(`q${index}.question`)}
                       </h3>
                       <ChevronDown
-                        className={`w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform flex-shrink-0 ${openFaq === index ? 'transform rotate-180' : ''
-                          }`}
+                        className={`w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform flex-shrink-0 ${
+                          openFaq === index ? 'transform rotate-180' : ''
+                        }`}
                       />
                     </button>
                     <div
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                        }`}
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                      }`}
                     >
                       <div className="px-6 pb-4 pt-2">
-                        <p className="text-gray-600 dark:text-gray-300">{tFaq(`q${index}.answer`)}</p>
+                        <p className="text-gray-600 dark:text-gray-300">
+                          {tFaq(`q${index}.answer`)}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -645,12 +643,11 @@ export default function HomePage() {
                 </CTAButton>
               </div>
             </div>
-          </section >
+          </section>
 
           {/* Final CTA Section */}
           <section className="py-24 bg-background relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
               {/* LAYER 1: PRIMARY FINAL CTA (DOMINANT) */}
               <div
                 ref={contactHeaderRef}
@@ -677,11 +674,8 @@ export default function HomePage() {
 
             {/* LAYER 2: SECONDARY PATHS (DE-EMPHASIZED) */}
             <div className="max-w-4xl mx-auto pt-12 border-t border-border">
-              <div className="grid grid-cols-1 md:grid-cols-1 gap-6 text-center">
-
-              </div>
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-6 text-center"></div>
             </div>
-
           </section>
         </Layout>
       )}

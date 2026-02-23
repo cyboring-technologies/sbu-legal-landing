@@ -20,12 +20,13 @@ interface BaseCTAProps {
   tooltip?: boolean;
 }
 
-type CTAButtonProps = BaseCTAProps & (
-  | { ctaType: 'cta-1'; href?: '/engine'; target?: '_blank'; rel?: string }
-  | { ctaType: 'cta-2'; href: string; target?: '_blank' | '_self'; rel?: string }
-  | { ctaType: 'cta-3'; href: string; target?: '_blank' | '_self'; rel?: string }
-  | { ctaType: 'cta-4'; href?: string; target?: '_blank' | '_self'; rel?: string }
-);
+type CTAButtonProps = BaseCTAProps &
+  (
+    | { ctaType: 'cta-1'; href?: '/engine'; target?: '_blank'; rel?: string }
+    | { ctaType: 'cta-2'; href: string; target?: '_blank' | '_self'; rel?: string }
+    | { ctaType: 'cta-3'; href: string; target?: '_blank' | '_self'; rel?: string }
+    | { ctaType: 'cta-4'; href?: string; target?: '_blank' | '_self'; rel?: string }
+  );
 
 const CTAButton: React.FC<CTAButtonProps> = ({
   href,
@@ -81,18 +82,20 @@ const CTAButton: React.FC<CTAButtonProps> = ({
     </>
   );
 
-
   const buttonContent = (
     <div className="relative inline-flex flex-col group/cta">
       {/* If href is not provided, or an onClick handler is present, render a button */}
-      {(!href || onClick || ctaType === 'cta-2') ? (
-        <button onClick={(e) => {
-          if (ctaType === 'cta-2') {
-            e.preventDefault();
-            openSecurityModal();
-          }
-          if (onClick) onClick();
-        }} className={`${classes} group`}>
+      {!href || onClick || ctaType === 'cta-2' ? (
+        <button
+          onClick={(e) => {
+            if (ctaType === 'cta-2') {
+              e.preventDefault();
+              openSecurityModal();
+            }
+            if (onClick) onClick();
+          }}
+          className={`${classes} group`}
+        >
           {content}
         </button>
       ) : finalHref?.startsWith('http') ? (
@@ -118,9 +121,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
       )}
 
       {note && !tooltip && (
-        <p className="mt-2 text-xs text-muted-foreground/80 leading-snug max-w-[240px]">
-          {note}
-        </p>
+        <p className="mt-2 text-xs text-muted-foreground/80 leading-snug max-w-[240px]">{note}</p>
       )}
 
       {note && tooltip && (
@@ -148,12 +149,13 @@ interface BaseCTA2Props {
   tooltip?: boolean;
 }
 
-type CTAButton2Props = BaseCTA2Props & (
-  | { ctaType: 'cta-1'; href?: '/engine'; target?: '_blank'; rel?: string }
-  | { ctaType: 'cta-2'; href: string; target?: '_blank' | '_self'; rel?: string }
-  | { ctaType: 'cta-3'; href: string; target?: '_blank' | '_self'; rel?: string }
-  | { ctaType: 'cta-4'; href?: string; target?: '_blank' | '_self'; rel?: string }
-);
+type CTAButton2Props = BaseCTA2Props &
+  (
+    | { ctaType: 'cta-1'; href?: '/engine'; target?: '_blank'; rel?: string }
+    | { ctaType: 'cta-2'; href: string; target?: '_blank' | '_self'; rel?: string }
+    | { ctaType: 'cta-3'; href: string; target?: '_blank' | '_self'; rel?: string }
+    | { ctaType: 'cta-4'; href?: string; target?: '_blank' | '_self'; rel?: string }
+  );
 
 const CTAButton2: React.FC<CTAButton2Props> = ({
   href,
@@ -206,18 +208,20 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
     </>
   );
 
-
   const buttonContent = (
     <div className="relative inline-flex flex-col group/cta">
       {/* Logic for button or link */}
-      {(onClick || ctaType === 'cta-2') ? (
-        <button onClick={(e) => {
-          if (ctaType === 'cta-2') {
-            e.preventDefault();
-            openSecurityModal();
-          }
-          if (onClick) onClick();
-        }} className={classes}>
+      {onClick || ctaType === 'cta-2' ? (
+        <button
+          onClick={(e) => {
+            if (ctaType === 'cta-2') {
+              e.preventDefault();
+              openSecurityModal();
+            }
+            if (onClick) onClick();
+          }}
+          className={classes}
+        >
           {content}
         </button>
       ) : finalHref?.startsWith('http') ? (
@@ -243,9 +247,7 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
       )}
 
       {note && !tooltip && (
-        <p className="mt-2 text-xs text-muted-foreground/80 leading-snug max-w-[240px]">
-          {note}
-        </p>
+        <p className="mt-2 text-xs text-muted-foreground/80 leading-snug max-w-[240px]">{note}</p>
       )}
 
       {note && tooltip && (

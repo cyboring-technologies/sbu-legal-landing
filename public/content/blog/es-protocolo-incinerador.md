@@ -1,4 +1,5 @@
 # Protocolo Incinerador
+
 ## Arquitectura Sin Estado y Destrucción Total
 
 ---
@@ -35,9 +36,7 @@ El problema no es el cifrado, es la persistencia.
 
 Una arquitectura sin estado significa que el sistema no mantiene memoria entre sesiones, no conserva archivos procesados, no acumula historiales y no construye repositorios internos.
 
-
 Cada sesión es aislada, independiente y efímera.
-
 
 El entorno de ejecución se activa para procesar un documento específico y, tras su cierre, deja de existir. No hay reanudación, recuperación ni continuidad técnica. La infraestructura no “recuerda”.
 
@@ -49,9 +48,7 @@ El flujo estructural es simple:
 
 1. Ingestión del documento. 2. Procesamiento en memoria volátil. 3. Generación del borrador. 4. Descarga. 5. Incineración total.
 
-
 La incineración implica: Eliminación del documento original, Eliminación de metadatos extraídos, Eliminación del borrador generado, Eliminación del estado interno del motor.
-
 
 No se conserva copia, no se archiva "por si acaso" y no existe entorno residual.
 
@@ -63,7 +60,6 @@ En muchos sistemas, la eliminación es opcional. Aquí no. La destrucción es ob
 
 No existe: Configuración para conservar, Toggle de almacenamiento, Opción premium para historial, Backup recuperable.
 
-
 La infraestructura no ofrece almacenamiento como servicio.
 
 Su función es transformar un archivo en un borrador, entregarlo y destruir todo lo demás.
@@ -74,9 +70,7 @@ Su función es transformar un archivo en un borrador, entregarlo y destruir todo
 
 El Protocolo Incinerador establece una separación estricta: Datos administrativos (facturación), Datos documentales (contenido legal).
 
-
 Los datos documentales: Nunca se integran en sistemas persistentes, Nunca alimentan modelos, Nunca se reutilizan.
-
 
 El documento no se convierte en dataset.
 No se convierte en activo interno.
@@ -90,9 +84,7 @@ Se elimina.
 
 Reducir persistencia reduce: Riesgo de filtración, Riesgo de explotación futura, Riesgo de exposición masiva, Superficie regulatoria acumulativa.
 
-
 Si no hay repositorio interno: No hay brecha masiva, No hay biblioteca comprometida, No hay archivos históricos expuestos.
-
 
 La responsabilidad digital tiende a cero tras el cierre de la sesión.
 
@@ -102,9 +94,7 @@ La responsabilidad digital tiende a cero tras el cierre de la sesión.
 
 El mercado asocia confianza con: Almacenamiento seguro, Infraestructura robusta, Historial accesible.
 
-
 El Protocolo Incinerador redefine la confianza como: Ausencia, Finalidad, Eliminación irreversible.
-
 
 No promete “guardar mejor”.
 Promete no guardar.
@@ -114,7 +104,6 @@ Promete no guardar.
 ## 8. Lo Que Este Modelo No Permite
 
 El Protocolo Incinerador excluye por diseño: Bibliotecas de documentos, Versionado histórico, Reapertura de casos anteriores, “Tus documentos”, “Tu workspace”.
-
 
 Si una funcionalidad requiere persistencia documental, contradice el modelo.
 
@@ -135,7 +124,6 @@ Donde otros construyen repositorios,
 aquí se construye un acto.
 
 Se ejecuta una vez, se descarga el resultado y la infraestructura queda vacía.
-
 
 La seguridad no se promete.
 Se impone mediante desaparición.

@@ -29,14 +29,12 @@ export const metadata: Metadata = {
   },
   description:
     'Infraestructura legal confiable, mínima y eficiente. Automatización de documentos sin fricción visual ni cognitiva.',
-  keywords:
-    'legal, automatización, documentos, b2b, infraestructura legal, documentos.legal',
+  keywords: 'legal, automatización, documentos, b2b, infraestructura legal, documentos.legal',
   authors: [{ name: 'Documentos.legal' }],
   metadataBase: new URL('https://documentos.legal'),
   openGraph: {
     title: 'Documentos.legal',
-    description:
-      'Infraestructura legal confiable y automatizada.',
+    description: 'Infraestructura legal confiable y automatizada.',
     url: 'https://documentos.legal',
     siteName: 'Documentos.legal',
     images: [],
@@ -46,8 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Documentos.legal',
-    description:
-      'Infraestructura legal confiable y automatizada.',
+    description: 'Infraestructura legal confiable y automatizada.',
   },
   icons: {
     icon: [
@@ -64,7 +61,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeScript />
       </head>
       <body className={`${inter.className} antialiased bg-background text-foreground`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="theme" suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          storageKey="theme"
+          suppressHydrationWarning
+        >
           {children}
         </ThemeProvider>
       </body>

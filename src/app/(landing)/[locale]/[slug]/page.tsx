@@ -1,56 +1,56 @@
-import { notFound } from "next/navigation";
-import { Metadata } from "next";
-import AntiPage from "../../../../components/AntiPage";
-import { allSlugs, getPageBySlug } from "../../../../lib/routeMatrix";
+import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
+import AntiPage from '../../../../components/AntiPage';
+import { allSlugs, getPageBySlug } from '../../../../lib/routeMatrix';
 
-export const dynamic = "error";
+export const dynamic = 'error';
 export const revalidate = false;
 
 type Props = {
-    params: Promise<{ locale: string; slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 };
 
 // 1. Static Execution Parameters
 export function generateStaticParams() {
-    return allSlugs.map((slug) => ({
-        locale: 'es',
-        slug,
-    }));
+  return allSlugs.map((slug) => ({
+    locale: 'es',
+    slug,
+  }));
 }
 
 // 2. SEO Validation
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { slug } = await params;
+  const { slug } = await params;
 
-    const pageData = getPageBySlug(slug);
+  const pageData = getPageBySlug(slug);
 
-    if (!pageData) {
-        return {};
-    }
+  if (!pageData) {
+    return {};
+  }
 
-    return {
-        title: `${pageData.service} in ${pageData.jurisdiction} | SBU-Legal`,
-        description: `Deterministic execution of ${pageData.service} for ${pageData.jurisdiction}. ${pageData.audience} context.`,
-        alternates: {
-            canonical: `https://documentos.legal/${slug}`,
-        },
-    };
+  return {
+    title: `${pageData.service} in ${pageData.jurisdiction} | SBU-Legal`,
+    description: `Deterministic execution of ${pageData.service} for ${pageData.jurisdiction}. ${pageData.audience} context.`,
+    alternates: {
+      canonical: `https://documentos.legal/${slug}`,
+    },
+  };
 }
 
 // 3. Page Component
 export default async function Page({ params }: Props) {
-    const { slug } = await params;
+  const { slug } = await params;
 
-    const pageData = getPageBySlug(slug);
+  const pageData = getPageBySlug(slug);
 
-    if (!pageData) {
-        notFound();
-    }
+  if (!pageData) {
+    notFound();
+  }
 
-    // Convert to exactly what AntiPageData expects
-    const antiPageData = {
-        ...pageData,
-    };
+  // Convert to exactly what AntiPageData expects
+  const antiPageData = {
+    ...pageData,
+  };
 
-    return <AntiPage data={antiPageData} />;
+  return <AntiPage data={antiPageData} />;
 }

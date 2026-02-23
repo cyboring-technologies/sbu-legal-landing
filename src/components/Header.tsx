@@ -86,8 +86,9 @@ const Header = () => {
       <header
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={`fixed w-full top-0 z-50 bg-white/40 dark:bg-gray-900/40 backdrop-blur-md border-b border-gray-200/5 dark:border-gray-700/5 transition-transform duration-300 ${headerVisible ? 'translate-y-0' : '-translate-y-full'
-          }`}
+        className={`fixed w-full top-0 z-50 bg-white/40 dark:bg-gray-900/40 backdrop-blur-md border-b border-gray-200/5 dark:border-gray-700/5 transition-transform duration-300 ${
+          headerVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -152,10 +153,11 @@ const Header = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`px-4 py-3 text-sm font-medium transition-colors duration-200 flex items-center ${isActive
-                      ? 'text-blue-600 dark:text-blue-400'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                      }`}
+                    className={`px-4 py-3 text-sm font-medium transition-colors duration-200 flex items-center ${
+                      isActive
+                        ? 'text-blue-600 dark:text-blue-400'
+                        : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -166,12 +168,7 @@ const Header = () => {
             {/* Theme Toggle & Access */}
             <div className="hidden md:flex items-center space-x-4">
               <LanguageToggle />
-              <CTAButton2
-                href="/engine"
-                variant="ghost"
-                size="sm"
-                ctaType="cta-1"
-              >
+              <CTAButton2 href="/engine" variant="ghost" size="sm" ctaType="cta-1">
                 {t('cta_1_access')}
               </CTAButton2>
               <div className="w-[40px] h-[40px] flex items-center justify-center">
@@ -204,10 +201,11 @@ const Header = () => {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`block px-3 py-2 text-base font-medium ${isActive
-                        ? 'text-blue-600 dark:text-blue-400'
-                        : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                        }`}
+                      className={`block px-3 py-2 text-base font-medium ${
+                        isActive
+                          ? 'text-blue-600 dark:text-blue-400'
+                          : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                      }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}

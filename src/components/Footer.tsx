@@ -9,14 +9,12 @@ import {
   Rocket,
   Mail,
   MessageCircle,
-
   Linkedin,
   Youtube,
   Lock,
   Code2,
   ShieldCheck,
   Cpu,
-
 } from 'lucide-react';
 
 // Azure Icon SVG Component
@@ -126,7 +124,6 @@ const Footer = () => {
   };
 
   const socialLinks = [
-
     { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com' },
   ];
@@ -170,9 +167,10 @@ const Footer = () => {
                 <span className="text-2xl font-logo font-semibold">Documentos.legal</span>
               </Link>
             </div>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 whitespace-pre-line">{t('slogan')}</p>
+            <p className="text-gray-600 dark:text-gray-300 mb-6 whitespace-pre-line">
+              {t('slogan')}
+            </p>
             <div className="space-y-2">
-
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                 <CTAButton
@@ -300,7 +298,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer >
+    </footer>
   );
 };
 

@@ -3,16 +3,16 @@
 import React from 'react';
 
 interface HoverCardProps {
-    children: React.ReactNode;
-    className?: string;
-    onClick?: () => void;
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
 }
 
 export const HoverCard: React.FC<HoverCardProps> = ({ children, className = '', onClick }) => {
-    return (
-        <div
-            onClick={onClick}
-            className={`
+  return (
+    <div
+      onClick={onClick}
+      className={`
         bg-white dark:bg-gray-900 
         rounded-2xl 
         shadow-lg hover:shadow-2xl 
@@ -21,8 +21,8 @@ export const HoverCard: React.FC<HoverCardProps> = ({ children, className = '', 
         hover:-translate-y-2
         ${className}
       `}
-        >
-            {children}
-        </div>
-    );
+    >
+      {children}
+    </div>
+  );
 };

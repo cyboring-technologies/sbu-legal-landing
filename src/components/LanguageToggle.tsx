@@ -6,13 +6,13 @@ import { Globe } from 'lucide-react';
 
 // Slug mapping between languages for blog posts
 const slugMap: Record<string, Record<string, string>> = {
-  'en': {
+  en: {
     'el-modelo-one-shot': 'the-one-shot-model',
     'protocolo-incinerador': 'incinerator-protocol',
     'pago-como-autoridad': 'payment-as-authority',
     'fin-horas-facturables': 'end-of-billable-hours',
   },
-  'es': {
+  es: {
     'the-one-shot-model': 'el-modelo-one-shot',
     'incinerator-protocol': 'protocolo-incinerador',
     'payment-as-authority': 'pago-como-autoridad',

@@ -2,21 +2,17 @@ import React from 'react';
 import './sovereign.css';
 
 export const metadata = {
-    title: 'Draft Generator | SBU-Legal',
-    description: 'Legal Document Processing',
+  title: 'Draft Generator | SBU-Legal',
+  description: 'Legal Document Processing',
 };
 
-export default function SovereignLayout({
-    children,
-}: {
-    children: React.ReactNode;
-}) {
-    return (
-        <html lang="en" className="h-full" suppressHydrationWarning>
-            <head>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
+export default function SovereignLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className="h-full" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
                             (function() {
                                 try {
                                     const urlParams = new URLSearchParams(window.location.search);
@@ -32,12 +28,10 @@ export default function SovereignLayout({
                                 } catch (e) {}
                             })();
                         `,
-                    }}
-                />
-            </head>
-            <body className="h-full overflow-hidden">
-                {children}
-            </body>
-        </html>
-    );
+          }}
+        />
+      </head>
+      <body className="h-full overflow-hidden">{children}</body>
+    </html>
+  );
 }

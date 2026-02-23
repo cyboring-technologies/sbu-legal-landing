@@ -104,8 +104,10 @@ export default function ContactPage() {
           <InteractiveGridPulse />
         </div>{' '}
         {/* Contact Form & Map - Operational */}
-        <section id="contact-form" className="py-24 bg-background border-b border-border relative overflow-hidden">
-
+        <section
+          id="contact-form"
+          className="py-24 bg-background border-b border-border relative overflow-hidden"
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="lg:grid lg:grid-cols-3 lg:gap-8">
               {/* Contact Information */}
@@ -115,9 +117,7 @@ export default function ContactPage() {
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                       {t('information.title')}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-8">
-                      {t('information.lead')}
-                    </p>
+                    <p className="text-gray-600 dark:text-gray-300 mb-8">{t('information.lead')}</p>
 
                     <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-6 uppercase tracking-wider text-sm">
                       {t('information.contactDetailsTitle')}
@@ -138,7 +138,6 @@ export default function ContactPage() {
                           </p>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </FadeIn>
@@ -161,7 +160,9 @@ export default function ContactPage() {
                         <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                           {t('form.success.title')}
                         </h4>
-                        <p className="text-gray-600 dark:text-gray-300">{t('form.success.message')}</p>
+                        <p className="text-gray-600 dark:text-gray-300">
+                          {t('form.success.message')}
+                        </p>
                       </div>
                     ) : (
                       <form onSubmit={handleSubmit} className="space-y-6">
@@ -322,7 +323,6 @@ export default function ContactPage() {
         </section>
         {/* Contact Info Grid - Operational */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <SectionHeader
               title={t('alternativeContact.title')}
@@ -401,19 +401,19 @@ export default function ContactPage() {
             </StaggeredGrid>
           </div>
         </section>
-
         {/* FAQ Quick Access - Operational */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <SectionHeader
-              title={tQA('title')}
-              description={tQA('description')}
-            />
+            <SectionHeader title={tQA('title')} description={tQA('description')} />
 
-            <FadeIn direction='up'>
+            <FadeIn direction="up">
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <CTAButton href="/questions-and-answers" variant="secondary" size="lg" ctaType="cta-2">
+                <CTAButton
+                  href="/questions-and-answers"
+                  variant="secondary"
+                  size="lg"
+                  ctaType="cta-2"
+                >
                   {tQA('cta_2_browseFaqs')}
                 </CTAButton>
               </div>
@@ -425,18 +425,30 @@ export default function ContactPage() {
               </h3>
               <StaggeredGrid columns={3} className="text-left">
                 <HoverCard className="p-6">
-                  <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">{tQA('features.privacy.title')}</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">{tQA('features.privacy.description')}</p>
+                  <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">
+                    {tQA('features.privacy.title')}
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
+                    {tQA('features.privacy.description')}
+                  </p>
                 </HoverCard>
 
                 <HoverCard className="p-6">
-                  <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">{tQA('features.efficiency.title')}</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">{tQA('features.efficiency.description')}</p>
+                  <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">
+                    {tQA('features.efficiency.title')}
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
+                    {tQA('features.efficiency.description')}
+                  </p>
                 </HoverCard>
 
                 <HoverCard className="p-6">
-                  <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">{tQA('features.sovereignty.title')}</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">{tQA('features.sovereignty.description')}</p>
+                  <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">
+                    {tQA('features.sovereignty.title')}
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
+                    {tQA('features.sovereignty.description')}
+                  </p>
                 </HoverCard>
               </StaggeredGrid>
             </div>
@@ -452,7 +464,7 @@ export default function ContactPage() {
               {t('cta.description')}
             </p>
 
-            <FadeIn direction='up' delay={200}>
+            <FadeIn direction="up" delay={200}>
               <CTAButton
                 href="/engine"
                 variant="primary"
@@ -466,6 +478,6 @@ export default function ContactPage() {
           </div>
         </section>
       </PageTransition>
-    </Layout >
+    </Layout>
   );
 }

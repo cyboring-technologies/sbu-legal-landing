@@ -67,7 +67,6 @@ export default function AboutUsPage() {
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="lg:grid lg:grid-cols-12 lg:gap-12">
-
               {/* Left Column: Main Title & Logo */}
               <div className="lg:col-span-4 mb-12 lg:mb-0">
                 <div className="sticky top-24">
@@ -132,8 +131,6 @@ export default function AboutUsPage() {
                       {t('story.items.philosophy.body')}
                     </p>
                   </div>
-
-
                 </StaggeredGrid>
               </div>
             </div>
@@ -184,13 +181,10 @@ export default function AboutUsPage() {
                 </p>
               </HoverCard>
             </StaggeredGrid>
-
-
           </div>
         </section>
         {/* Core Values - Conceptual */}
         <section className="py-32 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <SectionHeader title={t('values.title')} />
 
@@ -263,14 +257,10 @@ export default function AboutUsPage() {
                 </div>
               </HoverCard>
             </StaggeredGrid>
-
-
           </div>
         </section>
-
         {/* Company Stats - Operational */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <SectionHeader title={t('stats.title')} />
 
@@ -343,13 +333,10 @@ export default function AboutUsPage() {
                 </div>
               </HoverCard>
             </StaggeredGrid>
-
-
           </div>
         </section>
         {/* Standards and Strategic Alliances */}
         <section className="py-20 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <SectionHeader title={t('standards.title')} />
 
@@ -393,17 +380,12 @@ export default function AboutUsPage() {
                 </p>
               </HoverCard>
             </StaggeredGrid>
-
-
           </div>
         </section>
-
         {/* Incinerator Protocol */}
         <IncineratorProtocolSection />
-
         {/* Contact Information - Closing */}
         <section className="py-16 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <SectionHeader
               title={t('cta.title')}
@@ -411,22 +393,12 @@ export default function AboutUsPage() {
               description={t('cta.description')}
             />
 
-            <FadeIn direction='up'>
+            <FadeIn direction="up">
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <CTAButton
-                  href="/engine"
-                  variant="primary"
-                  size="lg"
-                  ctaType="cta-1"
-                >
+                <CTAButton href="/engine" variant="primary" size="lg" ctaType="cta-1">
                   {t('cta.cta_1_primary')}
                 </CTAButton>
-                <CTAButton
-                  href="/privacy"
-                  variant="secondary"
-                  size="lg"
-                  ctaType="cta-2"
-                >
+                <CTAButton href="/privacy" variant="secondary" size="lg" ctaType="cta-2">
                   {t('cta.cta_2_secondary')}
                 </CTAButton>
               </div>

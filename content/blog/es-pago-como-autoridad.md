@@ -1,4 +1,5 @@
-# Pago como Autoridad  
+# Pago como Autoridad
+
 ## La Economía de la Irreversibilidad
 
 ---

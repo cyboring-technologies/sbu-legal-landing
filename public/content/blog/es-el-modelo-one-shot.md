@@ -75,16 +75,15 @@ Es una doctrina operacional.
 
 Define:
 
-* Cómo se cobra.
-* Cómo se ejecuta.
-* Qué se permite.
-* Qué se prohíbe.
-* Qué se destruye.
+- Cómo se cobra.
+- Cómo se ejecuta.
+- Qué se permite.
+- Qué se prohíbe.
+- Qué se destruye.
 
 La arquitectura impone límites que el marketing no puede suavizar.
 
 No se vende relación, no se vende permanencia, no se vende "uso".
-
 
 Se vende un acto.
 

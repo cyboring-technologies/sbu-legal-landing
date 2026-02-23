@@ -14,15 +14,17 @@ export default function TermsContent() {
       <div className="bg-white dark:bg-gray-900 min-h-screen">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           {/* Header */}
-          <FadeIn direction='up'>
+          <FadeIn direction="up">
             <div className="mb-12">
-              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{t('title')}</h1>
+              <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                {t('title')}
+              </h1>
               <p className="text-gray-600 dark:text-gray-400">{t('lastUpdated')}</p>
             </div>
           </FadeIn>
 
           {/* Content */}
-          <FadeIn direction='up' delay={200}>
+          <FadeIn direction="up" delay={200}>
             <div className="prose prose-lg dark:prose-invert max-w-none">
               {/* Introduction */}
               <section className="mb-8">
@@ -36,7 +38,9 @@ export default function TermsContent() {
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   {t('sections.acceptance.title')}
                 </h2>
-                <p className="text-gray-700 dark:text-gray-300">{t('sections.acceptance.content')}</p>
+                <p className="text-gray-700 dark:text-gray-300">
+                  {t('sections.acceptance.content')}
+                </p>
               </section>
 
               {/* Description of Service */}
@@ -135,7 +139,9 @@ export default function TermsContent() {
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   {t('sections.liability.title')}
                 </h2>
-                <p className="text-gray-700 dark:text-gray-300">{t('sections.liability.content')}</p>
+                <p className="text-gray-700 dark:text-gray-300">
+                  {t('sections.liability.content')}
+                </p>
               </section>
 
               {/* Indemnification */}

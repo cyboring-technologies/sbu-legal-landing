@@ -59,7 +59,6 @@ export default function OurServicesPage() {
 
   return (
     <Layout>
-
       <PageTransition>
         {/* Hero Section */}
         <div className="relative">
@@ -82,7 +81,7 @@ export default function OurServicesPage() {
             <div
               style={{
                 opacity: radialEffectOpacity,
-                transition: 'opacity 1s ease-out'
+                transition: 'opacity 1s ease-out',
               }}
             >
               <InteractiveGridAnimatedRadialInward startImmediately runOnce />
@@ -90,14 +89,16 @@ export default function OurServicesPage() {
           )}
           <InteractiveGridPulse />
         </div>{' '}
-
         {/* Service Catalog - New Section */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <SectionHeader title={t('serviceCatalog.title')} />
             <StaggeredGrid columns={2} className="gap-6 mt-12">
               {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-                <HoverCard key={item} className="p-8 flex flex-col h-full group bg-card transition-all duration-300 hover:shadow-xl border border-border/50">
+                <HoverCard
+                  key={item}
+                  className="p-8 flex flex-col h-full group bg-card transition-all duration-300 hover:shadow-xl border border-border/50"
+                >
                   <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
                     {t(`serviceCatalog.items.item${item}.title`)}
                   </h3>
@@ -119,15 +120,10 @@ export default function OurServicesPage() {
             </StaggeredGrid>
           </div>
         </section>
-
         {/* Service Process - Process/List */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <SectionHeader
-              title={t('process.title')}
-              description={t('process.description')}
-            />
+            <SectionHeader title={t('process.title')} description={t('process.description')} />
 
             <StaggeredGrid columns={4} className="mt-12">
               <HoverCard className="p-6 text-center h-full group">
@@ -137,7 +133,9 @@ export default function OurServicesPage() {
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {t('process.step1.title')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-left">{t('process.step1.description')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-left">
+                  {t('process.step1.description')}
+                </p>
               </HoverCard>
 
               <HoverCard className="p-6 text-center h-full group">
@@ -147,7 +145,9 @@ export default function OurServicesPage() {
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {t('process.step2.title')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-left">{t('process.step2.description')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-left">
+                  {t('process.step2.description')}
+                </p>
               </HoverCard>
 
               <HoverCard className="p-6 text-center h-full group">
@@ -157,7 +157,9 @@ export default function OurServicesPage() {
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {t('process.step3.title')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-left">{t('process.step3.description')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-left">
+                  {t('process.step3.description')}
+                </p>
               </HoverCard>
 
               <HoverCard className="p-6 text-center h-full group">
@@ -167,20 +169,17 @@ export default function OurServicesPage() {
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {t('process.step4.title')}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-left">{t('process.step4.description')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-left">
+                  {t('process.step4.description')}
+                </p>
               </HoverCard>
             </StaggeredGrid>
           </div>
         </section>
-
         {/* Overview - Narrative */}
         <section className="py-32 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <SectionHeader
-              title={t('overview.title')}
-              description={t('overview.description')}
-            />
+            <SectionHeader title={t('overview.title')} description={t('overview.description')} />
 
             <StaggeredGrid columns={2} className="mt-12">
               {/* 1. Drafting Engine */}
@@ -199,15 +198,22 @@ export default function OurServicesPage() {
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
                     <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Capacidades:</span> {t('draftingEngine.capabilities')}</span>
+                    <span>
+                      <span className="font-semibold">Capacidades:</span>{' '}
+                      {t('draftingEngine.capabilities')}
+                    </span>
                   </li>
                   <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
                     <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Rigor:</span> {t('draftingEngine.rigor')}</span>
+                    <span>
+                      <span className="font-semibold">Rigor:</span> {t('draftingEngine.rigor')}
+                    </span>
                   </li>
                   <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
                     <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">HITL:</span> {t('draftingEngine.hitl')}</span>
+                    <span>
+                      <span className="font-semibold">HITL:</span> {t('draftingEngine.hitl')}
+                    </span>
                   </li>
                 </ul>
                 <CTAButton
@@ -236,15 +242,24 @@ export default function OurServicesPage() {
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
                     <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Eliminación:</span> {t('infrastructure.totalDeletion')}</span>
+                    <span>
+                      <span className="font-semibold">Eliminación:</span>{' '}
+                      {t('infrastructure.totalDeletion')}
+                    </span>
                   </li>
                   <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
                     <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Orquestación:</span> {t('infrastructure.orchestration')}</span>
+                    <span>
+                      <span className="font-semibold">Orquestación:</span>{' '}
+                      {t('infrastructure.orchestration')}
+                    </span>
                   </li>
                   <li className="flex items-start text-sm text-gray-600 dark:text-gray-300">
                     <CheckCircle className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span><span className="font-semibold">Arquitectura:</span> {t('infrastructure.architecture')}</span>
+                    <span>
+                      <span className="font-semibold">Arquitectura:</span>{' '}
+                      {t('infrastructure.architecture')}
+                    </span>
                   </li>
                 </ul>
                 <CTAButton
@@ -259,10 +274,8 @@ export default function OurServicesPage() {
             </StaggeredGrid>
           </div>
         </section>
-
         {/* Technologies - List */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <SectionHeader
               title={t('technologies.title')}
@@ -305,7 +318,7 @@ export default function OurServicesPage() {
             </StaggeredGrid>
 
             {/* Tech Stack List */}
-            <FadeIn direction='up' delay={200}>
+            <FadeIn direction="up" delay={200}>
               <div className="mt-16 bg-muted/30 dark:bg-muted/10 rounded-3xl p-8 lg:p-12 border border-border/50 relative overflow-hidden">
                 {/* Decorative background elements */}
                 <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
@@ -316,7 +329,7 @@ export default function OurServicesPage() {
                 </h3>
                 <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto text-lg leading-relaxed relative z-10">
                   {t.rich('technologies.techStack.intro', {
-                    br: () => <br />
+                    br: () => <br />,
                   })}
                 </p>
 
@@ -328,9 +341,12 @@ export default function OurServicesPage() {
                     'intelligence',
                     'orchestration',
                     'infrastructure',
-                    'security'
+                    'security',
                   ].map((key) => (
-                    <div key={key} className="group p-6 rounded-xl bg-background border border-border hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 transform hover:-translate-y-1">
+                    <div
+                      key={key}
+                      className="group p-6 rounded-xl bg-background border border-border hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 transform hover:-translate-y-1"
+                    >
                       <div className="flex items-start space-x-4">
                         <div className="mt-2 flex-shrink-0 w-2.5 h-2.5 rounded-full bg-primary dark:bg-white shadow-sm group-hover:scale-125 transition-transform duration-300" />
                         <p className="text-foreground font-medium text-lg leading-relaxed group-hover:text-primary transition-colors duration-300">
@@ -346,12 +362,8 @@ export default function OurServicesPage() {
         </section>
         {/* Service Benefits - List */}
         <section className="py-24 bg-background border-b border-border relative overflow-hidden">
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <SectionHeader
-              title={t('benefits.title')}
-              description={t('benefits.description')}
-            />
+            <SectionHeader title={t('benefits.title')} description={t('benefits.description')} />
 
             <StaggeredGrid columns={2}>
               {/* Benefit 1 */}
@@ -371,7 +383,9 @@ export default function OurServicesPage() {
                 </p>
                 <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20">
                   <p className="text-sm font-semibold text-primary dark:text-white">
-                    <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">{t('benefits.impactLabel')}</span>
+                    <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">
+                      {t('benefits.impactLabel')}
+                    </span>
                     {t('benefits.benefit1.impact')}
                   </p>
                 </div>
@@ -394,7 +408,9 @@ export default function OurServicesPage() {
                 </p>
                 <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20">
                   <p className="text-sm font-semibold text-primary dark:text-white">
-                    <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">{t('benefits.impactLabel')}</span>
+                    <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">
+                      {t('benefits.impactLabel')}
+                    </span>
                     {t('benefits.benefit2.impact')}
                   </p>
                 </div>
@@ -417,7 +433,9 @@ export default function OurServicesPage() {
                 </p>
                 <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20">
                   <p className="text-sm font-semibold text-primary dark:text-white">
-                    <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">{t('benefits.impactLabel')}</span>
+                    <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">
+                      {t('benefits.impactLabel')}
+                    </span>
                     {t('benefits.benefit3.impact')}
                   </p>
                 </div>
@@ -440,7 +458,9 @@ export default function OurServicesPage() {
                 </p>
                 <div className="bg-primary/5 dark:bg-primary/10 rounded-lg p-4 border border-primary/20">
                   <p className="text-sm font-semibold text-primary dark:text-white">
-                    <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">{t('benefits.impactLabel')}</span>
+                    <span className="uppercase tracking-wider text-xs opacity-70 block mb-1">
+                      {t('benefits.impactLabel')}
+                    </span>
                     {t('benefits.benefit4.impact')}
                   </p>
                 </div>
@@ -448,15 +468,13 @@ export default function OurServicesPage() {
             </StaggeredGrid>
           </div>
         </section>
-
         {/* Call to Action - Closing */}
-        <section id="contact" className="py-16 bg-background border-b border-border relative overflow-hidden">
-
+        <section
+          id="contact"
+          className="py-16 bg-background border-b border-border relative overflow-hidden"
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <SectionHeader
-              title={t('cta.title')}
-              description={t('cta.subtitle')}
-            />
+            <SectionHeader title={t('cta.title')} description={t('cta.subtitle')} />
 
             <StaggeredGrid columns={3}>
               {/* 1. Incinerator Protocol */}
@@ -470,19 +488,27 @@ export default function OurServicesPage() {
                 <div className="space-y-4 mt-auto">
                   <div className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-snug">{t('cta.protocol.guarantee')}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-snug">
+                      {t('cta.protocol.guarantee')}
+                    </p>
                   </div>
                   <div className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-snug">{t('cta.protocol.infrastructure')}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-snug">
+                      {t('cta.protocol.infrastructure')}
+                    </p>
                   </div>
                 </div>
               </HoverCard>
 
               {/* 2. WhatsApp Bridge */}
               <HoverCard className="p-8 flex flex-col h-full">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('cta.whatsapp.title')}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-8 flex-grow">{t('cta.whatsapp.description')}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  {t('cta.whatsapp.title')}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-8 flex-grow">
+                  {t('cta.whatsapp.description')}
+                </p>
                 <div className="mb-4">
                   <CTAButton
                     href="https://wa.me/50687504770"
@@ -503,8 +529,12 @@ export default function OurServicesPage() {
 
               {/* 3. Founder's Grant */}
               <HoverCard className="p-8 flex flex-col h-full relative overflow-hidden border-t-2 border-t-primary">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t('cta.grant.title')}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-8 flex-grow">{t('cta.grant.description')}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                  {t('cta.grant.title')}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-8 flex-grow">
+                  {t('cta.grant.description')}
+                </p>
                 <div className="mb-4">
                   <CTAButton
                     href="/engine"
