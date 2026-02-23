@@ -49,11 +49,7 @@ export default async function Page({ params }: Props) {
 
     // Convert to exactly what AntiPageData expects
     const antiPageData = {
-        slug: pageData.slug,
-        service: pageData.service,
-        jurisdiction: pageData.jurisdiction,
-        variant: pageData.variant,
-        audience: pageData.audience,
+        ...pageData,
     };
 
     return <AntiPage data={antiPageData} />;

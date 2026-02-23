@@ -9,6 +9,13 @@ export type AntiPage = {
         description: string;
         canonical: string;
     };
+    hero: { title: string };
+    context: { title: string; body: string };
+    scope: { title: string; body: string };
+    irreversibility: { title: string; body: string };
+    process: { title: string; body: string };
+    trust: { title: string; body: string };
+    cta: { label: string };
 };
 
 export function validateAntiPages(data: unknown): AntiPage[] {
@@ -33,7 +40,7 @@ export function validateAntiPages(data: unknown): AntiPage[] {
         if (!validVariants.includes(variant)) throw new Error(`Invalid variant at index ${index}: ${variant}`);
         if (!validAudiences.includes(audience)) throw new Error(`Invalid audience at index ${index}: ${audience}`);
 
-        const result: AntiPage = { slug, service, jurisdiction, variant, audience };
+        const result = { slug, service, jurisdiction, variant, audience } as AntiPage;
 
         if (seo !== undefined) {
             if (typeof seo !== 'object' || seo === null) throw new Error(`Invalid seo at index ${index}`);
@@ -49,13 +56,30 @@ export function validateAntiPages(data: unknown): AntiPage[] {
         }
 
         // Strict validation: no extra fields
-        const allowedKeys = ['slug', 'service', 'jurisdiction', 'variant', 'audience', 'seo'];
+        const allowedKeys = ['slug', 'service', 'jurisdiction', 'variant', 'audience', 'seo', 'hero', 'context', 'scope', 'irreversibility', 'process', 'trust', 'cta'];
         const actualKeys = Object.keys(item);
         for (const key of actualKeys) {
             if (!allowedKeys.includes(key)) {
                 throw new Error(`Unexpected field '${key}' at index ${index}`);
             }
         }
+
+        const { hero, context, scope, irreversibility, process, trust, cta } = item as any;
+        if (!hero || typeof hero.title !== 'string') throw new Error(`Invalid hero at index ${index}`);
+        if (!context || typeof context.title !== 'string' || typeof context.body !== 'string') throw new Error(`Invalid context at index ${index}`);
+        if (!scope || typeof scope.title !== 'string' || typeof scope.body !== 'string') throw new Error(`Invalid scope at index ${index}`);
+        if (!irreversibility || typeof irreversibility.title !== 'string' || typeof irreversibility.body !== 'string') throw new Error(`Invalid irreversibility at index ${index}`);
+        if (!process || typeof process.title !== 'string' || typeof process.body !== 'string') throw new Error(`Invalid process at index ${index}`);
+        if (!trust || typeof trust.title !== 'string' || typeof trust.body !== 'string') throw new Error(`Invalid trust at index ${index}`);
+        if (!cta || typeof cta.label !== 'string') throw new Error(`Invalid cta at index ${index}`);
+
+        result.hero = hero;
+        result.context = context;
+        result.scope = scope;
+        result.irreversibility = irreversibility;
+        result.process = process;
+        result.trust = trust;
+        result.cta = cta;
 
         return result;
     });

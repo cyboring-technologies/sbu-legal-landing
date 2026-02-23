@@ -11,6 +11,13 @@ export type AntiPageData = {
         description?: string;
         canonical?: string;
     };
+    hero: { title: string };
+    context: { title: string; body: string };
+    scope: { title: string; body: string };
+    irreversibility: { title: string; body: string };
+    process: { title: string; body: string };
+    trust: { title: string; body: string };
+    cta: { label: string };
 };
 
 export type AntiPageProps = {
@@ -18,59 +25,40 @@ export type AntiPageProps = {
 };
 
 export default function AntiPage({ data }: AntiPageProps) {
-    const h1Content = `${data.service} in ${data.jurisdiction}`;
-
     return (
-        <main>
+        <main className="prose dark:prose-invert max-w-3xl mx-auto px-6 py-12">
             <section id="hero">
-                <h1>{h1Content}</h1>
+                <h1>{data.hero.title}</h1>
             </section>
 
             <section id="context">
-                <h2>Context</h2>
-                <p>
-                    Execution parameter constraints defined for {data.audience} operating within {data.jurisdiction}.
-                    This service strictly deploys {data.variant} compliance matrices.
-                </p>
+                <h2>{data.context.title}</h2>
+                <p>{data.context.body}</p>
             </section>
 
             <section id="execution-scope">
-                <h2>Execution Scope</h2>
-                <p>
-                    Scope encompasses the deterministic delivery of {data.service}.
-                    All resultant outputs conform precisely to the predefined statutory boundaries of the jurisdiction.
-                </p>
+                <h2>{data.scope.title}</h2>
+                <p>{data.scope.body}</p>
             </section>
 
             <section id="irreversibility-statement">
-                <h2>Irreversibility Statement</h2>
-                <p>
-                    Architectural incineration enforced. Operations are executed in a single, unidirectional event horizon.
-                    There are no accounts, no saved states, no persistent workspaces, and no mechanism to return later.
-                </p>
+                <h2>{data.irreversibility.title}</h2>
+                <p>{data.irreversibility.body}</p>
             </section>
 
             <section id="process-summary">
-                <h2>Process Summary</h2>
-                <p>
-                    1. Propagate parameters to the Sovereign Engine.<br />
-                    2. Validate constraints in isolated runtime.<br />
-                    3. Instantaneous generation and handover of the final legal artifact.<br />
-                    4. Absolute destruction of session data upon delivery.
-                </p>
+                <h2>{data.process.title}</h2>
+                <p className="whitespace-pre-line">{data.process.body}</p>
             </section>
 
             <section id="trust-guarantees">
-                <h2>Structural Guarantees</h2>
-                <p>
-                    Execution is guaranteed strictly by protocol invariability.
-                    Outcome logic remains fully decentralized from human discretion, relying purely on the deterministic engine architecture.
-                </p>
+                <h2>{data.trust.title}</h2>
+                <p>{data.trust.body}</p>
             </section>
 
             <section id="cta-block">
                 <a href="https://engine.sbu-legal.com" target="_blank" rel="noopener noreferrer">
-                    Start Execution
+                    {data.cta.label}
                 </a>
             </section>
         </main>

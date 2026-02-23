@@ -4,167 +4,791 @@
         "service": "Iniciar proceso",
         "jurisdiction": "JUR_1",
         "variant": "V1",
-        "audience": "Direct"
+        "audience": "Direct",
+        "hero": {
+            "title": "Iniciar proceso en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para Direct operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V1."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Iniciar proceso. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "contestar-oponerse-jur-1",
         "service": "Contestar / Oponerse",
         "jurisdiction": "JUR_1",
         "variant": "V1",
-        "audience": "Direct"
+        "audience": "Direct",
+        "hero": {
+            "title": "Contestar / Oponerse en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para Direct operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V1."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Contestar / Oponerse. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "impugnar-apelar-jur-1",
         "service": "Impugnar / Apelar",
         "jurisdiction": "JUR_1",
         "variant": "V1",
-        "audience": "Direct"
+        "audience": "Direct",
+        "hero": {
+            "title": "Impugnar / Apelar en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para Direct operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V1."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Impugnar / Apelar. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "solicitar-medida-jur-1",
         "service": "Solicitar medida",
         "jurisdiction": "JUR_1",
         "variant": "V1",
-        "audience": "Direct"
+        "audience": "Direct",
+        "hero": {
+            "title": "Solicitar medida en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para Direct operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V1."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Solicitar medida. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "ampliar-modificar-demanda-jur-1",
         "service": "Ampliar / Modificar demanda",
         "jurisdiction": "JUR_1",
         "variant": "V1",
-        "audience": "Direct"
+        "audience": "Direct",
+        "hero": {
+            "title": "Ampliar / Modificar demanda en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para Direct operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V1."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Ampliar / Modificar demanda. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "cumplir-ejecutar-jur-1",
         "service": "Cumplir / Ejecutar",
         "jurisdiction": "JUR_1",
         "variant": "V1",
-        "audience": "Direct"
+        "audience": "Direct",
+        "hero": {
+            "title": "Cumplir / Ejecutar en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para Direct operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V1."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Cumplir / Ejecutar. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "informar-probar-jur-1",
         "service": "Informar / Probar",
         "jurisdiction": "JUR_1",
         "variant": "V1",
-        "audience": "Direct"
+        "audience": "Direct",
+        "hero": {
+            "title": "Informar / Probar en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para Direct operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V1."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Informar / Probar. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "desistir-transigir-jur-1",
         "service": "Desistir / Transigir",
         "jurisdiction": "JUR_1",
         "variant": "V1",
-        "audience": "Direct"
+        "audience": "Direct",
+        "hero": {
+            "title": "Desistir / Transigir en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para Direct operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V1."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Desistir / Transigir. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "iniciar-proceso-jur-1-v2",
         "service": "Iniciar proceso",
         "jurisdiction": "JUR_1",
         "variant": "V2",
-        "audience": "B2C"
+        "audience": "B2C",
+        "hero": {
+            "title": "Iniciar proceso en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2C operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V2."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Iniciar proceso. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "iniciar-proceso-jur-1-v3",
         "service": "Iniciar proceso",
         "jurisdiction": "JUR_1",
         "variant": "V3",
-        "audience": "B2B"
+        "audience": "B2B",
+        "hero": {
+            "title": "Iniciar proceso en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2B operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V3."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Iniciar proceso. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "contestar-oponerse-jur-1-v2",
         "service": "Contestar / Oponerse",
         "jurisdiction": "JUR_1",
         "variant": "V2",
-        "audience": "B2C"
+        "audience": "B2C",
+        "hero": {
+            "title": "Contestar / Oponerse en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2C operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V2."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Contestar / Oponerse. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "contestar-oponerse-jur-1-v3",
         "service": "Contestar / Oponerse",
         "jurisdiction": "JUR_1",
         "variant": "V3",
-        "audience": "B2B"
+        "audience": "B2B",
+        "hero": {
+            "title": "Contestar / Oponerse en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2B operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V3."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Contestar / Oponerse. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "impugnar-apelar-jur-1-v2",
         "service": "Impugnar / Apelar",
         "jurisdiction": "JUR_1",
         "variant": "V2",
-        "audience": "B2C"
+        "audience": "B2C",
+        "hero": {
+            "title": "Impugnar / Apelar en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2C operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V2."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Impugnar / Apelar. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "impugnar-apelar-jur-1-v3",
         "service": "Impugnar / Apelar",
         "jurisdiction": "JUR_1",
         "variant": "V3",
-        "audience": "B2B"
+        "audience": "B2B",
+        "hero": {
+            "title": "Impugnar / Apelar en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2B operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V3."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Impugnar / Apelar. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "solicitar-medida-jur-1-v2",
         "service": "Solicitar medida",
         "jurisdiction": "JUR_1",
         "variant": "V2",
-        "audience": "B2C"
+        "audience": "B2C",
+        "hero": {
+            "title": "Solicitar medida en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2C operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V2."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Solicitar medida. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "solicitar-medida-jur-1-v3",
         "service": "Solicitar medida",
         "jurisdiction": "JUR_1",
         "variant": "V3",
-        "audience": "B2B"
+        "audience": "B2B",
+        "hero": {
+            "title": "Solicitar medida en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2B operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V3."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Solicitar medida. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "ampliar-modificar-demanda-jur-1-v2",
         "service": "Ampliar / Modificar demanda",
         "jurisdiction": "JUR_1",
         "variant": "V2",
-        "audience": "B2C"
+        "audience": "B2C",
+        "hero": {
+            "title": "Ampliar / Modificar demanda en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2C operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V2."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Ampliar / Modificar demanda. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "ampliar-modificar-demanda-jur-1-v3",
         "service": "Ampliar / Modificar demanda",
         "jurisdiction": "JUR_1",
         "variant": "V3",
-        "audience": "B2B"
+        "audience": "B2B",
+        "hero": {
+            "title": "Ampliar / Modificar demanda en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2B operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V3."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Ampliar / Modificar demanda. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "cumplir-ejecutar-jur-1-v2",
         "service": "Cumplir / Ejecutar",
         "jurisdiction": "JUR_1",
         "variant": "V2",
-        "audience": "B2C"
+        "audience": "B2C",
+        "hero": {
+            "title": "Cumplir / Ejecutar en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2C operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V2."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Cumplir / Ejecutar. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "cumplir-ejecutar-jur-1-v3",
         "service": "Cumplir / Ejecutar",
         "jurisdiction": "JUR_1",
         "variant": "V3",
-        "audience": "B2B"
+        "audience": "B2B",
+        "hero": {
+            "title": "Cumplir / Ejecutar en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2B operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V3."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Cumplir / Ejecutar. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "informar-probar-jur-1-v2",
         "service": "Informar / Probar",
         "jurisdiction": "JUR_1",
         "variant": "V2",
-        "audience": "B2C"
+        "audience": "B2C",
+        "hero": {
+            "title": "Informar / Probar en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2C operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V2."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Informar / Probar. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "informar-probar-jur-1-v3",
         "service": "Informar / Probar",
         "jurisdiction": "JUR_1",
         "variant": "V3",
-        "audience": "B2B"
+        "audience": "B2B",
+        "hero": {
+            "title": "Informar / Probar en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2B operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V3."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Informar / Probar. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "desistir-transigir-jur-1-v2",
         "service": "Desistir / Transigir",
         "jurisdiction": "JUR_1",
         "variant": "V2",
-        "audience": "B2C"
+        "audience": "B2C",
+        "hero": {
+            "title": "Desistir / Transigir en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2C operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V2."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Desistir / Transigir. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     },
     {
         "slug": "desistir-transigir-jur-1-v3",
         "service": "Desistir / Transigir",
         "jurisdiction": "JUR_1",
         "variant": "V3",
-        "audience": "B2B"
+        "audience": "B2B",
+        "hero": {
+            "title": "Desistir / Transigir en JUR_1"
+        },
+        "context": {
+            "title": "Contexto",
+            "body": "Restricciones de los parámetros de ejecución definidos para B2B operando dentro de JUR_1. Este servicio despliega estrictamente matrices de cumplimiento V3."
+        },
+        "scope": {
+            "title": "Alcance de Ejecución",
+            "body": "El alcance abarca la entrega determinista de Desistir / Transigir. Todos los resultados se conforman con precisión a los límites estatutarios predefinidos de la jurisdicción."
+        },
+        "irreversibility": {
+            "title": "Declaración de Irreversibilidad",
+            "body": "Incineración arquitectónica aplicada. Las operaciones se ejecutan en un horizonte de eventos único e unidireccional. No hay cuentas, ni estados guardados, ni espacios de trabajo persistentes, ni mecanismos para regresar después."
+        },
+        "process": {
+            "title": "Resumen del Proceso",
+            "body": "1. Propagar parámetros al Motor Soberano.\n2. Validar restricciones en un entorno de ejecución aislado.\n3. Generación instantánea y entrega del artefacto legal final.\n4. Destrucción absoluta de los datos de la sesión tras la entrega."
+        },
+        "trust": {
+            "title": "Garantías Estructurales",
+            "body": "La ejecución está garantizada estrictamente por la invariabilidad del protocolo. La lógica de resultados permanece totalmente descentralizada de la discreción humana, dependiendo puramente de la arquitectura determinista del motor."
+        },
+        "cta": {
+            "label": "Iniciar Ejecución"
+        }
     }
 ]
