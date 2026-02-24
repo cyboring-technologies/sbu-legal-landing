@@ -45,10 +45,6 @@ export default function PricesPage() {
               text: t('hero.cta_1_primary'),
               href: '/engine',
             }}
-            secondaryCTA={{
-              text: t('hero.cta_2_secondary'),
-              href: '/privacy',
-            }}
             backgroundImage="/images/pricing-hero-bg.jpg"
             backgroundVariant="radial"
           />

@@ -70,10 +70,6 @@ export default function OurServicesPage() {
               text: t('hero.cta_1_primary'),
               href: '/engine',
             }}
-            secondaryCTA={{
-              text: t('hero.cta_2_secondary'),
-              href: '/privacy',
-            }}
             backgroundImage="/images/services-hero-bg.jpg"
             backgroundVariant="radial"
           />
