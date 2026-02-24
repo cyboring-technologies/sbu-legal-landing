@@ -51,7 +51,8 @@ export default function HomePage() {
 
   const handleStartExecution = useCallback(() => {
     const activeTheme = resolvedTheme || theme || 'light';
-    window.open(`/engine/?theme=${activeTheme}&lang=${locale}`, '_blank');
+    const engineBase = process.env.NEXT_PUBLIC_ENGINE_URL || '';
+    window.open(`${engineBase}/?theme=${activeTheme}&lang=${locale}`, '_blank');
   }, [theme, resolvedTheme, locale]);
 
   // SOVEREIGN MODE: No inline checkout state
@@ -612,15 +613,13 @@ export default function HomePage() {
                         {tFaq(`q${index}.question`)}
                       </h3>
                       <ChevronDown
-                        className={`w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform flex-shrink-0 ${
-                          openFaq === index ? 'transform rotate-180' : ''
-                        }`}
+                        className={`w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform flex-shrink-0 ${openFaq === index ? 'transform rotate-180' : ''
+                          }`}
                       />
                     </button>
                     <div
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                        openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                      }`}
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                        }`}
                     >
                       <div className="px-6 pb-4 pt-2">
                         <p className="text-gray-600 dark:text-gray-300">

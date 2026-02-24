@@ -1,4 +1,8 @@
 import React from 'react';
+
+// Resolved at build time by Next.js from NEXT_PUBLIC_ENGINE_URL.
+// In dev: 'http://localhost:8788'  |  In prod: '' (same-origin — CDN routes /engine/ to the engine worker)
+const ENGINE_BASE = process.env.NEXT_PUBLIC_ENGINE_URL ?? '';
 import { Link } from '../i18n/navigation';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import { useTheme } from 'next-themes';
@@ -22,7 +26,7 @@ interface BaseCTAProps {
 
 type CTAButtonProps = BaseCTAProps &
   (
-    | { ctaType: 'cta-1'; href?: '/engine'; target?: '_blank'; rel?: string }
+    | { ctaType: 'cta-1'; href?: string; target?: '_blank'; rel?: string }
     | { ctaType: 'cta-2'; href: string; target?: '_blank' | '_self'; rel?: string }
     | { ctaType: 'cta-3'; href: string; target?: '_blank' | '_self'; rel?: string }
     | { ctaType: 'cta-4'; href?: string; target?: '_blank' | '_self'; rel?: string }
@@ -46,13 +50,13 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
-  let finalHref = ctaType === 'cta-1' ? '/engine' : href;
+  let finalHref = ctaType === 'cta-1' ? `${ENGINE_BASE}/` : href;
   const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
   const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
 
   // Ephemeral Theme Handover
   if (ctaType === 'cta-1' && theme) {
-    finalHref = `/engine?theme=${theme}`;
+    finalHref = `${ENGINE_BASE}/?theme=${theme}`;
   }
 
   const baseClasses =
@@ -151,7 +155,7 @@ interface BaseCTA2Props {
 
 type CTAButton2Props = BaseCTA2Props &
   (
-    | { ctaType: 'cta-1'; href?: '/engine'; target?: '_blank'; rel?: string }
+    | { ctaType: 'cta-1'; href?: string; target?: '_blank'; rel?: string }
     | { ctaType: 'cta-2'; href: string; target?: '_blank' | '_self'; rel?: string }
     | { ctaType: 'cta-3'; href: string; target?: '_blank' | '_self'; rel?: string }
     | { ctaType: 'cta-4'; href?: string; target?: '_blank' | '_self'; rel?: string }
@@ -174,13 +178,13 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
   const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
-  let finalHref = ctaType === 'cta-1' ? '/engine' : href;
+  let finalHref = ctaType === 'cta-1' ? `${ENGINE_BASE}/` : href;
   const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
   const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
 
   // Ephemeral Theme Handover
   if (ctaType === 'cta-1' && theme) {
-    finalHref = `/engine?theme=${theme}`;
+    finalHref = `${ENGINE_BASE}/?theme=${theme}`;
   }
 
   const baseClasses =
