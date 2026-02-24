@@ -216,14 +216,6 @@ export default function OurServicesPage() {
                     </span>
                   </li>
                 </ul>
-                <CTAButton
-                  href="/engine"
-                  variant="primary"
-                  className="w-full justify-center"
-                  ctaType="cta-1"
-                >
-                  {t('draftingEngine.cta_1_start')}
-                </CTAButton>
               </HoverCard>
 
               {/* 3. Infrastructure */}
@@ -262,14 +254,6 @@ export default function OurServicesPage() {
                     </span>
                   </li>
                 </ul>
-                <CTAButton
-                  href="#contact"
-                  variant="secondary"
-                  className="w-full justify-center"
-                  ctaType="cta-2"
-                >
-                  {t('infrastructure.cta_2_security')}
-                </CTAButton>
               </HoverCard>
             </StaggeredGrid>
           </div>
@@ -431,86 +415,22 @@ export default function OurServicesPage() {
         {/* Call to Action - Closing */}
         <section
           id="contact"
-          className="py-16 bg-background border-b border-border relative overflow-hidden"
+          className="py-24 bg-background relative overflow-hidden"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <SectionHeader title={t('cta.title')} description={t('cta.subtitle')} />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+            <SectionHeader title={t('cta.title')} description={t('cta.description')} />
 
-            <StaggeredGrid columns={3}>
-              {/* 1. Incinerator Protocol */}
-              <HoverCard className="p-8 flex flex-col bg-gray-50 dark:bg-gray-800/50">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                  {t('cta.protocol.title')}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-8 text-sm leading-relaxed">
-                  {t('cta.protocol.description')}
-                </p>
-                <div className="space-y-4 mt-auto">
-                  <div className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-snug">
-                      {t('cta.protocol.guarantee')}
-                    </p>
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-snug">
-                      {t('cta.protocol.infrastructure')}
-                    </p>
-                  </div>
-                </div>
-              </HoverCard>
-
-              {/* 2. WhatsApp Bridge */}
-              <HoverCard className="p-8 flex flex-col h-full">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                  {t('cta.whatsapp.title')}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-8 flex-grow">
-                  {t('cta.whatsapp.description')}
-                </p>
-                <div className="mb-4">
-                  <CTAButton
-                    href="https://wa.me/50687504770"
-                    variant="secondary"
-                    size="md"
-                    className="w-full justify-center"
-                    ctaType="cta-3"
-                    note={t('cta.whatsapp.cta_3_note')}
-                    target="_blank"
-                  >
-                    {t('cta.whatsapp.cta_3_chat')}
-                  </CTAButton>
-                </div>
-                <p className="text-xs text-center text-gray-500 dark:text-gray-400 italic">
-                  {t('cta.whatsapp.microcopy')}
-                </p>
-              </HoverCard>
-
-              {/* 3. Founder's Grant */}
-              <HoverCard className="p-8 flex flex-col h-full relative overflow-hidden border-t-2 border-t-primary">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                  {t('cta.grant.title')}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-8 flex-grow">
-                  {t('cta.grant.description')}
-                </p>
-                <div className="mb-4">
-                  <CTAButton
-                    href="/engine"
-                    variant="primary"
-                    size="md"
-                    className="w-full justify-center"
-                    ctaType="cta-1"
-                  >
-                    {t('cta.grant.cta_1_activate')}
-                  </CTAButton>
-                </div>
-                <p className="text-xs text-center text-gray-500 dark:text-gray-400 italic">
-                  {t('cta.grant.microcopy')}
-                </p>
-              </HoverCard>
-            </StaggeredGrid>
+            <FadeIn direction="up" delay={100} className="mt-8">
+              <CTAButton
+                href="/engine"
+                variant="primary"
+                size="lg"
+                className="justify-center"
+                ctaType="cta-1"
+              >
+                {t('cta.cta_1_primary')}
+              </CTAButton>
+            </FadeIn>
           </div>
         </section>
       </PageTransition>

@@ -497,27 +497,9 @@
       }
     },
     "cta": {
-      "whatsapp": {
-        "title": "El Puente de Confianza",
-        "description": "Para firmas que requieren una validación humana antes de integrar nueva infraestructura técnica.",
-        "cta_3_chat": "WhatsApp",
-        "cta_3_note": "Canal externo para ventas y requerimientos enterprise. No brinda soporte operativo ni asistencia durante la ejecución.",
-        "microcopy": ""
-      },
-      "protocol": {
-        "title": "Señal de Confianza: El Protocolo Incinerador",
-        "description": "Su seguridad no es una opción, es una ley arquitectónica en nuestra infraestructura.",
-        "guarantee": "Garantía: Procesamiento en entorno sin estado con incineración inmediata y definitiva de archivos y secretos al cierre de la ejecución.",
-        "infrastructure": "Infraestructura: Operación 100% sobre Cloudflare Global Network con estándares de cumplimiento institucional."
-      },
-      "title": "Finalice la redacción artesanal<br /> Empiece la ingeniería",
-      "subtitle": "Recupere su ancho de banda mental. Delegue la carpintería documental a nuestra infraestructura de grado judicial y enfoque su intelecto en la estrategia ganadora.",
-      "grant": {
-        "title": "El Impulso de Inicio",
-        "description": "No vendemos promesas, entregamos capacidad operativa inmediata. Se habilita una ejecución de validación para validar nuestro rigor técnico sin compromiso financiero inicial.",
-        "cta_1_activate": "Iniciar ejecución",
-        "microcopy": ""
-      }
+      "title": "Autorice la ejecución ahora",
+      "description": "Un acto procesal. Un documento. Una sola vez.",
+      "cta_1_primary": "Iniciar ejecución"
     },
     "technologies": {
       "title": "Arquitectura de Grado Bancario y Ejecución Nativa",

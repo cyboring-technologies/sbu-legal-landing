@@ -501,27 +501,9 @@
       }
     },
     "cta": {
-      "whatsapp": {
-        "title": "The Trust Bridge",
-        "description": "For firms requiring human validation before integrating new technical infrastructure.",
-        "cta_3_chat": "Contact Engineering",
-        "cta_3_note": "External channel for sales and enterprise requirements. Does not provide operational support or assistance during execution.",
-        "microcopy": ""
-      },
-      "protocol": {
-        "title": "Trust Signal: The Incinerator Protocol",
-        "description": "Your security is not an option, it is an architectural law in our infrastructure.",
-        "guarantee": "Guarantee: Stateless environment processing with immediate and definitive incineration of files and secrets upon execution closure.",
-        "infrastructure": "Infrastructure: Operation 100% on Cloudflare Global Network with institutional compliance standards."
-      },
-      "title": "End the artisanal drafting<br /> Start the engineering",
-      "subtitle": "Reclaim your mental bandwidth. Delegate document grunt work to our judicial-grade infrastructure and focus your intellect on winning strategy.",
-      "grant": {
-        "title": "The Founder’s Grant",
-        "description": "We don’t sell promises, we deliver immediate operational capacity. A validation execution is enabled to validate our technical rigor without initial financial commitment.",
-        "cta_1_activate": "Start execution",
-        "microcopy": ""
-      }
+      "title": "Authorize execution now",
+      "description": "One procedural act. One document. One time.",
+      "cta_1_primary": "Start execution"
     },
     "technologies": {
       "title": "Bank-Grade Architecture and Native Execution",
