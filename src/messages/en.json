@@ -537,16 +537,6 @@
       "efficiency": {
         "title": "Scale-to-Zero Efficiency",
         "description": "We operate under a Scale-to-Zero financial and technical model. Our infrastructure only activates when you are processing a document, eliminating unnecessary costs and allowing us to offer a competitive cost advantage passed directly to our per-execution prices."
-      },
-      "techStack": {
-        "title": "The Technology Arsenal (Industrial Stack)",
-        "intro": "To establish technical rigor, we make explicit the infrastructure supporting the \"Digital Plumbing\" of documentos.legal:",
-        "frontend": "Frontend: React / Next.js (High-speed, low-friction interface).",
-        "businessLogic": "Business Logic: TypeScript / Cloudflare Workers (High-performance serverless execution).",
-        "intelligence": "Intelligence: Direct orchestration of latest generation LLM models via native APIs, dynamically selected for technical suitability at runtime.",
-        "orchestration": "Orchestration: Durable Objects (Transactional coordination and ephemeral state).",
-        "infrastructure": "Infrastructure: Cloudflare Global Network (Serverless edge deployment).",
-        "security": "Security: Incinerator Protocol (Volatile memory processing and immediate destruction)."
       }
     },
     "benefits": {

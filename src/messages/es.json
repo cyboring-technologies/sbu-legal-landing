@@ -449,7 +449,7 @@
       "description": "Sustituimos la redacción artesanal por procesos de ingeniería de alta precisión, permitiéndole centrar su intelecto en la estrategia mientras nosotros procesamos la carga técnica."
     },
     "draftingEngine": {
-      "title": "El Motor de Redacción (The Drafting Engine)",
+      "title": "El Motor de Redacción",
       "description": "Es nuestro módulo de ejecución insignia para la construcción de argumentos complejos. Actúa como un \"Constructor\" que traduce sus directrices estratégicas en documentos estructurados con rigor judicial.",
       "capabilities": "Generación de Contestaciones de Demanda, Demandas Civiles y recursos de apelación.",
       "rigor": "Estructuración de argumentos con tono impecable y precisión normativa.",
@@ -533,16 +533,6 @@
       "efficiency": {
         "title": "Eficiencia \"Scale-to-Zero\"",
         "description": "Operamos bajo un modelo financiero y técnico de Escalado a Cero. Nuestra infraestructura solo se activa cuando usted está procesando un documento, eliminando costos innecesarios y permitiéndonos ofrecer una ventaja competitiva en costos que trasladamos directamente a nuestros precios por ejecución."
-      },
-      "techStack": {
-        "title": "El Arsenal Tecnológico (Stack Industrial)",
-        "intro": "Para establecer rigor técnico, explicamos la infraestructura que sostiene la \"Plomería Digital\" de documentos.legal:",
-        "frontend": "Frontend: React / Next.js (Interfaz de alta velocidad y baja fricción).",
-        "businessLogic": "Lógica de Negocio: TypeScript / Cloudflare Workers (Ejecución serverless de alto rendimiento).",
-        "intelligence": "Inteligencia: Orquestación directa de modelos LLM de última generación vía APIs nativas, dinámicamente seleccionados por idoneidad técnica en tiempo de ejecución.",
-        "orchestration": "Orquestación: Durable Objects (Coordinación transaccional y estado efímero).",
-        "infrastructure": "Infraestructura: Cloudflare Global Network (Despliegue en el borde sin servidores).",
-        "security": "Seguridad: Protocolo Incinerador (Procesamiento en memoria volátil y destrucción inmediata)."
       }
     },
     "benefits": {

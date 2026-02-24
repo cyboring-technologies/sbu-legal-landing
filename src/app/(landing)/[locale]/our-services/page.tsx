@@ -317,47 +317,7 @@ export default function OurServicesPage() {
               </HoverCard>
             </StaggeredGrid>
 
-            {/* Tech Stack List */}
-            <FadeIn direction="up" delay={200}>
-              <div className="mt-16 bg-muted/30 dark:bg-muted/10 rounded-3xl p-8 lg:p-12 border border-border/50 relative overflow-hidden">
-                {/* Decorative background elements */}
-                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
 
-                <h3 className="text-3xl font-bold text-foreground mb-6 text-center relative z-10">
-                  {t('technologies.techStack.title')}
-                </h3>
-                <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto text-lg leading-relaxed relative z-10">
-                  {t.rich('technologies.techStack.intro', {
-                    br: () => <br />,
-                  })}
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto relative z-10">
-                  {/* Tech Stack Items */}
-                  {[
-                    'frontend',
-                    'businessLogic',
-                    'intelligence',
-                    'orchestration',
-                    'infrastructure',
-                    'security',
-                  ].map((key) => (
-                    <div
-                      key={key}
-                      className="group p-6 rounded-xl bg-background border border-border hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 transform hover:-translate-y-1"
-                    >
-                      <div className="flex items-start space-x-4">
-                        <div className="mt-2 flex-shrink-0 w-2.5 h-2.5 rounded-full bg-primary dark:bg-white shadow-sm group-hover:scale-125 transition-transform duration-300" />
-                        <p className="text-foreground font-medium text-lg leading-relaxed group-hover:text-primary transition-colors duration-300">
-                          {t(`technologies.techStack.${key}`)}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </FadeIn>
           </div>
         </section>
         {/* Service Benefits - List */}
