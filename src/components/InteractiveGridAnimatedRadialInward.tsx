@@ -44,7 +44,8 @@ const InteractiveGridAnimatedRadialInwardComponent: React.FC<
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const gridSize = 50;
+    const cellWidth = 53;
+    const cellHeight = 74;
     let animationOffset = 0;
     let animationFrameId: number;
 
@@ -72,13 +73,10 @@ const InteractiveGridAnimatedRadialInwardComponent: React.FC<
       const centerY = targetPos ? targetPos.y : height / 2;
 
       // Grid calculations
-      const cols = Math.ceil(width / gridSize);
-      const rows = Math.ceil(height / gridSize);
+      const cols = Math.ceil(width / cellWidth);
+      const rows = Math.ceil(height / cellHeight);
 
       // Animation logic (mimicking the original hook)
-      // Original: setAnimationOffset((prev) => (prev + 1.5) % 300) every 80ms
-      // 60fps is approx 16ms/frame.
-      // User reverted to 0.125 for "premium/stable" feel.
       if (runOnce && animationOffset >= 300) {
         // Stop animation after one complete cycle
         cancelAnimationFrame(animationFrameId);
@@ -89,8 +87,8 @@ const InteractiveGridAnimatedRadialInwardComponent: React.FC<
         : (animationOffset + 0.125) % 300;
 
       // Max Distance calculation (Manhattan)
-      const maxDistanceX = Math.max(centerX, width - centerX) / gridSize;
-      const maxDistanceY = Math.max(centerY, height - centerY) / gridSize;
+      const maxDistanceX = Math.max(centerX, width - centerX) / cellWidth;
+      const maxDistanceY = Math.max(centerY, height - centerY) / cellHeight;
       const maxDistance = Math.max(maxDistanceX, maxDistanceY);
 
       // Draw Loop
@@ -100,12 +98,12 @@ const InteractiveGridAnimatedRadialInwardComponent: React.FC<
 
       for (let y = 0; y < rows; y++) {
         for (let x = 0; x < cols; x++) {
-          const xPos = x * gridSize;
-          const yPos = y * gridSize;
+          const xPos = x * cellWidth;
+          const yPos = y * cellHeight;
 
-          // Manhattan distance logic
-          const dx = Math.abs(xPos + gridSize / 2 - centerX) / gridSize;
-          const dy = Math.abs(yPos + gridSize / 2 - centerY) / gridSize;
+          // Manhattan distance logic (proportional to cell dimensions)
+          const dx = Math.abs(xPos + cellWidth / 2 - centerX) / cellWidth;
+          const dy = Math.abs(yPos + cellHeight / 2 - centerY) / cellHeight;
           const distanceFromCenter = Math.max(dx, dy);
 
           const distance = Math.abs(distanceFromCenter - waveRadius);
@@ -113,20 +111,13 @@ const InteractiveGridAnimatedRadialInwardComponent: React.FC<
           if (distance < 2) {
             // Active Cell
             ctx.fillStyle = 'rgba(37, 99, 235, 0.1)';
-            ctx.fillRect(xPos, yPos, gridSize, gridSize);
+            ctx.fillRect(xPos, yPos, cellWidth, cellHeight);
 
             ctx.strokeStyle = 'rgba(37, 99, 235, 0.3)';
-            ctx.strokeRect(xPos, yPos, gridSize, gridSize);
-          }
-          // Optional: Draw subtle grid for inactive cells if needed,
-          // but original code didn't really show them much except maybe border?
-          // Original had: borderColor: cell.active ? 'rgba...' : 'rgba(..., 0.05)'
-          // Let's add the subtle border for all to match original feel if desired,
-          // or keep it clean. Original had 'absolute border ...' for ALL cells.
-          // Let's draw subtle border for everyone to preserve the "grid" look.
-          else {
+            ctx.strokeRect(xPos, yPos, cellWidth, cellHeight);
+          } else {
             ctx.strokeStyle = 'rgba(37, 99, 235, 0.05)';
-            ctx.strokeRect(xPos, yPos, gridSize, gridSize);
+            ctx.strokeRect(xPos, yPos, cellWidth, cellHeight);
           }
         }
       }

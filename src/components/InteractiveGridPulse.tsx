@@ -24,24 +24,36 @@ const throttle = <T extends (...args: any[]) => any>(
   };
 };
 
+interface GridPulseProps {
+  cellWidth?: number;
+  cellHeight?: number;
+}
+
 // Contact Page - Pulsing ripple effect with gradient intensity
-const InteractiveGridPulseComponent: React.FC = () => {
+const InteractiveGridPulseComponent: React.FC<GridPulseProps> = ({
+  cellWidth = 53,
+  cellHeight = 74,
+}) => {
   const [cells, setCells] = useState<GridCell[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
-  const gridSize = 50;
 
   useEffect(() => {
     const updateGrid = () => {
       if (!containerRef.current) return;
 
       const rect = containerRef.current.getBoundingClientRect();
-      const cols = Math.ceil(rect.width / gridSize);
-      const rows = Math.ceil(rect.height / gridSize);
+      const cols = Math.ceil(rect.width / cellWidth);
+      const rows = Math.ceil(rect.height / cellHeight);
 
       const newCells: GridCell[] = [];
       for (let y = 0; y < rows; y++) {
         for (let x = 0; x < cols; x++) {
-          newCells.push({ x: x * gridSize, y: y * gridSize, active: false, intensity: 0 });
+          newCells.push({
+            x: x * cellWidth,
+            y: y * cellHeight,
+            active: false,
+            intensity: 0,
+          });
         }
       }
       setCells(newCells);
@@ -50,36 +62,27 @@ const InteractiveGridPulseComponent: React.FC = () => {
     updateGrid();
     window.addEventListener('resize', updateGrid);
     return () => window.removeEventListener('resize', updateGrid);
-  }, []);
+  }, [cellWidth, cellHeight]);
 
   useEffect(() => {
     const updateCells = (mouseX: number, mouseY: number, rect?: DOMRect) => {
       setCells((prev) => {
-        // Optimization: If mouse is effectively "null" (outside), check if we need to reset
-        // using a flag or specific coordinate convention, or just by logic here.
-        // But here we'll pass coordinates.
-
-        // If no rect provided, we can't calculate.
         if (!rect) return prev;
 
         const isInside =
           mouseX >= 0 && mouseX <= rect.width && mouseY >= 0 && mouseY <= rect.height;
 
         if (!isInside) {
-          // Check if we need to reset to avoid spamming re-renders
           const hasActivity = prev.some((c) => c.active || c.intensity > 0);
           if (!hasActivity) return prev;
-
           return prev.map((c) => ({ ...c, active: false, intensity: 0 }));
         }
 
-        // Normal calculation
         return prev.map((cell) => {
           const distance = Math.sqrt(
-            Math.pow(cell.x + gridSize / 2 - mouseX, 2) +
-              Math.pow(cell.y + gridSize / 2 - mouseY, 2)
+            Math.pow(cell.x + cellWidth / 2 - mouseX, 2) +
+            Math.pow(cell.y + cellHeight / 2 - mouseY, 2)
           );
-          // Create ripple effect with gradient intensity
           const maxDistance = 150;
           const intensity = distance < maxDistance ? 1 - distance / maxDistance : 0;
 
@@ -141,8 +144,8 @@ const InteractiveGridPulseComponent: React.FC = () => {
           style={{
             left: cell.x,
             top: cell.y,
-            width: gridSize,
-            height: gridSize,
+            width: cellWidth,
+            height: cellHeight,
             backgroundColor: cell.active
               ? `rgba(37, 99, 235, ${0.15 * cell.intensity})`
               : 'transparent',

@@ -186,11 +186,10 @@ export default function QuestionsAndAnswersPage() {
                       <button
                         key={category.id}
                         onClick={() => setSelectedCategory(category.id)}
-                        className={`flex items-center px-4 py-2 rounded-lg transition-all border-2 ${
-                          selectedCategory === category.id
-                            ? 'border-primary bg-primary/10 text-primary'
-                            : 'border-border bg-background text-foreground hover:border-primary hover:text-primary'
-                        }`}
+                        className={`flex items-center px-4 py-2 rounded-lg transition-all border-2 ${selectedCategory === category.id
+                          ? 'border-primary bg-primary/10 text-primary'
+                          : 'border-border bg-background text-foreground hover:border-primary hover:text-primary'
+                          }`}
                       >
                         <Icon className="w-4 h-4 mr-2" />
                         {category.name}
