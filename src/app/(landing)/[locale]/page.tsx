@@ -515,10 +515,12 @@ export default function HomePage() {
                       </span>
                       {tTestimonials('client1.relief')}
                     </p>
-                    <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
-                      <p className="text-muted-foreground font-medium font-sans text-sm">
-                        {tTestimonials('client1.metric')}
-                      </p>
+                    <div className="pt-6 mt-2 border-t border-gray-100 dark:border-gray-800">
+                      <div className="bg-gray-50 dark:bg-gray-800/40 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+                        <p className="text-[#2F4A5C] dark:text-gray-200 font-medium font-sans text-sm leading-relaxed">
+                          {tTestimonials('client1.metric')}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -544,10 +546,12 @@ export default function HomePage() {
                       </span>
                       {tTestimonials('client2.relief')}
                     </p>
-                    <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
-                      <p className="text-muted-foreground font-medium font-sans text-sm">
-                        {tTestimonials('client2.metric')}
-                      </p>
+                    <div className="pt-6 mt-2 border-t border-gray-100 dark:border-gray-800">
+                      <div className="bg-gray-50 dark:bg-gray-800/40 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+                        <p className="text-[#2F4A5C] dark:text-gray-200 font-medium font-sans text-sm leading-relaxed">
+                          {tTestimonials('client2.metric')}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -573,10 +577,12 @@ export default function HomePage() {
                       </span>
                       {tTestimonials('client3.relief')}
                     </p>
-                    <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
-                      <p className="text-muted-foreground font-medium font-sans text-sm">
-                        {tTestimonials('client3.metric')}
-                      </p>
+                    <div className="pt-6 mt-2 border-t border-gray-100 dark:border-gray-800">
+                      <div className="bg-gray-50 dark:bg-gray-800/40 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+                        <p className="text-[#2F4A5C] dark:text-gray-200 font-medium font-sans text-sm leading-relaxed">
+                          {tTestimonials('client3.metric')}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

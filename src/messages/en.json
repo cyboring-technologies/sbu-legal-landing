@@ -150,19 +150,19 @@
       "profile": "The Strategic Litigator Persona",
       "challenge": "Submit multiple complex lawsuits with technical depth in a single afternoon.",
       "relief": "Strategic time optimization for the study of law, delegating \"document carpentry\" to a high-precision engineering infrastructure.",
-      "metric": "Success Metric: Optimization of \"Time-to-Download\"; less time on screen, more time in court."
+      "metric": "Optimization of download time; less time on screen, more time in court."
     },
     "client2": {
       "profile": "The Competitive Firm Partner",
       "challenge": "Scale the office's capacity without increasing fixed costs or team fatigue.",
       "relief": "Turn internal legal knowledge into persuasive and winning briefs immediately, without relying on slow manual processes.",
-      "metric": "Success Metric: Drastic reduction of opportunity cost for each document generated."
+      "metric": "Drastic reduction of opportunity cost for each document generated."
     },
     "client3": {
       "profile": "The High-Value Consultant",
       "challenge": "Eliminate administrative friction that drains the mental bandwidth needed for critical decision-making.",
       "relief": "Process documents under the Incinerator Protocol, ensuring sensitive information disappears after execution.",
-      "metric": "Success Metric: Absolute bank-grade security and full privacy compliance without additional effort."
+      "metric": "Absolute bank-grade security and full privacy compliance without additional effort."
     },
     "cta_1_join": "Start execution",
     "cta_2_guide": "View security protocols",
@@ -510,7 +510,7 @@
       "description": "We are built on a proprietary infrastructure designed for stability, data sovereignty, and operational efficiency.",
       "foundation": {
         "title": "The Foundation: Hexagonal Architecture",
-        "description": "Our infrastructure utilizes a Native Serverless Architecture that eliminates permanent server and database management. This modular structure allows us to flexibly orchestrate the most advanced AI models on the market (Gemini 1.5 Pro) via Cloudflare Workers, ensuring minimal latency and execution sovereignty."
+        "description": "Our infrastructure utilizes a Native Serverless Architecture that eliminates permanent server and database management. This modular structure allows us to flexibly orchestrate the most advanced AI models on the market via Cloudflare Workers, ensuring minimal latency and execution sovereignty."
       },
       "security": {
         "title": "Sovereignty and Security on the Edge",
@@ -600,7 +600,7 @@
       "items": {
         "origin": {
           "title": "The Origin: Engineering for \"Digital Plumbing\"",
-          "body": "We were not born from theory, but from a raw observation: elite professionals consumed by administrative \"drudgery\". We identified that the gap between legal strategy and final drafting was a system error that had to be patched. Documentos.legal is the industrial answer to that friction; we don't sell \"magic\", we sell operational efficiency through infrastructure."
+          "body": "We were not born from theory, but from a raw observation: elite professionals consumed by administrative burden. We identified that the gap between legal strategy and final drafting was a system error that had to be patched. Documentos.legal is the industrial answer to that friction; we don't sell \"magic\", we sell operational efficiency through infrastructure."
         },
         "vba": {
           "title": "The VBA Model: Stability and Scale-to-Zero",

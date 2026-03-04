@@ -150,19 +150,19 @@
       "profile": "El Perfil del Litigante Estratégico",
       "challenge": "Presentar múltiples demandas complejas con profundidad técnica en una sola tarde.",
       "relief": "Optimización del tiempo estratégico en el estudio del derecho, delegando la \"carpintería documental\" a una infraestructura de ingeniería de alta precisión.",
-      "metric": "Métrica de éxito: Optimización del \"Time-to-Download\" (Tiempo de descarga); menos tiempo en pantalla, más tiempo en tribunales."
+      "metric": "Optimización del tiempo de descarga; menos tiempo en pantalla, más tiempo en tribunales."
     },
     "client2": {
       "profile": "El Socio de Firma Competitiva",
       "challenge": "Escalar la capacidad de despacho sin aumentar los costos fijos ni la fatiga del equipo.",
       "relief": "Convertir el conocimiento jurídico interno en escritos persuasivos y ganadores de forma inmediata, sin depender de procesos manuales lentos.",
-      "metric": "Métrica de éxito: Reducción drástica del costo de oportunidad por cada documento generado."
+      "metric": "Reducción drástica del costo de oportunidad por cada documento generado."
     },
     "client3": {
       "profile": "El Consultor de Alto Valor",
       "challenge": "Eliminar la fricción administrativa que drena el ancho de banda mental necesario para la toma de decisiones críticas.",
       "relief": "Procesar documentos bajo el Protocolo Incinerador, garantizando que la información sensible desaparece tras la ejecución.",
-      "metric": "Métrica de éxito: Seguridad absoluta de grado bancario y cumplimiento total de privacidad sin esfuerzo adicional."
+      "metric": "Seguridad absoluta de grado bancario y cumplimiento total de privacidad sin esfuerzo adicional."
     },
     "cta_1_join": "Iniciar ejecución",
     "cta_2_guide": "Ver protocolos de seguridad",
@@ -506,7 +506,7 @@
       "description": "Construimos sobre una infraestructura propietaria diseñada para la estabilidad, la soberanía de los datos y la eficiencia operativa.",
       "foundation": {
         "title": "La Fundación: Arquitectura Hexagonal",
-        "description": "Nuestra infraestructura utiliza una Arquitectura Serverless Nativa que elimina la gestión de servidores y bases de datos permanentes. Esta estructura modular nos permite orquestar de forma flexible los modelos de IA más avanzados del mercado (Gemini 1.5 Pro) a través de Cloudflare Workers, garantizando una latencia mínima y soberanía en la ejecución."
+        "description": "Nuestra infraestructura utiliza una Arquitectura Serverless Nativa que elimina la gestión de servidores y bases de datos permanentes. Esta estructura modular nos permite orquestar de forma flexible los modelos de IA más avanzados del mercado a través de Cloudflare Workers, garantizando una latencia mínima y soberanía en la ejecución."
       },
       "security": {
         "title": "Soberanía y Seguridad en el Edge",
@@ -596,7 +596,7 @@
       "items": {
         "origin": {
           "title": "El Origen: Ingeniería para la \"Fontanería Digital\"",
-          "body": "No nacimos de la teoría, sino de una observación cruda: profesionales de élite consumidos por la \"drudgery\" administrativa. Identificamos que la brecha entre la estrategia legal y la redacción final era un error de sistema que debía ser parcheado. Documentos.legal es la respuesta industrial a esa fricción; no vendemos \"magia\", vendemos eficiencia operativa a través de infraestructura."
+          "body": "No nacimos de la teoría, sino de una observación cruda: profesionales de élite consumidos por la carga administrativa. Identificamos que la brecha entre la estrategia legal y la redacción final era un error de sistema que debía ser parcheado. Documentos.legal es la respuesta industrial a esa fricción; no vendemos \"magia\", vendemos eficiencia operativa a través de infraestructura."
         },
         "vba": {
           "title": "El Modelo VBA: Estabilidad y Escala-a-Cero",
