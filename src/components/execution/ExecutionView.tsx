@@ -75,6 +75,10 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({
   const [draft, setDraft] = useState<string | null>(null);
   const [draftHtml, setDraftHtml] = useState<string | null>(null);
 
+  // HITL Context State
+  const [isContextCommitted, setIsContextCommitted] = useState(false);
+  const [strategicContext, setStrategicContext] = useState('');
+
   const converter = new showdown.Converter();
   const mounted = useRef(true);
 
@@ -314,6 +318,7 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({
           id: jobId,
           text: extractedText,
           structure: structure,
+          strategicContext: isContextCommitted ? strategicContext : "",
         }),
       });
 
@@ -379,7 +384,7 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({
           setStatus('INCINERATED');
           clearInterval(interval);
         }
-      } catch (e) {}
+      } catch (e) { }
 
       if (polls > 20) clearInterval(interval);
     }, 1000);
@@ -575,13 +580,60 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({
           </div>
         )}
 
-        {status === 'READY_TO_GENERATE' && (
-          <button
-            onClick={handleGenerate}
-            className="w-full mt-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded font-bold shadow-lg"
-          >
-            Generate Draft
-          </button>
+        {/* Strategic Context (HITL 1) - Persists after Rubicon */}
+        {(status === 'READY_TO_GENERATE' || status === 'GENERATING' || status === 'REVIEWING' || status === 'COMPLETED') && (
+          <div className="mt-4 space-y-4 pt-4 border-t border-border">
+            <div className="space-y-2">
+              <label
+                htmlFor="strategic-context"
+                className="text-xs font-bold text-muted-foreground uppercase tracking-wider"
+              >
+                Strategic Context
+              </label>
+              <textarea
+                id="strategic-context"
+                value={
+                  status !== 'READY_TO_GENERATE' && !strategicContext.trim()
+                    ? "No se incorporó contexto adicional."
+                    : strategicContext
+                }
+                onChange={(e) => setStrategicContext(e.target.value)}
+                onFocus={() => setIsContextCommitted(false)}
+                disabled={isContextCommitted || status !== 'READY_TO_GENERATE'}
+                placeholder="Include additional relevant facts for the court (optional)..."
+                className={`w-full h-24 p-2 text-xs border rounded resize-none focus:ring-1 focus:ring-primary outline-none transition-all ${isContextCommitted || status !== 'READY_TO_GENERATE'
+                    ? 'bg-muted text-muted-foreground border-border opacity-80'
+                    : 'bg-background text-foreground'
+                  }`}
+              />
+
+              <div className="flex flex-col gap-2">
+                {status === 'READY_TO_GENERATE' && (
+                  !isContextCommitted ? (
+                    <button
+                      onClick={() => setIsContextCommitted(true)}
+                      className="self-start px-4 py-2 text-xs font-medium border-2 border-border text-foreground hover:border-primary hover:text-primary rounded-lg transition-all duration-200"
+                    >
+                      Incorporate Context
+                    </button>
+                  ) : (
+                    <span className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">
+                      Embedded Context
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
+
+            {status === 'READY_TO_GENERATE' && (
+              <button
+                onClick={handleGenerate}
+                className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded font-bold shadow-lg transition-all"
+              >
+                Generate Draft
+              </button>
+            )}
+          </div>
         )}
       </div>
 
