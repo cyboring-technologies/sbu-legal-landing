@@ -592,18 +592,19 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({
               </label>
               <textarea
                 id="strategic-context"
-                value={
-                  status !== 'READY_TO_GENERATE' && !strategicContext.trim()
-                    ? "No se incorporó contexto adicional."
-                    : strategicContext
-                }
+                value={strategicContext}
                 onChange={(e) => setStrategicContext(e.target.value)}
-                onFocus={() => setIsContextCommitted(false)}
+                onFocus={() => {
+                  if (strategicContext === "No se incorporó contexto adicional.") {
+                    setStrategicContext("");
+                  }
+                  setIsContextCommitted(false);
+                }}
                 disabled={isContextCommitted || status !== 'READY_TO_GENERATE'}
                 placeholder="Include additional relevant facts for the court (optional)..."
                 className={`w-full h-24 p-2 text-xs border rounded resize-none focus:ring-1 focus:ring-primary outline-none transition-all ${isContextCommitted || status !== 'READY_TO_GENERATE'
-                    ? 'bg-muted text-muted-foreground border-border opacity-80'
-                    : 'bg-background text-foreground'
+                  ? 'bg-muted text-muted-foreground border-border opacity-80'
+                  : 'bg-background text-foreground'
                   }`}
               />
 
@@ -611,8 +612,13 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({
                 {status === 'READY_TO_GENERATE' && (
                   !isContextCommitted ? (
                     <button
-                      onClick={() => setIsContextCommitted(true)}
-                      className="self-start px-4 py-2 text-xs font-medium border-2 border-border text-foreground hover:border-primary hover:text-primary rounded-lg transition-all duration-200"
+                      onClick={() => {
+                        if (!strategicContext.trim()) {
+                          setStrategicContext("No se incorporó contexto adicional.");
+                        }
+                        setIsContextCommitted(true);
+                      }}
+                      className="self-start px-4 py-2 text-xs font-medium border-2 border-border text-foreground hover:bg-muted rounded-lg transition-all duration-200"
                     >
                       Incorporate Context
                     </button>
@@ -659,7 +665,7 @@ export const ExecutionView: React.FC<ExecutionViewProps> = ({
             <button
               onClick={handleDownload}
               disabled={status === 'COMPLETED'}
-              className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded font-bold shadow"
+              className="w-full py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded font-bold shadow"
             >
               {status === 'COMPLETED' ? 'Downloaded' : 'Download Final & Incinerate'}
             </button>
