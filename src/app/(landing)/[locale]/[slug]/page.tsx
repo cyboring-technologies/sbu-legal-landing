@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 import AntiPage from '../../../../components/AntiPage';
 import { allSlugs, getPageBySlug } from '../../../../lib/routeMatrix';
 
@@ -12,10 +13,10 @@ type Props = {
 
 // 1. Static Execution Parameters
 export function generateStaticParams() {
-  return allSlugs.map((slug) => ({
-    locale: 'es',
-    slug,
-  }));
+  return allSlugs.flatMap((slug) => [
+    { locale: 'en', slug },
+    { locale: 'es', slug },
+  ]);
 }
 
 // 2. SEO Validation
@@ -39,7 +40,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // 3. Page Component
 export default async function Page({ params }: Props) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+
+  // Enable static rendering
+  setRequestLocale(locale);
 
   const pageData = getPageBySlug(slug);
 
@@ -52,5 +56,5 @@ export default async function Page({ params }: Props) {
     ...pageData,
   };
 
-  return <AntiPage data={antiPageData} />;
+  return <AntiPage data={antiPageData} locale={locale} />;
 }

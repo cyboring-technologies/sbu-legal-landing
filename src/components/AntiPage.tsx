@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { CTAButton } from './CTAButtons';
 
 export type AntiPageData = {
   slug: string;
@@ -22,6 +25,7 @@ export type AntiPageData = {
 
 export type AntiPageProps = {
   data: AntiPageData;
+  locale: string;
 };
 
 export default function AntiPage({ data }: AntiPageProps) {
@@ -49,6 +53,16 @@ export default function AntiPage({ data }: AntiPageProps) {
       <section id="process-summary">
         <h2>{data.process.title}</h2>
         <p className="whitespace-pre-line">{data.process.body}</p>
+        <div className="video-container">
+          <iframe
+            width="640"
+            height="360"
+            src="https://www.youtube.com/embed/zDObk6cPUdc"
+            title="Ejemplo de ejecución del motor"
+            frameBorder="0"
+            allowFullScreen
+          />
+        </div>
       </section>
 
       <section id="trust-guarantees">
@@ -56,10 +70,10 @@ export default function AntiPage({ data }: AntiPageProps) {
         <p>{data.trust.body}</p>
       </section>
 
-      <section id="cta-block">
-        <a href="https://engine.sbu-legal.com" target="_blank" rel="noopener noreferrer">
+      <section id="cta-block" className="mt-12 flex justify-center">
+        <CTAButton ctaType="cta-1" variant="primary" size="lg" icon={true}>
           {data.cta.label}
-        </a>
+        </CTAButton>
       </section>
     </main>
   );

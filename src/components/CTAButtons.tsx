@@ -6,6 +6,7 @@ const ENGINE_BASE = process.env.NEXT_PUBLIC_ENGINE_URL ?? '';
 import { Link } from '../i18n/navigation';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { useLocale } from 'next-intl';
 import { useModal } from './providers/ModalProvider';
 
 // CTA Architecture v1.1 Normative Types
@@ -47,6 +48,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   tooltip,
 }) => {
   const { theme } = useTheme();
+  const locale = useLocale();
   const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
@@ -54,9 +56,12 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
   const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
 
-  // Ephemeral Theme Handover
-  if (ctaType === 'cta-1' && theme) {
-    finalHref = `${ENGINE_BASE}/?theme=${theme}`;
+  // Ephemeral Theme/Lang Handover for CTA-1
+  if (ctaType === 'cta-1') {
+    const params = new URLSearchParams();
+    if (theme) params.set('theme', theme);
+    params.set('lang', locale);
+    finalHref = `${ENGINE_BASE}/?${params.toString()}`;
   }
 
   const baseClasses =
@@ -175,6 +180,7 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
   tooltip,
 }) => {
   const { theme } = useTheme();
+  const locale = useLocale();
   const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
@@ -182,9 +188,12 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
   const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
   const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
 
-  // Ephemeral Theme Handover
-  if (ctaType === 'cta-1' && theme) {
-    finalHref = `${ENGINE_BASE}/?theme=${theme}`;
+  // Ephemeral Theme/Lang Handover for CTA-1
+  if (ctaType === 'cta-1') {
+    const params = new URLSearchParams();
+    if (theme) params.set('theme', theme);
+    params.set('lang', locale);
+    finalHref = `${ENGINE_BASE}/?${params.toString()}`;
   }
 
   const baseClasses =
