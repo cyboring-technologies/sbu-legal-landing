@@ -94,6 +94,7 @@ export default function HomePage() {
   );
   const [isSolutionHeaderVisible, setIsSolutionHeaderVisible] = useState(false);
   const [isServicesHeaderVisible, setIsServicesHeaderVisible] = useState(false);
+  const [isVideoExecutionVisible, setIsVideoExecutionVisible] = useState(false);
   const [isTestimonialsHeaderVisible, setIsTestimonialsHeaderVisible] = useState(false);
   const [isFaqHeaderVisible, setIsFaqHeaderVisible] = useState(false);
   const [isContactHeaderVisible, setIsContactHeaderVisible] = useState(false);
@@ -104,6 +105,9 @@ export default function HomePage() {
   );
   const servicesHeaderRef = useIntersectionObserver(
     useCallback(() => setIsServicesHeaderVisible(true), [])
+  );
+  const videoExecutionRef = useIntersectionObserver(
+    useCallback(() => setIsVideoExecutionVisible(true), [])
   );
   const testimonialsHeaderRef = useIntersectionObserver(
     useCallback(() => setIsTestimonialsHeaderVisible(true), [])
@@ -482,12 +486,17 @@ export default function HomePage() {
 
           {/* Execution Video Section */}
           <section className="flex justify-center items-center py-[100px] w-full bg-background border-b border-border relative">
-            <button
-              onClick={() => setOpenModal(true)}
-              className="text-lg font-medium text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline underline-offset-4 transition-colors cursor-pointer"
+            <div
+              ref={videoExecutionRef}
+              className={`transition-all duration-1000 ${isVideoExecutionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             >
-              {tVideoExecution('cta')}
-            </button>
+              <button
+                onClick={() => setOpenModal(true)}
+                className="text-lg font-medium text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline underline-offset-4 transition-colors cursor-pointer"
+              >
+                {tVideoExecution('cta')}
+              </button>
+            </div>
           </section>
 
           {/* Testimonials Section */}
