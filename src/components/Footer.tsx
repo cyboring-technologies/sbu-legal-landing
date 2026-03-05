@@ -124,7 +124,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com' },
+    { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@DocumentosLegal' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com' },
   ];
 

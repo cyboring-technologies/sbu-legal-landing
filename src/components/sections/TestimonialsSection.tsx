@@ -14,6 +14,7 @@ export const TestimonialsSection: React.FC = () => {
     false,
     false,
   ]);
+  const [openModal, setOpenModal] = useState(false);
 
   const testimonialsHeaderRef = useIntersectionObserver(
     useCallback(() => setIsTestimonialsHeaderVisible(true), [])
@@ -31,6 +32,7 @@ export const TestimonialsSection: React.FC = () => {
   );
 
   const tTestimonials = useTranslations('testimonials');
+  const tExecutionVideo = useTranslations('executionVideo');
 
   return (
     <section className="py-20 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 dark:bg-gradient-to-br dark:from-gray-800 dark:via-blue-900/20 dark:to-gray-800 relative">
@@ -64,6 +66,32 @@ export const TestimonialsSection: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {openModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4">
+          <div className="relative w-full max-w-[900px]">
+            <button
+              onClick={() => setOpenModal(false)}
+              className="absolute -top-10 right-0 text-white hover:text-gray-300 text-2xl font-bold cursor-pointer"
+              aria-label="Close"
+            >
+              ✕
+            </button>
+            <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl flex items-center justify-center">
+              <iframe
+                width="100%"
+                height="506"
+                src="https://www.youtube.com/embed/zDObk6cPUdc?autoplay=1"
+                title="Complete execution flow"
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                className="block w-full max-h-[80vh] aspect-video sm:h-[506px]"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

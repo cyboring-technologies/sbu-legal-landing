@@ -192,7 +192,7 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
 
   const variantClasses = {
     outline:
-      'border-2 border-border text-foreground hover:border-primary hover:text-primary focus:ring-ring',
+      'border-2 border-border bg-white text-gray-900 hover:border-primary hover:text-primary focus:ring-ring',
     ghost:
       'text-primary dark:text-gray-100 hover:text-primary/80 dark:hover:text-white hover:bg-accent/10 focus:ring-ring',
   };

@@ -1060,5 +1060,11 @@
         "email": "Correo electrónico"
       }
     }
+  },
+  "executionVideo": {
+    "cta_watchExecution": "Ver cómo ocurre la ejecución"
+  },
+  "videoExecution": {
+    "cta": "Ver cómo ocurre la ejecución"
   }
 }

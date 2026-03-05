@@ -1100,5 +1100,11 @@
         "email": "Email"
       }
     }
+  },
+  "executionVideo": {
+    "cta_watchExecution": "See how execution occurs"
+  },
+  "videoExecution": {
+    "cta": "See how the execution happens"
   }
 }

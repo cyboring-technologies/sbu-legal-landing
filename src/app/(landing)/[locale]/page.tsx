@@ -12,6 +12,7 @@ import Layout from '../../../components/Layout';
 import Hero from '../../../components/Hero';
 import { CTAButton } from '../../../components/CTAButtons';
 import { HtmlContent } from '../../../components/HtmlContent';
+import YouTube, { YouTubeProps } from 'react-youtube';
 import {
   ShieldCheck,
   Shield,
@@ -46,6 +47,7 @@ import { HeroBackgroundEffects } from '../../../components/HeroBackgroundEffects
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [heroVisible, setHeroVisible] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const { theme, resolvedTheme } = useTheme();
   const locale = useLocale();
 
@@ -191,6 +193,8 @@ export default function HomePage() {
   const tTestimonials = useTranslations('testimonials');
   const tFaq = useTranslations('faq');
   const tContact = useTranslations('contact');
+  const tExecutionVideo = useTranslations('executionVideo');
+  const tVideoExecution = useTranslations('videoExecution');
 
   return (
     <>
@@ -476,6 +480,16 @@ export default function HomePage() {
             </div>
           </section>
 
+          {/* Execution Video Section */}
+          <section className="flex justify-center items-center py-[100px] w-full bg-background border-b border-border relative">
+            <button
+              onClick={() => setOpenModal(true)}
+              className="text-lg font-medium text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline underline-offset-4 transition-colors cursor-pointer"
+            >
+              {tVideoExecution('cta')}
+            </button>
+          </section>
+
           {/* Testimonials Section */}
           <section className="py-32 bg-background border-b border-border relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -588,6 +602,36 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+
+            {openModal && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4">
+                <div className="relative w-full max-w-[900px]">
+                  <button
+                    onClick={() => setOpenModal(false)}
+                    className="absolute -top-10 right-0 text-white hover:text-gray-300 text-2xl font-bold cursor-pointer"
+                    aria-label="Close"
+                  >
+                    ✕
+                  </button>
+                  <div className="w-full bg-black rounded-lg overflow-hidden shadow-2xl flex items-center justify-center">
+                    <YouTube
+                      videoId="zDObk6cPUdc"
+                      opts={{
+                        width: '100%',
+                        height: '506',
+                        playerVars: {
+                          autoplay: 1,
+                          rel: 0,
+                          modestbranding: 1
+                        },
+                      }}
+                      onEnd={() => setOpenModal(false)}
+                      className="w-full aspect-video sm:h-[506px] max-h-[80vh] [&>iframe]:w-full [&>iframe]:h-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
           </section>
 
           {/* FAQs Section */}
