@@ -19,6 +19,12 @@ export function generateStaticParams() {
   ]);
 }
 
+const JURISDICTION_LABELS: Record<string, string> = {
+  JUR_1: 'México',
+  JUR_2: 'Colombia',
+  JUR_3: 'Chile',
+};
+
 // 2. SEO Validation
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -29,9 +35,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
+  const jurisdictionLabel = JURISDICTION_LABELS[pageData.jurisdiction] || pageData.jurisdiction;
+
   return {
-    title: `${pageData.service} in ${pageData.jurisdiction} | SBU-Legal`,
-    description: `Deterministic execution of ${pageData.service} for ${pageData.jurisdiction}. ${pageData.audience} context.`,
+    title: `${pageData.service} en ${jurisdictionLabel} | SBU-Legal`,
+    description: `Ejecución determinista de ${pageData.service} para ${jurisdictionLabel}. Contexto ${pageData.audience}.`,
     alternates: {
       canonical: `https://documentos.legal/${slug}`,
     },
