@@ -109,10 +109,10 @@ export default function ContactPage() {
           className="py-24 bg-background border-b border-border relative overflow-hidden"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+            <div className="max-w-4xl mx-auto flex flex-col gap-12 lg:gap-16">
               {/* Contact Information */}
               <div className="mt-12 space-y-6">
-                <FadeIn direction="right">
+                <FadeIn direction="up">
                   <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-6 rounded-lg shadow-sm">
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                       {t('information.title')}
@@ -143,181 +143,7 @@ export default function ContactPage() {
                 </FadeIn>
               </div>
 
-              {/* Form */}
-              <div className="lg:col-span-2 mt-8">
-                <FadeIn direction="up" delay={200}>
-                  <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-8">
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                      {t('form.title')}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-8 text-sm">
-                      {t('form.description')}
-                    </p>
 
-                    {isSubmitted ? (
-                      <div className="text-center py-12">
-                        <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
-                        <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                          {t('form.success.title')}
-                        </h4>
-                        <p className="text-gray-600 dark:text-gray-300">
-                          {t('form.success.message')}
-                        </p>
-                      </div>
-                    ) : (
-                      <form onSubmit={handleSubmit} className="space-y-6">
-                        {/* Name Fields */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                          <div>
-                            <label
-                              htmlFor="firstName"
-                              className="block text-sm font-medium text-gray-700 mb-2"
-                            >
-                              {t('form.firstName')} {t('form.required')}
-                            </label>
-                            <input
-                              type="text"
-                              id="firstName"
-                              name="firstName"
-                              required
-                              value={formData.firstName}
-                              onChange={handleInputChange}
-                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                              placeholder={t('form.firstNamePlaceholder')}
-                            />
-                          </div>
-
-                          <div>
-                            <label
-                              htmlFor="lastName"
-                              className="block text-sm font-medium text-gray-700 mb-2"
-                            >
-                              {t('form.lastName')} {t('form.required')}
-                            </label>
-                            <input
-                              type="text"
-                              id="lastName"
-                              name="lastName"
-                              required
-                              value={formData.lastName}
-                              onChange={handleInputChange}
-                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                              placeholder={t('form.lastNamePlaceholder')}
-                            />
-                          </div>
-                        </div>
-
-                        {/* Email and Company */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                          <div>
-                            <label
-                              htmlFor="email"
-                              className="block text-sm font-medium text-gray-700 mb-2"
-                            >
-                              {t('form.email')} {t('form.required')}
-                            </label>
-                            <input
-                              type="email"
-                              id="email"
-                              name="email"
-                              required
-                              value={formData.email}
-                              onChange={handleInputChange}
-                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                              placeholder={t('form.emailPlaceholder')}
-                            />
-                          </div>
-
-                          <div>
-                            <label
-                              htmlFor="company"
-                              className="block text-sm font-medium text-gray-700 mb-2"
-                            >
-                              {t('form.company')}
-                            </label>
-                            <input
-                              type="text"
-                              id="company"
-                              name="company"
-                              value={formData.company}
-                              onChange={handleInputChange}
-                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                              placeholder={t('form.companyPlaceholder')}
-                            />
-                          </div>
-                        </div>
-
-                        {/* Reason */}
-                        <div>
-                          <label
-                            htmlFor="reason"
-                            className="block text-sm font-medium text-gray-700 mb-2"
-                          >
-                            {t('form.reason')}
-                          </label>
-                          <select
-                            id="reason"
-                            name="reason"
-                            value={formData.reason}
-                            onChange={handleInputChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          >
-                            <option value="">{t('form.reason')}</option>
-                            <option value="technical">{t('form.reasonOptions.technical')}</option>
-                            <option value="privacy">{t('form.reasonOptions.privacy')}</option>
-                            <option value="billing">{t('form.reasonOptions.billing')}</option>
-                            <option value="api">{t('form.reasonOptions.api')}</option>
-                          </select>
-                        </div>
-
-                        {/* Message */}
-                        <div>
-                          <label
-                            htmlFor="message"
-                            className="block text-sm font-medium text-gray-700 mb-2"
-                          >
-                            {t('form.message')} {t('form.required')}
-                          </label>
-                          <textarea
-                            id="message"
-                            name="message"
-                            required
-                            rows={6}
-                            value={formData.message}
-                            onChange={handleInputChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder={t('form.messagePlaceholder')}
-                          />
-                          <p className="mt-4 text-xs text-muted-foreground bg-muted p-3 rounded-md border border-border">
-                            {t('form.disclaimer')}
-                          </p>
-                        </div>
-
-                        {/* Submit Button */}
-                        <div>
-                          <button
-                            type="submit"
-                            disabled={isSubmitting}
-                            className="inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-background text-primary dark:text-primary-foreground border-2 border-border hover:bg-secondary focus:ring-ring px-6 py-3 text-base disabled:opacity-50 disabled:cursor-not-allowed"
-                          >
-                            {isSubmitting ? (
-                              <>
-                                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-gray-900 dark:border-white mr-2"></div>
-                                {t('form.sending')}
-                              </>
-                            ) : (
-                              <>
-                                <Send className="w-5 h-5 mr-2" />
-                                {t('form.sendMessage')}
-                              </>
-                            )}
-                          </button>
-                        </div>
-                      </form>
-                    )}
-                  </div>
-                </FadeIn>
-              </div>
             </div>
           </div>
         </section>
@@ -454,6 +280,191 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
+
+        {/* Contact Form Section */}
+        <section
+          id="contact-form"
+          className="py-24 bg-background border-b border-border relative overflow-hidden"
+        >
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            {/* Form */}
+            <div className="mt-8">
+              <FadeIn direction="up" delay={200}>
+                <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                    {t('form.title')}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-8 text-sm">
+                    {t('form.description')}
+                  </p>
+
+                  {isSubmitted ? (
+                    <div className="text-center py-12">
+                      <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
+                      <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                        {t('form.success.title')}
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-300">
+                        {t('form.success.message')}
+                      </p>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      {/* Name Fields */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                          <label
+                            htmlFor="firstName"
+                            className="block text-sm font-medium text-gray-700 mb-2"
+                          >
+                            {t('form.firstName')} {t('form.required')}
+                          </label>
+                          <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            required
+                            value={formData.firstName}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            placeholder={t('form.firstNamePlaceholder')}
+                          />
+                        </div>
+
+                        <div>
+                          <label
+                            htmlFor="lastName"
+                            className="block text-sm font-medium text-gray-700 mb-2"
+                          >
+                            {t('form.lastName')} {t('form.required')}
+                          </label>
+                          <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            required
+                            value={formData.lastName}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            placeholder={t('form.lastNamePlaceholder')}
+                          />
+                        </div>
+                      </div>
+
+                      {/* Email and Company */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                          <label
+                            htmlFor="email"
+                            className="block text-sm font-medium text-gray-700 mb-2"
+                          >
+                            {t('form.email')} {t('form.required')}
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            placeholder={t('form.emailPlaceholder')}
+                          />
+                        </div>
+
+                        <div>
+                          <label
+                            htmlFor="company"
+                            className="block text-sm font-medium text-gray-700 mb-2"
+                          >
+                            {t('form.company')}
+                          </label>
+                          <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            value={formData.company}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            placeholder={t('form.companyPlaceholder')}
+                          />
+                        </div>
+                      </div>
+
+                      {/* Reason */}
+                      <div>
+                        <label
+                          htmlFor="reason"
+                          className="block text-sm font-medium text-gray-700 mb-2"
+                        >
+                          {t('form.reason')}
+                        </label>
+                        <select
+                          id="reason"
+                          name="reason"
+                          value={formData.reason}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        >
+                          <option value="">{t('form.reason')}</option>
+                          <option value="technical">{t('form.reasonOptions.technical')}</option>
+                          <option value="privacy">{t('form.reasonOptions.privacy')}</option>
+                          <option value="billing">{t('form.reasonOptions.billing')}</option>
+                          <option value="api">{t('form.reasonOptions.api')}</option>
+                        </select>
+                      </div>
+
+                      {/* Message */}
+                      <div>
+                        <label
+                          htmlFor="message"
+                          className="block text-sm font-medium text-gray-700 mb-2"
+                        >
+                          {t('form.message')} {t('form.required')}
+                        </label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          required
+                          rows={6}
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder={t('form.messagePlaceholder')}
+                        />
+                        <p className="mt-4 text-xs text-muted-foreground bg-muted p-3 rounded-md border border-border">
+                          {t('form.disclaimer')}
+                        </p>
+                      </div>
+
+                      {/* Submit Button */}
+                      <div>
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-background text-primary dark:text-primary-foreground border-2 border-border hover:bg-secondary focus:ring-ring px-6 py-3 text-base disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                          {isSubmitting ? (
+                            <>
+                              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-gray-900 dark:border-white mr-2"></div>
+                              {t('form.sending')}
+                            </>
+                          ) : (
+                            <>
+                              <Send className="w-5 h-5 mr-2" />
+                              {t('form.sendMessage')}
+                            </>
+                          )}
+                        </button>
+                      </div>
+                    </form>
+                  )}
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA - Closing */}
         <section className="py-32 bg-background relative overflow-hidden">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
