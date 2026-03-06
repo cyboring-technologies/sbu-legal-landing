@@ -49,22 +49,49 @@ export default function AntiPage({ data }: AntiPageProps) {
 
       <section id="context">
         <h2>{replaceLabel(data.context.title)}</h2>
-        <p>{replaceLabel(data.context.body)}</p>
+        <p>
+          Este servicio permite generar el escrito legal necesario para <strong>{data.service} en {jurisdictionLabel}</strong>.
+        </p>
+        <p>
+          El documento se produce automáticamente a partir del material que usted proporcione y se ajusta a los requisitos formales aplicables dentro de esta jurisdicción.
+        </p>
+        <p>El documento puede utilizarse en situaciones como:</p>
+        <ul>
+          <li>Escrito de {data.service.toLowerCase()}</li>
+          <li>Formato de {data.service.toLowerCase()}</li>
+          <li>Modelo de {data.service.toLowerCase()}</li>
+          <li>Solicitud de {data.service.toLowerCase()} ante tribunal</li>
+        </ul>
       </section>
 
       <section id="execution-scope">
         <h2>{replaceLabel(data.scope.title)}</h2>
-        <p>{replaceLabel(data.scope.body)}</p>
+        <p>La ejecución produce un único documento legal listo para revisión y edición.</p>
+        <p>
+          El contenido se genera mediante un sistema automatizado diseñado para estructurar escritos jurídicos conforme a parámetros procesales previamente definidos para <strong>{jurisdictionLabel}</strong>. Costo típico de ejecución: $15 – $35 USD según la extensión del documento proporcionado.
+        </p>
       </section>
 
       <section id="irreversibility-statement">
         <h2>{replaceLabel(data.irreversibility.title)}</h2>
-        <p>{replaceLabel(data.irreversibility.body)}</p>
+        <p>Esta ejecución ocurre una sola vez.</p>
+        <p>
+          Una vez generado y entregado el documento final, todos los datos utilizados durante la sesión se destruyen permanentemente.
+        </p>
+        <p>
+          El sistema no conserva archivos, cuentas, historiales ni copias del documento generado.
+        </p>
       </section>
 
       <section id="process-summary">
         <h2>{replaceLabel(data.process.title)}</h2>
-        <p className="whitespace-pre-line">{replaceLabel(data.process.body)}</p>
+        <ol className="list-decimal list-inside space-y-2">
+          <li>Cargue el documento base relacionado con su proceso.</li>
+          <li>Revise la información antes de autorizar la ejecución.</li>
+          <li>El sistema genera el escrito jurídico correspondiente.</li>
+          <li>Descargue el documento final.</li>
+          <li>La sesión se destruye automáticamente después de la entrega.</li>
+        </ol>
         <div className="video-container">
           <iframe
             width="640"
@@ -79,7 +106,12 @@ export default function AntiPage({ data }: AntiPageProps) {
 
       <section id="trust-guarantees">
         <h2>{replaceLabel(data.trust.title)}</h2>
-        <p>{replaceLabel(data.trust.body)}</p>
+        <p>
+          La generación del documento se realiza mediante un sistema automatizado diseñado para producir textos jurídicos consistentes y verificables.
+        </p>
+        <p>
+          El proceso no depende de intervención humana ni implica almacenamiento posterior de la información utilizada durante la ejecución.
+        </p>
       </section>
 
       <section id="cta-block" className="mt-12 flex justify-center">

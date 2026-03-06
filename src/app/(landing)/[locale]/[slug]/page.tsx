@@ -38,8 +38,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const jurisdictionLabel = JURISDICTION_LABELS[pageData.jurisdiction] || pageData.jurisdiction;
 
   return {
-    title: `${pageData.service} en ${jurisdictionLabel} | SBU-Legal`,
-    description: `Ejecución determinista de ${pageData.service} para ${jurisdictionLabel}. Contexto ${pageData.audience}.`,
+    title: `${pageData.service} en ${jurisdictionLabel} — Generar Escrito Legal | SBU-Legal`,
+    description: `Genere el escrito legal para ${pageData.service.toLowerCase()} en ${jurisdictionLabel}. Ejecución única. Sin cuentas. Descarga inmediata del documento final.`,
     alternates: {
       canonical: `https://documentos.legal/${slug}`,
     },
