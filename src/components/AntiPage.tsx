@@ -47,11 +47,14 @@ export default function AntiPage({ data }: AntiPageProps) {
       (p) =>
         p.jurisdiction === data.jurisdiction &&
         p.service !== data.service &&
-        p.variant === data.variant // Ensure we match the same variant context to avoid duplicate links of same semantic service
+        p.variant === data.variant && // Ensure we match the same variant context to avoid duplicate links of same semantic service
+        p.slug !== data.slug // Exclude current page
     )
     // Create unique list by service just to be sure we are showing distinct procedures
     .filter((v, i, a) => a.findIndex(t => (t.service === v.service)) === i)
-    .slice(0, 5);
+    // Randomize
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
 
   return (
     <main className="prose dark:prose-invert max-w-3xl mx-auto px-6 py-12">
