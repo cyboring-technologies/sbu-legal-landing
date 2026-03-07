@@ -232,6 +232,15 @@ export default function HomePage() {
             <HeroBackgroundEffects />
           </div>
 
+          {/* Institutional Authority Signal */}
+          <div className="w-full border-b border-border py-3 bg-muted/20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex justify-center items-center">
+              <span className="text-xs font-mono text-muted-foreground tracking-widest uppercase">
+                Legal Technology Engine
+              </span>
+            </div>
+          </div>
+
           {/* Problem Section */}
           <section
             ref={problemsSectionRef}

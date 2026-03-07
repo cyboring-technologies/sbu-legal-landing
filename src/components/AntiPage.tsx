@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { CTAButton } from './CTAButtons';
+import antipages from '../data/antipages.json';
 
 export type AntiPageData = {
   slug: string;
@@ -40,6 +41,17 @@ export default function AntiPage({ data }: AntiPageProps) {
   const replaceLabel = (text: string) => {
     return text.replace(new RegExp(data.jurisdiction, 'g'), jurisdictionLabel);
   };
+
+  const relatedPages = antipages
+    .filter(
+      (p) =>
+        p.jurisdiction === data.jurisdiction &&
+        p.service !== data.service &&
+        p.variant === data.variant // Ensure we match the same variant context to avoid duplicate links of same semantic service
+    )
+    // Create unique list by service just to be sure we are showing distinct procedures
+    .filter((v, i, a) => a.findIndex(t => (t.service === v.service)) === i)
+    .slice(0, 5);
 
   return (
     <main className="prose dark:prose-invert max-w-3xl mx-auto px-6 py-12">
@@ -113,6 +125,21 @@ export default function AntiPage({ data }: AntiPageProps) {
           El proceso no depende de intervención humana ni implica almacenamiento posterior de la información utilizada durante la ejecución.
         </p>
       </section>
+
+      {relatedPages.length > 0 && (
+        <section id="related-procedures" className="mt-12 bg-muted/10 p-6 rounded-lg border border-border">
+          <h2 className="text-xl font-bold mb-4">Procedimientos Relacionados</h2>
+          <ul className="space-y-2">
+            {relatedPages.map((page) => (
+              <li key={page.slug}>
+                <a href={`/${page.slug}`} className="text-primary hover:underline font-medium">
+                  {page.service} en {jurisdictionLabel}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section id="cta-block" className="mt-12 flex justify-center">
         <CTAButton ctaType="cta-1" variant="primary" size="lg" icon={true}>
