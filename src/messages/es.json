@@ -11,7 +11,7 @@
     "hero": {
       "title": "Manuales de Ingeniería Documental",
       "subtitle": "Protocolos de operación para la soberanía del Arquitecto Legal.",
-      "description": "Acceda a la documentación oficial de documentos.legal sobre nuestra arquitectura de producción. Desde la ejecución táctica del Founder’s Grant hasta la seguridad del Protocolo Incinerador. Información diseñada para maximizar su eficiencia y garantizar su tiempo fuera del sitio.",
+      "description": "Acceda a la documentación oficial de Documentos.legal sobre nuestra arquitectura de producción. Desde la ejecución táctica del Founder’s Grant hasta la seguridad del Protocolo Incinerador. Información diseñada para maximizar su eficiencia y garantizar su tiempo fuera del sitio.",
       "cta_2_primary": "Ver protocolos de seguridad",
       "cta_1_secondary": "Iniciar ejecución"
     },
@@ -216,7 +216,7 @@
   "questionsAndAnswers": {
     "hero": {
       "title": "Protocolos y Certeza Operativa",
-      "subtitle": "Soporte técnico para la infraestructura de documentos.legal",
+      "subtitle": "Soporte técnico para la infraestructura de Documentos.legal",
       "description": "Despeje dudas sobre el Protocolo Incinerador, nuestra infraestructura con estándares institucionales y la gobernanza humana del sistema. Información técnica diseñada para reducir su responsabilidad legal y maximizar su velocidad de descarga.",
       "cta_3_primary": "WhatsApp",
       "cta_3_note": "Canal externo para consultas técnicas puntuales",
@@ -240,7 +240,7 @@
       "general": {
         "title": "General y Tecnología",
         "q1": {
-          "question": "¿Qué es exactamente documentos.legal y en qué se diferencia de un chat de IA genérico?",
+          "question": "¿Qué es exactamente Documentos.legal y en qué se diferencia de un chat de IA genérico?",
           "answer": "No somos un asistente de chat, sino una infraestructura de Ingeniería Documental Industrial. A diferencia de las IA genéricas que pueden alucinar, nuestro sistema utiliza una arquitectura de orquestación (SAGA Pattern) y un enrutador multi-modelo que selecciona la mejor inteligencia para tareas legales específicas. Nos enfocamos en el Relieve Cognitivo: eliminar la carga administrativa del abogado, no solo generar texto."
         },
         "q2": {
@@ -299,7 +299,7 @@
       "description": "Acceso directo a los protocolos que rigen nuestra infraestructura de ingeniería documental.",
       "technology": {
         "title": "Ingeniería y Arquitectura",
-        "description": "Detalles sobre nuestra Arquitectura Hexagonal y por qué documentos.legal es una infraestructura de procesamiento stateless (sin estado), no un almacén de datos. Conozca cómo optimizamos su tiempo fuera del sitio.",
+        "description": "Detalles sobre nuestra Arquitectura Hexagonal y por qué Documentos.legal es una infraestructura de procesamiento stateless (sin estado), no un almacén de datos. Conozca cómo optimizamos su tiempo fuera del sitio.",
         "link": "Consultar Arquitectura"
       },
       "security": {
@@ -792,7 +792,7 @@
       "contactDetailsTitle": "Datos de Enlace",
       "email": {
         "title": "Correo Electrónico Institucional",
-        "address": "hello@documentos.legal",
+        "address": "hello@Documentos.legal",
         "hint": "Respuesta técnica estimada: < 24 horas (L-V)."
       }
     },
@@ -917,147 +917,212 @@
   },
   "privacy": {
     "title": "Política de Privacidad",
-    "lastUpdated": "Última actualización: 1 de diciembre de 2025",
-    "introduction": "Cyboring Hexagonal Technologies LLC (\"Cyboring\", \"nosotros\" o \"nuestro\") está comprometido con la protección de su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos su información cuando utiliza nuestra infraestructura de ingeniería documental y servicios relacionados.",
+    "lastUpdated": "Última actualización: 7 de marzo de 2026",
+    "introduction": "Cyboring Technologies LLC (\"Cyboring\", \"nosotros\" o \"nuestro\") opera Documentos.legal, una infraestructura autónoma de ejecución única de documentos legales. Esta Política de Privacidad explica qué información recopilamos, cómo procesamos los documentos enviados al sistema y cómo protegemos su privacidad. La garantía central de privacidad de este sistema es arquitectónica: los documentos enviados para procesamiento nunca se almacenan permanentemente y son destruidos inmediatamente después de cada ciclo de ejecución.",
     "sections": {
       "informationCollect": {
-        "title": "Información que Recopilamos",
-        "intro": "Recopilamos información que usted nos proporciona directamente e información que obtenemos automáticamente cuando utiliza nuestros Servicios:",
+        "title": "1. Información que Recopilamos",
+        "intro": "Recopilamos únicamente la información mínima necesaria para operar la infraestructura de ejecución y procesar pagos. Específicamente:",
         "items": {
-          "personal": "Información Personal: Nombre, dirección de correo electrónico, número de teléfono, información de facturación y detalles profesionales que proporciona al iniciar una sesión de ejecución.",
-          "usage": "Datos de Uso: Información sobre cómo interactúa con nuestra infraestructura, incluyendo documentos procesados, funciones utilizadas y tiempo en la infraestructura.",
-          "device": "Información del Dispositivo: Dirección IP, tipo de navegador, sistema operativo e identificadores de dispositivo.",
-          "cookies": "Cookies y Rastreo: Utilizamos cookies y tecnologías similares para mejorar su experiencia y analizar el uso de la infraestructura."
+          "billing": "Datos de pago y facturación: Nombre, dirección de correo electrónico y datos del método de pago proporcionados durante el proceso de pago. Esto es procesado por Stripe, Inc. — nosotros no almacenamos datos completos de tarjetas de pago.",
+          "device": "Datos técnicos: Dirección IP, tipo de navegador y sistema operativo, recopilados automáticamente para la seguridad de la infraestructura y la prevención de fraude.",
+          "analytics": "Datos de uso agregado: Métricas no identificativas sobre el pipeline de ejecución (p.ej., recuentos de ejecuciones, tasas de error) utilizadas para mantener la fiabilidad de la infraestructura."
+        },
+        "notCollected": "NO recopilamos, almacenamos ni retenemos el contenido de los documentos enviados. El contenido de los documentos se procesa en memoria volátil y se destruye al terminar la sesión."
+      },
+      "documentProcessing": {
+        "title": "2. Cómo Procesamos sus Documentos",
+        "content1": "Los documentos fuente enviados a Documentos.legal se procesan exclusivamente en entornos de ejecución efímeros y aislados (Cloudflare Durable Objects). En ningún momento durante ni después de la ejecución se escribe el contenido del documento en almacenamiento persistente, se registra, indexa o transmite a ninguna parte más allá de lo estrictamente necesario para generar el artefacto de salida.",
+        "content2": "El pipeline de ejecución opera bajo estrictos principios de minimización de datos: los datos se ingieren, se transforman en el documento de salida solicitado y se destruyen inmediatamente. Ningún borrador intermedio, metadato extraído ni copia del archivo fuente se retiene tras el fin de la sesión de ejecución."
+      },
+      "incineration": {
+        "title": "3. Política de Incineración de Datos (Protocolo Incinerador)",
+        "content1": "El Protocolo Incinerador es el fundamento arquitectónico de nuestro modelo de privacidad. No es una elección de política — es una restricción técnica aplicada a nivel de infraestructura por el ciclo de vida efímero de los Durable Objects de Cloudflare. Al terminar la sesión, lo siguiente ocurre automáticamente:",
+        "items": {
+          "volatile": "Todo el contenido del documento se procesa exclusivamente en memoria volátil (RAM) sin escrituras en disco.",
+          "noPersist": "Ninguna base de datos persistente ni sistema de archivos recibe ninguna parte del contenido de su documento.",
+          "destroyed": "Cuando la sesión de ejecución termina (por descarga, abandono o fallo), todo el estado en memoria asociado es destruido por el runtime.",
+          "noRetention": "Cyboring Technologies LLC no tiene capacidad de recuperar, reconstruir ni acceder a los documentos enviados tras la terminación de la sesión."
+        },
+        "content2": "Esto significa que sus documentos no pueden ser objeto de brechas de seguridad, citaciones judiciales ni acceso no autorizado tras el fin de su sesión — porque ya no existen."
+      },
+      "noAccounts": {
+        "title": "4. Sin Cuentas ni Almacenamiento Persistente",
+        "intro": "Documentos.legal no proporciona ni ha proporcionado nunca:",
+        "items": {
+          "noProfiles": "Cuentas de usuario, perfiles ni registros de identidad de ningún tipo.",
+          "noStorage": "Bibliotecas de documentos, archivos ni almacenamiento persistente de documentos enviados o generados.",
+          "noHistory": "Historial de ejecuciones, historial de documentos ni ningún registro que vincule a una persona con documentos enviados anteriormente.",
+          "noCookieTracking": "Seguimiento de comportamiento entre sesiones ni cookies publicitarias."
         }
       },
-      "howWeUse": {
-        "title": "Cómo Usamos su Información",
-        "intro": "Utilizamos la información que recopilamos para:",
+      "thirdParty": {
+        "title": "5. Servicios de Terceros",
+        "intro": "Utilizamos los siguientes servicios de terceros para operar la infraestructura:",
         "items": {
-          "provide": "Proporcionar, mantener y mejorar nuestros servicios de ingeniería documental.",
-          "improve": "Desarrollar nuevas funciones y mejorar la experiencia del usuario.",
-          "communicate": "Enviarle avisos técnicos, actualizaciones, alertas de seguridad y mensajes de soporte.",
-          "security": "Detectar, prevenir y abordar problemas técnicos y amenazas de seguridad.",
-          "legal": "Cumplir con obligaciones legales y hacer cumplir nuestros términos de servicio."
+          "stripe": "Stripe, Inc. — Procesamiento de pagos. Stripe recopila y almacena los datos del método de pago necesarios para autorizar las ejecuciones. La Política de Privacidad de Stripe rige los datos que recopilan: stripe.com/privacy",
+          "cloudflare": "Cloudflare, Inc. — Infraestructura de ejecución (Workers, Durable Objects, Edge Network). Cloudflare procesa el tráfico de red y aloja el entorno de ejecución efímero. La Política de Privacidad de Cloudflare rige su tratamiento de datos: cloudflare.com/privacypolicy"
+        },
+        "disclaimer": "No vendemos, arrendamos ni cedemos su información personal a ningún tercero. Los servicios de terceros enumerados anteriormente reciben únicamente los datos mínimos necesarios para realizar su función específica."
+      },
+      "gdpr": {
+        "title": "6. Cumplimiento del Reglamento Europeo de Protección de Datos (GDPR)",
+        "intro": "Documentos.legal está diseñado para alinearse con el Reglamento General de Protección de Datos (UE 2016/679). Los siguientes principios rigen todo tratamiento de datos:",
+        "items": {
+          "minimization": "Minimización de datos: Recopilamos únicamente los datos estrictamente necesarios para procesar la ejecución y gestionar la transacción.",
+          "purpose": "Limitación de finalidad: Los datos recopilados (datos de facturación, información del dispositivo) se utilizan exclusivamente para la autorización de pagos, la prevención de fraude y la seguridad de la infraestructura — nunca para perfilado, marketing o reventa.",
+          "retention": "Limitación de conservación: El contenido de los documentos no se retiene más allá de la sesión de ejecución. Los registros de pago y transacción se conservan únicamente durante el tiempo que exija la ley aplicable y las obligaciones de cumplimiento de Stripe.",
+          "lawfulBasis": "Base jurídica del tratamiento: Los datos de pago se tratan sobre la base de la necesidad contractual (Art. 6(1)(b) RGPD). Los datos técnicos se tratan sobre la base de intereses legítimos en la seguridad de la infraestructura (Art. 6(1)(f) RGPD)."
+        },
+        "rights": {
+          "intro": "Los residentes de la UE tienen los siguientes derechos bajo el RGPD. Dado que el contenido de los documentos no se retiene, la mayoría de los derechos se aplican exclusivamente a los datos de facturación/pago gestionados por Stripe:",
+          "items": {
+            "info": "Derecho de información: Puede solicitar información sobre los datos personales que conservamos sobre usted (si los hubiera) contactando a legal@cyboring.com.",
+            "objection": "Derecho de oposición: Puede oponerse al tratamiento de sus datos personales por motivos de interés legítimo.",
+            "complaint": "Derecho a presentar una reclamación: Tiene derecho a presentar una reclamación ante la autoridad de control de su Estado miembro de la UE."
+          }
         }
       },
       "dataSecurity": {
-        "title": "Seguridad de Datos",
-        "content": "Implementamos medidas de seguridad estándar de la industria para proteger sus datos. Todos los datos se procesan dentro de la infraestructura empresarial de Microsoft Cloudflare con certificación SOC 2 Tipo II. Sus documentos e información estratégica están cifrados en tránsito y en reposo, y nunca se exponen a internet público ni se utilizan para entrenar modelos de IA."
-      },
-      "dataSharing": {
-        "title": "Compartir y Divulgar Datos",
-        "intro": "No vendemos su información personal. Solo podemos compartir su información en las siguientes circunstancias:",
-        "items": {
-          "providers": "Proveedores de Servicios: Con proveedores de servicios de terceros de confianza que nos ayudan a operar nuestra infraestructura, sujetos a obligaciones de confidencialidad.",
-          "legal": "Requisitos Legales: Cuando lo requiera la ley, citación u otro proceso legal, o para proteger los derechos y la seguridad de Cyboring, nuestros usuarios u otros.",
-          "business": "Transferencias Comerciales: En conexión con una fusión, adquisición o venta de activos, su información puede ser transferida como parte de la transacción."
-        }
-      },
-      "yourRights": {
-        "title": "Sus Derechos y Opciones",
-        "intro": "Dependiendo de su ubicación, puede tener ciertos derechos respecto a su información personal:",
-        "items": {
-          "access": "Acceso: Solicitar acceso a la información personal que tenemos sobre usted.",
-          "correction": "Corrección: Solicitar la corrección de información inexacta o incompleta.",
-          "deletion": "Eliminación: Solicitar la eliminación de su información personal, sujeto a ciertas excepciones.",
-          "portability": "Portabilidad: Solicitar una copia de sus datos en un formato estructurado y legible por máquina.",
-          "optOut": "Exclusión: Optar por no recibir comunicaciones de marketing en cualquier momento."
-        }
-      },
-      "cookies": {
-        "title": "Cookies y Tecnologías de Rastreo",
-        "content": "Utilizamos cookies y tecnologías de rastreo similares para recopilar información sobre sus actividades de navegación. Puede controlar las cookies a través de la configuración de su navegador, aunque deshabilitar ciertas cookies puede limitar su capacidad para usar algunas funciones de nuestra infraestructura."
+        "title": "7. Seguridad de Datos",
+        "content": "La infraestructura de ejecución opera exclusivamente en la red edge global de Cloudflare, que proporciona seguridad de grado empresarial, incluyendo cifrado TLS para todos los datos en tránsito, cumplimiento de SOC 2 Tipo II y controles alineados con ISO 27001. Dado que el contenido de los documentos nunca se escribe en almacenamiento persistente, no existe riesgo de datos en reposo para los documentos enviados. Los únicos datos persistentes sujetos a controles de seguridad son los datos de pago y facturación, que Stripe gestiona bajo su propio marco de cumplimiento PCI-DSS."
       },
       "children": {
-        "title": "Privacidad de Menores",
-        "content": "Nuestros Servicios no están dirigidos a menores de 18 años. No recopilamos deliberadamente información personal de menores. Si cree que hemos recopilado información de un menor, contáctenos inmediatamente."
+        "title": "8. Privacidad de Menores",
+        "content": "Documentos.legal es una infraestructura de documentos legales profesionales destinada al uso de adultos, incluidos profesionales del derecho y firmas legales. No recopilamos deliberadamente información personal de personas menores de 18 años. Si cree que un menor ha utilizado este sistema, contáctenos inmediatamente en legal@cyboring.com."
       },
       "changes": {
-        "title": "Cambios a Esta Política de Privacidad",
-        "content": "Podemos actualizar esta Política de Privacidad periódicamente. Le notificaremos de cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de \"Última actualización\". Su uso continuado de nuestros Servicios después de cualquier cambio indica su aceptación de la Política de Privacidad actualizada."
+        "title": "9. Cambios a Esta Política de Privacidad",
+        "content": "Podemos actualizar esta Política de Privacidad para reflejar cambios en nuestra infraestructura, obligaciones legales o relaciones con servicios de terceros. Las versiones actualizadas se publicarán en esta página con una fecha revisada. Dado que cada ejecución es un evento discreto y único, la Política de Privacidad vigente en el momento de su ejecución rige esa transacción."
       },
       "contact": {
-        "title": "Contáctenos",
-        "content": "Si tiene alguna pregunta sobre esta Política de Privacidad o nuestras prácticas de datos, contáctenos en:",
-        "email": "Correo electrónico"
+        "title": "10. Contacto",
+        "content": "Para consultas relacionadas con la privacidad, solicitudes de derechos de interesados o asuntos relacionados con el RGPD, contáctenos en:",
+        "email": "Correo electrónico",
+        "companyName": "Cyboring Technologies LLC"
       }
     }
   },
   "terms": {
     "title": "Términos de Servicio",
-    "lastUpdated": "Última actualización: 1 de diciembre de 2025",
-    "introduction": "Bienvenido a Cyboring. Estos Términos de Servicio (\"Términos\") rigen su acceso y uso de la infraestructura de ingeniería documental de Cyboring y servicios relacionados (\"Servicios\") proporcionados por Cyboring Hexagonal Technologies LLC (\"Cyboring\", \"nosotros\" o \"nuestro\"). Por favor lea estos Términos cuidadosamente antes de usar nuestros Servicios.",
+    "lastUpdated": "Última actualización: 7 de marzo de 2026",
+    "introduction": "Estos Términos de Servicio (\"Términos\") rigen el acto de autorizar y recibir una ejecución autónoma única de un documento legal a través de Documentos.legal, operado por Cyboring Technologies LLC (\"Cyboring\", \"nosotros\" o \"nuestro\"). Al iniciar una ejecución, usted acepta estos Términos en su totalidad.",
     "sections": {
+      "introduction": {
+        "title": "Sobre este documento",
+        "content": "Documentos.legal no es un servicio al que se suscribe. Es una ejecución que ocurre una única vez. Estos Términos definen los derechos y obligaciones de ese único acto. No establecen una relación continua, cuenta de usuario, ni acceso a ningún servicio de ningún tipo."
+      },
       "acceptance": {
         "title": "1. Aceptación de los Términos",
-        "content": "Al acceder o usar nuestros Servicios, usted acepta estar sujeto a estos Términos y nuestra Política de Privacidad. Si no está de acuerdo con estos Términos, no puede acceder ni usar nuestros Servicios. Si está usando los Servicios en nombre de una organización, usted declara y garantiza que tiene la autoridad para vincular a esa organización a estos Términos."
+        "content": "Al cargar un documento y autorizar el pago, usted reconoce que ha leído, comprendido y acepta estar vinculado por estos Términos. Si no está de acuerdo, no inicie una ejecución. Si actúa en nombre de una organización, declara que tiene autoridad para vincular a esa organización a estos Términos."
       },
       "description": {
-        "title": "2. Descripción de los Servicios",
-        "content": "Cyboring proporciona una infraestructura de ingeniería documental que utiliza un motor de ejecución de documentos procesales para ayudar a profesionales a crear, analizar y procesar documentos. Nuestros Servicios incluyen ejecución de documentos, extracción de metadatos, verificación de cumplimiento y otras funciones relacionadas. Nos reservamos el derecho de modificar, suspender o descontinuar cualquier parte de nuestros Servicios en cualquier momento."
+        "title": "2. Naturaleza del Sistema",
+        "content": "Documentos.legal es un motor autónomo de ejecución única de documentos legales. No es una plataforma de software, un servicio por suscripción, un sistema de gestión documental ni un servicio continuo de ningún tipo. El sistema existe exclusivamente para producir un único artefacto legal descargable por cada ejecución autorizada. Ninguna transacción establece una relación continua, cuenta de usuario ni acceso a servicios de ningún tipo."
       },
-      "accounts": {
-        "title": "3. Sesión Única de Ejecución",
-        "intro": "Para acceder a nuestra infraestructura de ejecución, debe iniciar una sesión efímera. Al usar el sistema, usted acepta:",
+      "oneShotModel": {
+        "title": "3. Modelo de Ejecución Única (One-Shot)",
+        "intro": "Cada transacción activa exactamente una ejecución irreversible. Este modelo es absoluto y no negociable. Específicamente:",
         "items": {
-          "accurate": "Proporcionar información precisa, actual y completa para la ejecución actual.",
-          "security": "Mantener la seguridad y confidencialidad de sus documentos descargados.",
-          "notify": "Asegurar que no se transmita información sensible fuera del contexto definido de ejecución.",
-          "responsible": "Ser responsable de todas las actividades que ocurran durante la sesión única de ejecución."
+          "ephemeral": "La ejecución corre una única vez en un entorno volátil y aislado, sin estado persistente.",
+          "noAccounts": "No se crea ninguna cuenta de usuario, perfil ni identidad en ningún momento.",
+          "noStorage": "Ningún documento, borrador ni metadato se retiene una vez finalizada la sesión de ejecución.",
+          "incineration": "Todos los materiales de entrada, borradores intermedios y el estado de ejecución son destruidos permanentemente al completarse o fallar la ejecución (Protocolo Incinerador)."
+        },
+        "conclusion": "El valor del sistema está contenido íntegramente en el artefacto final descargado. Una vez descargado y finalizada la sesión, el sistema no retiene nada."
+      },
+      "paymentAuthorization": {
+        "title": "4. Autorización de Pago",
+        "intro": "El pago no compra acceso, membresía, créditos ni un servicio continuo. El pago autoriza exactamente una ejecución irreversible. Las consecuencias de esta autorización son:",
+        "items": {
+          "authority": "El pago constituye una autoridad irrevocable para ejecutar un ciclo único de generación documental.",
+          "singleUse": "El token de ejecución emitido tras el pago es válido para un único uso y se destruye al ser consumido.",
+          "nonRefundable": "Una vez que la ejecución es autorizada y el proceso de generación comienza, el pago no es reembolsable, ya que el trabajo computacional se ha realizado de forma irreversible.",
+          "token": "Si la generación falla antes de completarse por un error del sistema, la reserva de pago será cancelada y no se capturará ningún cargo."
         }
       },
-      "acceptableUse": {
-        "title": "4. Uso Aceptable",
-        "intro": "Usted acepta no usar nuestros Servicios para:",
+      "noAccounts": {
+        "title": "5. Sin Cuentas, Sesiones ni Servicios Persistentes",
+        "intro": "Documentos.legal no proporciona ni proporcionará nunca:",
         "items": {
-          "illegal": "Violar cualquier ley, regulación o derechos de terceros aplicables.",
-          "harmful": "Cargar o transmitir virus, malware u otro código dañino.",
-          "infringe": "Infringir los derechos de propiedad intelectual de otros.",
-          "interfere": "Interferir o interrumpir la integridad o el rendimiento de nuestros Servicios.",
-          "unauthorized": "Intentar obtener acceso no autorizado a nuestros sistemas o interrumpir el procesamiento efímero."
+          "noUserAccounts": "Cuentas de usuario ni perfiles de ningún tipo.",
+          "noStorage": "Almacenamiento de documentos, bibliotecas ni archivos.",
+          "noDashboard": "Paneles de control, espacios de trabajo ni zonas administrativas.",
+          "noHistory": "Historial de ejecuciones, historial de documentos ni ningún registro de transacciones pasadas.",
+          "noSubscription": "Suscripciones, membresías, créditos ni facturación recurrente de ningún tipo."
+        }
+      },
+      "dataHandling": {
+        "title": "9. Tratamiento de Datos y Protocolo Incinerador",
+        "content1": "Todos los datos enviados para procesamiento — incluyendo el documento fuente, los metadatos extraídos y cualquier contexto suplementario — se procesan exclusivamente en memoria volátil durante una única sesión de ejecución. Ningún dato se escribe en almacenamiento persistente, se registra en sistemas de analítica, ni se transmite a terceros más allá de lo estrictamente necesario para ejecutar la generación.",
+        "content2": "Al finalizar la sesión (descarga, abandono o fallo), todo el estado en memoria se destruye de inmediata y completamente. Cyboring Technologies LLC no retiene copias de los documentos fuente, borradores generados ni ningún artefacto de ejecución. Esto no es una limitación técnica — es el modelo de operación."
+      },
+      "userResponsibilities": {
+        "title": "6. Responsabilidades del Usuario",
+        "intro": "Al iniciar una ejecución, usted confirma y acepta las siguientes responsabilidades:",
+        "items": {
+          "accurateInput": "Usted es responsable de la exactitud, integridad y legalidad de toda la información y los documentos enviados para procesamiento.",
+          "lawfulUse": "Usted confirma que utiliza el sistema para fines lícitos dentro de su jurisdicción.",
+          "noHarm": "No intentará abusar, realizar ingeniería inversa, inyectar contenido malicioso ni interferir con la infraestructura de ejecución de ninguna manera.",
+          "backup": "Reconoce que el artefacto descargado es el entregable final y único; usted es responsable de su resguardo tras la descarga."
+        }
+      },
+      "prohibitedUses": {
+        "title": "7. Usos Prohibidos",
+        "intro": "Usted acepta no utilizar este sistema para:",
+        "items": {
+          "illegal": "Generar documentos con fines ilegales, fraudulentos o engañosos.",
+          "harmful": "Cargar o transmitir malware, código dañino o datos diseñados para interrumpir o dañar la infraestructura.",
+          "infringe": "Violar los derechos de propiedad intelectual de terceros.",
+          "interfere": "Interferir, interrumpir o intentar eludir la integridad o seguridad del sistema.",
+          "unauthorized": "Intentar acceder al estado de ejecución, tokens o resultados pertenecientes a otras ejecuciones."
         }
       },
       "intellectualProperty": {
-        "title": "5. Propiedad Intelectual",
-        "content": "Los Servicios y todo el contenido, características y funcionalidad son propiedad de Cyboring y están protegidos por leyes internacionales de derechos de autor, marcas registradas, patentes, secretos comerciales y otras leyes de propiedad intelectual. No puede copiar, modificar, distribuir, vender o arrendar ninguna parte de nuestros Servicios sin nuestro consentimiento previo por escrito."
-      },
-      "userContent": {
-        "title": "6. Contenido del Usuario",
-        "content": "Usted conserva la propiedad de cualquier documento y contenido que cargue a nuestra infraestructura (\"Contenido del Usuario\"). Al cargar Contenido del Usuario, usted otorga a Cyboring una licencia limitada para procesar su contenido únicamente con el propósito de proporcionarle nuestros Servicios. No usamos su Contenido del Usuario para entrenar nuestra infraestructura de ejecución ni lo compartimos con terceros excepto según sea necesario para proporcionar los Servicios."
-      },
-      "payment": {
-        "title": "7. Términos de Pago",
-        "content": "Ciertas funciones de nuestros Servicios requieren pago. Usted acepta pagar todas las tarifas asociadas con su plan elegido. Las tarifas no son reembolsables excepto según lo requiera la ley o según se indique explícitamente en nuestra política de reembolso. Nos reservamos el derecho de cambiar nuestros precios con aviso razonable."
-      },
-      "termination": {
-        "title": "8. Terminación",
-        "content": "Podemos terminar o suspender su acceso a nuestros Servicios inmediatamente, sin previo aviso, por cualquier motivo, incluyendo si usted incumple estos Términos. Tras la terminación, su derecho a usar los Servicios cesará inmediatamente y todo el contexto de ejecución será destruido."
+        "title": "8. Propiedad Intelectual",
+        "content": "El motor de ejecución, su arquitectura, lógica de orquestación, sistemas de prompt y todo el software asociado son propiedad intelectual exclusiva de Cyboring Technologies LLC, protegidos bajo las leyes aplicables de derechos de autor, secretos comerciales y propiedad intelectual. Usted conserva la titularidad de los documentos fuente que carga y del artefacto generado que descarga. No adquiere ningún derecho sobre el motor de ejecución ni sus componentes."
       },
       "disclaimer": {
-        "title": "9. Exención de Garantías",
-        "content": "LOS SERVICIOS SE PROPORCIONAN \"TAL CUAL\" Y \"SEGÚN DISPONIBILIDAD\" SIN GARANTÍAS DE NINGÚN TIPO, YA SEAN EXPRESAS O IMPLÍCITAS, INCLUYENDO PERO NO LIMITADO A GARANTÍAS IMPLÍCITAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. CYBORING NO GARANTIZA QUE LOS SERVICIOS SERÁN ININTERRUMPIDOS, LIBRES DE ERRORES O SEGUROS."
+        "title": "10. Exención de Garantías",
+        "content": "EL SISTEMA SE PROPORCIONA \"TAL CUAL\" Y \"SEGÚN DISPONIBILIDAD\" SIN GARANTÍAS DE NINGÚN TIPO, EXPRESAS NI IMPLÍCITAS. CYBORING NO GARANTIZA QUE NINGUNA EJECUCIÓN DETERMINADA PRODUCIRÁ UN DOCUMENTO APTO PARA NINGÚN PROPÓSITO LEGAL ESPECÍFICO, NI QUE EL SISTEMA OPERARÁ SIN INTERRUPCIONES NI ERRORES. EL USUARIO ES EL ÚNICO RESPONSABLE DE REVISAR, VALIDAR Y DECIDIR SI UTILIZA EL DOCUMENTO GENERADO."
       },
       "liability": {
-        "title": "10. Limitación de Responsabilidad",
-        "content": "EN LA MÁXIMA MEDIDA PERMITIDA POR LA LEY, CYBORING NO SERÁ RESPONSABLE POR DAÑOS INDIRECTOS, INCIDENTALES, ESPECIALES, CONSECUENTES O PUNITIVOS, INCLUYENDO PÉRDIDA DE GANANCIAS, DATOS O FONDO DE COMERCIO, QUE SURJAN DE O ESTÉN RELACIONADOS CON SU USO DE LOS SERVICIOS. NUESTRA RESPONSABILIDAD TOTAL NO EXCEDERÁ EL MONTO QUE NOS PAGÓ EN LOS DOCE MESES ANTERIORES A LA RECLAMACIÓN."
+        "title": "11. Limitación de Responsabilidad",
+        "content": "EN LA MÁXIMA MEDIDA PERMITIDA POR LA LEY APLICABLE, LA RESPONSABILIDAD TOTAL DE CYBORING DERIVADA DE O RELACIONADA CON UNA EJECUCIÓN ÚNICA NO EXCEDERÁ EL MONTO PAGADO POR ESA EJECUCIÓN ESPECÍFICA. CYBORING NO SERÁ RESPONSABLE POR DAÑOS INDIRECTOS, INCIDENTALES, CONSECUENTES NI PUNITIVOS DE NINGÚN TIPO. DADO QUE CADA EJECUCIÓN ES UN EVENTO AISLADO DE USO ÚNICO, LA LIMITACIÓN DE RESPONSABILIDAD ES IGUALMENTE AISLADA Y NO SE ACUMULA ENTRE MÚLTIPLES TRANSACCIONES."
       },
       "indemnification": {
-        "title": "11. Indemnización",
-        "content": "Usted acepta indemnizar, defender y mantener indemne a Cyboring y a sus funcionarios, directores, empleados y agentes de cualquier reclamación, daño, pérdida, responsabilidad y gasto (incluyendo honorarios de abogados) que surja de su uso de los Servicios, su Contenido del Usuario o su violación de estos Términos."
+        "title": "12. Indemnización",
+        "content": "Usted acepta indemnizar, defender y mantener indemne a Cyboring Technologies LLC y a sus funcionarios, directores, empleados y agentes frente a cualquier reclamación, daño, pérdida, responsabilidad y gasto (incluyendo honorarios razonables de abogados) que surja del uso del sistema, los documentos que envió, el contenido del artefacto generado o su incumplimiento de estos Términos."
       },
       "governingLaw": {
-        "title": "12. Ley Aplicable",
-        "content": "Estos Términos se regirán e interpretarán de acuerdo con las leyes del Estado de Delaware, Estados Unidos, sin tener en cuenta sus disposiciones sobre conflicto de leyes. Cualquier disputa que surja de estos Términos se resolverá en los tribunales estatales o federales ubicados en Delaware."
+        "title": "13. Ley Aplicable",
+        "content": "Estos Términos se regirán e interpretarán de acuerdo con las leyes del Estado de Delaware, Estados Unidos, sin considerar sus disposiciones sobre conflicto de leyes. Cualquier disputa derivada de una transacción se resolverá en los tribunales estatales o federales ubicados en Delaware."
+      },
+      "operatingEntity": {
+        "title": "14. Entidad Operadora",
+        "intro": "La infraestructura de ejecución que opera bajo Documentos.legal es propiedad y está operada por:",
+        "companyName": "Cyboring Technologies LLC",
+        "state": "Estado de Delaware, Estados Unidos",
+        "registeredOfficeTitle": "Oficina Registrada",
+        "addressLine1": "131 Continental Dr, Suite 305",
+        "addressLine2": "Newark, DE 19713",
+        "addressLine3": "New Castle County",
+        "infrastructureTitle": "Infraestructura de Ejecución",
+        "infrastructureContent": "Documentos.legal es una infraestructura autónoma de ejecución. No es un servicio gestionado, plataforma ni aplicación con continuidad orientada al usuario.",
+        "paymentProcessingTitle": "Procesamiento de Pagos",
+        "paymentProcessingContent": "Todos los pagos se procesan a través de Stripe, Inc., procesador de pagos de terceros. El pago autoriza la ejecución — no crea una relación, cuenta ni derecho más allá de la ejecución única autorizada.",
+        "executionInfrastructureTitle": "Infraestructura Técnica",
+        "executionInfrastructureContent": "El motor de ejecución opera en la red Edge de Cloudflare utilizando Durable Objects efímeros. Todo el procesamiento es sin estado y aislado por sesión por diseño arquitectónico."
       },
       "changes": {
-        "title": "13. Cambios a los Términos",
-        "content": "Nos reservamos el derecho de modificar estos Términos en cualquier momento. Proporcionaremos aviso de cambios materiales publicando los Términos actualizados en nuestro sitio web y actualizando la fecha de \"Última actualización\". Su uso continuado de los Servicios después de que los cambios entren en vigor constituye su aceptación de los Términos revisados."
+        "title": "15. Cambios a los Términos",
+        "content": "Nos reservamos el derecho de modificar estos Términos en cualquier momento. Los Términos actualizados se publicarán en esta página con una fecha revisada. Dado que cada ejecución es un evento discreto y único, los Términos vigentes en el momento de la autorización del pago rigen esa ejecución. Las ejecuciones futuras, si las hubiera, se regirán por los Términos vigentes en ese momento."
       },
       "contact": {
-        "title": "14. Contáctenos",
-        "content": "Si tiene alguna pregunta sobre estos Términos, contáctenos en:",
-        "email": "Correo electrónico"
+        "title": "16. Contacto",
+        "content": "Para consultas legales relacionadas con estos Términos, contáctenos en:",
+        "email": "Correo electrónico",
+        "companyName": "Cyboring Technologies LLC"
       }
     }
   },

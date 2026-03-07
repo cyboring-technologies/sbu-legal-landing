@@ -26,14 +26,17 @@ export default function TermsContent() {
           {/* Content */}
           <FadeIn direction="up" delay={200}>
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              {/* Introduction */}
+              {/* 1. Introduction */}
               <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                  {t('sections.introduction.title')}
+                </h2>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  {t('introduction')}
+                  {t('sections.introduction.content')}
                 </p>
               </section>
 
-              {/* Acceptance of Terms */}
+              {/* 2. Acceptance of Terms */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   {t('sections.acceptance.title')}
@@ -43,7 +46,7 @@ export default function TermsContent() {
                 </p>
               </section>
 
-              {/* Description of Service */}
+              {/* 3. Description of Service */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   {t('sections.description.title')}
@@ -53,40 +56,92 @@ export default function TermsContent() {
                 </p>
               </section>
 
-              {/* User Accounts */}
+              {/* 4. One-Shot Execution Model */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                  {t('sections.accounts.title')}
+                  {t('sections.oneShotModel.title')}
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  {t('sections.accounts.intro')}
+                  {t('sections.oneShotModel.intro')}
+                </p>
+                <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mb-4">
+                  <li>{t('sections.oneShotModel.items.ephemeral')}</li>
+                  <li>{t('sections.oneShotModel.items.noAccounts')}</li>
+                  <li>{t('sections.oneShotModel.items.noStorage')}</li>
+                  <li>{t('sections.oneShotModel.items.incineration')}</li>
+                </ul>
+                <p className="text-gray-700 dark:text-gray-300">
+                  {t('sections.oneShotModel.conclusion')}
+                </p>
+              </section>
+
+              {/* 4. Payment Authorization */}
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                  {t('sections.paymentAuthorization.title')}
+                </h2>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  {t('sections.paymentAuthorization.intro')}
                 </p>
                 <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                  <li>{t('sections.accounts.items.accurate')}</li>
-                  <li>{t('sections.accounts.items.security')}</li>
-                  <li>{t('sections.accounts.items.notify')}</li>
-                  <li>{t('sections.accounts.items.responsible')}</li>
+                  <li>{t('sections.paymentAuthorization.items.authority')}</li>
+                  <li>{t('sections.paymentAuthorization.items.singleUse')}</li>
+                  <li>{t('sections.paymentAuthorization.items.nonRefundable')}</li>
+                  <li>{t('sections.paymentAuthorization.items.token')}</li>
                 </ul>
               </section>
 
-              {/* Acceptable Use */}
+              {/* 5. No Accounts or Persistent Services */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                  {t('sections.acceptableUse.title')}
+                  {t('sections.noAccounts.title')}
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  {t('sections.acceptableUse.intro')}
+                  {t('sections.noAccounts.intro')}
                 </p>
                 <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                  <li>{t('sections.acceptableUse.items.illegal')}</li>
-                  <li>{t('sections.acceptableUse.items.harmful')}</li>
-                  <li>{t('sections.acceptableUse.items.infringe')}</li>
-                  <li>{t('sections.acceptableUse.items.interfere')}</li>
-                  <li>{t('sections.acceptableUse.items.unauthorized')}</li>
+                  <li>{t('sections.noAccounts.items.noUserAccounts')}</li>
+                  <li>{t('sections.noAccounts.items.noStorage')}</li>
+                  <li>{t('sections.noAccounts.items.noDashboard')}</li>
+                  <li>{t('sections.noAccounts.items.noHistory')}</li>
+                  <li>{t('sections.noAccounts.items.noSubscription')}</li>
                 </ul>
               </section>
 
-              {/* Intellectual Property */}
+              {/* 6. User Responsibilities */}
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                  {t('sections.userResponsibilities.title')}
+                </h2>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  {t('sections.userResponsibilities.intro')}
+                </p>
+                <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                  <li>{t('sections.userResponsibilities.items.accurateInput')}</li>
+                  <li>{t('sections.userResponsibilities.items.lawfulUse')}</li>
+                  <li>{t('sections.userResponsibilities.items.noHarm')}</li>
+                  <li>{t('sections.userResponsibilities.items.backup')}</li>
+                </ul>
+              </section>
+
+              {/* 7. Prohibited Uses */}
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                  {t('sections.prohibitedUses.title')}
+                </h2>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  {t('sections.prohibitedUses.intro')}
+                </p>
+                <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                  <li>{t('sections.prohibitedUses.items.illegal')}</li>
+                  <li>{t('sections.prohibitedUses.items.harmful')}</li>
+                  <li>{t('sections.prohibitedUses.items.infringe')}</li>
+                  <li>{t('sections.prohibitedUses.items.interfere')}</li>
+                  <li>{t('sections.prohibitedUses.items.unauthorized')}</li>
+                </ul>
+              </section>
+
+              {/* 8. Intellectual Property */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   {t('sections.intellectualProperty.title')}
@@ -96,35 +151,20 @@ export default function TermsContent() {
                 </p>
               </section>
 
-              {/* User Content */}
+              {/* 9. Data Handling and Privacy */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                  {t('sections.userContent.title')}
+                  {t('sections.dataHandling.title')}
                 </h2>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  {t('sections.dataHandling.content1')}
+                </p>
                 <p className="text-gray-700 dark:text-gray-300">
-                  {t('sections.userContent.content')}
+                  {t('sections.dataHandling.content2')}
                 </p>
               </section>
 
-              {/* Payment Terms */}
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                  {t('sections.payment.title')}
-                </h2>
-                <p className="text-gray-700 dark:text-gray-300">{t('sections.payment.content')}</p>
-              </section>
-
-              {/* Termination */}
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                  {t('sections.termination.title')}
-                </h2>
-                <p className="text-gray-700 dark:text-gray-300">
-                  {t('sections.termination.content')}
-                </p>
-              </section>
-
-              {/* Disclaimer of Warranties */}
+              {/* 10. Disclaimer of Warranties */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   {t('sections.disclaimer.title')}
@@ -134,7 +174,7 @@ export default function TermsContent() {
                 </p>
               </section>
 
-              {/* Limitation of Liability */}
+              {/* 10. Limitation of Liability */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   {t('sections.liability.title')}
@@ -144,7 +184,7 @@ export default function TermsContent() {
                 </p>
               </section>
 
-              {/* Indemnification */}
+              {/* 11. Indemnification */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   {t('sections.indemnification.title')}
@@ -154,7 +194,7 @@ export default function TermsContent() {
                 </p>
               </section>
 
-              {/* Governing Law */}
+              {/* 12. Governing Law */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   {t('sections.governingLaw.title')}
@@ -164,7 +204,58 @@ export default function TermsContent() {
                 </p>
               </section>
 
-              {/* Changes to Terms */}
+              {/* 13. Operating Entity */}
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                  {t('sections.operatingEntity.title')}
+                </h2>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  {t('sections.operatingEntity.intro')}
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  {t('sections.operatingEntity.companyName')}<br />
+                  {t('sections.operatingEntity.state')}
+                </p>
+                <div className="mb-6">
+                  <p className="text-gray-700 dark:text-gray-300 font-semibold mb-1">
+                    {t('sections.operatingEntity.registeredOfficeTitle')}
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    {t('sections.operatingEntity.addressLine1')}<br />
+                    {t('sections.operatingEntity.addressLine2')}<br />
+                    {t('sections.operatingEntity.addressLine3')}
+                  </p>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    {t('sections.operatingEntity.infrastructureTitle')}
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    {t('sections.operatingEntity.infrastructureContent')}
+                  </p>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    {t('sections.operatingEntity.paymentProcessingTitle')}
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    {t('sections.operatingEntity.paymentProcessingContent')}
+                  </p>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    {t('sections.operatingEntity.executionInfrastructureTitle')}
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    {t('sections.operatingEntity.executionInfrastructureContent')}
+                  </p>
+                </div>
+              </section>
+
+              {/* 14. Changes to Terms */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   {t('sections.changes.title')}
@@ -172,85 +263,7 @@ export default function TermsContent() {
                 <p className="text-gray-700 dark:text-gray-300">{t('sections.changes.content')}</p>
               </section>
 
-              {/* Data Processing Model */}
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Data Processing Model
-                </h2>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  <strong>documentos.legal</strong> operates under an ephemeral processing architecture.
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  Documents uploaded by users are processed exclusively in volatile memory during a single execution session.
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  The platform does not provide:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mb-4">
-                  <li>user accounts</li>
-                  <li>persistent storage</li>
-                  <li>document libraries</li>
-                  <li>historical access to processed files</li>
-                </ul>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  Once the execution cycle ends and the final document is delivered, all uploaded materials and intermediate drafts are permanently destroyed as part of the Incineration Protocol.
-                </p>
-                <p className="text-gray-700 dark:text-gray-300">
-                  Cyboring Technologies LLC does not retain copies of processed documents after the execution session is terminated.
-                </p>
-              </section>
-
-              {/* Operating Entity */}
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Operating Entity
-                </h2>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  The infrastructure and services provided through <strong>documentos.legal</strong> are operated by the following legal entity:
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  Cyboring Technologies LLC<br />
-                  State of Delaware, United States
-                </p>
-                <div className="mb-6">
-                  <p className="text-gray-700 dark:text-gray-300 font-semibold mb-1">Registered Office</p>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    131 Continental Dr, Suite 305<br />
-                    Newark, DE 19713<br />
-                    New Castle County
-                  </p>
-                </div>
-
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    Operating Infrastructure
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    documentos.legal is an autonomous execution infrastructure operated by Cyboring Technologies LLC.
-                  </p>
-                </div>
-
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    Payment Processing
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    All payments are processed through Stripe, Inc., a third-party payment processor.
-                  </p>
-                </div>
-
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    Infrastructure
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    The execution infrastructure operates on the Cloudflare Edge Network.
-                  </p>
-                </div>
-              </section>
-
-
-              {/* Contact Us */}
+              {/* 15. Contact Us */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   {t('sections.contact.title')}
@@ -260,7 +273,7 @@ export default function TermsContent() {
                 </p>
                 <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
                   <p className="text-gray-900 dark:text-white font-semibold">
-                    Cyboring Hexagonal Technologies LLC
+                    {t('sections.contact.companyName')}
                   </p>
                   <p className="text-gray-700 dark:text-gray-300">
                     {t('sections.contact.email')}:{' '}
