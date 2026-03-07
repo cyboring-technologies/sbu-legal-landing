@@ -9,7 +9,6 @@ import {
   Rocket,
   Mail,
   MessageCircle,
-  Linkedin,
   Youtube,
   Lock,
   Code2,
@@ -125,7 +124,6 @@ const Footer = () => {
 
   const socialLinks = [
     { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@DocumentosLegal' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com' },
   ];
 
   return (

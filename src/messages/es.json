@@ -924,7 +924,7 @@
         "title": "Información que Recopilamos",
         "intro": "Recopilamos información que usted nos proporciona directamente e información que obtenemos automáticamente cuando utiliza nuestros Servicios:",
         "items": {
-          "personal": "Información Personal: Nombre, dirección de correo electrónico, número de teléfono, información de facturación y datos profesionales que proporciona al crear una cuenta o usar nuestros servicios.",
+          "personal": "Información Personal: Nombre, dirección de correo electrónico, número de teléfono, información de facturación y detalles profesionales que proporciona al iniciar una sesión de ejecución.",
           "usage": "Datos de Uso: Información sobre cómo interactúa con nuestra infraestructura, incluyendo documentos procesados, funciones utilizadas y tiempo en la infraestructura.",
           "device": "Información del Dispositivo: Dirección IP, tipo de navegador, sistema operativo e identificadores de dispositivo.",
           "cookies": "Cookies y Rastreo: Utilizamos cookies y tecnologías similares para mejorar su experiencia y analizar el uso de la infraestructura."
@@ -995,16 +995,16 @@
       },
       "description": {
         "title": "2. Descripción de los Servicios",
-        "content": "Cyboring proporciona una infraestructura de ingeniería documental que utiliza inteligencia artificial para ayudar a profesionales a crear, analizar y procesar documentos. Nuestros Servicios incluyen generación de documentos, extracción de metadatos, verificación de cumplimiento y otras funciones relacionadas. Nos reservamos el derecho de modificar, suspender o descontinuar cualquier parte de nuestros Servicios en cualquier momento."
+        "content": "Cyboring proporciona una infraestructura de ingeniería documental que utiliza un motor de ejecución de documentos procesales para ayudar a profesionales a crear, analizar y procesar documentos. Nuestros Servicios incluyen ejecución de documentos, extracción de metadatos, verificación de cumplimiento y otras funciones relacionadas. Nos reservamos el derecho de modificar, suspender o descontinuar cualquier parte de nuestros Servicios en cualquier momento."
       },
       "accounts": {
-        "title": "3. Cuentas de Usuario",
-        "intro": "Para acceder a ciertas funciones de nuestros Servicios, debe crear una cuenta. Al crear una cuenta, usted acepta:",
+        "title": "3. Sesión Única de Ejecución",
+        "intro": "Para acceder a nuestra infraestructura de ejecución, debe iniciar una sesión efímera. Al usar el sistema, usted acepta:",
         "items": {
-          "accurate": "Proporcionar información precisa, actual y completa durante el registro.",
-          "security": "Mantener la seguridad de su contraseña y credenciales de cuenta.",
-          "notify": "Notificarnos inmediatamente de cualquier acceso no autorizado a su cuenta.",
-          "responsible": "Ser responsable de todas las actividades que ocurran bajo su cuenta."
+          "accurate": "Proporcionar información precisa, actual y completa para la ejecución actual.",
+          "security": "Mantener la seguridad y confidencialidad de sus documentos descargados.",
+          "notify": "Asegurar que no se transmita información sensible fuera del contexto definido de ejecución.",
+          "responsible": "Ser responsable de todas las actividades que ocurran durante la sesión única de ejecución."
         }
       },
       "acceptableUse": {
@@ -1015,7 +1015,7 @@
           "harmful": "Cargar o transmitir virus, malware u otro código dañino.",
           "infringe": "Infringir los derechos de propiedad intelectual de otros.",
           "interfere": "Interferir o interrumpir la integridad o el rendimiento de nuestros Servicios.",
-          "unauthorized": "Intentar obtener acceso no autorizado a nuestros sistemas o cuentas de otros usuarios."
+          "unauthorized": "Intentar obtener acceso no autorizado a nuestros sistemas o interrumpir el procesamiento efímero."
         }
       },
       "intellectualProperty": {
@@ -1024,7 +1024,7 @@
       },
       "userContent": {
         "title": "6. Contenido del Usuario",
-        "content": "Usted conserva la propiedad de cualquier documento y contenido que cargue a nuestra infraestructura (\"Contenido del Usuario\"). Al cargar Contenido del Usuario, usted otorga a Cyboring una licencia limitada para procesar su contenido únicamente con el propósito de proporcionarle nuestros Servicios. No usamos su Contenido del Usuario para entrenar nuestros modelos de IA ni lo compartimos con terceros excepto según sea necesario para proporcionar los Servicios."
+        "content": "Usted conserva la propiedad de cualquier documento y contenido que cargue a nuestra infraestructura (\"Contenido del Usuario\"). Al cargar Contenido del Usuario, usted otorga a Cyboring una licencia limitada para procesar su contenido únicamente con el propósito de proporcionarle nuestros Servicios. No usamos su Contenido del Usuario para entrenar nuestra infraestructura de ejecución ni lo compartimos con terceros excepto según sea necesario para proporcionar los Servicios."
       },
       "payment": {
         "title": "7. Términos de Pago",
@@ -1032,7 +1032,7 @@
       },
       "termination": {
         "title": "8. Terminación",
-        "content": "Podemos terminar o suspender su acceso a nuestros Servicios inmediatamente, sin previo aviso, por cualquier motivo, incluyendo si usted incumple estos Términos. Tras la terminación, su derecho a usar los Servicios cesará inmediatamente. También puede terminar su cuenta en cualquier momento contactándonos."
+        "content": "Podemos terminar o suspender su acceso a nuestros Servicios inmediatamente, sin previo aviso, por cualquier motivo, incluyendo si usted incumple estos Términos. Tras la terminación, su derecho a usar los Servicios cesará inmediatamente y todo el contexto de ejecución será destruido."
       },
       "disclaimer": {
         "title": "9. Exención de Garantías",

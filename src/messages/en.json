@@ -964,7 +964,7 @@
         "title": "Information We Collect",
         "intro": "We collect information that you provide directly to us and information we obtain automatically when you use our Services:",
         "items": {
-          "personal": "Personal Information: Name, email address, phone number, billing information, and professional details you provide when creating an account or using our services.",
+          "personal": "Personal Information: Name, email address, phone number, billing information, and professional details you provide when initiating a single execution session.",
           "usage": "Usage Data: Information about how you interact with our infrastructure, including documents processed, features used, and time spent on the infrastructure.",
           "device": "Device Information: IP address, browser type, operating system, and device identifiers.",
           "cookies": "Cookies and Tracking: We use cookies and similar technologies to enhance your experience and analyze infrastructure usage."
@@ -1035,16 +1035,16 @@
       },
       "description": {
         "title": "2. Description of Services",
-        "content": "Cyboring provides a document engineering infrastructure that uses artificial intelligence to help professionals create, analyze, and process documents. Our Services include document generation, metadata extraction, compliance checking, and other related features. We reserve the right to modify, suspend, or discontinue any part of our Services at any time."
+        "content": "Cyboring provides a document engineering infrastructure that uses a procedural document execution engine to help professionals create, analyze, and process documents. Our Services include document execution, metadata extraction, compliance checking, and other related features. We reserve the right to modify, suspend, or discontinue any part of our Services at any time."
       },
       "accounts": {
-        "title": "3. User Accounts",
-        "intro": "To access certain features of our Services, you must create an account. When you create an account, you agree to:",
+        "title": "3. Single Execution Session",
+        "intro": "To access our execution infrastructure, you must initiate an ephemeral session. When you use the system, you agree to:",
         "items": {
-          "accurate": "Provide accurate, current, and complete information during registration.",
-          "security": "Maintain the security of your password and account credentials.",
-          "notify": "Notify us immediately of any unauthorized access to your account.",
-          "responsible": "Be responsible for all activities that occur under your account."
+          "accurate": "Provide accurate, current, and complete information for the current execution.",
+          "security": "Maintain the security and confidentiality of your downloaded documents.",
+          "notify": "Ensure that no sensitive data is transmitted outside the defined execution context.",
+          "responsible": "Be responsible for all activities that occur during the single execution session."
         }
       },
       "acceptableUse": {
@@ -1055,7 +1055,7 @@
           "harmful": "Upload or transmit viruses, malware, or other harmful code.",
           "infringe": "Infringe upon intellectual property rights of others.",
           "interfere": "Interfere with or disrupt the integrity or performance of our Services.",
-          "unauthorized": "Attempt to gain unauthorized access to our systems or other users' accounts."
+          "unauthorized": "Attempt to gain unauthorized access to our systems or disrupt the ephemeral processing."
         }
       },
       "intellectualProperty": {
@@ -1064,7 +1064,7 @@
       },
       "userContent": {
         "title": "6. User Content",
-        "content": "You retain ownership of any documents and content you upload to our infrastructure (\"User Content\"). By uploading User Content, you grant Cyboring a limited license to process your content solely for the purpose of providing our Services to you. We do not use your User Content to train our AI models or share it with third parties except as necessary to provide the Services."
+        "content": "You retain ownership of any documents and content you upload to our infrastructure (\"User Content\"). By uploading User Content, you grant Cyboring a limited license to process your content solely for the purpose of providing our Services to you. We do not use your User Content to train our execution infrastructure or share it with third parties except as necessary to provide the Services."
       },
       "payment": {
         "title": "7. Payment Terms",
@@ -1072,7 +1072,7 @@
       },
       "termination": {
         "title": "8. Termination",
-        "content": "We may terminate or suspend your access to our Services immediately, without prior notice, for any reason, including if you breach these Terms. Upon termination, your right to use the Services will cease immediately. You may also terminate your account at any time by contacting us."
+        "content": "We may terminate or suspend your access to our Services immediately, without prior notice, for any reason, including if you breach these Terms. Upon termination, your right to use the Services will cease immediately, and all execution context is destroyed."
       },
       "disclaimer": {
         "title": "9. Disclaimer of Warranties",

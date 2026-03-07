@@ -1,0 +1,40 @@
+tests/unit/AntiPages.test.tsx(24,35): error TS2741: Property 'locale' is missing in type '{ data: any; }' but required in type 'AntiPageProps'.
+tests/unit/AntiPages.test.tsx(29,35): error TS2741: Property 'locale' is missing in type '{ data: any; }' but required in type 'AntiPageProps'.
+tests/unit/example.test.tsx(124,15): error TS2322: Type '{ children: string; href: string; }' is not assignable to type 'IntrinsicAttributes & CTAButtonProps'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(131,10): error TS2322: Type '{ children: string; href: string; variant: "primary"; }' is not assignable to type 'IntrinsicAttributes & CTAButtonProps'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; variant: "primary"; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(142,10): error TS2322: Type '{ children: string; href: string; variant: "secondary"; }' is not assignable to type 'IntrinsicAttributes & CTAButtonProps'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; variant: "secondary"; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(154,10): error TS2322: Type '{ children: string; href: string; icon: true; }' is not assignable to type 'IntrinsicAttributes & CTAButtonProps'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; icon: true; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(164,10): error TS2322: Type '{ children: string; href: string; icon: false; }' is not assignable to type 'IntrinsicAttributes & CTAButtonProps'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; icon: false; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(176,10): error TS2322: Type '{ children: string; href: string; size: "sm"; }' is not assignable to type 'IntrinsicAttributes & CTAButtonProps'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; size: "sm"; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(188,10): error TS2322: Type '{ children: string; href: string; size: "md"; }' is not assignable to type 'IntrinsicAttributes & CTAButtonProps'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; size: "md"; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(200,10): error TS2322: Type '{ children: string; href: string; size: "lg"; }' is not assignable to type 'IntrinsicAttributes & CTAButtonProps'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; size: "lg"; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(212,15): error TS2322: Type '{ children: string; href: string; }' is not assignable to type 'IntrinsicAttributes & CTAButtonProps'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(223,10): error TS2322: Type '{ children: string; href: string; onClick: Mock<any, any, any>; }' is not assignable to type 'IntrinsicAttributes & CTAButtonProps'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; onClick: Mock<any, any, any>; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(236,10): error TS2322: Type '{ children: string; href: string; className: string; }' is not assignable to type 'IntrinsicAttributes & CTAButtonProps'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; className: string; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(253,15): error TS2322: Type '{ children: string; href: string; }' is not assignable to type 'IntrinsicAttributes & CTAButton2Props'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(260,10): error TS2322: Type '{ children: string; href: string; variant: "outline"; }' is not assignable to type 'IntrinsicAttributes & CTAButton2Props'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; variant: "outline"; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(272,10): error TS2322: Type '{ children: string; href: string; variant: "ghost"; }' is not assignable to type 'IntrinsicAttributes & CTAButton2Props'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; variant: "ghost"; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(289,10): error TS2322: Type '{ children: string; href: string; onClick: Mock<any, any, any>; }' is not assignable to type 'IntrinsicAttributes & CTAButton2Props'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; onClick: Mock<any, any, any>; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(301,15): error TS2322: Type '{ children: string; href: string; }' is not assignable to type 'IntrinsicAttributes & CTAButton2Props'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(310,10): error TS2322: Type '{ children: string; href: string; size: "sm"; }' is not assignable to type 'IntrinsicAttributes & CTAButton2Props'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; size: "sm"; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(317,10): error TS2322: Type '{ children: string; href: string; size: "md"; }' is not assignable to type 'IntrinsicAttributes & CTAButton2Props'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; size: "md"; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
+tests/unit/example.test.tsx(324,10): error TS2322: Type '{ children: string; href: string; size: "lg"; }' is not assignable to type 'IntrinsicAttributes & CTAButton2Props'.
+  Property 'ctaType' is missing in type '{ children: string; href: string; size: "lg"; }' but required in type '{ ctaType: "cta-4"; href?: string | undefined; target?: "_self" | "_blank" | undefined; rel?: string | undefined; }'.
