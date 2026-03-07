@@ -149,6 +149,15 @@ export default function AntiPage({ data }: AntiPageProps) {
           {replaceLabel(data.cta.label)}
         </CTAButton>
       </section>
+
+      <footer className="mt-16 pt-6 border-t border-border/40 text-center text-xs text-muted-foreground space-y-1">
+        <p>
+          <a href="/legal/terms" className="hover:underline">Términos de Servicio</a>
+          {' · '}
+          <a href="/legal/privacy" className="hover:underline">Política de Privacidad</a>
+        </p>
+        <p>Cyboring Technologies LLC</p>
+      </footer>
     </main>
   );
 }
