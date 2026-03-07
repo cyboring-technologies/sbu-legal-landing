@@ -92,6 +92,7 @@ export default async function BlogPostPage({
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": t(`posts.${postId}.title`),
+    "datePublished": t(`posts.${postId}.date`),
     "author": {
       "@type": "Organization",
       "name": "Cyboring Technologies LLC"

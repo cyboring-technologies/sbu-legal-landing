@@ -67,9 +67,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@type": "Organization",
               "name": "Cyboring Technologies LLC",
               "url": "https://documentos.legal",
+              "logo": "https://documentos.legal/logo.png",
               "brand": {
                 "@type": "Brand",
                 "name": "documentos.legal"
+              },
+              "sameAs": [
+                "https://documentos.legal"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "hello@documentos.legal",
+                "contactType": "customer support"
               },
               "address": {
                 "@type": "PostalAddress",
@@ -78,6 +87,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "addressRegion": "DE",
                 "postalCode": "19713",
                 "addressCountry": "US"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "documentos.legal",
+              "url": "https://documentos.legal",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Cyboring Technologies LLC"
               }
             })
           }}

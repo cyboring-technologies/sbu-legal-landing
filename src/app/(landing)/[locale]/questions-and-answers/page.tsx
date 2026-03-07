@@ -140,12 +140,12 @@ export default function QuestionsAndAnswersPage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqData.map((faq) => ({
+    "mainEntity": faqData.slice(0, 6).map((faq) => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": faq.answer
+        "text": faq.answer.length > 300 ? faq.answer.slice(0, 297) + '...' : faq.answer
       }
     }))
   };

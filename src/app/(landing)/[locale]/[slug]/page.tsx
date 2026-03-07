@@ -38,8 +38,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const jurisdictionLabel = JURISDICTION_LABELS[pageData.jurisdiction] || pageData.jurisdiction;
 
   return {
-    title: `${pageData.service} en ${jurisdictionLabel} — Generar Escrito Legal | SBU-Legal`,
-    description: `Genere su escrito legal para ${pageData.service.toLowerCase()} en ${jurisdictionLabel} listo para presentar en minutos. Ejecución única. Sin cuentas. Sin almacenamiento.`,
+    title: `${pageData.service} en ${jurisdictionLabel} — Documento listo en minutos | documentos.legal`,
+    description: `Genere su escrito legal para ${pageData.service.toLowerCase()} en ${jurisdictionLabel} listo para presentar en minutos. Sin cuentas. Sin almacenamiento. Ejecución única.`,
     alternates: {
       canonical: `https://documentos.legal/${slug}`,
     },
@@ -64,10 +64,14 @@ export default async function Page({ params }: Props) {
     ...pageData,
   };
 
+  const jurisdictionLabel = JURISDICTION_LABELS[pageData.jurisdiction] || pageData.jurisdiction;
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": pageData.service,
+    "serviceType": "Generación de escrito procesal",
+    "areaServed": jurisdictionLabel,
     "provider": {
       "@type": "Organization",
       "name": "Cyboring Technologies LLC"
@@ -76,12 +80,38 @@ export default async function Page({ params }: Props) {
       "@type": "Brand",
       "name": "documentos.legal"
     },
-    "serviceType": "Procedural Legal Document Generation"
+    "url": `https://documentos.legal/${slug}`
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://documentos.legal"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Servicios",
+        "item": "https://documentos.legal/our-services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": pageData.service,
+        "item": `https://documentos.legal/${slug}`
+      }
+    ]
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <AntiPage data={antiPageData} locale={locale} />
     </>
   );
