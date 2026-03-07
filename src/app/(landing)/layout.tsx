@@ -66,6 +66,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Cyboring Technologies LLC",
+              "legalName": "Cyboring Technologies LLC",
+              "foundingOrganization": {
+                "@type": "Organization",
+                "name": "Cyboring Technologies LLC"
+              },
               "url": "https://documentos.legal",
               "logo": "https://documentos.legal/logo.png",
               "brand": {
@@ -115,6 +120,41 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "name": "documentos.legal",
               "url": "https://documentos.legal",
               "description": "Infraestructura de ejecución documental para generar escritos judiciales listos para presentar."
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "SiteNavigationElement",
+                  "name": "Home",
+                  "url": "https://documentos.legal"
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  "name": "Servicios",
+                  "url": "https://documentos.legal/our-services"
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  "name": "Pricing",
+                  "url": "https://cyboring.com/pricing"
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  "name": "Questions",
+                  "url": "https://documentos.legal/questions-and-answers"
+                },
+                {
+                  "@type": "SiteNavigationElement",
+                  "name": "Blog",
+                  "url": "https://documentos.legal/blog"
+                }
+              ]
             })
           }}
         />

@@ -7,10 +7,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticUrls: MetadataRoute.Sitemap = [
     {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
       url: corporateUrl,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 1.0,
+      priority: 0.8,
     },
     {
       url: `${corporateUrl}/pricing`,
@@ -22,7 +28,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${corporateUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.7,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.6,
     },
     {
       url: `${corporateUrl}/legal/terms`,
@@ -42,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/${page.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
-    priority: 0.8,
+    priority: 0.9,
   }));
 
   return [...staticUrls, ...antiPageUrls];
