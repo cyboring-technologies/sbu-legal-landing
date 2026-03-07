@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${pageData.service} en ${jurisdictionLabel} — Generar Escrito Legal | SBU-Legal`,
-    description: `Genere el escrito legal para ${pageData.service.toLowerCase()} en ${jurisdictionLabel}. Ejecución única. Sin cuentas. Descarga inmediata del documento final.`,
+    description: `Genere su escrito legal para ${pageData.service.toLowerCase()} en ${jurisdictionLabel} listo para presentar en minutos. Ejecución única. Sin cuentas. Sin almacenamiento.`,
     alternates: {
       canonical: `https://documentos.legal/${slug}`,
     },
@@ -64,5 +64,25 @@ export default async function Page({ params }: Props) {
     ...pageData,
   };
 
-  return <AntiPage data={antiPageData} locale={locale} />;
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": pageData.service,
+    "provider": {
+      "@type": "Organization",
+      "name": "Cyboring Technologies LLC"
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "documentos.legal"
+    },
+    "serviceType": "Procedural Legal Document Generation"
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <AntiPage data={antiPageData} locale={locale} />
+    </>
+  );
 }

@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     template: '%s - Documentos.legal',
   },
   description:
-    'Infraestructura legal confiable, mínima y eficiente. Automatización de documentos sin fricción visual ni cognitiva.',
+    'Genere su documento jurídico listo para presentar en minutos. Ejecución única. Sin cuentas. Sin almacenamiento.',
   keywords: 'legal, automatización, documentos, b2b, infraestructura legal, documentos.legal',
   authors: [{ name: 'Documentos.legal' }],
   metadataBase: new URL('https://documentos.legal'),
   openGraph: {
     title: 'Documentos.legal',
-    description: 'Infraestructura legal confiable y automatizada.',
+    description: 'Genere su documento jurídico listo para presentar en minutos. Ejecución única. Sin cuentas. Sin almacenamiento.',
     url: 'https://documentos.legal',
     siteName: 'Documentos.legal',
     images: [],
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Documentos.legal',
-    description: 'Infraestructura legal confiable y automatizada.',
+    description: 'Genere su documento jurídico listo para presentar en minutos. Ejecución única. Sin cuentas. Sin almacenamiento.',
   },
   icons: {
     icon: [
@@ -59,6 +59,41 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html suppressHydrationWarning className={`${inter.variable} ${plexSans.variable}`}>
       <head>
         <ThemeScript />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Cyboring Technologies LLC",
+              "url": "https://documentos.legal",
+              "brand": {
+                "@type": "Brand",
+                "name": "documentos.legal"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "131 Continental Dr, Suite 305",
+                "addressLocality": "Newark",
+                "addressRegion": "DE",
+                "postalCode": "19713",
+                "addressCountry": "US"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Brand",
+              "name": "documentos.legal",
+              "url": "https://documentos.legal",
+              "description": "Infraestructura de ejecución documental para generar escritos judiciales listos para presentar."
+            })
+          }}
+        />
       </head>
       <body className={`${inter.className} antialiased bg-background text-foreground`}>
         <ThemeProvider

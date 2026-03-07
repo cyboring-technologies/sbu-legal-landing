@@ -88,8 +88,27 @@ export default async function BlogPostPage({
     htmlContent = '<p>Blog post not found.</p>';
   }
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": t(`posts.${postId}.title`),
+    "author": {
+      "@type": "Organization",
+      "name": "Cyboring Technologies LLC"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Cyboring Technologies LLC"
+    },
+    "about": {
+      "@type": "Brand",
+      "name": "documentos.legal"
+    }
+  };
+
   return (
     <Layout>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <PageTransition>
         {/* Back Button */}
         <div className="bg-background border-b border-border">

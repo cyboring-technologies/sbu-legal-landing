@@ -59,6 +59,26 @@ export default function OurServicesPage() {
 
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Generación de escritos judiciales",
+            "provider": {
+              "@type": "Organization",
+              "name": "Cyboring Technologies LLC"
+            },
+            "brand": {
+              "@type": "Brand",
+              "name": "documentos.legal"
+            },
+            "serviceType": "Legal Document Execution Infrastructure",
+            "areaServed": "Latin America"
+          })
+        }}
+      />
       <PageTransition>
         {/* Hero Section */}
         <div className="relative">
