@@ -1,4 +1,7 @@
 {
+  "branding": {
+    "authoritySignal": "Motor de Tecnología Legal"
+  },
   "navigation": {
     "services": "Servicios",
     "prices": "Precios",
