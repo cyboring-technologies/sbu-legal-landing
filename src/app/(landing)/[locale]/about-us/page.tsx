@@ -25,7 +25,6 @@ import {
   MapPin,
   Calendar,
   Mail,
-  Linkedin,
   Settings,
   Brain,
   Zap,
