@@ -8,6 +8,7 @@ import {
 } from '../../hooks/useIntersectionObserver';
 import { CTAButton } from '../CTAButtons';
 import { HtmlContent } from '../HtmlContent';
+import { Link } from '../../i18n/navigation';
 import { Scale, Target, Cpu, ArrowRight } from 'lucide-react';
 
 export const ServicesSection: React.FC = () => {
@@ -72,12 +73,12 @@ export const ServicesSection: React.FC = () => {
                   {tServices(`${card.key}.title`)}
                 </h3>
                 <p className="text-gray-600 mb-4">{tServices(`${card.key}.description`)}</p>
-                <a
+                <Link
                   href="/our-services"
                   className="text-blue-600 font-medium hover:text-blue-800 flex items-center"
                 >
                   Learn more <ArrowRight className="w-4 h-4 ml-1" />
-                </a>
+                </Link>
               </div>
             );
           })}

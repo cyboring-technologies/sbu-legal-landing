@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { CTAButton } from './CTAButtons';
+import { Link } from '../i18n/navigation';
 import antipages from '../data/antipages.json';
 
 export type AntiPageData = {
@@ -27,6 +28,7 @@ export type AntiPageData = {
 export type AntiPageProps = {
   data: AntiPageData;
   locale: string;
+  relatedPages: AntiPageData[];
 };
 
 const JURISDICTION_LABELS: Record<string, string> = {
@@ -35,26 +37,12 @@ const JURISDICTION_LABELS: Record<string, string> = {
   JUR_3: 'Chile',
 };
 
-export default function AntiPage({ data }: AntiPageProps) {
+export default function AntiPage({ data, relatedPages }: AntiPageProps) {
   const jurisdictionLabel = JURISDICTION_LABELS[data.jurisdiction] || data.jurisdiction;
 
   const replaceLabel = (text: string) => {
     return text.replace(new RegExp(data.jurisdiction, 'g'), jurisdictionLabel);
   };
-
-  const relatedPages = antipages
-    .filter(
-      (p) =>
-        p.jurisdiction === data.jurisdiction &&
-        p.service !== data.service &&
-        p.variant === data.variant && // Ensure we match the same variant context to avoid duplicate links of same semantic service
-        p.slug !== data.slug // Exclude current page
-    )
-    // Create unique list by service just to be sure we are showing distinct procedures
-    .filter((v, i, a) => a.findIndex(t => (t.service === v.service)) === i)
-    // Randomize
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 4);
 
   return (
     <main className="prose dark:prose-invert max-w-3xl mx-auto px-6 py-12">
@@ -135,9 +123,9 @@ export default function AntiPage({ data }: AntiPageProps) {
           <ul className="space-y-2">
             {relatedPages.map((page) => (
               <li key={page.slug}>
-                <a href={`/${page.slug}`} className="text-primary hover:underline font-medium">
+                <Link href={`/${page.slug}`} className="text-primary hover:underline font-medium">
                   {page.service} en {jurisdictionLabel}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -145,16 +133,23 @@ export default function AntiPage({ data }: AntiPageProps) {
       )}
 
       <section id="cta-block" className="mt-12 flex justify-center">
-        <CTAButton ctaType="cta-1" variant="primary" size="lg" icon={true}>
+        <CTAButton
+          ctaType="cta-1"
+          href="/engine"
+          variant="primary"
+          size="lg"
+          icon={true}
+          data-cta-label={data.cta.label}
+        >
           {replaceLabel(data.cta.label)}
         </CTAButton>
       </section>
 
       <footer className="mt-16 pt-6 border-t border-border/40 text-center text-xs text-muted-foreground space-y-1">
         <p>
-          <a href="/legal/terms" className="hover:underline">Términos de Servicio</a>
+          <Link href="/terms" className="hover:underline">Términos de Servicio</Link>
           {' · '}
-          <a href="/legal/privacy" className="hover:underline">Política de Privacidad</a>
+          <Link href="/privacy" className="hover:underline">Política de Privacidad</Link>
         </p>
         <p>Cyboring Technologies LLC</p>
       </footer>

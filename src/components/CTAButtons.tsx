@@ -52,7 +52,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
-  let finalHref = ctaType === 'cta-1' ? `${ENGINE_BASE}/` : href;
+  let finalHref = ctaType === 'cta-1' ? `/engine/` : href;
   const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
   const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
 
@@ -61,7 +61,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
     const params = new URLSearchParams();
     if (theme) params.set('theme', theme);
     params.set('lang', locale);
-    finalHref = `${ENGINE_BASE}/?${params.toString()}`;
+    finalHref = `/engine/?${params.toString()}`;
   }
 
   const baseClasses =
@@ -94,7 +94,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   const buttonContent = (
     <div className="relative inline-flex flex-col group/cta">
       {/* If href is not provided, or an onClick handler is present, render a button */}
-      {!href || onClick || ctaType === 'cta-2' ? (
+      {((!href && ctaType !== 'cta-1') || onClick || ctaType === 'cta-2') ? (
         <button
           onClick={(e) => {
             if (ctaType === 'cta-2') {
@@ -184,7 +184,7 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
   const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
-  let finalHref = ctaType === 'cta-1' ? `${ENGINE_BASE}/` : href;
+  let finalHref = ctaType === 'cta-1' ? `/engine/` : href;
   const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
   const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
 
@@ -193,7 +193,7 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
     const params = new URLSearchParams();
     if (theme) params.set('theme', theme);
     params.set('lang', locale);
-    finalHref = `${ENGINE_BASE}/?${params.toString()}`;
+    finalHref = `/engine/?${params.toString()}`;
   }
 
   const baseClasses =
@@ -224,7 +224,7 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
   const buttonContent = (
     <div className="relative inline-flex flex-col group/cta">
       {/* Logic for button or link */}
-      {onClick || ctaType === 'cta-2' ? (
+      {((!href && ctaType !== 'cta-1') || onClick || ctaType === 'cta-2') ? (
         <button
           onClick={(e) => {
             if (ctaType === 'cta-2') {

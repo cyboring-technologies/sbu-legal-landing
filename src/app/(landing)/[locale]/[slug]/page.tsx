@@ -161,12 +161,26 @@ export default async function Page({ params }: Props) {
     ]
   };
 
+  const allPages = (await import('../../../../data/antipages.json')).default;
+  const relatedPages = allPages
+    .filter(
+      (p: any) =>
+        p.jurisdiction === pageData.jurisdiction &&
+        p.service !== pageData.service &&
+        p.variant === pageData.variant &&
+        p.slug !== pageData.slug
+    )
+    .filter((v: any, i: number, a: any[]) => a.findIndex((t: any) => t.service === v.service) === i)
+    // Stable sort based on slug length or alphabetical to avoid Math.random() in SSR
+    .sort((a: any, b: any) => a.slug.localeCompare(b.slug))
+    .slice(0, 4);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <AntiPage data={antiPageData} locale={locale} />
+      <AntiPage data={antiPageData} locale={locale} relatedPages={relatedPages as any} />
     </>
   );
 }

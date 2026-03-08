@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../../../../../components/Layout';
 import { PageTransition } from '../../../../../components/ui/PageTransition';
 import { Calendar, Clock, Tag, ArrowLeft } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '../../../../../i18n/navigation';
 import { getTranslations } from 'next-intl/server';
 import showdown from 'showdown';
 import fs from 'fs/promises';
@@ -24,7 +24,13 @@ const blogFiles: Record<string, string> = {
 };
 
 export function generateStaticParams() {
-  return Object.keys(blogFiles).map((slug) => ({ slug }));
+  const locales = ['en', 'es'];
+  return locales.flatMap((locale) =>
+    Object.keys(blogFiles).map((slug) => ({
+      locale,
+      slug
+    }))
+  );
 }
 
 export default async function BlogPostPage({
@@ -115,7 +121,7 @@ export default async function BlogPostPage({
         <div className="bg-background border-b border-border">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <Link
-              href={`/${locale}`}
+              href="/"
               className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               {locale === 'es' ? 'Inicio' : 'Home'}

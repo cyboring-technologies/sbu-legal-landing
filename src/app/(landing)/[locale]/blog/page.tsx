@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '../../../../i18n/navigation';
 import Layout from '../../../../components/Layout';
 import Hero from '../../../../components/Hero';
 import { InteractiveGridPulse } from '../../../../components/InteractiveGridPulse';
@@ -68,7 +68,7 @@ export default function BlogPage() {
               {posts.map((post) => (
                 <Link
                   key={post.id}
-                  href={`/${locale}/blog/${t(`posts.${post.id}.slug`)}`}
+                  href={`/blog/${t(`posts.${post.id}.slug`)}`}
                   className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 block"
                 >
                   {/* Image Placeholder */}
