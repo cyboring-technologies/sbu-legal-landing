@@ -47,7 +47,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   note,
   tooltip,
 }) => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const locale = useLocale();
   const { openSecurityModal } = useModal();
 
@@ -59,7 +59,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   // Ephemeral Theme/Lang Handover for CTA-1
   if (ctaType === 'cta-1') {
     const params = new URLSearchParams();
-    if (theme) params.set('theme', theme);
+    if (resolvedTheme) params.set('theme', resolvedTheme);
     params.set('lang', locale);
     finalHref = `${ENGINE_BASE}/engine/?${params.toString()}`;
   }
