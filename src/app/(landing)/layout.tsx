@@ -72,7 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 "name": "Cyboring Technologies LLC"
               },
               "url": "https://documentos.legal",
-              "logo": "https://documentos.legal/logo.png",
+              "logo": "https://documentos.legal/logo-light-mode.svg",
               "brand": {
                 "@type": "Brand",
                 "name": "documentos.legal"

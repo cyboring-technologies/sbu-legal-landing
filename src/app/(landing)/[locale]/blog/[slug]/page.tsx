@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../../../../components/Layout';
 import { PageTransition } from '../../../../../components/ui/PageTransition';
 import { Calendar, Clock, Tag, ArrowLeft } from 'lucide-react';
+import { CTAButton } from '../../../../../components/CTAButtons';
 import { Link } from '../../../../../i18n/navigation';
 import { getTranslations } from 'next-intl/server';
 import showdown from 'showdown';
@@ -197,12 +198,14 @@ export default async function BlogPostPage({
                     ? 'Experimente el poder de la ingeniería documental de grado judicial.'
                     : 'Experience the power of judicial-grade document engineering.'}
                 </p>
-                <Link
+                <CTAButton
+                  ctaType="cta-1"
+                  variant="primary"
+                  size="lg"
                   href="/engine"
-                  className="inline-block px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors shadow-lg"
                 >
                   {locale === 'es' ? 'Iniciar Ejecución' : 'Start Execution'}
-                </Link>
+                </CTAButton>
               </div>
             </div>
           </div>

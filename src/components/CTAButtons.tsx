@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Resolved at build time by Next.js from NEXT_PUBLIC_ENGINE_URL.
-// In dev: 'http://localhost:8788'  |  In prod: '' (same-origin — CDN routes /engine/ to the engine worker)
+// In dev: 'http://localhost:8788'  |  In prod: '' (same-origin — CDN routes ${ENGINE_BASE}/engine/ to the engine worker)
 const ENGINE_BASE = process.env.NEXT_PUBLIC_ENGINE_URL ?? '';
 import { Link } from '../i18n/navigation';
 import { ArrowRight, ChevronRight } from 'lucide-react';
@@ -52,7 +52,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
-  let finalHref = ctaType === 'cta-1' ? `/engine/` : href;
+  let finalHref = ctaType === 'cta-1' ? `${ENGINE_BASE}/engine/` : href;
   const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
   const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
 
@@ -61,7 +61,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
     const params = new URLSearchParams();
     if (theme) params.set('theme', theme);
     params.set('lang', locale);
-    finalHref = `/engine/?${params.toString()}`;
+    finalHref = `${ENGINE_BASE}/engine/?${params.toString()}`;
   }
 
   const baseClasses =
@@ -184,7 +184,7 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
   const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
-  let finalHref = ctaType === 'cta-1' ? `/engine/` : href;
+  let finalHref = ctaType === 'cta-1' ? `${ENGINE_BASE}/engine/` : href;
   const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
   const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
 
@@ -193,7 +193,7 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
     const params = new URLSearchParams();
     if (theme) params.set('theme', theme);
     params.set('lang', locale);
-    finalHref = `/engine/?${params.toString()}`;
+    finalHref = `${ENGINE_BASE}/engine/?${params.toString()}`;
   }
 
   const baseClasses =
