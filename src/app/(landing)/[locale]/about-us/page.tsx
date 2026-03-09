@@ -80,18 +80,11 @@ export default function AboutUsPage() {
                       className="relative w-48 opacity-80 hover:opacity-100 transition-opacity block"
                     >
                       <Image
-                        src="/cyboring-logo-light-mode.svg"
+                        src="/cyboring-brand-logo.svg"
                         alt="Cyboring Technologies Logo"
                         width={200}
                         height={60}
-                        className="w-full h-auto dark:hidden"
-                      />
-                      <Image
-                        src="/cyboring-logo-dark-mode.svg"
-                        alt="Cyboring Technologies Logo"
-                        width={200}
-                        height={60}
-                        className="w-full h-auto hidden dark:block"
+                        className="w-full h-auto"
                       />
                     </Link>
                   </FadeIn>
