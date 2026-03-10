@@ -1,6 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+import { buildEngineURL } from '../../config/runtimeOrigins';
+import { useLocale } from 'next-intl';
+import { useTheme } from 'next-themes';
 
 interface CheckoutFlowProps {
   // No props required for Sovereign Handoff
@@ -9,10 +12,13 @@ interface CheckoutFlowProps {
 export const CheckoutFlow: React.FC<CheckoutFlowProps> = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const [isBlocked, setIsBlocked] = useState(false);
+  const locale = useLocale();
+  const { resolvedTheme } = useTheme();
 
   React.useEffect(() => {
     // Auto-redirect to remove "middle step" interaction
-    const handle = window.open('/engine', '_blank');
+    const url = buildEngineURL(locale, resolvedTheme);
+    const handle = window.open(url, '_blank');
 
     if (handle) {
       // Success: Close the parent modal to remove "Launching..." message
@@ -32,7 +38,8 @@ export const CheckoutFlow: React.FC<CheckoutFlowProps> = () => {
   }, []);
 
   const openEngine = () => {
-    window.open('/engine', '_blank');
+    const url = buildEngineURL(locale, resolvedTheme);
+    window.open(url, '_blank');
   };
 
   if (!isBlocked) {

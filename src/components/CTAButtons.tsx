@@ -1,8 +1,6 @@
 import React from 'react';
 
-// Resolved at build time by Next.js from NEXT_PUBLIC_ENGINE_URL.
-// In dev: 'http://localhost:8788'  |  In prod: '' (same-origin — CDN routes ${ENGINE_BASE}/engine/ to the engine worker)
-const ENGINE_BASE = process.env.NEXT_PUBLIC_ENGINE_URL ?? '';
+import { buildEngineURL } from '../config/runtimeOrigins';
 import { Link } from '../i18n/navigation';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import { useTheme } from 'next-themes';
@@ -52,17 +50,9 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
-  let finalHref = ctaType === 'cta-1' ? `${ENGINE_BASE}/engine/` : href;
+  let finalHref = ctaType === 'cta-1' ? buildEngineURL(locale, resolvedTheme) : href;
   const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
   const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
-
-  // Ephemeral Theme/Lang Handover for CTA-1
-  if (ctaType === 'cta-1') {
-    const params = new URLSearchParams();
-    if (resolvedTheme) params.set('theme', resolvedTheme);
-    params.set('lang', locale);
-    finalHref = `${ENGINE_BASE}/engine/?${params.toString()}`;
-  }
 
   const baseClasses =
     'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
@@ -184,17 +174,9 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
   const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
-  let finalHref = ctaType === 'cta-1' ? `${ENGINE_BASE}/engine/` : href;
+  let finalHref = ctaType === 'cta-1' ? buildEngineURL(locale, theme) : href;
   const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
   const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
-
-  // Ephemeral Theme/Lang Handover for CTA-1
-  if (ctaType === 'cta-1') {
-    const params = new URLSearchParams();
-    if (theme) params.set('theme', theme);
-    params.set('lang', locale);
-    finalHref = `${ENGINE_BASE}/engine/?${params.toString()}`;
-  }
 
   const baseClasses =
     'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 group';

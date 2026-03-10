@@ -3,9 +3,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useTheme } from 'next-themes';
 import { X, Mail, MessageCircle } from 'lucide-react';
+import { buildEngineURL } from '../../../config/runtimeOrigins';
+import { useLocale } from 'next-intl';
 
 export default function ClientTerminal() {
     const { theme, resolvedTheme } = useTheme();
+    const locale = useLocale();
     const [isSupportModalOpen, setIsSupportModalOpen] = useState(false);
 
     const closeModal = useCallback(() => setIsSupportModalOpen(false), []);
@@ -65,8 +68,8 @@ export default function ClientTerminal() {
                     <button
                         onClick={() => {
                             const activeTheme = resolvedTheme || theme || 'light';
-                            const engineUrl = process.env.NEXT_PUBLIC_ENGINE_URL || '/engine';
-                            window.location.assign(`${engineUrl}/?theme=${activeTheme}`);
+                            const url = buildEngineURL(locale, activeTheme);
+                            window.location.assign(url);
                         }}
                         className="w-full inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-ring shadow-lg hover:shadow-xl hover:scale-95 px-8 py-4 text-lg"
                     >

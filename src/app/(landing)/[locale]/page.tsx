@@ -10,6 +10,7 @@ import {
 } from '../../../hooks/useIntersectionObserver';
 import Layout from '../../../components/Layout';
 import Hero from '../../../components/Hero';
+import { buildEngineURL } from '../../../config/runtimeOrigins';
 import { CTAButton } from '../../../components/CTAButtons';
 import { HtmlContent } from '../../../components/HtmlContent';
 import YouTube, { YouTubeProps } from 'react-youtube';
@@ -53,8 +54,8 @@ export default function HomePage() {
 
   const handleStartExecution = useCallback(() => {
     const activeTheme = resolvedTheme || theme || 'light';
-    const engineBase = process.env.NEXT_PUBLIC_ENGINE_URL || '';
-    window.open(`${engineBase}/?theme=${activeTheme}&lang=${locale}`, '_blank');
+    const url = buildEngineURL(locale, activeTheme);
+    window.open(url, '_blank');
   }, [theme, resolvedTheme, locale]);
 
   // SOVEREIGN MODE: No inline checkout state
