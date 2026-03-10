@@ -1,0 +1,97 @@
+
+> corporate-website@1.0.0 build
+> next build
+
+  Ôû▓ Next.js 14.2.33
+  - Environments: .env.local, .env.production
+
+   Creating an optimized production build ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+ Ô£ô Compiled successfully
+   Linting and checking validity of types ...
+
+./src/app/(landing)/terminal/ClientTerminal.tsx
+30:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+31:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/(landing)/[locale]/page.tsx
+186:47  Warning: The ref value 'problemsSectionRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'problemsSectionRef.current' to a variable inside the effect, and use that variable in the cleanup function.  react-hooks/exhaustive-deps
+
+./src/components/InteractiveGridPulse.tsx
+136:6  Warning: React Hook useEffect has missing dependencies: 'cellHeight' and 'cellWidth'. Either include them or remove the dependency array. If 'setCells' needs the current value of 'cellWidth', you can also switch to useReducer instead of useState and read 'cellWidth' in the reducer.  react-hooks/exhaustive-deps
+
+./src/components/sections/ProblemsSection.tsx
+55:47  Warning: The ref value 'problemsSectionRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'problemsSectionRef.current' to a variable inside the effect, and use that variable in the cleanup function.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/93) ...
+   Generating static pages (23/93) 
+   Generating static pages (46/93) 
+   Generating static pages (69/93) 
+ Ô£ô Generating static pages (93/93)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+Ôöî Ôùï /                                    1.05 kB        88.6 kB
+Ôö£ Ôùï /_not-found                          873 B          88.4 kB
+Ôö£ ÔùÅ /[locale]                            13 kB           140 kB
+Ôö£   Ôö£ /en
+Ôö£   Ôöö /es
+Ôö£ ÔùÅ /[locale]/[slug]                     7.79 kB         119 kB
+Ôö£   Ôö£ /en/iniciar-proceso-jur-1
+Ôö£   Ôö£ /es/iniciar-proceso-jur-1
+Ôö£   Ôö£ /en/contestar-oponerse-jur-1
+Ôö£   Ôöö [+45 more paths]
+Ôö£ ÔùÅ /[locale]/about-us                   3.4 kB          134 kB
+Ôö£   Ôö£ /en/about-us
+Ôö£   Ôöö /es/about-us
+Ôö£ ÔùÅ /[locale]/blog                       3.55 kB         131 kB
+Ôö£   Ôö£ /en/blog
+Ôö£   Ôöö /es/blog
+Ôö£ ÔùÅ /[locale]/blog/[slug]                155 B          87.7 kB
+Ôö£   Ôö£ /en/blog/el-modelo-one-shot
+Ôö£   Ôö£ /en/blog/the-one-shot-model
+Ôö£   Ôö£ /en/blog/protocolo-incinerador
+Ôö£   Ôöö [+13 more paths]
+Ôö£ ÔùÅ /[locale]/contact                    3.01 kB         133 kB
+Ôö£   Ôö£ /en/contact
+Ôö£   Ôöö /es/contact
+Ôö£ ÔùÅ /[locale]/our-services               3.53 kB         134 kB
+Ôö£   Ôö£ /en/our-services
+Ôö£   Ôöö /es/our-services
+Ôö£ ÔùÅ /[locale]/prices                     2.19 kB         132 kB
+Ôö£   Ôö£ /en/prices
+Ôö£   Ôöö /es/prices
+Ôö£ ÔùÅ /[locale]/privacy                    1.97 kB         129 kB
+Ôö£   Ôö£ /en/privacy
+Ôö£   Ôöö /es/privacy
+Ôö£ ÔùÅ /[locale]/questions-and-answers      3.97 kB         134 kB
+Ôö£   Ôö£ /en/questions-and-answers
+Ôö£   Ôöö /es/questions-and-answers
+Ôö£ ÔùÅ /[locale]/terms                      2.2 kB          129 kB
+Ôö£   Ôö£ /en/terms
+Ôö£   Ôöö /es/terms
+Ôö£ ãÆ /api/log-email                       0 B                0 B
+Ôö£ Ôùï /engine                              377 B          87.9 kB
+Ôö£ Ôùï /prepare                             459 B            88 kB
+Ôö£ Ôùï /robots.txt                          0 B                0 B
+Ôö£ Ôùï /sitemap                             175 B          96.4 kB
+Ôö£ Ôùï /sitemap.xml                         0 B                0 B
+Ôöö Ôùï /terminal                            3.95 kB        91.5 kB
++ First Load JS shared by all            87.6 kB
+  Ôö£ chunks/117-09f8d7c3a0266f16.js       31.8 kB
+  Ôö£ chunks/fd9d1056-d6ac603e65d70f45.js  53.6 kB
+  Ôöö other shared chunks (total)          2.07 kB
+
+
+Ôùï  (Static)   prerendered as static content
+ÔùÅ  (SSG)      prerendered as static HTML (uses getStaticProps)
+ãÆ  (Dynamic)  server-rendered on demand
+
+
+> corporate-website@1.0.0 postbuild
+> node generate-rss.mjs
+
+[generate-rss] Ô£ô RSS feed generated ÔåÆ C:\Cyboring_Global\5_Ventures\sbu-legal\sbu-legal-landing\out\rss.xml
