@@ -38,7 +38,7 @@ const blogMetadata = {
 };
 
 type Props = {
-  params: Promise<{ locale: string; slug: string }>;
+  params: { locale: string; slug: string };
 };
 
 export function generateStaticParams() {
@@ -55,7 +55,7 @@ export function generateStaticParams() {
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const { locale, slug } = await params;
+  const { locale, slug } = params;
 
   // IMPORTANT: setRequestLocale must be called BEFORE any translation calls
   setRequestLocale(locale);
