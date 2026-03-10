@@ -7,7 +7,13 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Static export for Cloudflare Pages
-  output: 'export', // Enabled for validation
+  output: 'export',
+
+  // Required for static export: disables server-side image optimization
+  images: {
+    unoptimized: true,
+  },
+
   /* async rewrites() {
     return [
       {
