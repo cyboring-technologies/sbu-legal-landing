@@ -1,0 +1,18 @@
+
+> corporate-website@1.0.0 build
+> next build
+
+  Ôû▓ Next.js 14.2.33
+  - Environments: .env.local, .env.production
+
+   Creating an optimized production build ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Failed to compile.
+
+./src/app/(landing)/[locale]/blog/[slug]/page.tsx
+Module not found: Can't resolve '../../../components/HtmlContent'
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+> Build failed because of webpack errors
