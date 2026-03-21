@@ -51,7 +51,8 @@ const CTAButton: React.FC<CTAButtonProps> = ({
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
   let finalHref = ctaType === 'cta-1' ? buildEngineURL(locale, resolvedTheme) : href;
-  const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
+  const isExternalProtocol = href?.startsWith('mailto:') || href?.startsWith('tel:');
+  const finalTarget = ctaType === 'cta-1' ? '_blank' : (isExternalProtocol ? '_self' : target);
   const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
 
   const baseClasses =
@@ -175,7 +176,8 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
   let finalHref = ctaType === 'cta-1' ? buildEngineURL(locale, theme) : href;
-  const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
+  const isExternalProtocol = href?.startsWith('mailto:') || href?.startsWith('tel:');
+  const finalTarget = ctaType === 'cta-1' ? '_blank' : (isExternalProtocol ? '_self' : target);
   const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
 
   const baseClasses =
