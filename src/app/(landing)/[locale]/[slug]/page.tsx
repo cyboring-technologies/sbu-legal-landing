@@ -27,7 +27,7 @@ const JURISDICTION_LABELS: Record<string, string> = {
 
 // 2. SEO Validation
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
 
   const pageData = getPageBySlug(slug);
 
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${pageData.service} en ${jurisdictionLabel} — Escrito legal listo para presentar | documentos.legal`,
     description: `Genere su documento legal para ${pageData.service.toLowerCase()} en ${jurisdictionLabel}. Listo para presentar en minutos. Sin cuentas. Sin almacenamiento.`,
     alternates: {
-      canonical: `https://documentos.legal/${slug}`,
+      canonical: `https://documentos.legal/${locale}/${slug}`,
     },
   };
 }
@@ -94,7 +94,7 @@ export default async function Page({ params }: Props) {
         }
       ]
     },
-    "url": `https://documentos.legal/${slug}`
+    "url": `https://documentos.legal/${locale}/${slug}`
   };
 
   const breadcrumbSchema = {
@@ -111,13 +111,13 @@ export default async function Page({ params }: Props) {
         "@type": "ListItem",
         "position": 2,
         "name": "Servicios",
-        "item": "https://documentos.legal/our-services"
+        "item": `https://documentos.legal/${locale}/our-services`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": pageData.service,
-        "item": `https://documentos.legal/${slug}`
+        "item": `https://documentos.legal/${locale}/${slug}`
       }
     ]
   };
