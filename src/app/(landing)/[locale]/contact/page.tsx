@@ -95,7 +95,6 @@ export default function ContactPage() {
               text: t('hero.cta_4_secondary'),
               href: 'mailto:hello@documentos.legal',
               ctaType: 'cta-4',
-              target: '_blank',
               note: t('hero.cta_4_note'),
             }}
             backgroundImage="/images/contact-hero-bg.jpg"
