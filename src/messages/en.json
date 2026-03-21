@@ -181,7 +181,7 @@
     },
     "q2": {
       "question": "How secure are my data and strategy?",
-      "answer": "We implement the Incinerator Protocol: we treat client data as \"toxic waste\" that must be destroyed after processing. All infrastructure resides on Microsoft Cloudflare, where files are permanently deleted automatically after execution. Your strategic data is never used to train AI models nor exposed to the public internet."
+      "answer": "We implement the Incinerator Protocol: we treat client data as \"toxic waste\" that must be destroyed after processing. All infrastructure resides on Microsoft Azure and Cloudflare, where files are permanently deleted automatically after execution. Your strategic data is never used to train AI models nor exposed to the public internet."
     },
     "q3": {
       "question": "Can I trust the technical accuracy of the documents?",
@@ -626,7 +626,7 @@
         },
         "availability": {
           "title": "99.9%+: Availability on Armored Infrastructure",
-          "body": "We operate on Microsoft Cloudflare to offer bank-grade resilience and enterprise standard compliance. Our native hexagonal architecture ensures unwavering stability and massive scalability for critical litigation processes."
+          "body": "We operate on Microsoft Azure and Cloudflare to offer bank-grade resilience and enterprise standard compliance. Our native hexagonal architecture ensures unwavering stability and massive scalability for critical litigation processes."
         },
         "zero_storage": {
           "title": "0% Secrets Storage",

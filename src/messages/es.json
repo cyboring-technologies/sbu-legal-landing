@@ -181,7 +181,7 @@
     },
     "q2": {
       "question": "¿Qué tan seguros están mis datos y mi estrategia?",
-      "answer": "Implementamos el Protocolo Incinerador: tratamos los datos de los clientes como \"residuos tóxicos\" que deben ser destruidos tras su procesamiento. Toda la infraestructura reside en Microsoft Cloudflare, donde los archivos se eliminan permanentemente de forma automática tras la ejecución. Sus datos estratégicos nunca se utilizan para entrenar modelos de IA ni se exponen al internet público."
+      "answer": "Implementamos el Protocolo Incinerador: tratamos los datos de los clientes como \"residuos tóxicos\" que deben ser destruidos tras su procesamiento. Toda la infraestructura reside en Microsoft Azure y Cloudflare, donde los archivos se eliminan permanentemente de forma automática tras la ejecución. Sus datos estratégicos nunca se utilizan para entrenar modelos de IA ni se exponen al internet público."
     },
     "q3": {
       "question": "¿Puedo confiar en la precisión técnica de los documentos?",
@@ -622,7 +622,7 @@
         },
         "availability": {
           "title": "99.9%+: Disponibilidad en Infraestructura Blindada",
-          "body": "Operamos sobre Microsoft Cloudflare para ofrecer resiliencia de grado bancario y cumplimiento de estándares empresariales. Nuestra arquitectura hexagonal nativa asegura una estabilidad inquebrantable y escalabilidad masiva para procesos críticos de litigio."
+          "body": "Operamos sobre Microsoft Azure y Cloudflare para ofrecer resiliencia de grado bancario y cumplimiento de estándares empresariales. Nuestra arquitectura hexagonal nativa asegura una estabilidad inquebrantable y escalabilidad masiva para procesos críticos de litigio."
         },
         "zero_storage": {
           "title": "0% Almacenamiento de Secretos",
