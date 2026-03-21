@@ -359,7 +359,7 @@ export default function QuestionsAndAnswersPage() {
                   target="_blank"
                   variant="secondary"
                   size="md"
-                  ctaType="cta-2"
+                  ctaType="cta-3"
                   note={t('helpResources.cta_3_note')}
                   className="mx-auto"
                 >
@@ -405,7 +405,7 @@ export default function QuestionsAndAnswersPage() {
                   target="_blank"
                   variant="secondary"
                   size="md"
-                  ctaType="cta-2"
+                  ctaType="cta-3"
                   className="mx-auto"
                 >
                   {t('helpResources.docs.cta_2_explore')}

@@ -69,7 +69,7 @@ export const FaqSection: React.FC = () => {
           <CTAButton href="/questions-and-answers" variant="primary" size="lg" ctaType="cta-2">
             {tFaq('viewAll')}
           </CTAButton>
-          <CTAButton href="/contact" variant="secondary" size="lg" ctaType="cta-2">
+          <CTAButton href="/contact" variant="secondary" size="lg" ctaType="cta-3">
             {tFaq('askQuestion')}
           </CTAButton>
         </div>

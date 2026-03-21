@@ -172,7 +172,7 @@ export default function ContactPage() {
                   target="_blank"
                   variant="secondary"
                   size="sm"
-                  ctaType="cta-2"
+                  ctaType="cta-3"
                   note={t('alternativeContact.cta_3_note')}
                 >
                   {t('alternativeContact.whatsapp.cta_3_chat')}
@@ -238,7 +238,7 @@ export default function ContactPage() {
                   href="/questions-and-answers"
                   variant="secondary"
                   size="lg"
-                  ctaType="cta-2"
+                  ctaType="cta-3"
                 >
                   {tQA('cta_2_browseFaqs')}
                 </CTAButton>
