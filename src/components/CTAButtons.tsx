@@ -105,12 +105,6 @@ const CTAButton: React.FC<CTAButtonProps> = ({
           target={finalTarget}
           rel={finalRel}
           data-cta-type={ctaType}
-          onClick={(e) => {
-            if (isExternalProtocol) {
-              e.preventDefault();
-              window.location.assign(finalHref!);
-            }
-          }}
         >
           {content}
         </a>
@@ -234,12 +228,6 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
           target={finalTarget}
           rel={finalRel}
           data-cta-type={ctaType}
-          onClick={(e) => {
-            if (isExternalProtocol) {
-              e.preventDefault();
-              window.location.assign(finalHref!);
-            }
-          }}
         >
           {content}
         </a>
