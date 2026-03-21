@@ -97,7 +97,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
         >
           {content}
         </button>
-      ) : finalHref?.startsWith('http') ? (
+      ) : (finalHref?.startsWith('http') || finalHref?.startsWith('mailto:') || finalHref?.startsWith('tel:')) ? (
         <a
           href={finalHref}
           className={`${classes} group`}
@@ -219,7 +219,7 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
         >
           {content}
         </button>
-      ) : finalHref?.startsWith('http') ? (
+      ) : (finalHref?.startsWith('http') || finalHref?.startsWith('mailto:') || finalHref?.startsWith('tel:')) ? (
         <a
           href={finalHref}
           className={classes}
