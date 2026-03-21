@@ -47,12 +47,14 @@ export default function BlogPage() {
             subtitle={t('hero.subtitle')}
             description={t('hero.description')}
             primaryCTA={{
-              text: t('hero.cta_2_primary'),
-              href: '#newsletter',
+              text: t('hero.cta_1_secondary'),
+              href: '/engine',
+              ctaType: 'cta-1',
             }}
             secondaryCTA={{
-              text: t('hero.cta_1_secondary'),
-              href: '/rss.xml',
+              text: t('hero.cta_2_primary'),
+              href: '#',
+              ctaType: 'cta-2',
             }}
             // Uses existing hero background or a specific one if available
             backgroundImage="/images/blog-hero-bg.jpg"
