@@ -52,10 +52,10 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
   let finalHref = ctaType === 'cta-1' ? buildEngineURL(locale, resolvedTheme) : href;
   const isExternalProtocol = href?.startsWith('mailto:') || href?.startsWith('tel:');
-  // mailto:/tel: links must NOT use target="_blank" — it causes a blank tab when no mail client is configured.
-  // The fix is rendering as a standard <a> (not next-intl Link). Let the browser handle it natively.
-  const finalTarget = ctaType === 'cta-1' ? '_blank' : (isExternalProtocol ? undefined : target);
-  const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : (isExternalProtocol ? undefined : rel);
+  // isExternalProtocol: ensures <a> tag is used (not next-intl Link) — avoids locale-prefixing
+  // target is passed through as-is from props
+  const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
+  const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
 
   const baseClasses =
     'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
@@ -179,8 +179,8 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
   let finalHref = ctaType === 'cta-1' ? buildEngineURL(locale, theme) : href;
   const isExternalProtocol = href?.startsWith('mailto:') || href?.startsWith('tel:');
-  const finalTarget = ctaType === 'cta-1' ? '_blank' : (isExternalProtocol ? undefined : target);
-  const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : (isExternalProtocol ? undefined : rel);
+  const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
+  const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
 
   const baseClasses =
     'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 group';
