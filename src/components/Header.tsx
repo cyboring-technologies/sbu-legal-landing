@@ -73,7 +73,7 @@ const Header = () => {
     { name: t('contact'), href: '/contact' },
   ];
 
-  const headerVisible = isVisible || isHovered;
+  const headerVisible = isVisible || isHovered || isMenuOpen;
 
   return (
     <>
@@ -193,18 +193,18 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700">
+            <div className="md:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-lg absolute w-full left-0 mt-0">
+              <div className="px-4 py-4 space-y-2 border-t border-gray-200 dark:border-gray-800">
                 {navigation.map((item) => {
                   const isActive = pathname === item.href;
                   return (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`block px-3 py-2 text-base font-medium ${
+                      className={`block px-3 py-3 text-base font-medium rounded-md ${
                         isActive
-                          ? 'text-blue-600 dark:text-blue-400'
-                          : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                          ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
+                          : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -212,13 +212,13 @@ const Header = () => {
                     </Link>
                   );
                 })}
-                <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+                <div className="pt-2 border-t border-gray-200 dark:border-gray-800">
                   <CTAButton2
                     href="/engine"
                     variant="ghost"
                     size="md"
                     ctaType="cta-1"
-                    className="w-full justify-start text-gray-500 dark:text-gray-400 !transition-none opacity-60 hover:opacity-100"
+                    className="w-full justify-start text-gray-700 dark:text-gray-300 !transition-none opacity-80 hover:opacity-100 hover:bg-gray-50 dark:hover:bg-gray-800/50 px-3 py-3 rounded-md"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {t('cta_1_access')}
