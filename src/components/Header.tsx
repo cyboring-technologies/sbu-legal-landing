@@ -73,7 +73,7 @@ const Header = () => {
     { name: t('contact'), href: '/contact' },
   ];
 
-  const headerVisible = isVisible || isHovered || isMenuOpen;
+  const headerVisible = isVisible || isHovered;
 
   return (
     <>
@@ -124,7 +124,7 @@ const Header = () => {
                     className="absolute inset-0 hidden dark:block"
                   />
                 </div>
-                <span className="text-2xl font-logo font-semibold tracking-tight text-foreground">
+                <span className="text-xl sm:text-2xl font-logo font-semibold tracking-tight text-foreground">
                   Documentos<span className="text-foreground">.legal</span>
                 </span>
               </Link>
@@ -177,14 +177,13 @@ const Header = () => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden flex items-center space-x-2">
-              <LanguageToggle />
+            <div className="md:hidden flex items-center space-x-1 sm:space-x-2">
               <div className="w-[40px] h-[40px] flex items-center justify-center">
                 <ThemeToggle iconSize={20} />
               </div>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:text-blue-600 dark:focus:text-blue-400"
+                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:text-blue-600 dark:focus:text-blue-400 p-2"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -193,18 +192,18 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-lg absolute w-full left-0 mt-0">
-              <div className="px-4 py-4 space-y-2 border-t border-gray-200 dark:border-gray-800">
+            <div className="md:hidden">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700">
                 {navigation.map((item) => {
                   const isActive = pathname === item.href;
                   return (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`block px-3 py-3 text-base font-medium rounded-md ${
+                      className={`block px-3 py-2 text-base font-medium ${
                         isActive
-                          ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                          : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50'
+                          ? 'text-blue-600 dark:text-blue-400'
+                          : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -212,13 +211,16 @@ const Header = () => {
                     </Link>
                   );
                 })}
-                <div className="pt-2 border-t border-gray-200 dark:border-gray-800">
+                <div className="py-2 px-3 border-t border-gray-200 dark:border-gray-700">
+                  <LanguageToggle />
+                </div>
+                <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
                   <CTAButton2
                     href="/engine"
                     variant="ghost"
                     size="md"
                     ctaType="cta-1"
-                    className="w-full justify-start text-gray-700 dark:text-gray-300 !transition-none opacity-80 hover:opacity-100 hover:bg-gray-50 dark:hover:bg-gray-800/50 px-3 py-3 rounded-md"
+                    className="w-full justify-start text-gray-500 dark:text-gray-400 !transition-none opacity-60 hover:opacity-100"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {t('cta_1_access')}
