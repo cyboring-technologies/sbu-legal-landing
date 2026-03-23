@@ -1,0 +1,5 @@
+# Cloudflare Pages Edge Redirects
+# These execute at the edge BEFORE any JavaScript runs, eliminating the 2-second client-side redirect delay.
+
+# Root → Spanish (primary locale) — instant edge redirect, no JS required
+/   /es/   302
