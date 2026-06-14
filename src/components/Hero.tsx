@@ -81,14 +81,12 @@ const Hero: React.FC<HeroProps> = ({
           <div className="flex flex-col items-center gap-4 mb-0">
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
               {(() => {
-                const isEngine =
-                  primaryCTA.href === '/engine' || primaryCTA.href?.includes('/engine?');
-                const deducedType = primaryCTA.ctaType || (isEngine ? 'cta-1' : 'cta-2');
+                const deducedType = primaryCTA.ctaType || 'cta-2';
                 const variant = deducedType === 'cta-2' ? 'secondary' : 'primary';
 
                 return (
                   <CTAButton
-                    href={deducedType === 'cta-1' ? '/engine' : primaryCTA.href}
+                    href={deducedType === 'cta-1' ? '/' : primaryCTA.href}
                     variant={variant}
                     size="lg"
                     className={

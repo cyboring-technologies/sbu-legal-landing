@@ -16,20 +16,6 @@ import {
   Cpu,
 } from 'lucide-react';
 
-// Azure Icon SVG Component
-const AzureIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg
-    className={className}
-    viewBox="0 0 96 96"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M33.338 6.544h26.038l-27.03 80.455a4.152 4.152 0 0 1-3.933 2.824H8.149a4.145 4.145 0 0 1-3.928-5.47L29.404 9.368a4.152 4.152 0 0 1 3.934-2.825z" />
-    <path d="M71.175 60.261H41.29a1.911 1.911 0 0 0-1.305 3.309l26.532 24.764a4.171 4.171 0 0 0 2.846 1.121h23.586z" />
-    <path d="M33.338 6.544a4.118 4.118 0 0 0-3.943 2.879L4.252 84.078a4.146 4.146 0 0 0 3.916 5.545h20.646a4.443 4.443 0 0 0 3.587-2.616l6.082-17.089 22.324 20.849a4.236 4.236 0 0 0 2.628 1.037h23.053L62.83 61.106l-30.475-.043L59.47 6.544z" />
-  </svg>
-);
-
 // Microsoft AI Foundry Icon SVG Component
 const AIFoundryIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg

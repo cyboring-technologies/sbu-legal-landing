@@ -1,10 +1,7 @@
 import React from 'react';
 
-import { buildEngineURL } from '../config/runtimeOrigins';
 import { Link } from '../i18n/navigation';
 import { ArrowRight, ChevronRight } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import { useLocale } from 'next-intl';
 import { useModal } from './providers/ModalProvider';
 
 // CTA Architecture v1.1 Normative Types
@@ -23,13 +20,12 @@ interface BaseCTAProps {
   tooltip?: boolean;
 }
 
-type CTAButtonProps = BaseCTAProps &
-  (
-    | { ctaType: 'cta-1'; href?: string; target?: '_blank'; rel?: string }
-    | { ctaType: 'cta-2'; href: string; target?: '_blank' | '_self'; rel?: string }
-    | { ctaType: 'cta-3'; href: string; target?: '_blank' | '_self'; rel?: string }
-    | { ctaType: 'cta-4'; href?: string; target?: '_blank' | '_self'; rel?: string }
-  );
+type CTAButtonProps = BaseCTAProps & {
+  ctaType?: CTAType;
+  href?: string;
+  target?: '_blank' | '_self';
+  rel?: string;
+};
 
 const CTAButton: React.FC<CTAButtonProps> = ({
   href,
@@ -41,21 +37,19 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   onClick,
   target,
   rel,
-  ctaType,
+  ctaType = 'cta-4',
   note,
   tooltip,
 }) => {
-  const { resolvedTheme } = useTheme();
-  const locale = useLocale();
   const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
-  let finalHref = ctaType === 'cta-1' ? buildEngineURL(locale, resolvedTheme) : href;
+  const finalHref = ctaType === 'cta-1' ? '/' : href;
   const isExternalProtocol = href?.startsWith('mailto:') || href?.startsWith('tel:');
   // isExternalProtocol: ensures <a> tag is used (not next-intl Link) — avoids locale-prefixing
   // target is passed through as-is from props
-  const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
-  const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
+  const finalTarget = ctaType === 'cta-1' ? '_self' : target;
+  const finalRel = ctaType === 'cta-1' ? undefined : rel;
 
   const baseClasses =
     'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
@@ -151,13 +145,12 @@ interface BaseCTA2Props {
   tooltip?: boolean;
 }
 
-type CTAButton2Props = BaseCTA2Props &
-  (
-    | { ctaType: 'cta-1'; href?: string; target?: '_blank'; rel?: string }
-    | { ctaType: 'cta-2'; href: string; target?: '_blank' | '_self'; rel?: string }
-    | { ctaType: 'cta-3'; href: string; target?: '_blank' | '_self'; rel?: string }
-    | { ctaType: 'cta-4'; href?: string; target?: '_blank' | '_self'; rel?: string }
-  );
+type CTAButton2Props = BaseCTA2Props & {
+  ctaType?: CTAType;
+  href?: string;
+  target?: '_blank' | '_self';
+  rel?: string;
+};
 
 const CTAButton2: React.FC<CTAButton2Props> = ({
   href,
@@ -168,19 +161,17 @@ const CTAButton2: React.FC<CTAButton2Props> = ({
   onClick,
   target,
   rel,
-  ctaType,
+  ctaType = 'cta-4',
   note,
   tooltip,
 }) => {
-  const { theme } = useTheme();
-  const locale = useLocale();
   const { openSecurityModal } = useModal();
 
   // ARCHITECTURE v1.1: Centralized Routing Enforcement
-  let finalHref = ctaType === 'cta-1' ? buildEngineURL(locale, theme) : href;
+  const finalHref = ctaType === 'cta-1' ? '/' : href;
   const isExternalProtocol = href?.startsWith('mailto:') || href?.startsWith('tel:');
-  const finalTarget = ctaType === 'cta-1' ? '_blank' : target;
-  const finalRel = ctaType === 'cta-1' ? 'noopener noreferrer' : rel;
+  const finalTarget = ctaType === 'cta-1' ? '_self' : target;
+  const finalRel = ctaType === 'cta-1' ? undefined : rel;
 
   const baseClasses =
     'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 group';

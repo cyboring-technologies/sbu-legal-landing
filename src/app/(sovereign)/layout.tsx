@@ -2,8 +2,13 @@ import React from 'react';
 import './sovereign.css';
 
 export const metadata = {
-  title: 'Draft Generator | SBU-Legal',
-  description: 'Legal Document Processing',
+  title: 'Ruta archivada | Documentos.legal',
+  description: 'Ruta histórica retirada de Documentos.legal.',
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+  },
 };
 
 export default function SovereignLayout({ children }: { children: React.ReactNode }) {

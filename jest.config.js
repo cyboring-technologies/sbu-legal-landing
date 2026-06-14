@@ -16,17 +16,11 @@ const customJestConfig = {
     '^@/app/(.*)$': '<rootDir>/src/app/$1',
   },
   testMatch: ['<rootDir>/tests/unit/**/*.test.{ts,tsx}', '<rootDir>/tests/unit/**/*.spec.{ts,tsx}'],
-  collectCoverageFrom: ['src/components/Hero.tsx', 'src/components/CTAButtons.tsx'],
+  collectCoverageFrom: ['src/components/archive/ArchiveLanding.tsx'],
   coverageThreshold: {
-    './src/components/Hero.tsx': {
-      branches: 70,
-      functions: 80,
-      lines: 80,
-      statements: 80,
-    },
-    './src/components/CTAButtons.tsx': {
-      branches: 70,
-      functions: 80,
+    './src/components/archive/ArchiveLanding.tsx': {
+      branches: 80,
+      functions: 100,
       lines: 80,
       statements: 80,
     },

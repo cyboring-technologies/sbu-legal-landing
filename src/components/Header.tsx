@@ -168,7 +168,7 @@ const Header = () => {
             {/* Theme Toggle & Access */}
             <div className="hidden md:flex items-center space-x-4">
               <LanguageToggle />
-              <CTAButton2 href="/engine" variant="ghost" size="sm" ctaType="cta-1">
+              <CTAButton2 href="/" variant="ghost" size="sm" ctaType="cta-1">
                 {t('cta_1_access')}
               </CTAButton2>
               <div className="w-[40px] h-[40px] flex items-center justify-center">
@@ -216,7 +216,7 @@ const Header = () => {
                 </div>
                 <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
                   <CTAButton2
-                    href="/engine"
+                    href="/"
                     variant="ghost"
                     size="md"
                     ctaType="cta-1"

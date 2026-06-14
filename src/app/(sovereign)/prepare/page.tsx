@@ -1,21 +1,16 @@
-'use client';
-
-import React from 'react';
-import RuntimeShell from '../../../components/sovereign/RuntimeShell';
-
-export default function EnginePage() {
+export default function PreparePage() {
   return (
-    <div className="w-screen h-screen overflow-hidden flex items-center justify-center bg-black text-white">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold mb-4">Legacy Surface Deprecated</h1>
-        <p>
-          Please use the Engine V2 directly at{' '}
-          <a href="http://localhost:8788/" className="text-blue-400 underline">
-            localhost:8788
-          </a>
+    <main className="flex min-h-screen items-center justify-center bg-slate-950 p-8 text-slate-100">
+      <div className="max-w-2xl">
+        <p className="uppercase tracking-widest text-slate-400">Ruta retirada</p>
+        <h1 className="mt-4 text-4xl font-bold">Documentos.legal está archivado</h1>
+        <p className="mt-5 leading-7 text-slate-300">
+          Esta ruta ya no inicia procesos ni ofrece servicios.
         </p>
+        <a className="mt-8 inline-block underline" href="/">
+          Volver al archivo
+        </a>
       </div>
-      {/* <RuntimeShell /> */}
-    </div>
+    </main>
   );
 }
