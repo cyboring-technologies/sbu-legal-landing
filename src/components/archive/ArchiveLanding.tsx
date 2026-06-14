@@ -61,10 +61,10 @@ export function ArchiveLanding() {
             </p>
             <a
               className="mt-5 inline-block text-sm font-semibold text-slate-200 underline decoration-slate-600 underline-offset-4 hover:decoration-slate-200"
-              href="https://www.cyboring.com"
+              href="https://cyboring.com"
               rel="noreferrer"
             >
-              Sitio institucional de Cyboring Technologies LLC
+              Cyboring Technologies LLC
             </a>
           </section>
 

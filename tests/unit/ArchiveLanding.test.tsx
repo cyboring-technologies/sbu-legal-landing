@@ -11,6 +11,10 @@ describe('archived public surface', () => {
     ).toBeInTheDocument();
     expect(screen.getByText(/ya no ofrece generación de documentos legales/i)).toBeInTheDocument();
     expect(screen.queryByText(/comprar|iniciar ejecución|subir archivo/i)).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Cyboring Technologies LLC' })).toHaveAttribute(
+      'href',
+      'https://cyboring.com'
+    );
   });
 
   it('renders a neutral notice for retired routes', () => {

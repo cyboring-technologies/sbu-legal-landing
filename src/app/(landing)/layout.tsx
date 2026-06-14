@@ -68,7 +68,7 @@ const archiveSchema = {
   about: {
     '@type': 'Organization',
     name: 'Cyboring Technologies LLC',
-    url: 'https://www.cyboring.com',
+    url: 'https://cyboring.com',
   },
 };
 
