@@ -14,6 +14,23 @@ test.describe('Documentos.legal archive', () => {
     await expect(page.locator('a[href*="engine"]')).toHaveCount(0);
   });
 
+  test('does not create horizontal scroll on mobile archive routes', async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 720 });
+
+    for (const path of ['/', '/n/']) {
+      await page.goto(path);
+      await expect(
+        page.getByRole('heading', { level: 1, name: 'Documentos.legal está archivado' })
+      ).toBeVisible();
+
+      const hasHorizontalOverflow = await page.evaluate(
+        () => document.documentElement.scrollWidth > window.innerWidth
+      );
+
+      expect(hasHorizontalOverflow).toBe(false);
+    }
+  });
+
   test('marks operational routes as retired', async ({ page }) => {
     for (const path of ['/engine/', '/prepare/', '/terminal/']) {
       await page.goto(path);

@@ -4,13 +4,13 @@ const archivedAt = '14 de junio de 2026';
 
 export function ArchiveLanding() {
   return (
-    <main className="min-h-screen bg-slate-950 px-6 py-16 text-slate-100 sm:px-10">
-      <div className="mx-auto max-w-3xl">
+    <main className="min-h-screen overflow-x-hidden bg-slate-950 px-6 py-16 text-slate-100 sm:px-10">
+      <div className="mx-auto max-w-3xl min-w-0">
         <p className="mb-8 text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
           Archivo institucional
         </p>
 
-        <h1 className="font-plex text-4xl font-bold tracking-tight sm:text-6xl">
+        <h1 className="font-plex text-3xl font-bold leading-tight break-words sm:text-6xl">
           Documentos.legal está archivado
         </h1>
 
@@ -94,12 +94,14 @@ export function ArchiveLanding() {
 
 export function ArchivedRouteNotice() {
   return (
-    <main className="flex min-h-screen items-center bg-slate-950 px-6 py-16 text-slate-100">
-      <div className="mx-auto w-full max-w-2xl">
+    <main className="flex min-h-screen items-center overflow-x-hidden bg-slate-950 px-6 py-16 text-slate-100">
+      <div className="mx-auto w-full max-w-2xl min-w-0">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
           Ruta retirada
         </p>
-        <h1 className="mt-5 font-plex text-4xl font-bold">Documentos.legal está archivado</h1>
+        <h1 className="mt-5 font-plex text-3xl font-bold leading-tight break-words sm:text-4xl">
+          Documentos.legal está archivado
+        </h1>
         <p className="mt-5 leading-7 text-slate-300">
           Esta ruta pertenecía a una operación que ya no está disponible. No se ofrecen servicios
           legales ni procesamiento de documentos.
